@@ -4864,6 +4864,100 @@
                 transition-duration: .01ms !important;
             }
         }
+
+        /* ─── SITE FOOTER & LEGAL COPYRIGHT ─── */
+        .site-footer {
+            width: 100%;
+            border-top: var(--glass-border);
+            background: var(--glass-bg-subtle);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            box-shadow: var(--glass-highlight-top);
+            padding: 32px 24px 38px;
+            margin-top: 48px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .site-footer-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .site-footer-badges {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-repo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 6px 14px;
+            border-radius: var(--radius-pill);
+            background: var(--accent-soft);
+            border: 1px solid var(--track-sel-border);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 12.5px;
+            font-weight: 700;
+            transition: all var(--t-fast) var(--ease-tactile);
+            box-shadow: var(--glass-highlight-top);
+        }
+
+        .footer-repo-link:hover {
+            background: var(--accent);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .footer-license-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: var(--radius-pill);
+            background: var(--surface-muted);
+            border: var(--glass-border);
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .footer-copy-text,
+        .footer-license-text {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.65;
+            color: var(--text-tertiary);
+        }
+
+        .site-footer a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 600;
+            transition: color var(--t-fast);
+        }
+
+        .site-footer a:hover {
+            color: #60a5fa;
+        }
+
+        @media (max-width: 900px) {
+            .site-footer {
+                padding-bottom: 96px;
+            }
+        }
     </style>
     <base target="_blank">
 </head>
@@ -4927,6 +5021,21 @@
         </nav>
         <main class="main-content" id="main"></main>
     </div>
+
+    <!-- ─── RODAPÉ INSTITUCIONAL & LICENÇA LEGAL (GNU AGPL v3) ─── -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="site-footer-inner">
+            <div class="site-footer-badges">
+                <a href="https://github.com/webglossdev/CEFET" target="_blank" rel="noopener" class="footer-repo-link" title="Ver repositório oficial no GitHub">
+                    <svg height="15" width="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    <span>webglossdev / CEFET</span>
+                </a>
+                <span class="footer-license-pill">⚖️ GNU AFFERO GPL V3</span>
+            </div>
+            <p class="footer-copy-text">© 2026 Leonardo P. Soares. O conteúdo deste site é protegido por direitos autorais de acordo com a <a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="_blank" rel="noopener">Lei 9.610/98</a>.</p>
+            <p class="footer-license-text">O <a href="https://github.com/webglossdev/CEFET" target="_blank" rel="noopener">código-fonte</a> está disponível sob a licença <a href="https://www.gnu.org/licenses/agpl-3.0.pt-br.html" target="_blank" rel="noopener">GNU AFFERO GPL V3</a>.</p>
+        </div>
+    </footer>
 
     <!-- ─── TACTILE MOBILE BOTTOM DOCK (500px/MOBILE) ─── -->
     <nav class="mobile-bottom-bar" id="mobileBottomBar">

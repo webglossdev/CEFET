@@ -10,7 +10,7 @@
 [![Build](https://img.shields.io/badge/Build-Zero%20Dependencies%20(No%20NPM)-8b5cf6?style=for-the-badge&logo=speedtest)](https://github.com/webglossdev/CEFET)
 [![Offline First](https://img.shields.io/badge/Armazenamento-LocalStorage%20Offline-06b6d4?style=for-the-badge&logo=databricks)](https://github.com/webglossdev/CEFET)
 [![Design](https://img.shields.io/badge/Design%20System-Apple%20Liquid%20Glass-f43f5e?style=for-the-badge&logo=figma)](https://github.com/webglossdev/CEFET)
-[![License](https://img.shields.io/badge/Licença-MIT-gray?style=for-the-badge)](LICENSE)
+[![License: GNU AGPLv3](https://img.shields.io/badge/Licença-GNU%20AGPL%20v3-0284c7?style=for-the-badge&logo=gnu)](https://www.gnu.org/licenses/agpl-3.0.pt-br.html)
 
 <br/>
 
@@ -378,16 +378,22 @@ Contribuições são muito bem-vindas! Seja para adicionar novas questões ao si
 
 ---
 
-## ⚖️ Licença & Reconhecimentos
+## ⚖️ Licença, Direitos Autorais & Código-Fonte
 
-Distribuído sob a licença **MIT**. Consulte `LICENSE` para mais informações.
+Este projeto é software livre licenciado sob os termos da licença **[GNU AFFERO GENERAL PUBLIC LICENSE Versão 3 (AGPLv3)](https://www.gnu.org/licenses/agpl-3.0.pt-br.html)**.
 
+> © 2026 Leonardo P. Soares. O conteúdo deste site é protegido por direitos autorais de acordo com a [Lei 9.610/98](https://www.planalto.gov.br/ccivil_03/leis/l9610.htm).  
+> O [código-fonte](https://github.com/webglossdev/CEFET) está disponível sob a licença [GNU AFFERO GPL V3](https://www.gnu.org/licenses/agpl-3.0.pt-br.html).
+
+- **Repositório Oficial no GitHub:** [https://github.com/webglossdev/CEFET](https://github.com/webglossdev/CEFET)
+- **Texto Oficial da Licença:** [GNU AGPL v3 (Português)](https://www.gnu.org/licenses/agpl-3.0.pt-br.html) / [GNU AGPL v3 (English)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 - Dedicado aos estudantes de escolas públicas do Rio de Janeiro que sonham com uma vaga no **CEFET-RJ**.
 - Agradecimentos à comunidade de educadores e desenvolvedores que acreditam na educação aberta, acessível e de excelência.
 
 ---
 
 <div align="center">
-  <sub>Desenvolvido com excelência técnica para transformar a preparação de estudantes brasileiros.</sub><br>
+  <p>© 2026 Leonardo P. Soares. O conteúdo deste site é protegido por direitos autorais de acordo com a <a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm">Lei 9.610/98</a>.<br/>
+  O <a href="https://github.com/webglossdev/CEFET">código-fonte</a> está disponível sob a licença <a href="https://www.gnu.org/licenses/agpl-3.0.pt-br.html">GNU AFFERO GPL V3</a>.</p>
   <sub><b>CEFET-RJ Maracanã 2027 • Educação Pública, Gratuita e de Alta Qualidade</b></sub>
 </div>
