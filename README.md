@@ -235,31 +235,29 @@ A plataforma conta com **64 módulos autorais completos**, com teoria, analogias
 
 ---
 
-## 🏫 Os 11 Cursos Técnicos do Maracanã
+## 🏫 Oferta de Vagas: Os 7 Campi Oficiais (1.024 Vagas)
 
-O Campus Maracanã (sede principal do CEFET-RJ) oferece **512 vagas anuais** na modalidade **Integrada** (Ensino Médio + Técnico em 3 anos). A plataforma inclui um guia de orientação vocacional para cada formação:
+O Processo Seletivo Oficial do CEFET-RJ (Edital nº 05/2026) oferece **1.024 vagas anuais** na modalidade **Integrada** (Ensino Médio + Técnico em 3 anos), distribuídas em 7 campi pelo Estado do Rio de Janeiro:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                      CURSOS TÉCNICOS INTEGRADOS — CAMPUS MARACANÃ                      │
+│               DISTRIBUIÇÃO GERAL DE VAGAS POR CAMPUS — EDITAL Nº 05/2026               │
 ├───────────────────────────────┬───────────────────────────────┬────────────────────────┤
-│ CURSO                         │ VAGAS ANUAIS                  │ TURNO                  │
+│ CAMPUS                        │ VAGAS TOTAIS                  │ QUANTIDADE DE CURSOS   │
 ├───────────────────────────────┼───────────────────────────────┼────────────────────────┤
-│ 💻 Informática                │ 64 vagas (32 + 32)            │ Manhã / Tarde          │
-│ ⚙️ Mecânica                   │ 64 vagas (32 + 32)            │ Manhã / Tarde          │
-│ ⚡ Eletrônica                 │ 64 vagas (32 + 32)            │ Manhã / Tarde          │
-│ 💡 Eletrotécnica              │ 64 vagas (32 + 32)            │ Manhã / Tarde          │
-│ 🏗️ Edificações                │ 64 vagas (32 + 32)            │ Manhã / Tarde          │
-│ 📊 Administração              │ 32 vagas                      │ Tarde                  │
-│ 🛣️ Estradas                   │ 32 vagas                      │ Manhã                  │
-│ 📡 Telecomunicações           │ 32 vagas                      │ Tarde                  │
-│ 🌦️ Meteorologia               │ 32 vagas                      │ Manhã                  │
-│ 🛡️ Segurança do Trabalho      │ 32 vagas                      │ Tarde                  │
-│ 🎭 Eventos                    │ 32 vagas                      │ Manhã                  │
+│ 🏛️ Maracanã (Sede)            │ 512 vagas                     │ 11 cursos (16 turmas)  │
+│ 🏙️ Nova Iguaçu                │ 160 vagas                     │ 4 cursos (40 vagas cd) │
+│ 🏭 Maria da Graça             │ 120 vagas                     │ 4 cursos (30 vagas cd) │
+│ ⚓ Itaguaí                    │ 96 vagas                      │ 3 cursos (32 vagas cd) │
+│ 🌿 Valença                    │ 60 vagas                      │ 2 cursos (30 vagas cd) │
+│ ⛰️ Nova Friburgo              │ 40 vagas                      │ 2 cursos (20 vagas cd) │
+│ 🏰 Petrópolis                 │ 36 vagas                      │ 1 curso (36 vagas)     │
+├───────────────────────────────┼───────────────────────────────┼────────────────────────┤
+│ TOTAL GERAL DO CERTAME        │ 1.024 vagas                   │ 27 opções de formação  │
 └───────────────────────────────┴───────────────────────────────┴────────────────────────┘
 ```
 
-> **Atenção Edital CEFET-RJ:** Na modalidade Integrada, o candidato concorre a uma vaga específica de curso e turno. Mais de 50% das vagas são reservadas pela Lei de Cotas (Lei nº 14.723/2023) para quem cursou **todo o Ensino Fundamental em escola pública**.
+> **Atenção Edital CEFET-RJ:** Na modalidade Integrada, o candidato concorre a uma vaga específica de curso, campus e turno. Pelo menos 50% de todas as vagas são reservadas pela Lei de Cotas (Lei nº 12.711/2012 e Lei nº 14.723/2023) para quem cursou **todo o Ensino Fundamental exclusivamente em escola pública**. Candidatos devem ter idade inferior a 18 anos até 30/03/2027.
 
 ---
 

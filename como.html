@@ -824,9 +824,24 @@
                                 </thead>
                                 <tbody class="divide-y divide-white/5 bg-slate-900/50 font-mono text-slate-300">
                                     <tr>
-                                        <td class="p-3 text-sky-400">cefet2027_progress</td>
+                                        <td class="p-3 text-sky-400">cefet2027_profiles</td>
+                                        <td class="p-3">JSON Array</td>
+                                        <td class="p-3 font-sans">Lista de estudantes cadastrados localmente (id, nome, avatar).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 text-sky-400">cefet2027_active_profile</td>
+                                        <td class="p-3">String</td>
+                                        <td class="p-3 font-sans">ID do perfil selecionado ('default' ou 'p_[timestamp]').</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 text-sky-400">cefet2027_progress<br><span class="text-xs text-slate-500 font-sans">ou cefet2027_p_[id]_progress</span></td>
                                         <td class="p-3">JSON Object</td>
-                                        <td class="p-3 font-sans">Módulos marcados como concluídos pelo aluno.</td>
+                                        <td class="p-3 font-sans">Módulos marcados como concluídos isoladamente pelo estudante ativo.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 text-sky-400">cefet2027_activity_days<br><span class="text-xs text-slate-500 font-sans">ou cefet2027_p_[id]_activity_days</span></td>
+                                        <td class="p-3">JSON Object</td>
+                                        <td class="p-3 font-sans">Registro de dias com estudo real do perfil para o ritmo semanal.</td>
                                     </tr>
                                     <tr>
                                         <td class="p-3 text-sky-400">cefet2027_active_track</td>
@@ -847,6 +862,11 @@
                                         <td class="p-3 text-sky-400">cefet2027_fc_mastered</td>
                                         <td class="p-3">JSON Object</td>
                                         <td class="p-3 font-sans">Cartões de memória marcados como dominados no Leitner.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 text-sky-400">cefet2027_essay</td>
+                                        <td class="p-3">String</td>
+                                        <td class="p-3 font-sans">Rascunho de redação salvo localmente pelo estudante.</td>
                                     </tr>
                                 </tbody>
                             </table>

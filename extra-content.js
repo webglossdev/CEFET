@@ -828,148 +828,72 @@ window.cefetMaracanaCourses = [
 
 /* ══════════════════════════════════════════════════════════════
    CRONOGRAMA OFICIAL COMPLETO (ANEXO II - EDITAL Nº 05/2026)
+   Todos os 45 Eventos Oficiais do Processo Seletivo CEFET-RJ
    ══════════════════════════════════════════════════════════════ */
 
 window.cefetCalendarEvents = [
-    {
-        num: 1,
-        titulo: "Pedido de Isenção da Taxa de Inscrição (R$ 70,00)",
-        inicio: "2026-08-20",
-        fim: "2026-08-26",
-        fase: "isencao",
-        destaque: true,
-        icone: "🎁",
-        descricao: "Prazo para quem concluiu o fundamental em escola pública ou possui CadÚnico solicitar a isenção dos R$ 70. Não perca este prazo curto!"
-    },
-    {
-        num: 5,
-        titulo: "Período de Inscrições Oficiais pela Internet",
-        inicio: "2026-08-20",
-        fim: "2026-09-27",
-        fase: "inscricao",
-        destaque: true,
-        icone: "📝",
-        descricao: "Inscrições no site do Instituto Selecon. Escolha correta do curso, campus Maracanã e da modalidade de cota."
-    },
-    {
-        num: 6,
-        titulo: "Data Final para Pagamento do Boleto (R$ 70,00)",
-        inicio: "2026-09-28",
-        fim: "2026-09-28",
-        fase: "inscricao",
-        destaque: false,
-        icone: "💳",
-        descricao: "Último dia para pagar a taxa caso não tenha conseguido a isenção. Pagamento após esta data anula a inscrição."
-    },
-    {
-        num: 10,
-        titulo: "Cartão de Confirmação (CDI) — Local Exato de Prova",
-        inicio: "2026-10-06",
-        fim: "2026-10-06",
-        fase: "prova",
-        destaque: true,
-        icone: "📍",
-        descricao: "Divulgação às 18h no Selecon. Atenção: a prova é em várias escolas do Rio de Janeiro, não apenas no campus sede do Maracanã!"
-    },
-    {
-        num: 12,
-        titulo: "🎯 APLICAÇÃO DA PROVA OBJETIVA E REDAÇÃO",
-        inicio: "2026-10-11",
-        fim: "2026-10-11",
-        fase: "prova",
-        destaque: true,
-        icone: "🚨",
-        descricao: "Das 09h às 13h (4 horas de prova). Portões fecham às 08h50 pontualmente. Leve documento com foto original e caneta transparente preta/azul."
-    },
-    {
-        num: 13,
-        titulo: "Divulgação do Gabarito Preliminar da Prova Objetiva",
-        inicio: "2026-10-13",
-        fim: "2026-10-13",
-        fase: "gabarito",
-        destaque: false,
-        icone: "🔍",
-        descricao: "Conferência das respostas oficiais no site do Selecon e no portal do CEFET-RJ."
-    },
-    {
-        num: 19,
-        titulo: "Divulgação das Notas Finais da Prova Objetiva",
-        inicio: "2026-10-29",
-        fim: "2026-10-29",
-        fase: "resultado",
-        destaque: false,
-        icone: "📊",
-        descricao: "Publicação do desempenho oficial e convocação dos classificados até 2x as vagas para correção da redação."
-    },
-    {
-        num: 20,
-        titulo: "Divulgação das Notas da Prova de Redação",
-        inicio: "2026-11-09",
-        fim: "2026-11-09",
-        fase: "resultado",
-        destaque: true,
-        icone: "✍️",
-        descricao: "Notas da redação divulgadas às 19h no Selecon. Verifique sua pontuação para saber se está na nota de corte."
-    },
-    {
-        num: 25,
-        titulo: "Bancas de Heteroidentificação Online (Microsoft Teams)",
-        inicio: "2026-11-21",
-        fim: "2026-11-23",
-        fase: "hetero",
-        destaque: true,
-        icone: "📱",
-        descricao: "Entrevista por vídeo para candidatos PPI. Obrigatória a presença do pai, mãe ou responsável legal para menores de 18 anos!"
-    },
-    {
-        num: 32,
-        titulo: "🏆 DIVULGAÇÃO DO RESULTADO FINAL DO CONCURSO",
-        inicio: "2026-12-02",
-        fim: "2026-12-02",
-        fase: "resultado",
-        destaque: true,
-        icone: "🎉",
-        descricao: "Lista oficial dos aprovados e classificados para o Ensino Médio Integrado 2027 do CEFET-RJ!"
-    },
-    {
-        num: 33,
-        titulo: "1ª Chamada — Envio Eletrônico de Documentos de Matrícula",
-        inicio: "2026-12-04",
-        fim: "2026-12-16",
-        fase: "matricula",
-        destaque: true,
-        icone: "📂",
-        descricao: "Envio digital pelo portal de matrícula do CEFET-RJ. Fique atento para não perder a vaga por falta de documento!"
-    },
-    {
-        num: 35,
-        titulo: "Divulgação da 2ª Chamada (1ª Reclassificação)",
-        inicio: "2027-01-04",
-        fim: "2027-01-04",
-        fase: "matricula",
-        destaque: false,
-        icone: "🔄",
-        descricao: "Chamada de lista de espera caso haja vagas remanescentes de candidatos que não se matricularam."
-    },
-    {
-        num: 45,
-        titulo: "🎓 INÍCIO DAS AULAS DO ANO LETIVO DE 2027",
-        inicio: "2027-01-26",
-        fim: "2027-01-26",
-        fase: "aulas",
-        destaque: true,
-        icone: "🎒",
-        descricao: "Boas-vindas aos novos alunos cefetianos no lendário Campus Maracanã!"
-    }
+    { num: 1, titulo: "Período de pedido de isenção da Taxa de Inscrição", inicio: "2026-08-20", fim: "2026-08-26", fase: "isencao", destaque: true, icone: "🎁", descricao: "Solicitação de isenção total dos R$ 70,00 via upload de documentos no Selecon (para rede pública ou CadÚnico)." },
+    { num: 2, titulo: "Resultado preliminar dos pedidos de isenção", inicio: "2026-09-02", fim: "2026-09-02", fase: "isencao", destaque: false, icone: "📋", descricao: "Publicação da lista preliminar de isenções aceitas e recusadas no portal Selecon." },
+    { num: 3, titulo: "Recurso em face do resultado preliminar de isenção", inicio: "2026-09-03", fim: "2026-09-04", fase: "isencao", destaque: false, icone: "⚖️", descricao: "Prazo para contestar indeferimento de isenção pela Área do Candidato." },
+    { num: 4, titulo: "Resultado final do pedido de isenção da Taxa de Inscrição", inicio: "2026-09-09", fim: "2026-09-09", fase: "isencao", destaque: false, icone: "✅", descricao: "Divulgação definitiva dos pedidos de isenção homologados após as 18h." },
+    { num: 5, titulo: "Período de inscrição no processo seletivo", inicio: "2026-08-20", fim: "2026-09-27", fase: "inscricao", destaque: true, icone: "📝", descricao: "Inscrições pela internet no portal do Instituto Selecon. Escolha atenta de campus, curso e cota." },
+    { num: 6, titulo: "Data final para pagamento do boleto bancário (R$ 70,00)", inicio: "2026-09-28", fim: "2026-09-28", fase: "inscricao", destaque: true, icone: "💳", descricao: "Último dia útil para pagamento da taxa de inscrição em rede bancária ou lotéricas." },
+    { num: 7, titulo: "Divulgação da confirmação preliminar das inscrições", inicio: "2026-09-30", fim: "2026-09-30", fase: "inscricao", destaque: false, icone: "🔍", descricao: "Lista preliminar de inscritos após as 18h. Obrigação do candidato conferir todos os dados." },
+    { num: 8, titulo: "Recurso em face da confirmação preliminar das inscrições", inicio: "2026-10-01", fim: "2026-10-01", fase: "inscricao", destaque: false, icone: "⚖️", descricao: "Prazo para correção de eventuais erros cadastrais (nome, CPF, cota, curso ou campus)." },
+    { num: 9, titulo: "Resultado final das inscrições confirmadas", inicio: "2026-10-03", fim: "2026-10-03", fase: "inscricao", destaque: false, icone: "📄", descricao: "Homologação definitiva das inscrições deferidas para o concurso." },
+    { num: 10, titulo: "Disponibilização do Cartão de Confirmação de Inscrição (CDI)", inicio: "2026-10-06", fim: "2026-10-06", fase: "prova", destaque: true, icone: "📍", descricao: "Divulgação a partir das 18h com o endereço exato do seu local de prova. Imprima com antecedência!" },
+    { num: 11, titulo: "Condição de atendimento especial com inexatidão", inicio: "2026-10-06", fim: "2026-10-06", fase: "prova", destaque: false, icone: "♿", descricao: "Contato via faleconosco@selecon.org.br caso haja erro no pedido de atendimento especial." },
+    { num: 12, titulo: "🎯 APLICAÇÃO DA PROVA OBJETIVA E REDAÇÃO", inicio: "2026-10-11", fim: "2026-10-11", fase: "prova", destaque: true, icone: "🚨", descricao: "Das 09h às 13h (4 horas). Portões abrem às 08h e fecham às 08h50 impreterivelmente. Leve documento original e caneta azul/preta." },
+    { num: 13, titulo: "Divulgação do gabarito da prova objetiva", inicio: "2026-10-13", fim: "2026-10-13", fase: "gabarito", destaque: false, icone: "🗝️", descricao: "Publicação do gabarito preliminar das 30 questões objetivas no site Selecon e CEFET." },
+    { num: 14, titulo: "Divulgação dos cadernos de questões da prova objetiva", inicio: "2026-10-13", fim: "2026-10-13", fase: "gabarito", destaque: false, icone: "📚", descricao: "Liberação do PDF dos cadernos de prova para download e conferência." },
+    { num: 15, titulo: "Recurso em face das questões objetivas", inicio: "2026-10-15", fim: "2026-10-16", fase: "gabarito", destaque: false, icone: "⚖️", descricao: "Prazo para contestar formulação de itens ou gabaritos preliminares da prova objetiva." },
+    { num: 16, titulo: "Resultado dos recursos em face das questões da prova objetiva", inicio: "2026-10-26", fim: "2026-10-26", fase: "gabarito", destaque: false, icone: "📑", descricao: "Decisão oficial da banca sobre anulações ou alterações de gabarito." },
+    { num: 17, titulo: "Divulgação do gabarito definitivo da prova objetiva", inicio: "2026-10-27", fim: "2026-10-27", fase: "gabarito", destaque: false, icone: "🔒", descricao: "Gabarito final consolidado após julgamento de recursos (a partir das 19h)." },
+    { num: 18, titulo: "Divulgação das imagens dos cartões-resposta da prova objetiva", inicio: "2026-10-27", fim: "2026-10-27", fase: "gabarito", destaque: false, icone: "🖼️", descricao: "Disponibilização da imagem digitalizada da folha de respostas do candidato." },
+    { num: 19, titulo: "Divulgação final das notas da prova objetiva", inicio: "2026-10-29", fim: "2026-10-29", fase: "resultado", destaque: true, icone: "📊", descricao: "Publicação das notas na Área do Candidato e convocação para correção de redação (até 2x as vagas)." },
+    { num: 20, titulo: "Divulgação das notas da prova de redação", inicio: "2026-11-09", fim: "2026-11-09", fase: "resultado", destaque: true, icone: "✍️", descricao: "Notas preliminares da redação (a partir das 19h no Selecon)." },
+    { num: 21, titulo: "Recurso em face do grau obtido na prova de redação", inicio: "2026-11-10", fim: "2026-11-11", fase: "resultado", destaque: false, icone: "⚖️", descricao: "Interposição de recurso administrativo contra a nota preliminar da redação." },
+    { num: 22, titulo: "Resultado do recurso da redação e nota final", inicio: "2026-11-13", fim: "2026-11-13", fase: "resultado", destaque: false, icone: "📑", descricao: "Parecer da Banca Elaboradora sobre recursos da redação." },
+    { num: 23, titulo: "Divulgação final das notas da prova de redação", inicio: "2026-11-17", fim: "2026-11-17", fase: "resultado", destaque: false, icone: "📝", descricao: "Consolidação das notas de redação para apuração da classificação geral." },
+    { num: 24, titulo: "Convocação bancas heteroidentificação e envio docs indígenas/quilombolas", inicio: "2026-11-18", fim: "2026-11-20", fase: "hetero", destaque: true, icone: "📢", descricao: "Convocação dos candidatos PPI até o dobro de vagas e upload de declarações comunitárias." },
+    { num: 25, titulo: "Realização das bancas de heteroidentificação e análise documental", inicio: "2026-11-21", fim: "2026-11-23", fase: "hetero", destaque: true, icone: "📱", descricao: "Entrevista online via Microsoft Teams. Presença obrigatória do responsável para menores de 18 anos!" },
+    { num: 26, titulo: "Divulgação dos resultados das bancas de heteroidentificação", inicio: "2026-11-23", fim: "2026-11-23", fase: "hetero", destaque: false, icone: "📋", descricao: "Publicação do deferimento ou indeferimento da autodeclaração étnico-racial." },
+    { num: 27, titulo: "Recurso contra resultado das bancas de heteroidentificação", inicio: "2026-11-24", fim: "2026-11-26", fase: "hetero", destaque: false, icone: "⚖️", descricao: "Envio de recurso administrativo via Área do Candidato direcionado à COADIQ/CHET." },
+    { num: 28, titulo: "Divulgação dos resultados dos recursos contrários às bancas", inicio: "2026-11-27", fim: "2026-11-27", fase: "hetero", destaque: false, icone: "📑", descricao: "Parecer preliminar recursal da comissão de heteroidentificação." },
+    { num: 29, titulo: "Convocação da banca recursal de heteroidentificação", inicio: "2026-11-27", fim: "2026-11-27", fase: "hetero", destaque: false, icone: "📢", descricao: "Agendamento da banca de reavaliação fenotípica recursal." },
+    { num: 30, titulo: "Realização da banca recursal de heteroidentificação", inicio: "2026-11-28", fim: "2026-11-29", fase: "hetero", destaque: false, icone: "📱", descricao: "Sessão recursal online com nova comissão de 5 membros." },
+    { num: 31, titulo: "Divulgação do resultado da banca recursal", inicio: "2026-11-29", fim: "2026-11-29", fase: "hetero", destaque: false, icone: "🔒", descricao: "Decisão final soberana e irrecorrível sobre as cotas étnico-raciais." },
+    { num: 32, titulo: "🏆 DIVULGAÇÃO DO RESULTADO FINAL DO PROCESSO SELETIVO", inicio: "2026-12-02", fim: "2026-12-02", fase: "resultado", destaque: true, icone: "🎉", descricao: "Lista oficial de classificação final dos aprovados em todos os 7 campi a partir das 19h!" },
+    { num: 33, titulo: "1ª chamada — Envio de documentos para matrícula via plataforma", inicio: "2026-12-04", fim: "2026-12-16", fase: "matricula", destaque: true, icone: "📂", descricao: "Prazo de envio eletrônico da documentação de matrícula para Ampla Concorrência e Cotas." },
+    { num: 34, titulo: "Divulgação do resultado das matrículas homologadas da 1ª chamada", inicio: "2026-12-22", fim: "2026-12-22", fase: "matricula", destaque: false, icone: "🎓", descricao: "Publicação das matrículas confirmadas e levantamento de vagas remanescentes." },
+    { num: 35, titulo: "Divulgação da lista da 1ª Reclassificação (2ª chamada)", inicio: "2027-01-04", fim: "2027-01-04", fase: "matricula", destaque: false, icone: "🔄", descricao: "Convocação da lista de espera para preenchimento de vagas sobressalentes." },
+    { num: 36, titulo: "2ª chamada — Envio de documentos dos reclassificados", inicio: "2027-01-04", fim: "2027-01-10", fase: "matricula", destaque: false, icone: "📤", descricao: "Upload de documentação para os convocados na 1ª reclassificação." },
+    { num: 37, titulo: "Divulgação do resultado das matrículas da 2ª chamada", inicio: "2027-01-13", fim: "2027-01-13", fase: "matricula", destaque: false, icone: "📋", descricao: "Homologação de matrículas da segunda convocação." },
+    { num: 38, titulo: "Divulgação da lista da 2ª Reclassificação (3ª chamada)", inicio: "2027-01-13", fim: "2027-01-13", fase: "matricula", destaque: false, icone: "🔄", descricao: "Convocação da 3ª chamada para preenchimento de vagas remanescentes." },
+    { num: 39, titulo: "3ª chamada — Envio de documentos dos reclassificados", inicio: "2027-01-13", fim: "2027-01-17", fase: "matricula", destaque: false, icone: "📤", descricao: "Upload de documentação dos candidatos convocados em 3ª chamada." },
+    { num: 40, titulo: "Divulgação do resultado das matrículas da 3ª chamada", inicio: "2027-01-19", fim: "2027-01-19", fase: "matricula", destaque: false, icone: "📋", descricao: "Resultado das matrículas homologadas da terceira convocação." },
+    { num: 41, titulo: "Divulgação da lista da 3ª Reclassificação (4ª chamada)", inicio: "2027-01-19", fim: "2027-01-19", fase: "matricula", destaque: false, icone: "🔄", descricao: "Convocação da 4ª chamada (se houver vagas não preenchidas)." },
+    { num: 42, titulo: "4ª chamada — Envio de documentos dos reclassificados", inicio: "2027-01-19", fim: "2027-01-24", fase: "matricula", destaque: false, icone: "📤", descricao: "Envio de documentos de matrícula da 4ª convocação." },
+    { num: 43, titulo: "Divulgação do resultado das matrículas da 4ª chamada", inicio: "2027-01-26", fim: "2027-01-26", fase: "matricula", destaque: false, icone: "🎓", descricao: "Homologação das matrículas finais da 4ª reclassificação." },
+    { num: 44, titulo: "Impugnação ao Edital", inicio: "2026-09-27", fim: "2026-09-27", fase: "inscricao", destaque: false, icone: "⚖️", descricao: "Prazo limite para impugnação de termos do edital por qualquer cidadão." },
+    { num: 45, titulo: "🎓 INÍCIO DAS AULAS DO ANO LETIVO DE 2027 (PREVISÃO)", inicio: "2027-01-26", fim: "2027-01-26", fase: "aulas", destaque: true, icone: "🎒", descricao: "Início das atividades letivas para os novos alunos em todos os campi do CEFET-RJ!" }
 ];
 
 /* ══════════════════════════════════════════════════════════════
-   MANUAL ANTI-ELIMINAÇÃO DO CEFET-RJ (COISAS QUE TE REPROVAM NO ATO)
+   MANUAL ANTI-ELIMINAÇÃO DO CEFET-RJ & NORMAS OFICIAIS DO EDITAL
+   Atualizado conforme Itens 1, 8, 10, 11, 12, 15, 17 do Edital nº 05/2026
    ══════════════════════════════════════════════════════════════ */
 
 window.cefetRules = [
     {
-        titulo: "⏰ Portão fecha às 8h50 pontualmente",
+        titulo: "🔞 Limite de Idade: Menos de 18 anos até 30/03/2027",
+        icone: "🎂",
+        nivel: "fatal",
+        regra: "O Item 1 do Edital estabelece que o candidato deve ter escolaridade mínima de Ensino Fundamental Completo (ou concluindo o 9º ano em 2026) e ter IDADE INFERIOR A 18 ANOS até o dia 30 de março de 2027. Quem completar 18 anos antes desta data é eliminado no ato da matrícula.",
+        dica: "Verifique a data exata de nascimento na certidão. Candidatos com 18 anos completos antes de 30/03/2027 devem buscar a modalidade PROEJA/Subsequente."
+    },
+    {
+        titulo: "⏰ Portão fecha às 8h50 pontualmente (Item 10.8)",
         icone: "🛑",
         nivel: "fatal",
         regra: "A prova inicia às 9h, mas os portões do local fecham impreterivelmente às 08h50 (horário de Brasília). Não há tolerância de 1 segundo nem para quem estiver na calçada.",
@@ -980,50 +904,145 @@ window.cefetRules = [
         icone: "🗺️",
         nivel: "fatal",
         regra: "O CEFET-RJ aloca candidatos em dezenas de escolas parceiras pelo Rio de Janeiro. Todo ano candidatos perdem a prova porque foram ao Maracanã sem olhar o Cartão de Confirmação (CDI).",
-        dica: "Imprima seu cartão em 06/10/2026 e visite o trajeto um dia antes se possível."
+        dica: "Imprima seu cartão a partir de 06/10/2026 e visite o trajeto um dia antes se possível."
     },
     {
-        titulo: "🚫 Nota ZERO em Português ou ZERO em Matemática",
+        titulo: "🚫 Nota ZERO em Português, Matemática ou Redação (Item 11)",
         icone: "📝",
         nivel: "fatal",
-        regra: "O Item 11 do Edital é categórico: o candidato que obtiver aproveitamento NULO (zero acertos) em Português ou Matemática é desclassificado na hora, não importando a nota das outras matérias.",
-        dica: "Nunca deixe questões em branco: se tiver dúvida entre duas, elimine as absurdas e marque a mais coerente."
+        regra: "O Item 11 do Edital é categórico: o candidato que obtiver aproveitamento NULO (zero pontos) em Língua Portuguesa, em Matemática OU na Redação é desclassificado na hora, não importando a pontuação nas demais disciplinas.",
+        dica: "Nunca deixe questões em branco: se tiver dúvida entre duas, elimine as absurdas e marque a mais coerente. Garanta ao menos um acerto em cada pilar!"
     },
     {
-        titulo: "✍️ Nota ZERO na Redação ou Anulação no ato",
+        titulo: "✍️ Nota ZERO na Redação ou Anulação no ato (Item 10 / Pág. 8)",
         icone: "📄",
         nivel: "fatal",
-        regra: "Será atribuída nota zero à redação que: fugir completamente ao tema, for escrita em verso (poema), desrespeitar os Direitos Humanos ou tiver menos de 20 linhas.",
-        dica: "Faça texto em prosa com 4 parágrafos e tese clara, defendendo a dignidade e igualdade humana."
+        regra: "Será atribuída nota zero à redação que: fugir completamente ao tema, for escrita em versos (poema/estrofes), desrespeitar os Direitos Humanos ou tiver extensão insuficiente.",
+        dica: "Faça texto dissertativo-argumentativo em prosa com 4 parágrafos (20 a 30 linhas) e tese clara, defendendo a dignidade e igualdade humana."
     },
     {
-        titulo: "📱 Celular tocar ou vibrar no saco lacrado",
+        titulo: "🏆 Critérios Oficiais de Desempate (Item 12.1)",
+        icone: "⚖️",
+        nivel: "info",
+        regra: "Em caso de empate na nota final entre candidatos do mesmo grupo, o edital aplica a seguinte ordem rigorosa: 1º) Maior soma de pontos em Língua Portuguesa (Objetiva + Redação); 2º) Maior pontuação em Matemática; 3º) Maior pontuação em Ciências da Natureza; 4º) Maior idade.",
+        dica: "Língua Portuguesa e Redação juntas valem até 150 pontos e são o critério número 1 de desempate do concurso!"
+    },
+    {
+        titulo: "🚫 Proibido Levar o Caderno de Prova ou Copiar Gabarito (Item 10.16)",
+        icone: "🔒",
+        nivel: "fatal",
+        regra: "O edital proíbe expressamente levar o caderno de questões para casa ao término do exame e proíbe igualmente copiar os assinalamentos do gabarito em papéis avulsos ou na pele.",
+        dica: "Não tente anotar suas respostas na mão ou em papéis de rascunho para levar embora. Os cadernos oficiais e gabaritos serão publicados online em 13/10/2026."
+    },
+    {
+        titulo: "✏️ Materiais Permitidos: Caneta Preta/Azul, Lápis e Borracha (Itens 10.9 e 10.11)",
+        icone: "🖊️",
+        nivel: "info",
+        regra: "O preenchimento do Cartão de Respostas e a redação definitiva devem ser feitos exclusivamente com caneta esferográfica azul ou preta. Para rascunhar e resolver as questões, o edital AUTORIZA expressamente caneta, lápis e borracha. Calculadoras e réguas são terminantemente proibidas.",
+        dica: "Leve duas canetas de tubo transparente (preta e azul), lápis macio (HB ou 2B) e borracha simples sem capa plástica."
+    },
+    {
+        titulo: "⏳ Permanência Mínima de 60 Minutos na Sala (Item 10.15)",
+        icone: "⏱️",
+        nivel: "info",
+        regra: "Nenhum candidato poderá entregar a prova ou ausentar-se do local de exame antes de transcorridos 60 minutos do início da prova.",
+        dica: "Use o tempo com inteligência! 4 horas dão média de 5 a 6 minutos por questão e 1 hora inteira para a redação."
+    },
+    {
+        titulo: "👥 Empate na Última Vaga de Corte para a Redação (Item 10)",
+        icone: "🎯",
+        nivel: "info",
+        regra: "Apenas os candidatos classificados até o dobro (2x) do número de vagas têm a redação corrigida. Porém, havendo empate de pontos na nota do último colocado do corte, TODOS os empatados terão a redação corrigida!",
+        dica: "Cada questão de Português e Matemática (5 pontos) aproxima você do grupo dos convocados para a correção da redação."
+    },
+    {
+        titulo: "📱 Celular Tocar ou Vibrar no Saco Lacrado (Item 10.14)",
         icone: "📵",
         nivel: "fatal",
-        regra: "O candidato cujo aparelho eletrônico (celular, smartwatch, fone) emitir qualquer som ou alarme durante a prova é eliminado sumariamente (Item 10.14 do Edital).",
-        dica: "Desative todos os alarmes despertadores e DESLIGUE o aparelho antes de entrar na sala."
+        regra: "O candidato cujo aparelho eletrônico (celular, smartwatch, fone) emitir qualquer som ou alarme durante a prova é eliminado sumariamente, mesmo lacrado na embalagem plástica.",
+        dica: "Desative todos os alarmes despertadores e DESLIGUE completamente o aparelho antes de entrar na sala de prova."
     },
     {
-        titulo: "🏫 Inscrever-se em Cota tendo estudado em Escola Particular",
+        titulo: "🏫 Cota de Escola Pública: 100% dos Anos (1º ao 9º) em Rede Pública",
         icone: "⚠️",
         nivel: "fatal",
-        regra: "Bolsistas de colégio particular (mesmo 100% integral) NÃO têm direito às cotas de escola pública da Lei 12.711. Quem faz isso é desclassificado na entrega de documentos da matrícula.",
+        regra: "Bolsistas de colégio particular (mesmo com 100% de bolsa integral) NÃO têm direito às cotas da Lei 12.711/14.723. Quem concorrer em cota tendo cursado qualquer série em escola privada é desclassificado na matrícula.",
         dica: "Se você estudou qualquer série do 1º ao 9º em particular, inscreva-se em Ampla Concorrência (AC)."
     },
     {
-        titulo: "👥 Faltar à Banca de Heteroidentificação ou sem o Responsável",
-        icone: "💻",
-        nivel: "fatal",
-        regra: "Candidatos pretos e pardos (LB_PPI e LI_PPI) que faltarem à entrevista pelo Microsoft Teams ou menores de 18 anos sem o pai/mãe/responsável presente na chamada são desclassificados.",
-        dica: "Prepare computador com câmera e iluminação adequada e avise aos pais sobre os dias 21 a 23/11/2026."
+        titulo: "🔄 Regra de Remanejamento de Vagas Ociosas de Cotas (Item 15.1)",
+        icone: "🔀",
+        nivel: "info",
+        regra: "Se as vagas de um grupo de cota não forem preenchidas por falta de candidatos, elas migram obedecendo à ordem do Edital: LB_PPI -> LB_Q -> LB_PCD -> LB_EP -> LI_PPI -> LI_Q -> LI_PCD -> LI_EP -> Ampla Concorrência.",
+        dica: "Mesmo em posições de suplência na lista de espera, reclassificações podem ocorrer em virtude da redistribuição de vagas não ocupadas."
     },
     {
-        titulo: "🪪 Não levar documento oficial ORIGINAL com foto",
+        titulo: "💻 Presença Obrigatória do Responsável na Heteroidentificação (Anexo IX)",
+        icone: "👨‍👩‍👧",
+        nivel: "fatal",
+        regra: "Candidatos pretos e pardos (LB_PPI e LI_PPI) convocados passam por validação facial online pelo Microsoft Teams. Candidatos menores de 18 anos sem o pai/mãe/responsável legal presente na chamada de vídeo são desclassificados.",
+        dica: "Reserve espaço com boa iluminação, prepare documento oficial físico e avise aos pais sobre os dias 21 a 23/11/2026."
+    },
+    {
+        titulo: "🪪 Documento Oficial ORIGINAL com Foto (Itens 10.2 a 10.5)",
         icone: "🆔",
         nivel: "fatal",
-        regra: "Não são aceitas cópias (mesmo autenticadas em cartório) nem Certidão de Nascimento para maiores de 12 anos. Documentos no app oficial do Gov.br são aceitos.",
-        dica: "Deixe a identidade original (RG) ou passaporte separado na véspera dentro de um plástico transparente."
+        regra: "São aceitos documentos oficiais com foto (RG, Passaporte, Carteira de Trabalho) ou comprovante no app oficial do Gov.br. Não são aceitas cópias autenticadas, certidões de nascimento nem carteirinhas de estudante.",
+        dica: "Deixe seu RG original ou celular com Gov.br carregado e testado no dia anterior."
     }
+];
+
+/* ══════════════════════════════════════════════════════════════
+   QUADRO GERAL DE TODOS OS 7 CAMPI DO CEFET-RJ (ANEXO I - EDITAL 05/2026)
+   1.024 Vagas Totais • 7 Campi • Modalidade Integrada ao Ensino Médio
+   ══════════════════════════════════════════════════════════════ */
+
+window.cefetAllCampusesCourses = [
+    /* ─── CAMPUS ITAGUAÍ (96 VAGAS) ─── */
+    { codigo: 201, campus: "Itaguaí", nome: "Mecânica", turno: "Manhã", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "⚙️", estagio: "Mín. 400h", descricao: "Usinagem, máquinas industriais, manutenção mecânica e automação no polo naval e portuário de Itaguaí." },
+    { codigo: 202, campus: "Itaguaí", nome: "Automação Industrial", turno: "Manhã", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🤖", estagio: "Mín. 400h", descricao: "Controladores lógicos programáveis (CLP), robótica, instrumentação e sensoriamento para plantas industriais." },
+    { codigo: 203, campus: "Itaguaí", nome: "Logística", turno: "Manhã", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "📦", estagio: "Mín. 400h", descricao: "Cadeia de suprimentos, logística portuária, gestão de estoques, comércio exterior e transportes multimodais." },
+
+    /* ─── CAMPUS MARACANÃ (512 VAGAS - SEDE) ─── */
+    { codigo: 301, campus: "Maracanã", nome: "Administração", turno: "Tarde", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "📊", estagio: "Mín. 400h", descricao: "Gestão corporativa, planejamento financeiro, marketing, recursos humanos e projetos empresariais." },
+    { codigo: 302, campus: "Maracanã", nome: "Edificações (Manhã)", turno: "Manhã", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🏗️", estagio: "Mín. 400h", descricao: "Projetos arquitetônicos em BIM/CAD, topografia, resistência dos materiais e supervisão de obras civis." },
+    { codigo: 303, campus: "Maracanã", nome: "Edificações (Tarde)", turno: "Tarde", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🏗️", estagio: "Mín. 400h", descricao: "Turma vespertina: instalações prediais, orçamentação e ensaios tecnológicos de concreto e solos." },
+    { codigo: 304, campus: "Maracanã", nome: "Eletrônica (Manhã)", turno: "Manhã", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "⚡", estagio: "Mín. 400h", descricao: "Circuitos eletrônicos, microcontroladores, robótica, hardware embarcado e sistemas de instrumentação." },
+    { codigo: 305, campus: "Maracanã", nome: "Eletrônica (Tarde)", turno: "Tarde", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "⚡", estagio: "Mín. 400h", descricao: "Turma vespertina: placas de circuito impresso, Internet das Coisas (IoT) e automação de dispositivos inteligentes." },
+    { codigo: 306, campus: "Maracanã", nome: "Eletrotécnica (Manhã)", turno: "Manhã", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🔋", estagio: "Mín. 400h", descricao: "Geração, transmissão e distribuição de energia elétrica, subestações, motores elétricos e energia solar fotovoltaica." },
+    { codigo: 307, campus: "Maracanã", nome: "Eletrotécnica (Tarde)", turno: "Tarde", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🔋", estagio: "Mín. 400h", descricao: "Turma vespertina: comandos industriais, automação de potência, NR-10 e projetos elétricos prediais e fabris." },
+    { codigo: 308, campus: "Maracanã", nome: "Estradas", turno: "Manhã", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🛣️", estagio: "Mín. 400h", descricao: "Pioneiro no Brasil: traçado viário, pavimentação, terraplenagem, pontes, drenagem e engenharia de tráfego." },
+    { codigo: 309, campus: "Maracanã", nome: "Informática (Manhã)", turno: "Manhã", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "💻", estagio: "Mín. 400h", descricao: "Desenvolvimento de software fullstack, estruturas de dados, algoritmos, banco de dados e arquitetura de sistemas." },
+    { codigo: 310, campus: "Maracanã", nome: "Informática (Tarde)", turno: "Tarde", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "💻", estagio: "Mín. 400h", descricao: "Turma vespertina: inteligência artificial aplicada, computação em nuvem, cibersegurança e aplicações web/mobile." },
+    { codigo: 311, campus: "Maracanã", nome: "Mecânica (Manhã)", turno: "Manhã", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "⚙️", estagio: "Mín. 400h", descricao: "Usinagem CNC, modelagem 3D (SolidWorks), metalurgia, motores a combustão e termodinâmica industrial." },
+    { codigo: 312, campus: "Maracanã", nome: "Mecânica (Tarde)", turno: "Tarde", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "⚙️", estagio: "Mín. 400h", descricao: "Turma vespertina: ensaios mecânicos de materiais, soldagem especializada, manutenção preditiva e hidráulica." },
+    { codigo: 313, campus: "Maracanã", nome: "Meteorologia", turno: "Manhã", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🌤️", estagio: "Mín. 400h", descricao: "Previsão meteorológica, física atmosférica, radares e satélites climáticos, agrometeorologia e eventos extremos." },
+    { codigo: 314, campus: "Maracanã", nome: "Segurança do Trabalho", turno: "Tarde", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🦺", estagio: "Mín. 320h (estágio pode ocorrer à noite no 3º ano)", descricao: "Normas Regulamentadoras (NRs), ergonomia, higiene ocupacional, combate a incêndios e prevenção pericial de riscos." },
+    { codigo: 315, campus: "Maracanã", nome: "Telecomunicações", turno: "Tarde", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "📡", estagio: "Mín. 400h", descricao: "Fibras ópticas, sistemas móveis 4G/5G, micro-ondas, antenas de satélite, VoIP e infraestrutura de data centers." },
+    { codigo: 316, campus: "Maracanã", nome: "Eventos", turno: "Manhã/Tarde", periodo: "Anual (3 anos)", totalVagas: 32, vagas: { ac: 16, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🎭", estagio: "Mín. 400h", descricao: "Planejamento, cerimonial, captação de recursos, sustentabilidade e logística de festivais e congressos corporativos." },
+
+    /* ─── CAMPUS MARIA DA GRAÇA (120 VAGAS) ─── */
+    { codigo: 401, campus: "Maria da Graça", nome: "Automação Industrial", turno: "Manhã", periodo: "Anual (3 anos)", totalVagas: 30, vagas: { ac: 15, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 3, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🤖", estagio: "Mín. 400h", descricao: "Sistemas automatizados, eletrônica de controle, sensores e robótica aplicados à indústria moderna." },
+    { codigo: 402, campus: "Maria da Graça", nome: "Manutenção Automotiva", turno: "Tarde", periodo: "Anual (3 anos)", totalVagas: 30, vagas: { ac: 15, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 3, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🚗", estagio: "Mín. 400h", descricao: "Injeção eletrônica, motores a combustão e elétricos, dinâmica veicular, freios ABS e diagnósticos computadorizados." },
+    { codigo: 403, campus: "Maria da Graça", nome: "Segurança do Trabalho", turno: "Tarde", periodo: "Anual (3 anos)", totalVagas: 30, vagas: { ac: 15, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 3, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🦺", estagio: "Mín. 400h", descricao: "Prevenção de acidentes, programas de saúde no trabalho (PGR/PCMSO), laudos técnicos e inspeção de instalações." },
+    { codigo: 404, campus: "Maria da Graça", nome: "Produção Cultural", turno: "Manhã/Tarde", periodo: "Anual (3 anos)", totalVagas: 30, vagas: { ac: 15, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 3, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🎨", estagio: "Mín. 400h", descricao: "Elaboração de projetos e leis de incentivo (Lei Rouanet/Paulo Gustavo), gestão de museus, teatro e festivais de arte." },
+
+    /* ─── CAMPUS NOVA FRIBURGO (40 VAGAS) ─── */
+    { codigo: 501, campus: "Nova Friburgo", nome: "Informática", turno: "Manhã/Tarde", periodo: "Anual (3 anos)", totalVagas: 20, vagas: { ac: 10, lb_ppi: 2, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 2, li_q: 0, li_pcd: 0, li_ep: 2 }, icone: "💻", estagio: "Mín. 400h", descricao: "Programação de software, desenvolvimento web, banco de dados e suporte no polo tecnológico da Região Serrana." },
+    { codigo: 502, campus: "Nova Friburgo", nome: "Administração", turno: "Manhã/Tarde", periodo: "Anual (3 anos)", totalVagas: 20, vagas: { ac: 10, lb_ppi: 2, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 2, li_q: 0, li_pcd: 0, li_ep: 2 }, icone: "📊", estagio: "Mín. 400h", descricao: "Empreendedorismo, finanças, gestão da cadeia têxtil e metalmecânica tradicional da serra fluminense." },
+
+    /* ─── CAMPUS NOVA IGUAÇU (160 VAGAS) ─── */
+    { codigo: 601, campus: "Nova Iguaçu", nome: "Automação Industrial", turno: "Manhã/Tarde", periodo: "Anual (3 anos)", totalVagas: 40, vagas: { ac: 20, lb_ppi: 6, lb_q: 1, lb_pcd: 1, lb_ep: 3, li_ppi: 5, li_q: 0, li_pcd: 1, li_ep: 3 }, icone: "🤖", estagio: "Mín. 400h", descricao: "Automação de processos produtivos, controladores eletrônicos, robótica e manutenção em plantas industriais." },
+    { codigo: 602, campus: "Nova Iguaçu", nome: "Enfermagem", turno: "Manhã/Tarde", periodo: "Anual (3 anos)", totalVagas: 40, vagas: { ac: 20, lb_ppi: 6, lb_q: 1, lb_pcd: 1, lb_ep: 3, li_ppi: 5, li_q: 0, li_pcd: 1, li_ep: 3 }, icone: "🩺", estagio: "Mín. 600h obrigatório (Item 4.2 do Edital)", descricao: "Formação técnica em saúde humana, assistência ao paciente, biossegurança, farmacologia e enfermagem hospitalar." },
+    { codigo: 603, campus: "Nova Iguaçu", nome: "Informática", turno: "Manhã/Tarde", periodo: "Anual (3 anos)", totalVagas: 40, vagas: { ac: 20, lb_ppi: 6, lb_q: 1, lb_pcd: 1, lb_ep: 3, li_ppi: 5, li_q: 0, li_pcd: 1, li_ep: 3 }, icone: "💻", estagio: "Mín. 400h", descricao: "Desenvolvimento de sistemas de computação, interfaces digitais, programação orientada a objetos e redes." },
+    { codigo: 604, campus: "Nova Iguaçu", nome: "Telecomunicações", turno: "Manhã/Tarde", periodo: "Anual (3 anos)", totalVagas: 40, vagas: { ac: 20, lb_ppi: 6, lb_q: 1, lb_pcd: 1, lb_ep: 3, li_ppi: 5, li_q: 0, li_pcd: 1, li_ep: 3 }, icone: "📡", estagio: "Mín. 400h", descricao: "Redes telemáticas, sistemas de transmissão sem fio, cabos de fibra óptica e infraestrutura de comunicações da Baixada." },
+
+    /* ─── CAMPUS PETRÓPOLIS (36 VAGAS) ─── */
+    { codigo: 701, campus: "Petrópolis", nome: "Telecomunicações", turno: "Manhã/Tarde", periodo: "Anual (3 anos)", totalVagas: 36, vagas: { ac: 18, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 3, li_ppi: 4, li_q: 0, li_pcd: 1, li_ep: 3 }, icone: "📡", estagio: "Mín. 400h", descricao: "Infraestrutura de transmissão digital, redes sem fio, comutação e integração de telecomunicações no polo serrano." },
+
+    /* ─── CAMPUS VALENÇA (60 VAGAS) ─── */
+    { codigo: 801, campus: "Valença", nome: "Alimentos", turno: "Manhã/Tarde", periodo: "Anual (3 anos)", totalVagas: 30, vagas: { ac: 15, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 3, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🥖", estagio: "Mín. 400h", descricao: "Processamento e conservação de laticínios, carnes, bebidas, microbiologia de alimentos e controle de qualidade sanitária." },
+    { codigo: 802, campus: "Valença", nome: "Química", turno: "Manhã/Tarde", periodo: "Anual (3 anos)", totalVagas: 30, vagas: { ac: 15, lb_ppi: 5, lb_q: 1, lb_pcd: 1, lb_ep: 2, li_ppi: 3, li_q: 0, li_pcd: 1, li_ep: 2 }, icone: "🧪", estagio: "Mín. 400h", descricao: "Análises físico-químicas laboratoriais, química ambiental, operações unitárias industriais e bioprocessos." }
 ];
 
 /* ══════════════════════════════════════════════════════════════

@@ -4988,6 +4988,399 @@
                 padding-bottom: 96px;
             }
         }
+
+        /* ─── COFRE DO ESTUDANTE & PERFIS LOCAIS ─── */
+        .profile-header-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--glass-bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-pill);
+            padding: 5px 12px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all var(--t-fast);
+        }
+
+        .profile-header-btn:hover {
+            background: var(--surface-hover);
+            border-color: #84b2ed;
+            box-shadow: 0 0 14px rgba(132, 178, 237, 0.22);
+        }
+
+        .profile-avatar-mini {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .profile-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.72);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            z-index: 1050;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 300ms ease;
+        }
+
+        .profile-modal {
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            border: var(--glass-border-strong);
+            border-radius: var(--radius-squircle);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), var(--glass-highlight-top);
+            max-width: 660px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 30px;
+            position: relative;
+            animation: popUp 350ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .profile-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 15px;
+            cursor: pointer;
+            transition: all var(--t-fast);
+        }
+
+        .profile-modal-close:hover {
+            background: var(--danger-soft);
+            color: var(--danger);
+            border-color: var(--danger);
+        }
+
+        .profile-modal-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        .profile-vault-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(132, 178, 237, 0.22), rgba(74, 248, 98, 0.15));
+            border: 1px solid rgba(132, 178, 237, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 0 18px rgba(74, 248, 98, 0.18);
+        }
+
+        .profile-modal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #4af862;
+            background: rgba(74, 248, 98, 0.12);
+            padding: 3px 9px;
+            border-radius: var(--radius-pill);
+            border: 1px solid rgba(74, 248, 98, 0.25);
+            margin-bottom: 6px;
+        }
+
+        .profile-modal-title {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        .profile-hero-card {
+            background: linear-gradient(135deg, rgba(132, 178, 237, 0.08), rgba(74, 248, 98, 0.05));
+            border: 1px solid rgba(132, 178, 237, 0.22);
+            border-radius: var(--radius-card);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .profile-avatar-big {
+            width: 64px;
+            height: 64px;
+            border-radius: 20px;
+            background: var(--surface);
+            border: 2px solid #84b2ed;
+            box-shadow: 0 0 20px rgba(132, 178, 237, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            cursor: pointer;
+            transition: transform var(--t-fast);
+        }
+
+        .profile-avatar-big:hover {
+            transform: scale(1.06);
+        }
+
+        .profile-info-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .profile-name-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .profile-active-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .profile-rename-btn {
+            background: transparent;
+            border: 1px dashed var(--border);
+            border-radius: var(--radius-pill);
+            padding: 2px 10px;
+            font-size: 11.5px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--t-fast);
+        }
+
+        .profile-rename-btn:hover {
+            background: var(--surface-hover);
+            color: var(--text-primary);
+            border-color: #84b2ed;
+        }
+
+        .profile-stats-chips {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .profile-stat-chip {
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: var(--radius-pill);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .profile-stat-chip strong {
+            color: var(--text-primary);
+        }
+
+        .profile-section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 18px 0 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profile-list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .profile-card-item {
+            background: var(--glass-bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            cursor: pointer;
+            transition: all var(--t-fast);
+        }
+
+        .profile-card-item:hover {
+            background: var(--surface-hover);
+            border-color: #84b2ed;
+            transform: translateY(-1px);
+        }
+
+        .profile-card-item.is-active {
+            border-color: #4af862;
+            background: rgba(74, 248, 98, 0.06);
+            box-shadow: 0 0 12px rgba(74, 248, 98, 0.15);
+        }
+
+        .profile-card-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            overflow: hidden;
+        }
+
+        .profile-item-avatar {
+            font-size: 20px;
+        }
+
+        .profile-item-name {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .profile-item-badge {
+            font-size: 10.5px;
+            padding: 2px 7px;
+            border-radius: var(--radius-pill);
+            font-weight: 600;
+        }
+
+        .profile-item-badge.active-badge {
+            background: rgba(74, 248, 98, 0.2);
+            color: #4af862;
+            border: 1px solid rgba(74, 248, 98, 0.35);
+        }
+
+        .profile-delete-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-quaternary);
+            cursor: pointer;
+            font-size: 13px;
+            padding: 4px;
+            border-radius: 4px;
+            transition: color var(--t-fast);
+        }
+
+        .profile-delete-btn:hover {
+            color: var(--danger);
+        }
+
+        .profile-privacy-box {
+            background: rgba(132, 178, 237, 0.06);
+            border: 1px solid rgba(132, 178, 237, 0.22);
+            border-radius: var(--radius-card);
+            padding: 16px 18px;
+            margin-bottom: 20px;
+            font-size: 13.5px;
+            line-height: 1.55;
+            color: var(--text-secondary);
+        }
+
+        .profile-privacy-box strong {
+            color: var(--text-primary);
+        }
+
+        .profile-actions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .profile-action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 11px 16px;
+            font-size: 13.5px;
+            font-weight: 700;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all var(--t-fast);
+            text-align: center;
+        }
+
+        .profile-action-btn:hover {
+            background: var(--surface-hover);
+            border-color: #84b2ed;
+            box-shadow: 0 0 14px rgba(132, 178, 237, 0.2);
+        }
+
+        .profile-action-btn.btn-export {
+            border-color: rgba(74, 248, 98, 0.35);
+            background: rgba(74, 248, 98, 0.08);
+            color: #4af862;
+        }
+
+        .profile-action-btn.btn-export:hover {
+            background: rgba(74, 248, 98, 0.16);
+            border-color: #4af862;
+            box-shadow: 0 0 16px rgba(74, 248, 98, 0.25);
+        }
+
+        .profile-action-btn.btn-danger-outline {
+            border-color: rgba(239, 68, 68, 0.3);
+            color: var(--danger);
+            background: transparent;
+        }
+
+        .profile-action-btn.btn-danger-outline:hover {
+            background: var(--danger-soft);
+            border-color: var(--danger);
+        }
+
+        .profile-emojis-picker {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            padding: 8px;
+            background: var(--surface);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .profile-emoji-opt {
+            font-size: 20px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background var(--t-fast);
+        }
+
+        .profile-emoji-opt:hover {
+            background: var(--surface-hover);
+        }
     </style>
     <base target="_blank">
 </head>
@@ -5013,6 +5406,10 @@
             <button class="nav-pillar-btn" data-hub="preparar" onclick="switchHub('preparar')">🎯 Preparar para a Prova</button>
         </nav>
         <div class="header-right">
+            <button class="header-btn profile-header-btn" onclick="showProfileModal()" title="Gerenciar perfil e dados do estudante" id="headerProfileBtn">
+                <span class="profile-avatar-mini" id="headerProfileAvatar">🎓</span>
+                <span class="btn-label" id="headerProfileName">Estudante 1</span>
+            </button>
             <button class="header-btn" onclick="showExamAlertModal()" title="Ver checklist e orientações da prova">🗓️ <span class="btn-label">Checklist Prova</span></button>
             <div class="progress-pill">
                 <span>Progresso</span>
@@ -5160,6 +5557,25 @@
         </div>
     </div>
 
+    <!-- ══════════════════════════════════════════════════════════════
+         POP-UP MODAL: COFRE DO ESTUDANTE & PERFIS LOCAIS (ISOLAMENTO MULTI-ALUNO)
+         ══════════════════════════════════════════════════════════════ -->
+    <div class="profile-modal-overlay" id="profileModalOverlay" style="display:none;"
+        onclick="if(event.target===this) closeProfileModal()">
+        <div class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle">
+            <button class="profile-modal-close" onclick="closeProfileModal()" aria-label="Fechar janela">✕</button>
+            <div class="profile-modal-header">
+                <div class="profile-vault-icon">🛡️</div>
+                <div>
+                    <div class="profile-modal-badge">Armazenamento Local • 100% Offline</div>
+                    <h2 id="profileModalTitle" class="profile-modal-title">Cofre de Estudos & Perfis</h2>
+                </div>
+            </div>
+            <div id="profileModalContent"></div>
+            <input type="file" id="importProfileFileInput" accept=".json" style="display:none;" onchange="handleImportProfileFile(event)">
+        </div>
+    </div>
+
     <!-- Carga da Matriz Curricular -->
     <script src="curriculum.js"></script>
     <script src="extra-content.js"></script>
@@ -5178,27 +5594,46 @@
             }
         } catch (e) { }
 
-        let state = {
-            currentDiscipline: null,
-            currentModule: 0,
-            currentStep: 0,
-            playerMode: localStorage.getItem('cefet2027_player_mode') || 'steps', // 'steps' | 'full'
-            activeHub: 'hoje', // 'hoje' | 'aprender' | 'preparar'
-            aprenderTab: 'materias', // 'materias' | 'trilhas'
-            activeTrack: localStorage.getItem('cefet2027_active_track') || 'aprovacao',
-            zenMode: false,
-            cefetTab: 'simulado',
-            homeFilter: 'all', // 'all' | 'selecao' | 'reforco' | 'edital' | 'flashcards' | 'calendario' | 'cefet' | 'redacao' | 'simulado' | 'plano'
-            completed: readStorageObject('cefet2027_progress'),
-            collapsed: readStorageObject('cefet2027_collapsed'),
-            flashcardsMastered: readStorageObject('cefet2027_fc_mastered'),
-            fcCurrentIndex: 0,
-            fcFilter: 'all',
-            maracanaTab: 'cursos', // 'cursos' | 'regras' | 'pais' | 'cotas'
-            maracanaShiftFilter: 'all', // 'all' | 'manha' | 'tarde'
-            calendarFilter: 'all', // 'all' | 'destaques' | 'isencao' | 'prova' | 'matricula'
-            moduleMode: 'complete' // 'complete' | 'focus'
-        };
+        /* ─── SISTEMA DE PERFIS & ISOLAMENTO LOCAL DO ESTUDANTE ─── */
+        function getProfilesList() {
+            try {
+                const list = JSON.parse(localStorage.getItem('cefet2027_profiles') || '[]');
+                if (Array.isArray(list) && list.length > 0) return list;
+            } catch (e) { }
+            const initial = [{
+                id: 'default',
+                name: 'Estudante 1',
+                avatar: '🎓',
+                createdAt: Date.now()
+            }];
+            try { localStorage.setItem('cefet2027_profiles', JSON.stringify(initial)); } catch (e) { }
+            return initial;
+        }
+
+        function saveProfilesList(list) {
+            try { localStorage.setItem('cefet2027_profiles', JSON.stringify(list)); } catch (e) { }
+        }
+
+        function getActiveProfileId() {
+            try {
+                return localStorage.getItem('cefet2027_active_profile') || 'default';
+            } catch (e) {
+                return 'default';
+            }
+        }
+
+        function getActiveProfile() {
+            const list = getProfilesList();
+            const id = getActiveProfileId();
+            return list.find(p => p.id === id) || list[0] || { id: 'default', name: 'Estudante 1', avatar: '🎓' };
+        }
+
+        function getProfileStorageKey(baseKey) {
+            const pid = getActiveProfileId();
+            if (pid === 'default') return baseKey;
+            const suffix = baseKey.replace('cefet2027_', '');
+            return `cefet2027_p_${pid}_${suffix}`;
+        }
 
         function readStorageObject(key) {
             try {
@@ -5208,6 +5643,357 @@
                 console.warn('Não foi possível ler o progresso salvo.', error);
                 return {};
             }
+        }
+
+        let state = {
+            currentDiscipline: null,
+            currentModule: 0,
+            currentStep: 0,
+            playerMode: localStorage.getItem(getProfileStorageKey('cefet2027_player_mode')) || 'steps', // 'steps' | 'full'
+            activeHub: 'hoje', // 'hoje' | 'aprender' | 'preparar'
+            aprenderTab: 'materias', // 'materias' | 'trilhas'
+            activeTrack: localStorage.getItem(getProfileStorageKey('cefet2027_active_track')) || 'aprovacao',
+            zenMode: false,
+            cefetTab: 'simulado',
+            homeFilter: 'all', // 'all' | 'selecao' | 'reforco' | 'edital' | 'flashcards' | 'calendario' | 'cefet' | 'redacao' | 'simulado' | 'plano'
+            completed: readStorageObject(getProfileStorageKey('cefet2027_progress')),
+            collapsed: readStorageObject(getProfileStorageKey('cefet2027_collapsed')),
+            flashcardsMastered: readStorageObject(getProfileStorageKey('cefet2027_fc_mastered')),
+            fcCurrentIndex: 0,
+            fcFilter: 'all',
+            maracanaTab: 'cursos', // 'cursos' | 'regras' | 'pais' | 'cotas'
+            maracanaShiftFilter: 'all', // 'all' | 'manha' | 'tarde'
+            maracanaCampusFilter: 'all', // 'all' | 'Maracanã' | 'Maria da Graça' | 'Nova Iguaçu' | 'Itaguaí' | 'Valença' | 'Nova Friburgo' | 'Petrópolis'
+            calendarFilter: 'all', // 'all' | 'destaques' | 'isencao' | 'prova' | 'matricula'
+            moduleMode: 'complete' // 'complete' | 'focus'
+        };
+
+        /* ─── Profile Management Functions ─── */
+        function updateHeaderProfileBadge() {
+            const p = getActiveProfile();
+            const avEl = document.getElementById('headerProfileAvatar');
+            const nameEl = document.getElementById('headerProfileName');
+            if (avEl) avEl.textContent = p.avatar || '🎓';
+            if (nameEl) nameEl.textContent = p.name || 'Estudante 1';
+        }
+
+        function showProfileModal() {
+            const modal = document.getElementById('profileModalOverlay');
+            if (!modal) return;
+            renderProfileModalContent();
+            modal.style.display = 'flex';
+        }
+
+        function closeProfileModal() {
+            const modal = document.getElementById('profileModalOverlay');
+            if (modal) modal.style.display = 'none';
+        }
+
+        function renderProfileModalContent() {
+            const content = document.getElementById('profileModalContent');
+            if (!content) return;
+            const activeP = getActiveProfile();
+            const profiles = getProfilesList();
+
+            // Estatísticas do perfil ativo
+            let totalMods = 0, doneMods = 0;
+            if (window.curriculum) {
+                window.curriculum.forEach(d => d.modules.forEach(m => {
+                    totalMods++;
+                    if (state.completed[m.id]) doneMods++;
+                }));
+            }
+            const pct = totalMods > 0 ? Math.round((doneMods / totalMods) * 100) : 0;
+            const actDays = readStorageObject(getProfileStorageKey('cefet2027_activity_days'));
+            const activeDaysCount = Object.keys(actDays).length;
+
+            const emojis = ['🎓', '🚀', '🔬', '📐', '💡', '⚡', '🦁', '🦉', '🦊', '🥋', '🎯', '🌟'];
+
+            let html = `
+            <div class="profile-hero-card">
+                <div class="profile-avatar-big" onclick="toggleEmojiPicker()" title="Clique para trocar seu avatar">
+                    ${activeP.avatar || '🎓'}
+                </div>
+                <div class="profile-info-col">
+                    <div class="profile-name-row">
+                        <span class="profile-active-name">${activeP.name}</span>
+                        <button class="profile-rename-btn" onclick="promptRenameProfile()">✏️ Renomear</button>
+                    </div>
+                    <div class="profile-stats-chips">
+                        <span class="profile-stat-chip">📚 <strong>${doneMods}/${totalMods}</strong> módulos (${pct}%)</span>
+                        <span class="profile-stat-chip">🔥 <strong>${activeDaysCount}</strong> ${activeDaysCount === 1 ? 'dia ativo' : 'dias ativos'}</span>
+                        <span class="profile-stat-chip">Trilha: <strong>${state.activeTrack === 'emergencia' ? 'Reta Final' : (state.activeTrack === 'reforco' ? 'Base Sólida' : 'Aprovação')}</strong></span>
+                    </div>
+                    <div id="emojiPickerRow" class="profile-emojis-picker" style="display:none;">
+                        ${emojis.map(e => `<span class="profile-emoji-opt" onclick="changeActiveProfileAvatar('${e}')">${e}</span>`).join('')}
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-privacy-box">
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px; color:var(--text-primary); font-weight:700;">
+                    <span>🔒</span> <span>Privacidade & Armazenamento 100% Local</span>
+                </div>
+                <div>
+                    Seus dados de estudo ficam guardados <strong>exclusivamente neste navegador</strong> (em <code>localStorage</code> offline). Não usamos servidores remotos nem misturamos o progresso de diferentes estudantes.
+                </div>
+            </div>
+
+            <div class="profile-section-title">
+                <span>Perfis Neste Navegador (${profiles.length})</span>
+                <button class="btn" onclick="promptCreateProfile()" style="padding:4px 12px; font-size:12px; border-radius:var(--radius-pill); background:rgba(132, 178, 237, 0.15); border:1px solid rgba(132, 178, 237, 0.35); color:#84b2ed; cursor:pointer;">
+                    + Novo Estudante
+                </button>
+            </div>
+
+            <div class="profile-list-grid">
+                ${profiles.map(p => {
+                    const isActive = p.id === activeP.id;
+                    return `
+                    <div class="profile-card-item ${isActive ? 'is-active' : ''}" onclick="${isActive ? '' : `switchProfile('${p.id}')`}">
+                        <div class="profile-card-left">
+                            <span class="profile-item-avatar">${p.avatar || '🎓'}</span>
+                            <div>
+                                <div class="profile-item-name">${p.name}</div>
+                                <span class="profile-item-badge ${isActive ? 'active-badge' : ''}">
+                                    ${isActive ? '● Ativo agora' : 'Clique para alternar'}
+                                </span>
+                            </div>
+                        </div>
+                        ${(!isActive && profiles.length > 1) ? `
+                            <button class="profile-delete-btn" onclick="event.stopPropagation(); deleteProfile('${p.id}')" title="Excluir perfil ${p.name}">🗑️</button>
+                        ` : ''}
+                    </div>`;
+                }).join('')}
+            </div>
+
+            <div class="profile-section-title">
+                <span>Portabilidade (Mudar de Dispositivo / Backup)</span>
+            </div>
+
+            <div class="profile-actions-grid">
+                <button class="profile-action-btn btn-export" onclick="exportStudentProgress()">
+                    <span>📥</span>
+                    <span>Exportar Meu Progresso (.json)</span>
+                </button>
+                <button class="profile-action-btn" onclick="document.getElementById('importProfileFileInput').click()">
+                    <span>📤</span>
+                    <span>Importar de Arquivo (.json)</span>
+                </button>
+                <button class="profile-action-btn btn-danger-outline" onclick="promptResetProfileProgress()">
+                    <span>🔄</span>
+                    <span>Zerar Progresso Deste Perfil</span>
+                </button>
+            </div>
+            `;
+
+            content.innerHTML = html;
+        }
+
+        function toggleEmojiPicker() {
+            const picker = document.getElementById('emojiPickerRow');
+            if (picker) {
+                picker.style.display = picker.style.display === 'none' ? 'flex' : 'none';
+            }
+        }
+
+        function changeActiveProfileAvatar(emoji) {
+            const profiles = getProfilesList();
+            const activeId = getActiveProfileId();
+            const prof = profiles.find(p => p.id === activeId);
+            if (prof) {
+                prof.avatar = emoji;
+                saveProfilesList(profiles);
+                updateHeaderProfileBadge();
+                renderProfileModalContent();
+            }
+        }
+
+        function promptRenameProfile() {
+            const activeP = getActiveProfile();
+            const newName = prompt('Digite o nome do estudante:', activeP.name);
+            if (newName && newName.trim()) {
+                const profiles = getProfilesList();
+                const p = profiles.find(item => item.id === activeP.id);
+                if (p) {
+                    p.name = newName.trim().slice(0, 24);
+                    saveProfilesList(profiles);
+                    updateHeaderProfileBadge();
+                    renderProfileModalContent();
+                }
+            }
+        }
+
+        function promptCreateProfile() {
+            const name = prompt('Digite o nome do novo estudante:');
+            if (!name || !name.trim()) return;
+            const cleanName = name.trim().slice(0, 24);
+            const profiles = getProfilesList();
+            const newId = 'p_' + Date.now();
+            profiles.push({
+                id: newId,
+                name: cleanName,
+                avatar: '🚀',
+                createdAt: Date.now()
+            });
+            saveProfilesList(profiles);
+            switchProfile(newId);
+        }
+
+        function switchProfile(profileId) {
+            try {
+                localStorage.setItem('cefet2027_active_profile', profileId);
+            } catch (e) { }
+
+            // Recarregar dados isolados do novo perfil
+            state.completed = readStorageObject(getProfileStorageKey('cefet2027_progress'));
+            state.collapsed = readStorageObject(getProfileStorageKey('cefet2027_collapsed'));
+            state.flashcardsMastered = readStorageObject(getProfileStorageKey('cefet2027_fc_mastered'));
+            state.activeTrack = localStorage.getItem(getProfileStorageKey('cefet2027_active_track')) || 'aprovacao';
+            state.playerMode = localStorage.getItem(getProfileStorageKey('cefet2027_player_mode')) || 'steps';
+
+            updateHeaderProfileBadge();
+            updateProgress();
+            renderSidebar();
+
+            if (state.activeHub === 'hoje') {
+                renderHome();
+            } else if (state.activeHub === 'aprender') {
+                renderAprenderHub();
+            } else if (state.activeHub === 'preparar') {
+                showSupportPage(state.cefetTab || 'simulado');
+            }
+
+            renderProfileModalContent();
+
+            // Toast de confirmação
+            const activeP = getActiveProfile();
+            showCustomToast('👤 Perfil ativo: ' + activeP.name);
+        }
+
+        function deleteProfile(profileId) {
+            const profiles = getProfilesList();
+            const target = profiles.find(p => p.id === profileId);
+            if (!target) return;
+            if (confirm('Tem certeza que deseja excluir o perfil "' + target.name + '" e todos os seus registros de estudo deste navegador?')) {
+                // Remover dados do storage
+                const keysToRemove = [
+                    `cefet2027_p_${profileId}_progress`,
+                    `cefet2027_p_${profileId}_activity_days`,
+                    `cefet2027_p_${profileId}_last_module`,
+                    `cefet2027_p_${profileId}_active_track`,
+                    `cefet2027_p_${profileId}_fc_mastered`,
+                    `cefet2027_p_${profileId}_essay`,
+                    `cefet2027_p_${profileId}_checklist`,
+                    `cefet2027_p_${profileId}_player_mode`,
+                    `cefet2027_p_${profileId}_collapsed`
+                ];
+                keysToRemove.forEach(k => { try { localStorage.removeItem(k); } catch (e) { } });
+
+                const updated = profiles.filter(p => p.id !== profileId);
+                saveProfilesList(updated);
+                renderProfileModalContent();
+                showCustomToast('Perfil excluído com sucesso.');
+            }
+        }
+
+        function exportStudentProgress() {
+            const activeP = getActiveProfile();
+            const exportPayload = {
+                app: 'CEFET Quest 2027',
+                version: '2.0',
+                exportedAt: new Date().toISOString(),
+                profile: activeP,
+                progress: readStorageObject(getProfileStorageKey('cefet2027_progress')),
+                activityDays: readStorageObject(getProfileStorageKey('cefet2027_activity_days')),
+                lastModule: localStorage.getItem(getProfileStorageKey('cefet2027_last_module')) || null,
+                activeTrack: localStorage.getItem(getProfileStorageKey('cefet2027_active_track')) || 'aprovacao',
+                flashcardsMastered: readStorageObject(getProfileStorageKey('cefet2027_fc_mastered')),
+                essay: localStorage.getItem(getProfileStorageKey('cefet2027_essay')) || '',
+                checklist: readStorageObject(getProfileStorageKey('cefet2027_checklist'))
+            };
+
+            const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(exportPayload, null, 2));
+            const safeName = (activeP.name || 'aluno').replace(/[^a-zA-Z0-9_-]/g, '_');
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute('href', dataStr);
+            downloadAnchor.setAttribute('download', `cefet2027_progresso_${safeName}.json`);
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+            showCustomToast('📥 Progresso exportado com sucesso! Guarde seu arquivo JSON.');
+        }
+
+        function handleImportProfileFile(event) {
+            const file = event.target.files && event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    if (!data || typeof data !== 'object') {
+                        throw new Error('Arquivo JSON inválido.');
+                    }
+                    const profName = (data.profile && data.profile.name) ? data.profile.name : 'Estudante Importado';
+                    const profAvatar = (data.profile && data.profile.avatar) ? data.profile.avatar : '🎓';
+                    const profiles = getProfilesList();
+                    const newId = 'p_' + Date.now();
+                    profiles.push({
+                        id: newId,
+                        name: profName + ' (Importado)',
+                        avatar: profAvatar,
+                        createdAt: Date.now()
+                    });
+                    saveProfilesList(profiles);
+
+                    // Gravar dados isolados do novo perfil
+                    if (data.progress) localStorage.setItem(`cefet2027_p_${newId}_progress`, JSON.stringify(data.progress));
+                    if (data.activityDays) localStorage.setItem(`cefet2027_p_${newId}_activity_days`, JSON.stringify(data.activityDays));
+                    if (data.lastModule) localStorage.setItem(`cefet2027_p_${newId}_last_module`, data.lastModule);
+                    if (data.activeTrack) localStorage.setItem(`cefet2027_p_${newId}_active_track`, data.activeTrack);
+                    if (data.flashcardsMastered) localStorage.setItem(`cefet2027_p_${newId}_fc_mastered`, JSON.stringify(data.flashcardsMastered));
+                    if (data.essay) localStorage.setItem(`cefet2027_p_${newId}_essay`, data.essay);
+                    if (data.checklist) localStorage.setItem(`cefet2027_p_${newId}_checklist`, JSON.stringify(data.checklist));
+
+                    switchProfile(newId);
+                    showCustomToast('🎉 Perfil e progresso restaurados com sucesso!');
+                } catch (err) {
+                    alert('Erro ao importar arquivo: formato inválido ou corrompido.');
+                    console.error(err);
+                }
+                event.target.value = '';
+            };
+            reader.readAsText(file);
+        }
+
+        function promptResetProfileProgress() {
+            const activeP = getActiveProfile();
+            if (confirm(`Atenção: Deseja realmente zerar todo o progresso de estudo de "${activeP.name}"?\nEsta ação removerá missões concluídas, simulados e ritmo de estudos deste perfil.`)) {
+                try {
+                    localStorage.removeItem(getProfileStorageKey('cefet2027_progress'));
+                    localStorage.removeItem(getProfileStorageKey('cefet2027_activity_days'));
+                    localStorage.removeItem(getProfileStorageKey('cefet2027_last_module'));
+                    localStorage.removeItem(getProfileStorageKey('cefet2027_fc_mastered'));
+                    localStorage.removeItem(getProfileStorageKey('cefet2027_essay'));
+                    localStorage.removeItem(getProfileStorageKey('cefet2027_checklist'));
+                } catch (e) { }
+
+                state.completed = {};
+                state.flashcardsMastered = {};
+                updateProgress();
+                renderSidebar();
+                if (state.activeHub === 'hoje') renderHome();
+                renderProfileModalContent();
+                showCustomToast('🔄 Progresso deste perfil foi zerado.');
+            }
+        }
+
+        function showCustomToast(msg) {
+            const t = document.createElement('div');
+            t.textContent = msg;
+            t.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--surface);color:var(--text-primary);border:1px solid #84b2ed;padding:12px 24px;border-radius:var(--radius-pill);font-size:14px;font-weight:700;z-index:99999;box-shadow:0 8px 30px rgba(0,0,0,0.5);transition:opacity .3s, transform .3s;';
+            document.body.appendChild(t);
+            setTimeout(() => { t.style.opacity = '0'; t.style.transform = 'translateX(-50%) translateY(10px)'; setTimeout(() => t.remove(), 300); }, 2600);
         }
 
         /* ─── Helpers de Busca e Título ─── */
@@ -5298,7 +6084,7 @@
         /* ─── Accordion Sidebar ─── */
         function toggleGroup(discId) {
             state.collapsed[discId] = !state.collapsed[discId];
-            localStorage.setItem('cefet2027_collapsed', JSON.stringify(state.collapsed));
+            localStorage.setItem(getProfileStorageKey('cefet2027_collapsed'), JSON.stringify(state.collapsed));
             renderSidebar();
         }
 
@@ -5427,7 +6213,7 @@
 
         function setActiveTrack(trackKey) {
             state.activeTrack = trackKey;
-            localStorage.setItem('cefet2027_active_track', trackKey);
+            localStorage.setItem(getProfileStorageKey('cefet2027_active_track'), trackKey);
             if (state.activeHub === 'aprender' && state.aprenderTab === 'trilhas') {
                 renderAprenderHub();
             } else {
@@ -5450,7 +6236,7 @@
             state.aprenderTab = 'trilhas';
             state.activeTrack = trackId;
             state.homeFilter = 'trilha-' + trackId;
-            localStorage.setItem('cefet2027_active_track', trackId);
+            localStorage.setItem(getProfileStorageKey('cefet2027_active_track'), trackId);
 
             document.querySelectorAll('.nav-pillar-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.hub === 'aprender' || btn.dataset.hub === 'trilhas');
@@ -5693,7 +6479,7 @@
             if (page === 'cefet') {
                 calcularCota();
             } else if (page === 'redacao') {
-                const saved = localStorage.getItem('cefet2027_essay') || '';
+                const saved = localStorage.getItem(getProfileStorageKey('cefet2027_essay')) || '';
                 const draft = document.getElementById('essayDraft');
                 if (draft) {
                     draft.value = saved;
@@ -5723,7 +6509,7 @@
             if (confirm('Deseja realmente limpar o rascunho da sua redação?')) {
                 const draft = document.getElementById('essayDraft');
                 if (draft) { draft.value = ''; updateEssayCount(); }
-                localStorage.removeItem('cefet2027_essay');
+                localStorage.removeItem(getProfileStorageKey('cefet2027_essay'));
                 const fb = document.getElementById('essayFeedback');
                 if (fb) { fb.className = 'feedback show'; fb.textContent = 'Rascunho limpo.'; }
             }
@@ -5744,7 +6530,7 @@
             const draft = document.getElementById('essayDraft');
             const feedback = document.getElementById('essayFeedback');
             if (!draft || !feedback) return;
-            localStorage.setItem('cefet2027_essay', draft.value);
+            localStorage.setItem(getProfileStorageKey('cefet2027_essay'), draft.value);
             feedback.className = 'feedback show ok';
             feedback.textContent = '✓ Rascunho salvo com sucesso neste dispositivo!';
         }
@@ -5778,15 +6564,15 @@
         ];
 
         function togglePlanTask(taskId) {
-            const checklist = JSON.parse(localStorage.getItem('cefet2027_checklist') || '{}');
+            const checklist = JSON.parse(localStorage.getItem(getProfileStorageKey('cefet2027_checklist')) || '{}');
             checklist[taskId] = !checklist[taskId];
-            localStorage.setItem('cefet2027_checklist', JSON.stringify(checklist));
+            localStorage.setItem(getProfileStorageKey('cefet2027_checklist'), JSON.stringify(checklist));
             renderStudyPlan();
         }
 
         function renderStudyPlan() {
             const main = document.getElementById('main');
-            const checklist = JSON.parse(localStorage.getItem('cefet2027_checklist') || '{}');
+            const checklist = JSON.parse(localStorage.getItem(getProfileStorageKey('cefet2027_checklist')) || '{}');
             const total = planTasks.length;
             const done = planTasks.filter(t => checklist[t.id]).length;
             const pct = Math.round((done / total) * 100);
@@ -6127,7 +6913,7 @@
             } else {
                 delete state.flashcardsMastered[current.id];
             }
-            localStorage.setItem('cefet2027_fc_mastered', JSON.stringify(state.flashcardsMastered));
+            localStorage.setItem(getProfileStorageKey('cefet2027_fc_mastered'), JSON.stringify(state.flashcardsMastered));
             nextFlashcard();
         }
 
@@ -6321,7 +7107,7 @@
 
             <div class="timeline-container">
                 ${events.map(ev => {
-                const isExam = ev.num === 18;
+                const isExam = ev.num === 12;
                 const dateTxt = ev.inicio === ev.fim ? formatOfficialDate(ev.inicio) : `${formatOfficialDate(ev.inicio)} a ${formatOfficialDate(ev.fim)}`;
                 return `
                         <div class="timeline-event-card ${ev.destaque ? 'featured' : ''} ${isExam ? 'exam-day' : ''}">
@@ -6349,7 +7135,7 @@
                                 <div class="box-warning" style="margin-top:14px; padding:12px 16px;">
                                     <div class="box-header" style="color:var(--danger);">🚨 ATENÇÃO MÁXIMA PARA O DIA 11/10/2026:</div>
                                     <p style="font-size:13px; margin:0;">
-                                        Portões fecham às 08h50. Leve documento físico original com foto, duas canetas pretas de tubo transparente, garrafa de água sem rótulo e chegue às 07h50 no local indicado no seu CDI!
+                                        Portões fecham às 08h50 pontualmente. Leve documento físico original com foto, duas canetas pretas de tubo transparente, garrafa de água sem rótulo e chegue às 07h50 no local indicado no seu CDI!
                                     </p>
                                 </div>
                             ` : ''}
@@ -6363,7 +7149,7 @@
         }
 
         /* ══════════════════════════════════════════════════════════════
-           CEFET MARACANÃ DASHBOARD (16 TURMAS, REGRAS, PAIS & COTAS)
+           CEFET-RJ DASHBOARD (TODOS OS 7 CAMPI • 1.024 VAGAS • REGRAS)
            ══════════════════════════════════════════════════════════════ */
         function setMaracanaTab(tab) {
             state.maracanaTab = tab;
@@ -6375,29 +7161,62 @@
             renderCefetMaracanaPage();
         }
 
+        function setMaracanaCampusFilter(campus) {
+            state.maracanaCampusFilter = campus;
+            renderCefetMaracanaPage();
+        }
+
         function renderCefetMaracanaPage() {
             const main = document.getElementById('main');
             const tab = state.maracanaTab || 'cursos';
+            state.maracanaCampusFilter = state.maracanaCampusFilter || 'all';
 
             let contentHTML = '';
 
             if (tab === 'cursos') {
-                let courses = window.cefetMaracanaCourses || [];
-                if (state.maracanaShiftFilter === 'manha') courses = courses.filter(c => c.turno === 'Manhã');
-                else if (state.maracanaShiftFilter === 'tarde') courses = courses.filter(c => c.turno === 'Tarde');
+                const allCourses = window.cefetAllCampusesCourses || window.cefetMaracanaCourses || [];
+                let courses = allCourses;
+
+                if (state.maracanaCampusFilter !== 'all') {
+                    courses = courses.filter(c => (c.campus || 'Maracanã') === state.maracanaCampusFilter);
+                }
+
+                if (state.maracanaShiftFilter === 'manha') {
+                    courses = courses.filter(c => c.turno.includes('Manhã'));
+                } else if (state.maracanaShiftFilter === 'tarde') {
+                    courses = courses.filter(c => c.turno.includes('Tarde'));
+                }
+
+                const totalVagasFiltered = courses.reduce((acc, c) => acc + (c.totalVagas || 32), 0);
 
                 contentHTML = `
-                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
-                    <div>
-                        <h2 style="font-size:18px; margin:0 0 4px;">Cursos Técnicos Integrados — Campus Maracanã (Sede)</h2>
-                        <p style="font-size:13.5px; color:var(--text-secondary); margin:0;">
-                            São 11 cursos estruturados em <strong>16 turmas de 32 alunos (Total de 512 vagas)</strong>. Ensino Médio integrado à formação profissional em 3 anos.
-                        </p>
+                <div style="margin-bottom:18px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
+                        <div>
+                            <h2 style="font-size:19px; margin:0 0 4px; color:var(--text-primary);">
+                                🏛️ Oferta de Vagas por Curso & Campus (Edital nº 05/2026 - Anexo I)
+                            </h2>
+                            <p style="font-size:13.5px; color:var(--text-secondary); margin:0;">
+                                Total no certame: <strong>1.024 vagas integradas em 7 campi</strong>. Exibindo <strong>${courses.length} opções (${totalVagasFiltered} vagas)</strong>:
+                            </p>
+                        </div>
+                        <div style="display:flex; gap:6px;">
+                            <button class="fc-filter-btn ${state.maracanaShiftFilter === 'all' ? 'active' : ''}" onclick="setMaracanaShiftFilter('all')">Todos Turnos</button>
+                            <button class="fc-filter-btn ${state.maracanaShiftFilter === 'manha' ? 'active' : ''}" onclick="setMaracanaShiftFilter('manha')">🌅 Manhã</button>
+                            <button class="fc-filter-btn ${state.maracanaShiftFilter === 'tarde' ? 'active' : ''}" onclick="setMaracanaShiftFilter('tarde')">🌇 Tarde</button>
+                        </div>
                     </div>
-                    <div style="display:flex; gap:6px;">
-                        <button class="fc-filter-btn ${state.maracanaShiftFilter === 'all' ? 'active' : ''}" onclick="setMaracanaShiftFilter('all')">Todas (16 Turmas)</button>
-                        <button class="fc-filter-btn ${state.maracanaShiftFilter === 'manha' ? 'active' : ''}" onclick="setMaracanaShiftFilter('manha')">🌅 Manhã (8)</button>
-                        <button class="fc-filter-btn ${state.maracanaShiftFilter === 'tarde' ? 'active' : ''}" onclick="setMaracanaShiftFilter('tarde')">🌇 Tarde (8)</button>
+
+                    <!-- Seletor dos 7 Campi Oficiais -->
+                    <div class="fc-filter-row" style="margin:10px 0 20px; overflow-x:auto; padding-bottom:6px;">
+                        <button class="fc-filter-btn ${state.maracanaCampusFilter === 'all' ? 'active' : ''}" onclick="setMaracanaCampusFilter('all')">🌐 Todos os 7 Campi (1.024 vagas)</button>
+                        <button class="fc-filter-btn ${state.maracanaCampusFilter === 'Maracanã' ? 'active' : ''}" onclick="setMaracanaCampusFilter('Maracanã')">🏛️ Maracanã (512)</button>
+                        <button class="fc-filter-btn ${state.maracanaCampusFilter === 'Nova Iguaçu' ? 'active' : ''}" onclick="setMaracanaCampusFilter('Nova Iguaçu')">🏙️ Nova Iguaçu (160)</button>
+                        <button class="fc-filter-btn ${state.maracanaCampusFilter === 'Maria da Graça' ? 'active' : ''}" onclick="setMaracanaCampusFilter('Maria da Graça')">🏭 Maria da Graça (120)</button>
+                        <button class="fc-filter-btn ${state.maracanaCampusFilter === 'Itaguaí' ? 'active' : ''}" onclick="setMaracanaCampusFilter('Itaguaí')">⚓ Itaguaí (96)</button>
+                        <button class="fc-filter-btn ${state.maracanaCampusFilter === 'Valença' ? 'active' : ''}" onclick="setMaracanaCampusFilter('Valença')">🌿 Valença (60)</button>
+                        <button class="fc-filter-btn ${state.maracanaCampusFilter === 'Nova Friburgo' ? 'active' : ''}" onclick="setMaracanaCampusFilter('Nova Friburgo')">⛰️ Nova Friburgo (40)</button>
+                        <button class="fc-filter-btn ${state.maracanaCampusFilter === 'Petrópolis' ? 'active' : ''}" onclick="setMaracanaCampusFilter('Petrópolis')">🏰 Petrópolis (36)</button>
                     </div>
                 </div>
 
@@ -6408,19 +7227,24 @@
                                 <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
                                     <span style="font-size:28px;">${c.icone || '🏫'}</span>
                                     <div style="text-align:right;">
-                                        <span class="track-badge badge-sel">Cód. ${c.codigo}</span>
-                                        <div style="font-size:11.5px; color:var(--accent); font-weight:700; margin-top:2px;">Turno: ${c.turno}</div>
+                                        <span class="track-badge badge-sel">Campus ${c.campus || 'Maracanã'} • Cód. ${c.codigo}</span>
+                                        <div style="font-size:11.5px; color:var(--accent); font-weight:700; margin-top:2px;">Turno: ${c.turno} • ${c.totalVagas} vagas</div>
                                     </div>
                                 </div>
                                 <h3 style="font-size:17px; font-weight:800; margin:0 0 6px; color:var(--text-primary);">${c.nome}</h3>
                                 <p style="font-size:13px; color:var(--text-secondary); line-height:1.5; margin:0 0 10px;">
                                     ${c.descricao}
                                 </p>
+                                ${c.carreira ? `
                                 <div style="font-size:12px; color:var(--text-quaternary); margin-bottom:8px;">
                                     <strong>Carreira:</strong> ${c.carreira}
-                                </div>
+                                </div>` : ''}
+                                ${c.estagio ? `
+                                <div style="font-size:11.5px; color:var(--solar-gold); margin-bottom:8px; font-weight:600;">
+                                    💼 Estágio Curricular: ${c.estagio}
+                                </div>` : ''}
                                 <div style="font-size:12px; font-weight:700; color:var(--text-secondary); margin-bottom:4px;">
-                                    Distribuição das 32 Vagas (Anexo I):
+                                    Distribuição de Vagas por Grupo (Anexo I):
                                 </div>
                                 <div class="course-quota-pills">
                                     <span class="quota-mini-pill" title="Ampla Concorrência">AC: <strong>${c.vagas.ac}</strong></span>
@@ -6433,9 +7257,10 @@
                                     <span class="quota-mini-pill" title="Escola Pública + PCD (Independente Renda)">LI_PCD: <strong>${c.vagas.li_pcd}</strong></span>
                                 </div>
                             </div>
+                            ${c.destaques ? `
                             <div style="margin-top:14px; padding-top:10px; border-top:1px solid var(--border); font-size:12px; color:var(--text-tertiary);">
                                 <strong>Destaques:</strong> ${(c.destaques || []).join(' • ')}
-                            </div>
+                            </div>` : ''}
                         </div>
                     `).join('')}
                 </div>
@@ -6444,8 +7269,8 @@
                 const rules = window.cefetRules || [];
                 contentHTML = `
                 <div class="box-analogy" style="margin-bottom:20px;">
-                    <div class="box-header">📋 Checklist para chegar tranquilo no dia da prova: Orientações do Edital nº 05/2026</div>
-                    <p>Fazer a prova com tranquilidade começa por conhecer as regras administrativas com antecedência. Siga estes pontos essenciais para focar 100% no seu aprendizado:</p>
+                    <div class="box-header">📋 Checklist Oficial do Edital nº 05/2026: Regras, Proibições e Desempate</div>
+                    <p>Fazer a prova com tranquilidade começa por conhecer as regras administrativas com antecedência. Evite desclassificações sumárias observando os pontos críticos abaixo:</p>
                 </div>
 
                 <div>
@@ -6456,15 +7281,15 @@
                                     <span>${r.icone || '📌'}</span>
                                     <span>${i + 1}. ${r.titulo}</span>
                                 </div>
-                                <span class="track-badge badge-sel" style="background:rgba(37,99,235,0.12); color:var(--accent); border-color:rgba(37,99,235,0.25);">
-                                    Atenção no Edital
+                                <span class="track-badge ${r.nivel === 'fatal' ? 'badge-ref' : 'badge-sel'}" style="${r.nivel === 'fatal' ? 'background:rgba(239,68,68,0.12); color:var(--danger); border-color:rgba(239,68,68,0.25);' : 'background:rgba(37,99,235,0.12); color:var(--accent); border-color:rgba(37,99,235,0.25);'}">
+                                    ${r.nivel === 'fatal' ? 'Eliminação Sumária' : 'Norma do Edital'}
                                 </span>
                             </div>
                             <p style="font-size:14px; color:var(--text-secondary); line-height:1.55; margin:6px 0 10px;">
                                 ${r.regra}
                             </p>
                             <div class="rule-tip-box">
-                                <strong>💡 Como fazer com tranquilidade:</strong> ${r.dica}
+                                <strong>💡 Como agir com tranquilidade:</strong> ${r.dica}
                             </div>
                         </div>
                     `).join('')}
@@ -6495,16 +7320,16 @@
 
             main.innerHTML = `
             <div class="support-page" style="max-width:1040px;">
-                <div class="breadcrumb"><a onclick="goHome()">Início</a><span class="breadcrumb-sep">></span><span>CEFET-RJ Maracanã</span></div>
-                <h1 class="page-title">🏫 Tudo Sobre o CEFET-RJ Maracanã & Edital</h1>
+                <div class="breadcrumb"><a onclick="goHome()">Início</a><span class="breadcrumb-sep">></span><span>CEFET-RJ Oficial</span></div>
+                <h1 class="page-title">🏛️ Guia Oficial do Edital CEFET-RJ 2027</h1>
                 <p class="support-intro">
-                    Informações oficiais, turmas, distribuição de vagas, orientações para a família e manual para não ser eliminado do Processo Seletivo 2027.
+                    Quadro oficial dos 7 campi (1.024 vagas), regras anti-eliminação, orientações para responsáveis e assistente de cotas conforme Edital nº 05/2026.
                 </p>
 
                 <div class="cefet-subtabs">
-                    <button class="subtab-btn ${tab === 'cursos' ? 'active' : ''}" onclick="setMaracanaTab('cursos')">🏫 Cursos & Vagas (16 Turmas)</button>
-                    <button class="subtab-btn ${tab === 'regras' ? 'active' : ''}" onclick="setMaracanaTab('regras')">🚨 Como NÃO Ser Reprovado</button>
-                    <button class="subtab-btn ${tab === 'pais' ? 'active' : ''}" onclick="setMaracanaTab('pais')">👨‍👩‍👧 Guia dos Pais</button>
+                    <button class="subtab-btn ${tab === 'cursos' ? 'active' : ''}" onclick="setMaracanaTab('cursos')">🏛️ Todos os Cursos (7 Campi • 1.024 Vagas)</button>
+                    <button class="subtab-btn ${tab === 'regras' ? 'active' : ''}" onclick="setMaracanaTab('regras')">🚨 Regras & Anti-Eliminação</button>
+                    <button class="subtab-btn ${tab === 'pais' ? 'active' : ''}" onclick="setMaracanaTab('pais')">👨‍👩‍👧 Guia dos Responsáveis</button>
                     <button class="subtab-btn ${tab === 'cotas' ? 'active' : ''}" onclick="setMaracanaTab('cotas')">🎯 Assistente de Cotas & Isenção</button>
                 </div>
 
@@ -6606,7 +7431,7 @@
                     <button class="central-tab-pill ${activeTab === 'flashcards' ? 'active' : ''}" onclick="showSupportPage('flashcards')">🃏 Flashcards 3D</button>
                     <button class="central-tab-pill ${activeTab === 'redacao' ? 'active' : ''}" onclick="showSupportPage('redacao')">✍️ Redação Oficial</button>
                     <button class="central-tab-pill ${activeTab === 'calendario' ? 'active' : ''}" onclick="showSupportPage('calendario')">🗓️ Calendário & Checklist</button>
-                    <button class="central-tab-pill ${activeTab === 'cefet' ? 'active' : ''}" onclick="showSupportPage('cefet')">🏫 CEFET Maracanã (16 Cursos)</button>
+                    <button class="central-tab-pill ${activeTab === 'cefet' ? 'active' : ''}" onclick="showSupportPage('cefet')">🏛️ Cursos dos 7 Campi (1.024 Vagas)</button>
                     <button class="central-tab-pill ${activeTab === 'cotas' ? 'active' : ''}" onclick="showSupportPage('cotas')">🎯 Assistente de Cotas & Isenção</button>
                     <button class="central-tab-pill ${activeTab === 'plano' ? 'active' : ''}" onclick="showSupportPage('plano')">🗓️ Plano Semanal</button>
                     <button class="central-tab-pill ${activeTab === 'edital' ? 'active' : ''}" onclick="showSupportPage('edital')">📋 Raio-X do Edital</button>
@@ -6739,29 +7564,28 @@
                 }
             }
 
-            // Determinar o último módulo estudado
-            const lastModuleId = localStorage.getItem('cefet2027_last_module');
+            // Determinar o último módulo estudado no perfil ativo
+            const lastModuleId = localStorage.getItem(getProfileStorageKey('cefet2027_last_module'));
             let lastModInfo = lastModuleId ? getModuleById(lastModuleId) : null;
-            if (!lastModInfo && nextModInfo) {
-                lastModInfo = nextModInfo;
-            }
 
             // Ritmo semanal (Seg a Dom)
             const dayOfWeek = (now.getDay() + 6) % 7; // Seg = 0, Dom = 6
             const dayNames = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'];
 
-            // Contagem de dias ativos nesta semana
-            const actDays = readStorageObject('cefet2027_activity_days');
-            let completedCount = 0;
+            // Contagem de dias com estudo real nesta semana
+            const actDays = readStorageObject(getProfileStorageKey('cefet2027_activity_days'));
             const mondayDate = new Date(now);
             mondayDate.setDate(now.getDate() - dayOfWeek);
-            for (let i = 0; i <= dayOfWeek; i++) {
+            const weekKeys = [];
+            for (let i = 0; i < 7; i++) {
                 const cur = new Date(mondayDate);
                 cur.setDate(mondayDate.getDate() + i);
-                const k = cur.toISOString().split('T')[0];
-                if (actDays[k]) completedCount++;
+                weekKeys.push(cur.toISOString().split('T')[0]);
             }
-            if (completedCount === 0) completedCount = Math.min(dayOfWeek + 1, 3);
+            let completedCount = 0;
+            for (let i = 0; i <= dayOfWeek; i++) {
+                if (actDays[weekKeys[i]]) completedCount++;
+            }
 
             let h = `
             <div class="hoje-container">
@@ -6842,21 +7666,26 @@
                     <div class="hoje-rhythm-days">`;
 
             dayNames.forEach((dName, dIdx) => {
+                const dayKey = weekKeys[dIdx];
+                const isDayActive = !!actDays[dayKey];
                 const isPast = dIdx < dayOfWeek;
                 const isToday = dIdx === dayOfWeek;
                 let dotIcon = '—';
                 let colClass = '';
-                if (isPast) {
+                if (isDayActive) {
                     dotIcon = '✓';
                     colClass = 'completed';
                 } else if (isToday) {
                     dotIcon = '●';
                     colClass = 'today';
+                } else if (isPast) {
+                    dotIcon = '·';
+                    colClass = 'missed';
                 }
                 h += `
                         <div class="hoje-day-col ${colClass}">
                             <span class="hoje-day-name">${dName}</span>
-                            <div class="hoje-day-coin" title="${dName}">
+                            <div class="hoje-day-coin" title="${dName}${isDayActive ? ' (Meta cumprida!)' : (isToday ? ' (Hoje - meta pendente)' : '')}">
                                 ${dotIcon}
                             </div>
                         </div>`;
@@ -6870,7 +7699,8 @@
                 </div>`;
 
             // 4. CONTINUE DE ONDE PAROU (TACTILE CAPSULE)
-            if (lastModInfo) {
+            // Exibido apenas se o estudante tiver de fato aberto ou concluído um módulo
+            if (lastModInfo && (state.completed[lastModInfo.module.id] || localStorage.getItem(getProfileStorageKey('cefet2027_last_module')))) {
                 const lMod = lastModInfo.module;
                 const lDisc = lastModInfo.discipline;
                 h += `
@@ -7192,7 +8022,7 @@
 
         function setPlayerMode(mode) {
             state.playerMode = mode;
-            localStorage.setItem('cefet2027_player_mode', mode);
+            localStorage.setItem(getProfileStorageKey('cefet2027_player_mode'), mode);
             renderModule();
         }
 
@@ -7459,13 +8289,13 @@
             state.currentStep = 0;
             const disc = window.curriculum.find(d => d.id === discId);
             if (disc && disc.modules[modIdx]) {
-                localStorage.setItem('cefet2027_last_module', disc.modules[modIdx].id);
+                localStorage.setItem(getProfileStorageKey('cefet2027_last_module'), disc.modules[modIdx].id);
             }
             try {
                 const todayKey = new Date().toISOString().split('T')[0];
-                const act = readStorageObject('cefet2027_activity_days');
+                const act = readStorageObject(getProfileStorageKey('cefet2027_activity_days'));
                 act[todayKey] = true;
-                localStorage.setItem('cefet2027_activity_days', JSON.stringify(act));
+                localStorage.setItem(getProfileStorageKey('cefet2027_activity_days'), JSON.stringify(act));
             } catch (e) { }
             if (window.innerWidth > 900) {
                 toggleZenMode(true);
@@ -7587,12 +8417,12 @@
         /* ─── Progresso ─── */
         function markDone(modId) {
             state.completed[modId] = true;
-            localStorage.setItem('cefet2027_progress', JSON.stringify(state.completed));
+            localStorage.setItem(getProfileStorageKey('cefet2027_progress'), JSON.stringify(state.completed));
             try {
                 const todayKey = new Date().toISOString().split('T')[0];
-                const act = readStorageObject('cefet2027_activity_days');
+                const act = readStorageObject(getProfileStorageKey('cefet2027_activity_days'));
                 act[todayKey] = true;
-                localStorage.setItem('cefet2027_activity_days', JSON.stringify(act));
+                localStorage.setItem(getProfileStorageKey('cefet2027_activity_days'), JSON.stringify(act));
             } catch (e) { }
             renderSidebar();
             updateProgress();
@@ -7616,6 +8446,7 @@
         }
 
         /* ─── Inicialização ─── */
+        updateHeaderProfileBadge();
         window.curriculum.forEach((d, i) => {
             if (!(d.id in state.collapsed)) state.collapsed[d.id] = i > 0;
         });
