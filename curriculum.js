@@ -11,16 +11,11 @@ window.curriculum = [
         id: "mat", name: "Matemática", icon: "📐",
         modules: [
         {
-            id: "mat-01", title: "1. Frações, Decimais & Porcentagens", time: "25 min", difficulty: "nivelamento",
+            id: "mat-01", title: "1. Frações, Decimais & Porcentagens", time: "45 min", difficulty: "nivelamento",
             track: "reforco", prerequisites: [], examTopics: ["BNCC 6º/7º Ano — Base de Aritmética", "Edital 1.3: Números racionais e reais, operações, proporcionalidade"],
             simpleExplanation: `
-                <div style="line-height:1.75; font-size:14.5px;">
-                    <p><strong>🍞 1. O que é Fração?</strong> Pense numa barra de chocolate dividida em pedaços iguais. O número de baixo (<strong>Denominador</strong>) diz em quantos pedaços a barra foi cortada. O de cima (<strong>Numerador</strong>) diz quantos pedaços você pegou. Se cortou em 4 e pegou 1, você tem <code>1/4</code> (25% ou 0,25).</p>
-                    
-                    <p><strong>🪜 2. Por que precisamos do MMC para somar?</strong> Imagine somar 1 pedaço de uma barra cortada em 2 partes (<code>1/2</code>) com 1 pedaço de uma barra cortada em 3 partes (<code>1/3</code>). Os pedaços têm <em>tamanhos diferentes</em>! Não dá para somar direto. O <strong>MMC (Mínimo Múltiplo Comum)</strong> é apenas encontrar um novo corte de barra que sirva para as duas ao mesmo tempo: cortando tudo em 6 pedaços (porque 6 está na tabuada do 2 e do 3), <code>1/2</code> vira <code>3/6</code> e <code>1/3</code> vira <code>2/6</code>. Agora sim: <code>3/6 + 2/6 = 5/6</code>!</p>
-                    
-                    <p><strong>✂️ 3. E para que serve o MDC?</strong> O <strong>MDC (Máximo Divisor Comum)</strong> serve para o caminho inverso: <strong>simplificar</strong>! Se a sua conta der <code>12/18</code>, você não vai achar essa resposta no gabarito do CEFET. Dividindo em cima e embaixo pelo MDC (que é 6), você acha a resposta oficial: <code>2/3</code>.</p>
-                </div>
+                <p><strong>Em palavras simples:</strong> Fração é um jeito de escrever <em>parte de um todo</em>. O número de baixo (<strong>denominador</strong>) diz em quantos pedaços iguais o todo foi cortado; o de cima (<strong>numerador</strong>) diz quantos pedaços você pegou. Só dá para somar pedaços do <em>mesmo tamanho</em>, por isso igualamos os denominadores (com o MMC). Na multiplicação é só &ldquo;pegar uma parte de uma parte&rdquo;. Na divisão pergunta-se &ldquo;quantas vezes cabe?&rdquo;, e é por isso que invertemos a segunda fração.</p>
+<p><strong>Decimal</strong> é a fração escrita com denominador 10, 100, 1000... (0,25 = 25/100). <strong>Porcentagem</strong> é a fração com denominador 100 (25% = 25/100). Os três (fração, decimal e %) são só três jeitos de escrever o mesmo número.</p>
             `,
             content: `
 <div class="card" style="margin-bottom:20px; border-left: 5px solid var(--accent);">
@@ -55,160 +50,92 @@ window.curriculum = [
     </ul>
 </div>
 
-<div class="card" style="margin-bottom:20px; border-left: 5px solid #00d6b6;">
-    <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-        <span style="font-size:26px;">🔬</span>
-        <h3 style="margin:0; font-size:18px; color:var(--text-primary);">Teoria Descomplicada: Operações, o Segredo do MMC e a Simplificação por MDC</h3>
-    </div>
-    <p style="font-size:15px; line-height:1.75; color:var(--text-secondary); margin-bottom:16px;">
-        Muitos estudantes tentam decorar que <em>"soma de fração divide pelo de baixo e multiplica pelo de cima"</em>, mas na hora da prova esquecem a ordem ou travam porque nunca entenderam <strong>por onde a conta começa a andar</strong>. Vamos desmontar esse mistério passo a passo para que você nunca mais dependa de sorte ou decoreba.
-    </p>
-
-    <!-- Alerta: O Erro Fatal que Elimina Candidatos -->
-    <div style="background: rgba(235, 155, 10, 0.08); border-left: 4px solid #eb9b0a; padding: 14px 18px; border-radius: 8px; margin-bottom: 20px;">
-        <strong style="color: #eb9b0a; font-size: 15px;">⚠️ O Erro Fatal que Elimina Candidatos:</strong>
-        <p style="font-size: 14px; line-height: 1.7; color: var(--text-secondary); margin: 6px 0 0 0;">
-            Se você fizer <code>1/2 + 1/3 = (1 + 1)/(2 + 3) = 2/5</code>, você acabou de cometer o erro mais comum da matemática básica! Pense com a lógica da vida real: <code>1/2</code> é meia pizza inteira (50%). Se você somar mais um terço (33%), você tem quase a pizza inteira (83%). Mas <code>2/5</code> é apenas 40% (menos do que a metade que você já tinha no início!). <strong>Não se pode somar frações com pedaços de tamanhos diferentes!</strong>
-        </p>
-    </div>
-
-    <!-- Degrau 1: O que é MMC de verdade -->
-    <h4 style="color: #00d6b6; font-size: 16px; margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px;">
-        <span>🪜</span> Degrau 1: O que é o MMC e de Onde Ele Surge?
-    </h4>
-    <p style="font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 12px;">
-        Para somar <code>1/2</code> com <code>1/3</code>, precisamos encontrar um <strong>tamanho de corte em comum</strong> que sirva tanto para quem divide por 2 quanto para quem divide por 3. Esse tamanho é o <strong>Mínimo Múltiplo Comum (MMC)</strong>.
-    </p>
-    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 16px;">
-        <div style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.8;">
-            • <strong>Múltiplo de um número</strong> é simplesmente o resultado da tabuada dele:<br>
-            &nbsp;&nbsp;Tabuada do 2: 2, 4, <strong style="color:#00d6b6;">6</strong>, 8, 10, <strong style="color:#00d6b6;">12</strong>, 14, 16, <strong style="color:#00d6b6;">18</strong>...<br>
-            &nbsp;&nbsp;Tabuada do 3: 3, <strong style="color:#00d6b6;">6</strong>, 9, <strong style="color:#00d6b6;">12</strong>, 15, <strong style="color:#00d6b6;">18</strong>, 21...<br>
-            • <strong>Múltiplos Comuns:</strong> Números que aparecem nas DUAS tabuadas ao mesmo tempo: <code>6, 12, 18, 24...</code><br>
-            • <strong>MÍNIMO Múltiplo Comum (MMC):</strong> É o primeiro encontro das duas tabuadas, o menor de todos: <strong style="color:#00d6b6; font-size:15px;">6</strong>!
-        </div>
-    </div>
-
-    <!-- Degrau 2: A Fatoração Simultânea -->
-    <h4 style="color: #00d6b6; font-size: 16px; margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px;">
-        <span>⚙️</span> Degrau 2: A Fatoração Simultânea (A Famosa "Barrinha")
-    </h4>
-    <p style="font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 10px;">
-        Quando os números forem maiores (ex: somar frações com denominadores 4 e 6), não precisamos escrever a tabuada inteira. Usamos a divisão simultânea por números primos (2, 3, 5, 7...):
-    </p>
-    <div style="background: #0b0f19; border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; font-family: monospace; font-size: 13.5px; line-height: 1.7; color: #e2e8f0; margin-bottom: 16px;">
-        &nbsp;&nbsp;4 , 6 | <strong>2</strong>&nbsp;&nbsp;(4 ÷ 2 = 2;&nbsp; 6 ÷ 2 = 3)<br>
-        &nbsp;&nbsp;2 , 3 | <strong>2</strong>&nbsp;&nbsp;(2 ÷ 2 = 1;&nbsp; 3 não divide por 2, apenas repete)<br>
-        &nbsp;&nbsp;1 , 3 | <strong>3</strong>&nbsp;&nbsp;(3 ÷ 3 = 1)<br>
-        &nbsp;&nbsp;1 , 1 | <strong>Fim!</strong> Multiplique a coluna da direita: <strong>2 × 2 × 3 = 12</strong>.<br>
-        &nbsp;&nbsp;<span style="color:#00d6b6;">➔ O MMC entre 4 e 6 é exatamente 12!</span>
-    </div>
-
-    <!-- Degrau 3: O Mistério de Divide pelo de baixo -->
-    <h4 style="color: #00d6b6; font-size: 16px; margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px;">
-        <span>💡</span> Degrau 3: O Mistério de "Divide Pelo de Baixo e Multiplica Pelo de Cima"
-    </h4>
-    <p style="font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 12px;">
-        Agora que sabemos que o novo denominador comum entre 2 e 3 é <strong>6</strong>, por que fazemos essa regra? Veja o significado visual de cada etapa:
-    </p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-bottom: 18px;">
-        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px;">
-            <strong style="color: var(--accent); font-size: 14px;">Convertendo a Fração 1/2:</strong>
-            <p style="font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); margin: 8px 0 0 0;">
-                1º) <code>6 ÷ 2 = 3</code>: "Quantas fatias novas de tamanho 1/6 cabem na minha metade antiga?" Cabem <strong>3</strong>!<br>
-                2º) <code>3 × 1 = 3</code>: "Como eu tinha 1 metade, agora fico com <strong>3 fatias de 1/6</strong>."<br>
-                ➔ Resultado: <code>1/2 = 3/6</code>.
-            </p>
-        </div>
-        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px;">
-            <strong style="color: var(--accent); font-size: 14px;">Convertendo a Fração 1/3:</strong>
-            <p style="font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); margin: 8px 0 0 0;">
-                1º) <code>6 ÷ 3 = 2</code>: "Quantas fatias novas de tamanho 1/6 cabem no meu terço antigo?" Cabem <strong>2</strong>!<br>
-                2º) <code>2 × 1 = 2</code>: "Como eu tinha 1 terço, agora fico com <strong>2 fatias de 1/6</strong>."<br>
-                ➔ Resultado: <code>1/3 = 2/6</code>.
-            </p>
-        </div>
-    </div>
-    <div style="background: rgba(0, 214, 182, 0.08); border: 1px solid rgba(0, 214, 182, 0.25); border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.7;">
-        <strong>Conclusão da Soma:</strong> Agora que todas as fatias têm o mesmo tamanho (sextos), somamos apenas os numeradores:<br>
-        <span style="font-size: 16px; font-weight: 800; color: #00d6b6;">1/2 + 1/3 = 3/6 + 2/6 = (3 + 2)/6 = 5/6</span>
-    </div>
-
-    <!-- O Método da Borboleta -->
-    <div style="background: linear-gradient(135deg, rgba(138, 87, 235, 0.08), rgba(235, 155, 10, 0.05)); border: 1px dashed rgba(138, 87, 235, 0.35); border-radius: 12px; padding: 16px 18px; margin-bottom: 22px;">
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-            <span style="font-size:20px;">🦋</span>
-            <strong style="color: #a78bfa; font-size: 15px;">Atalho Ninja para a Prova: O Método da Borboleta (Multiplicação Cruzada)</strong>
-        </div>
-        <p style="font-size: 13.5px; line-height: 1.65; color: var(--text-secondary); margin-bottom: 10px;">
-            Se a questão tiver apenas <strong>duas frações</strong> para somar ou subtrair, você não precisa armar a barrinha do MMC na hora da prova. Multiplique cruzado:
-        </p>
-        <div style="font-family: monospace; font-size: 14px; background: rgba(0,0,0,0.3); padding: 10px 14px; border-radius: 8px; color: #e2e8f0; line-height: 1.6;">
-            1/2 + 1/3 = [(1 × 3) + (2 × 1)] / (2 × 3) = (3 + 2) / 6 = <strong>5/6</strong>
-        </div>
-        <p style="font-size: 12.5px; color: var(--text-tertiary); margin: 8px 0 0 0;">
-            <em>Regra prática: Multiplica a diagonal principal + diagonal secundária no topo; multiplica os denominadores retos na base!</em>
-        </p>
-    </div>
-
-    <!-- Degrau 4: E o MDC? -->
-    <h4 style="color: #00d6b6; font-size: 16px; margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px;">
-        <span>✂️</span> Degrau 4: E o MDC? Para que Serve e Onde Entra na Prova?
-    </h4>
-    <p style="font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 12px;">
-        Enquanto o MMC serve para <strong>iniciar</strong> a soma unificando os denominadores, o <strong>MDC (Máximo Divisor Comum)</strong> serve para o <strong>final da conta: simplificar a fração</strong> até a forma irredutível que aparece nas opções do gabarito!
-    </p>
-    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 16px;">
-        <div style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.75;">
-            • Imagine que sua conta terminou na fração <code>48/72</code>. Essa opção NÃO vai existir na prova.<br>
-            • Os divisores de 48 são: 1, 2, 3, 4, 6, 8, 12, 16, <strong style="color:#eb9b0a;">24</strong>, 48.<br>
-            • Os divisores de 72 são: 1, 2, 3, 4, 6, 8, 9, 12, 18, <strong style="color:#eb9b0a;">24</strong>, 36, 72.<br>
-            • O <strong>MAIOR</strong> número que divide ambos ao mesmo tempo é o <strong>24</strong> (o MDC).<br>
-            • Dividindo o de cima e o de baixo por 24 em uma única etapa: <code>(48 ÷ 24) / (72 ÷ 24) = 2/3</code>! Pronto, você achou a alternativa correta!
-        </div>
-    </div>
-
-    <!-- Resumo das 4 Operações -->
-    <h4 style="color: #00d6b6; font-size: 16px; margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px;">
-        <span>📊</span> Resumo Visual das 4 Operações com Frações
-    </h4>
-    <div class="box-formula" style="line-height: 1.9; font-size: 14px;">
-        <strong>➕ Soma & ➖ Subtração:</strong> EXIGEM denominadores iguais. Use o <strong>MMC</strong> para igualar os pedaços (ou o Método da Borboleta para 2 frações).<br>
-        <strong>✖️ Multiplicação:</strong> NÃO usa MMC! Multiplica direto: topo × topo e base × base: <code>(2/3) · (4/5) = (2·4)/(3·5) = 8/15</code>.<br>
-        <strong>➗ Divisão:</strong> NÃO usa MMC! Mantém a primeira fração, inverte a segunda e multiplica: <code>(2/3) ÷ (4/5) = (2/3) · (5/4) = 10/12 = 5/6</code>.<br>
-        <strong>✂️ Simplificação Final:</strong> Divida numerador e denominador pelo <strong>MDC</strong> para chegar na fração irredutível do gabarito.
-    </div>
+<div class="card" style="margin-bottom:20px;">
+    <h3><span class="step-num">🔬</span> Teoria do Zero: Frações, Decimais e Porcentagens (e o porquê de cada regra)</h3>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Muita gente decora regras de fração (&ldquo;inverte e multiplica&rdquo;, &ldquo;iguala o de baixo&rdquo;) e esquece tudo na prova. Aqui você vai ver <strong>por que cada regra existe</strong>. Quando você entende o motivo, a regra deixa de ser decoreba e você nunca mais esquece.</p>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 1. O que é uma fração, de verdade?</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Uma fração <code>a/b</code> responde: &ldquo;se eu cortar um todo em <strong>b pedaços iguais</strong>, quanto vale <strong>a</strong> desses pedaços?&rdquo;. O <strong>denominador</strong> (b, embaixo) <em>nomeia</em> o tamanho do pedaço (quartos, quintos, oitavos...). O <strong>numerador</strong> (a, em cima) <em>conta</em> quantos pedaços temos.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Há uma segunda leitura, igualmente importante: <code>a/b</code> também significa <strong>a ÷ b</strong>. Por isso <code>3/4 = 3 ÷ 4 = 0,75</code>. A barra de fração é um sinal de divisão.</p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Fração própria:</strong> numerador menor que o denominador (3/4). Vale menos que 1 inteiro.</li>
+<li><strong>Fração imprópria:</strong> numerador maior ou igual ao denominador (7/4). Vale 1 inteiro ou mais.</li>
+<li><strong>Número misto:</strong> inteiro + fração própria. Exemplo: <code>7/4 = 1 3/4</code>, porque 7 quartos são 4 quartos (1 inteiro) + 3 quartos.</li>
+</ul>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Misto → imprópria:</strong> multiplique o inteiro pelo denominador, some o numerador e mantenha o denominador. <code>2 1/3 = (2·3 + 1)/3 = 7/3</code> (2 inteiros = 6 terços, mais 1 terço = 7 terços).<br><strong>Imprópria → mista:</strong> divida. <code>17/5</code>: 17 ÷ 5 = 3 resta 2, então <code>3 2/5</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Fração de um número:</strong> &ldquo;de&rdquo; significa <strong>vezes</strong>. Para achar <code>3/4 de 20</code>, divida 20 em 4 partes (20 ÷ 4 = 5) e pegue 3 delas (3 · 5 = 15). Ou em uma conta só: <code>(3/4) · 20 = 60/4 = 15</code>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 2. Frações equivalentes e simplificação</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Frações diferentes podem valer o mesmo: <code>1/2 = 2/4 = 3/6 = 50/100</code>. Se você multiplicar o numerador <strong>e</strong> o denominador pelo mesmo número, o valor não muda. Por quê? Porque você está multiplicando a fração por <code>2/2</code>, <code>3/3</code>..., e qualquer número dividido por ele mesmo vale 1. Multiplicar por 1 nunca muda nada: só &ldquo;troca a roupa&rdquo; da fração (cortamos cada pedaço ao meio, o dobro de pedaços, cada um com metade do tamanho).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Simplificar</strong> é o caminho contrário: dividir em cima e embaixo pelo mesmo número até não dar mais. A fração <strong>irredutível</strong> é a mais simples possível, e é a que a prova costuma colocar no gabarito. O atalho é dividir de uma só vez pelo <strong>MDC</strong> (maior número que divide os dois): <code>48/72</code>, MDC = 24, então <code>2/3</code>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 3. Comparar frações: qual é maior?</h4><ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Mesmo denominador:</strong> o maior numerador vence (5/8 &gt; 3/8: pedaços do mesmo tamanho, 5 é mais que 3).</li>
+<li><strong>Mesmo numerador:</strong> o <em>menor</em> denominador vence (1/3 &gt; 1/5: dividir a pizza em menos pedaços dá fatias maiores).</li>
+<li><strong>Tudo diferente:</strong> iguale os denominadores (MMC) e compare os numeradores. Ou transforme em decimais. Exemplo: <code>3/4</code> vs <code>5/7</code>: 3/4 = 0,75 e 5/7 ≈ 0,714, logo 3/4 é maior.</li>
+</ul></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 4. Soma e subtração: só dá para juntar pedaços do mesmo tamanho</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Somar <code>1/2 + 1/3</code> como <code>2/5</code> é o erro mais comum de todos. Teste de bom senso: meia pizza (50%) mais um terço de pizza (33%) dá quase a pizza inteira. Mas 2/5 = 40%, <em>menos</em> que a meia pizza que você já tinha! Impossível.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O problema é que meios e terços são pedaços de <strong>tamanhos diferentes</strong>. A solução é cortar tudo em um tamanho comum que sirva para os dois. Esse tamanho é o <strong>denominador comum</strong>, e o menor possível é o <strong>MMC</strong> (menor número que está na tabuada dos dois denominadores).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Passo a passo (1/2 + 1/3):</strong></p>
+<ol style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>MMC(2, 3) = 6</strong> (tabuada do 2: 2, 4, <strong>6</strong>; do 3: 3, <strong>6</strong>). Vamos cortar tudo em sextos.</li>
+<li><strong>Converter:</strong> quantos sextos cabem em 1/2? 6 ÷ 2 = 3, e como tínhamos 1 meio, ficamos com 1 · 3 = 3 sextos: <code>1/2 = 3/6</code>. Do mesmo jeito, 6 ÷ 3 = 2, então <code>1/3 = 2/6</code>. (Foi exatamente a regra &ldquo;divide pelo de baixo e multiplica pelo de cima&rdquo;!)</li>
+<li><strong>Somar só os numeradores</strong> (o denominador apenas <em>nomeia</em> os pedaços e não soma): <code>3/6 + 2/6 = 5/6</code>.</li>
+<li><strong>Simplificar</strong> se der.</li>
+</ol>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Como achar o MMC de números maiores (a &ldquo;barrinha&rdquo;):</strong> divida todos ao mesmo tempo por primos (2, 3, 5...) e multiplique os divisores usados. Para 4 e 6: <code>4,6 | 2</code> → <code>2,3 | 2</code> → <code>1,3 | 3</code> → <code>1,1</code>. MMC = 2 · 2 · 3 = <strong>12</strong>.</p>
+<div class="box-formula" style="line-height:1.8;"><strong>Atalho da borboleta</strong> (só para 2 frações): <code>a/b + c/d = (a·d + c·b) / (b·d)</code><br>Exemplo: 1/2 + 1/3 = (1·3 + 1·2)/(2·3) = 5/6. Funciona sempre, mas pode dar uma fração para simplificar no final.</div></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 5. Multiplicação: pegar uma parte de uma parte</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Multiplicar frações é <strong>topo × topo e base × base</strong>, sem MMC. <strong>Por quê?</strong> Porque <code>1/2 · 1/3</code> significa &ldquo;metade de um terço&rdquo;. Imagine uma barra de chocolate cortada em 3 tiras iguais: pegue 1 tira (1/3) e corte-a ao meio. Cada pedacinho é <code>1/6</code> da barra (a barra inteira ficaria com 3 · 2 = 6 pedacinhos). Logo <code>1/2 · 1/3 = (1·1)/(2·3) = 1/6</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Em geral: <code>(a/b) · (c/d) = (a·c)/(b·d)</code>. Dica de prova: <strong>corte antes de multiplicar</strong> (simplifique na diagonal). <code>(4/9) · (3/8) = (4·3)/(9·8)</code>; corte 4 com 8 (÷4) e 3 com 9 (÷3): fica <code>1/(3·2) = 1/6</code>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 6. Divisão: &ldquo;quantas vezes cabe?&rdquo; (e por que invertemos)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Dividir é perguntar <strong>quantas vezes um número cabe dentro do outro</strong>. Quantos pedaços de <code>1/2</code> cabem em 3 inteiros? Cada inteiro tem 2 metades, então 3 inteiros têm 6 metades: <code>3 ÷ 1/2 = 6</code>. Repare: dividir por 1/2 deu o mesmo que <strong>multiplicar por 2</strong>, o inverso de 1/2.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Isso vale sempre: <strong>dividir por uma fração é multiplicar pela fração invertida</strong>. <code>(a/b) ÷ (c/d) = (a/b) · (d/c)</code>. Exemplo: <code>(2/3) ÷ (4/5) = (2/3) · (5/4) = 10/12 = 5/6</code>. Cuidado: inverte-se apenas a <em>segunda</em> fração (o divisor), e só depois se multiplica.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Um número misto deve virar fração imprópria <strong>antes</strong> de multiplicar ou dividir: <code>2 1/2 · 4/5 = 5/2 · 4/5 = 2</code>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 7. Números decimais: frações com denominador 10, 100, 1000...</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O sistema decimal usa o valor posicional: cada casa depois da vírgula vale <strong>10 vezes menos</strong> que a anterior: décimos (1/10), centésimos (1/100), milésimos (1/1000). Assim, <code>0,375 = 3/10 + 7/100 + 5/1000 = 375/1000</code>.</p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Decimal → fração:</strong> escreva o número sem a vírgula sobre 1 seguido de tantos zeros quantas forem as casas decimais, e simplifique. <code>0,75 = 75/100 = 3/4</code>. <code>1,2 = 12/10 = 6/5</code>.</li>
+<li><strong>Fração → decimal:</strong> divida o numerador pelo denominador. <code>3/8 = 3 ÷ 8 = 0,375</code>. <code>1/3 = 0,333...</code> (uma dízima periódica, assunto do módulo 3).</li>
+<li><strong>Somar e subtrair decimais:</strong> alinhe <em>vírgula embaixo de vírgula</em> (para somar décimos com décimos). Complete com zeros se precisar: <code>3,5 + 0,27 = 3,50 + 0,27 = 3,77</code>.</li>
+<li><strong>Multiplicar decimais:</strong> multiplique como se não houvesse vírgula e depois conte as casas decimais de <em>todos</em> os fatores. <code>0,3 · 0,04</code>: 3 · 4 = 12, com 1 + 2 = 3 casas, então <code>0,012</code>.</li>
+<li><strong>Dividir decimais:</strong> multiplique dividendo e divisor pela mesma potência de 10 para eliminar a vírgula (é a mesma fração equivalente de antes). <code>1,5 ÷ 0,05 = 150 ÷ 5 = 30</code>.</li>
+</ul></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 8. Porcentagem: fração com denominador 100</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">&ldquo;Por cento&rdquo; quer dizer <strong>por cada cem</strong>. <code>25% = 25/100 = 1/4 = 0,25</code>. Para ir de decimal a porcentagem, multiplique por 100 (ande 2 casas para a direita); para voltar, divida por 100.</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Fração</th><th>Decimal</th><th>Porcentagem</th></tr>
+<tr><td>1/2</td><td>0,5</td><td>50%</td></tr>
+<tr><td>1/4</td><td>0,25</td><td>25%</td></tr>
+<tr><td>3/4</td><td>0,75</td><td>75%</td></tr>
+<tr><td>1/5</td><td>0,2</td><td>20%</td></tr>
+<tr><td>1/10</td><td>0,1</td><td>10%</td></tr>
+<tr><td>1/8</td><td>0,125</td><td>12,5%</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Calcular x% de um valor:</strong> transforme em decimal e multiplique (&ldquo;de&rdquo; = vezes). 30% de 250 = 0,30 · 250 = 75. Atalho mental: 10% é dividir por 10; 50% é dividir por 2; 1% é dividir por 100.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Aumento e desconto com o fator multiplicador:</strong> um aumento de 20% deixa o preço em <code>100% + 20% = 120% = 1,20</code> do original. Um desconto de 20% deixa em <code>100% − 20% = 80% = 0,80</code>. Então o novo preço é <strong>preço × fator</strong>. Um produto de R$ 150 com 20% de aumento custa 150 · 1,20 = R$ 180.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Quanto por cento um valor é de outro?</strong> Faça a fração &ldquo;parte/todo&rdquo; e transforme em %. 18 de 24: <code>18/24 = 3/4 = 75%</code>.</p></div>
 </div>
 
 <div class="box-warning" style="margin-bottom:20px;">
-    <div class="box-header">⚠️ A Pegadinha Clássica da Banca do CEFET</div>
-    <p>A banca adora enunciados em que frações incidem <strong>sobre o restante</strong> e não sobre o total! Exemplo: "gastei 1/3 do meu salário no aluguel e 1/4 <em>do que sobrou</em> no supermercado". Se você fizer <code>1/3 + 1/4 = 7/12</code>, você errou na hora! O correto é: se sobrou 2/3, o supermercado consumiu <code>1/4 de 2/3 = (1/4) · (2/3) = 2/12 = 1/6</code> do salário total!</p>
+    <div class="box-header">⚠️ As Pegadinhas da Banca do CEFET em Frações e Porcentagens</div>
+<p><strong>1. Fração do restante, não do total.</strong> &ldquo;Gastei 1/3 do salário no aluguel e 1/4 <em>do que sobrou</em> no mercado.&rdquo; Se você fizer 1/3 + 1/4 = 7/12, errou. Sobrou 2/3 do salário, e o mercado levou 1/4 de 2/3 = 2/12 = 1/6 do salário <em>total</em>.</p>
+<p><strong>2. Somar frações somando em cima e embaixo.</strong> 1/2 + 1/3 ≠ 2/5. Sempre iguale os denominadores primeiro. Na multiplicação, ao contrário, não há MMC: multiplica direto.</p>
+<p><strong>3. Aumento e desconto iguais não se cancelam.</strong> Um desconto de 20% seguido de um aumento de 20% <em>não</em> volta ao preço original: 100 · 0,80 · 1,20 = 96. Cada porcentagem incide sobre um valor diferente (o segundo é 20% de 80, e não de 100).</p>
+<p><strong>4. Inverter a fração errada na divisão.</strong> Em (a/b) ÷ (c/d), inverte-se somente a segunda. E mista precisa virar imprópria antes de multiplicar ou dividir.</p>
 </div>
 
 <div class="example-solved">
     <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas</div>
     <div class="ex-problem">
-        <strong>Situação-Problema:</strong> Em um processo seletivo do CEFET-RJ, 2/5 dos candidatos inscritos fizeram a prova pela manhã e 1/3 no turno da tarde. Se os 400 candidatos restantes fizeram a prova à noite, quantos candidatos se inscreveram no total?
+        <strong>Situação-Problema:</strong> Em um processo seletivo, 2/5 dos candidatos inscritos fizeram a prova pela manhã e 1/3 no turno da tarde. Se os 400 candidatos restantes fizeram a prova à noite, quantos candidatos se inscreveram no total?
     </div>
     <div class="ex-step">
         <span class="step-tag tag-interp">Etapa 1: Interpretação do Enunciado</span><br>
-        Manhã = 2/5 do total. Tarde = 1/3 do total. Noite = 400 candidatos (representa a fração restante para completar o total 1).
+        Manhã = 2/5 do total. Tarde = 1/3 do total. Noite = 400 pessoas, que representam <strong>o que falta</strong> para completar o todo (o todo vale 1 inteiro = 15/15, por exemplo).
     </div>
     <div class="ex-step">
         <span class="step-tag tag-model">Etapa 2: Modelagem Matemática</span><br>
-        Somamos as frações da manhã e da tarde igualando as fatias: MMC(5, 3) = 15.<br>
-        Manhã + Tarde = 2/5 + 1/3 = 6/15 + 5/15 = 11/15.<br>
-        A fração restante que fez a prova à noite é: 1 − 11/15 = 4/15 do total.
+        Para somar 2/5 e 1/3 preciso do mesmo tamanho de pedaço: MMC(5, 3) = 15.<br><code>2/5 = 6/15</code> e <code>1/3 = 5/15</code>, então manhã + tarde = <code>6/15 + 5/15 = 11/15</code> do total.<br>Fração da noite = 1 − 11/15 = <code>15/15 − 11/15 = 4/15</code>.
     </div>
     <div class="ex-step">
         <span class="step-tag tag-calc">Etapa 3: Resolução dos Cálculos</span><br>
-        Sabemos que 4/15 equivalem exatamente a 400 pessoas:<br>
-        Se 4 partes = 400, então 1 parte (1/15) = 400 ÷ 4 = 100 pessoas.<br>
-        O total de inscritos (as 15 partes de 15) é: 15 · 100 = 1.500 pessoas.
+        4/15 do total são 400 pessoas. Se 4 partes valem 400, então 1 parte (1/15) vale 400 ÷ 4 = 100.<br>O total tem 15 partes: 15 · 100 = <strong>1.500</strong>.<br>Conferindo: manhã 2/5 · 1.500 = 600; tarde 1/3 · 1.500 = 500; noite 400. Soma: 600 + 500 + 400 = 1.500 ✔.
     </div>
     <div class="ex-step result">
         <span class="step-tag tag-concl">Etapa 4: Conclusão Contextualizada</span><br>
-        Inscreveram-se no concurso exatamente <strong>1.500 candidatos</strong>.
+        Inscreveram-se <strong>1.500 candidatos</strong>. O segredo foi tratar o &ldquo;restante&rdquo; como a fração que falta (1 − soma) e depois descobrir o valor de <em>uma</em> parte para reconstruir o todo.
     </div>
 </div>`,
             questions: [
@@ -217,28 +144,69 @@ window.curriculum = [
                     q: "Qual é o resultado simplificado da expressão (3/4 − 1/6) ÷ (7/12)?",
                     options: ["1", "7/12", "14/72", "1/2"],
                     correct: 0,
-                    exp: "Primeiro resolvemos o parêntese: MMC(4,6) = 12 → (9/12 − 2/12) = 7/12. Dividindo: (7/12) ÷ (7/12) = 1."
+                    exp: "Primeiro o parêntese: MMC(4,6) = 12, então 9/12 − 2/12 = 7/12. Depois (7/12) ÷ (7/12) = 1, pois qualquer número dividido por ele mesmo é 1."
                 },
                 {
                     type: "text",
                     q: "Qual é o valor decimal exato da fração 3/8? (Use vírgula para decimais)",
                     a: ["0,375", "0.375"],
-                    exp: "Dividindo 3 por 8: 3 ÷ 8 = 0,375 (trezentos e setenta e cinco milésimos)."
+                    exp: "Fração é divisão: 3 ÷ 8 = 0,375 (trezentos e setenta e cinco milésimos)."
                 },
                 {
                     type: "mc",
                     q: "Ao simplificar a fração 48/72 dividindo numerador e denominador pelo MDC(48, 72) = 24, obtém-se a fração irredutível:",
                     options: ["2/3", "3/4", "4/6", "1/2"],
                     correct: 0,
-                    exp: "48 ÷ 24 = 2 e 72 ÷ 24 = 3 → Fração irredutível 2/3."
+                    exp: "48 ÷ 24 = 2 e 72 ÷ 24 = 3, logo 2/3. Irredutível porque 2 e 3 não têm divisor comum além do 1."
+                },
+                {
+                    type: "mc",
+                    q: "Quanto vale 2/3 + 3/4?",
+                    options: ["5/7", "17/12", "5/12", "6/12"],
+                    correct: 1,
+                    exp: "MMC(3,4) = 12. 2/3 = 8/12 e 3/4 = 9/12, então a soma é 17/12 (ou 1 5/12). A opção 5/7 vem do erro de somar em cima e embaixo."
+                },
+                {
+                    type: "mc",
+                    q: "Qual é o valor de (2/3) ÷ (4/9)?",
+                    options: ["8/27", "3/2", "2/3", "6/9"],
+                    correct: 1,
+                    exp: "Mantém a primeira, inverte a segunda e multiplica: (2/3) · (9/4) = 18/12 = 3/2. Conferindo: 4/9 cabe 1,5 vez em 2/3 (4/9 · 1,5 = 6/9 = 2/3)."
+                },
+                {
+                    type: "text",
+                    q: "Quanto é 0,3 × 0,04? (Use vírgula; escreva o número decimal)",
+                    a: ["0,012", "0.012"],
+                    exp: "3 · 4 = 12. Os fatores têm 1 + 2 = 3 casas decimais no total, então o resultado tem 3 casas: 0,012."
+                },
+                {
+                    type: "mc",
+                    q: "Um tênis custava R$ 200 e recebeu um desconto de 15%. Qual o novo preço?",
+                    options: ["R$ 185", "R$ 170", "R$ 30", "R$ 175"],
+                    correct: 1,
+                    exp: "Desconto de 15% → fator 1 − 0,15 = 0,85. Novo preço = 200 · 0,85 = R$ 170. (15% de 200 = 30 é o valor do desconto, não o preço final.)"
+                },
+                {
+                    type: "mc",
+                    q: "Em uma turma de 40 alunos, 30 foram aprovados. A porcentagem de aprovados foi:",
+                    options: ["30%", "60%", "75%", "80%"],
+                    correct: 2,
+                    exp: "Parte/todo = 30/40 = 3/4 = 0,75 = 75%."
+                },
+                {
+                    type: "text",
+                    q: "Maria gastou 1/5 do salário com aluguel e 1/4 do que sobrou com transporte. Que fração do salário total ela gastou com transporte? (Escreva como fração simplificada, ex.: 1/2)",
+                    a: ["1/5"],
+                    exp: "Depois do aluguel sobraram 4/5. Transporte = 1/4 de 4/5 = 4/20 = 1/5 do salário total."
                 }
             ]
         },
         {
-            id: "mat-02", title: "2. Conjuntos & Diagramas de Venn", time: "25 min", difficulty: "fácil",
+            id: "mat-02", title: "2. Conjuntos & Diagramas de Venn", time: "40 min", difficulty: "fácil",
             track: "selecao", prerequisites: [], examTopics: ["Edital 1.1: Noção intuitiva de conjunto, operações, pertinência, inclusão, Diagramas de Venn-Euler"],
             simpleExplanation: `
-                <p><strong>Em palavras simples:</strong> Pense em dois grupos de amigos: quem joga futebol (A) e quem joga videogame (B). Quem faz as duas coisas fica no meio, na <em>interseção</em> (A ∩ B). Se você quiser contar quantas pessoas existem no total sem contar ninguém duas vezes, você soma os dois grupos e subtrai a turma do meio!</p>
+                <p><strong>Em palavras simples:</strong> Conjunto é um grupo de coisas (os elementos). <strong>Pertencer (∈)</strong> liga um <em>elemento</em> a um conjunto; <strong>estar contido (⊂)</strong> liga um <em>conjunto</em> a outro conjunto. <strong>União (∪)</strong> junta tudo (sem repetir); <strong>interseção (∩)</strong> pega só o que está nos dois; <strong>diferença (A − B)</strong> pega o que é de A e não é de B.</p>
+<p>Nos problemas de pesquisa, desenhe os círculos e <strong>comece sempre pelo miolo</strong> (a interseção), depois preencha para fora. Para evitar contar duas vezes: <code>n(A∪B) = n(A) + n(B) − n(A∩B)</code>.</p>
             `,
             content: `
 <div class="card" style="margin-bottom:20px; border-left: 5px solid var(--accent);">
@@ -275,52 +243,75 @@ window.curriculum = [
 </div>
 
 <div class="card" style="margin-bottom:20px;">
-    <h3><span class="step-num">🔬</span> Teoria Descomplicada: Notações, Subconjuntos & A Fórmula da União</h3>
-    <p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">
-        Para não errar na prova do CEFET, você precisa dominar duas linguagens formais:
-    </p>
-    <ul style="font-size:15px; line-height:1.7; color:var(--text-secondary); padding-left:20px;">
-        <li><strong>Pertinência (∈ e ∉):</strong> Liga um <em>indivíduo</em> ao seu grupo. Exemplo: <code>Neymar ∈ Jogadores</code>. (Nunca use pertence entre dois conjuntos!).</li>
-        <li><strong>Inclusão (⊂ e ⊄):</strong> Liga um <em>grupo menor</em> a um <em>grupo maior</em>. Exemplo: <code>{Atacantes} ⊂ Jogadores</code>.</li>
-        <li><strong>Por que o Conjunto das Partes tem $2^n$ subconjuntos?</strong> Porque ao montar um subconjunto qualquer, para cada elemento da lista você só tem duas escolhas binárias: ou ele <em>entra</em> ou <em>fica de fora</em> (como interruptores de luz: <code>2 · 2 · 2... = 2ⁿ</code>).</li>
-    </ul>
-    <div class="box-formula" style="line-height:1.8;">
-        <strong>Fórmula Fundamental da União de 2 Conjuntos:</strong><br>
-        n(A ∪ B) = n(A) + n(B) − n(A ∩ B)<br>
-        <em>Demonstração: Se você somar n(A) + n(B), as pessoas do meio (interseção) foram contadas duas vezes. Por isso, você DEVE subtrair uma vez o n(A ∩ B) para corrigir a contagem!</em>
-    </div>
+    <h3><span class="step-num">🔬</span> Teoria do Zero: Conjuntos, Operações e Diagramas de Venn</h3>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Conjuntos são a <strong>linguagem organizadora</strong> da matemática: antes de resolver um problema, você precisa saber &ldquo;do que estamos falando&rdquo;. Aqui você aprende a notação (que parece difícil, mas é só um código) e, principalmente, a técnica de resolver os problemas de pesquisa que o CEFET adora.</p>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 1. Conjunto e elemento</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Conjunto</strong> é uma coleção de objetos bem definida (dá para dizer com certeza se um objeto está ou não nela). Cada objeto é um <strong>elemento</strong>. Usamos letras maiúsculas para os conjuntos e chaves para listar os elementos: <code>A = {1, 2, 3}</code>. A ordem não importa e elementos repetidos contam uma vez só: <code>{1, 2, 2, 3} = {3, 1, 2}</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Três jeitos de descrever um conjunto:</strong></p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Listando:</strong> <code>B = {2, 4, 6, 8}</code></li>
+<li><strong>Pela propriedade:</strong> <code>B = {x | x é par e 0 &lt; x &lt; 10}</code> (lê-se &ldquo;x tal que x é par e está entre 0 e 10&rdquo;). A barra | significa &ldquo;tal que&rdquo;.</li>
+<li><strong>Pelo diagrama de Venn-Euler:</strong> uma curva fechada com os elementos dentro dela.</li>
+</ul>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Conjuntos especiais:</strong> o <strong>conjunto vazio</strong> (∅ ou { }) não tem nenhum elemento; o <strong>unitário</strong> tem exatamente 1; o <strong>conjunto universo</strong> (U) é o &ldquo;mundo&rdquo; onde estamos trabalhando e contém todos os elementos considerados.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 2. Pertinência (∈) × Inclusão (⊂): a confusão que mais derruba</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">São duas relações <strong>diferentes</strong>:</p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Pertinência (∈, ∉):</strong> relaciona <em>elemento</em> com <em>conjunto</em>. &ldquo;2 pertence a A&rdquo;: <code>2 ∈ A</code>.</li>
+<li><strong>Inclusão (⊂, ⊄):</strong> relaciona <em>conjunto</em> com <em>conjunto</em>. &ldquo;{1, 2} está contido em A&rdquo;: <code>{1,2} ⊂ A</code>. Dizemos que {1,2} é <strong>subconjunto</strong> de A quando <em>todo</em> elemento dele também está em A.</li>
+</ul>
+<div class="box-formula" style="line-height:1.8;">Elemento ∈ Conjunto &nbsp;&nbsp;|&nbsp;&nbsp; Conjunto ⊂ Conjunto<br>Com A = {1, 2, 3}: &nbsp;<strong>1 ∈ A ✔</strong> &nbsp; <strong>{1} ⊂ A ✔</strong> &nbsp; <strong>1 ⊂ A ✘</strong> &nbsp; <strong>{1} ∈ A ✘</strong></div>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Truque de memória:</strong> chaves {} indicam conjunto. Se há chaves dos dois lados, use ⊂. Se há um elemento solto (sem chaves) de um lado, use ∈. Dois fatos úteis: o vazio é subconjunto de <em>qualquer</em> conjunto (∅ ⊂ A), e todo conjunto é subconjunto de si mesmo (A ⊂ A).</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 3. Quantos subconjuntos existem? (a regra do 2ⁿ e por quê)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Para montar um subconjunto, você decide, elemento por elemento, <strong>entra ou não entra</strong>. São 2 escolhas para o 1º elemento, 2 para o 2º, e assim por diante. Com n elementos: <code>2 · 2 · ... · 2 = 2ⁿ</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo:</strong> A = {a, b, c} tem 2³ = <strong>8</strong> subconjuntos: ∅, {a}, {b}, {c}, {a,b}, {a,c}, {b,c}, {a,b,c}. (&ldquo;Subconjuntos <em>próprios</em>&rdquo; são todos menos o próprio A: 2ⁿ − 1.)</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 4. As operações (com a playlist na cabeça)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Considere <code>A = {1, 2, 3, 4}</code> e <code>B = {3, 4, 5, 6}</code>.</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Operação</th><th>Símbolo</th><th>Significado</th><th>Resultado</th></tr>
+<tr><td><strong>União</strong></td><td>A ∪ B</td><td>está em A <em>ou</em> em B (ou nos dois)</td><td>{1, 2, 3, 4, 5, 6}</td></tr>
+<tr><td><strong>Interseção</strong></td><td>A ∩ B</td><td>está em A <em>e</em> em B ao mesmo tempo</td><td>{3, 4}</td></tr>
+<tr><td><strong>Diferença</strong></td><td>A − B</td><td>está em A <em>mas não</em> em B</td><td>{1, 2}</td></tr>
+<tr><td><strong>Diferença</strong></td><td>B − A</td><td>está em B mas não em A</td><td>{5, 6}</td></tr>
+<tr><td><strong>Complementar</strong></td><td>A<sup>c</sup> (em U)</td><td>está em U mas <em>não</em> em A</td><td>com U = {1..6}: {5, 6}</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Note que <strong>A − B ≠ B − A</strong> (a diferença depende da ordem) e que na união os elementos repetidos (3 e 4) aparecem uma vez só. Dois conjuntos sem elementos em comum (A ∩ B = ∅) são <strong>disjuntos</strong>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 5. Contando elementos: por que subtrair a interseção?</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Numa turma, 20 alunos gostam de futebol e 15 gostam de vôlei. Quantos alunos gostam de pelo menos um dos dois? Somar 20 + 15 = 35 está <strong>errado se alguns alunos gostam dos dois</strong>, porque esses alunos foram contados <em>duas vezes</em> (uma na lista do futebol e outra na do vôlei). Corrigimos tirando a interseção uma vez:</p>
+<div class="box-formula" style="line-height:1.8;"><strong>n(A ∪ B) = n(A) + n(B) − n(A ∩ B)</strong><br>Se 8 alunos gostam dos dois: 20 + 15 − 8 = <strong>27</strong> alunos gostam de pelo menos um.</div>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Para <strong>três conjuntos</strong> a ideia é a mesma, com um ajuste: some os três, subtraia as três interseções de dois (que foram contadas 2 vezes) e some de volta a interseção dos três (que foi subtraída demais): <code>n(A∪B∪C) = n(A)+n(B)+n(C) − n(A∩B) − n(A∩C) − n(B∩C) + n(A∩B∩C)</code>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 6. O método infalível para problemas de pesquisa (Diagrama de Venn)</h4><ol style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Desenhe os círculos</strong> (dois ou três) dentro de um retângulo (o universo).</li>
+<li><strong>Comece pelo miolo:</strong> preencha primeiro a interseção de <em>todos</em> os conjuntos, depois as interseções de dois, e só no fim as regiões &ldquo;só de um&rdquo;.</li>
+<li><strong>Cuidado com &ldquo;total&rdquo; versus &ldquo;só&rdquo;:</strong> quando o enunciado diz &ldquo;20 gostam de futebol&rdquo;, esses 20 incluem os que também gostam de vôlei. Então, a região &ldquo;só futebol&rdquo; = 20 − (os que estão na interseção).</li>
+<li><strong>O que está fora dos círculos</strong> (mas dentro do retângulo) = total − (soma de todas as regiões preenchidas).</li>
+</ol>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo (2 conjuntos):</strong> em uma pesquisa com 100 pessoas, 60 bebem café, 45 bebem chá e 25 bebem os dois. Miolo: 25. Só café: 60 − 25 = 35. Só chá: 45 − 25 = 20. Dentro dos círculos: 35 + 25 + 20 = 80. Fora (nenhum dos dois): 100 − 80 = <strong>20</strong>.</p></div>
 </div>
 
 <div class="box-warning" style="margin-bottom:20px;">
-    <div class="box-header">⚠️ A Pegadinha Clássica da Banca do CEFET</div>
-    <p>A banca adora confundir <strong>"gostam de A"</strong> com <strong>"gostam APENAS de A"</strong>! Se o texto diz que "40 alunos gostam de matemática e 15 gostam de matemática e física", o número de alunos que gostam <em>somente de matemática</em> é <code>40 − 15 = 25</code>! Regra de ouro da aprovação: <strong>Sempre comece preenchendo o diagrama pelo CENTRO (a interseção mais interna)!</strong></p>
+    <div class="box-header">⚠️ As Pegadinhas da Banca do CEFET em Conjuntos</div>
+<p><strong>1. ∈ no lugar de ⊂ (e vice-versa).</strong> Com A = {1, 2, 3}, a afirmação <code>1 ⊂ A</code> é <strong>falsa</strong> (1 é elemento, e não conjunto), e <code>{1} ∈ A</code> também é <strong>falsa</strong> ({1} é conjunto, e não é um dos elementos de A). As corretas são <code>1 ∈ A</code> e <code>{1} ⊂ A</code>.</p>
+<p><strong>2. Usar o &ldquo;total&rdquo; como se fosse &ldquo;só&rdquo;.</strong> &ldquo;30 alunos falam inglês&rdquo; inclui quem fala inglês e outro idioma. Se você escrever 30 direto na região &ldquo;só inglês&rdquo; do diagrama, a soma final estoura o total da pesquisa. Sempre subtraia a interseção primeiro.</p>
+<p><strong>3. Esquecer quem está fora.</strong> Se a pesquisa tem 120 pessoas e as regiões somam 92, existem 28 pessoas que não pertencem a nenhum conjunto. A banca pergunta por esse grupo.</p>
+<p><strong>4. Diferença não é simétrica.</strong> A − B e B − A dão resultados diferentes. Leia com calma qual vem primeiro.</p>
 </div>
 
 <div class="example-solved">
-    <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas</div>
+    <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas (3 Conjuntos)</div>
     <div class="ex-problem">
-        <strong>Situação-Problema:</strong> Em uma pesquisa com 50 alunos do 9º ano concorrentes ao CEFET Maracanã sobre cursos técnicos de preferência, 30 escolheram Informática, 25 escolheram Mecatrônica e 8 não demonstraram interesse por nenhum desses dois cursos. Quantos alunos escolheram AMBOS os cursos simultaneamente?
+        <strong>Situação-Problema:</strong> Em uma pesquisa com 120 estudantes sobre idiomas: 50 estudam inglês, 40 estudam espanhol e 30 estudam francês. Sabe-se que 15 estudam inglês e espanhol, 10 estudam inglês e francês, 8 estudam espanhol e francês, e 5 estudam os três idiomas. Quantos estudantes <strong>não</strong> estudam nenhum desses três idiomas?
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-interp">Etapa 1: Interpretação dos Dados</span><br>
-        Total pesquisado = 50 alunos.<br>
-        Alunos fora dos dois cursos = 8.<br>
-        Total de alunos que escolheram ao menos um dos cursos: n(I ∪ M) = 50 − 8 = <strong>42 alunos</strong>.
+        <span class="step-tag tag-interp">Etapa 1: Interpretação do Enunciado</span><br>
+        Três conjuntos: I (inglês), E (espanhol) e F (francês), dentro de um universo de 120 pessoas. Os números dados (15, 10, 8) são <strong>totais</strong> das interseções de dois, e por isso incluem os 5 que estudam os três. A pergunta é sobre a região <strong>fora</strong> dos três círculos.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-model">Etapa 2: Modelagem Matemática</span><br>
-        Aplicamos a fórmula da união com a incógnita x representando os que querem ambos (interseção):<br>
-        n(I ∪ M) = n(I) + n(M) − n(I ∩ M)<br>
-        42 = 30 + 25 − x
+        <span class="step-tag tag-model">Etapa 2: Modelagem (preencher do miolo para fora)</span><br>
+        • Miolo (I ∩ E ∩ F): <strong>5</strong>.<br>• Só I e E: 15 − 5 = <strong>10</strong>. Só I e F: 10 − 5 = <strong>5</strong>. Só E e F: 8 − 5 = <strong>3</strong>.<br>• Só inglês: 50 − (10 + 5 + 5) = <strong>30</strong>. Só espanhol: 40 − (10 + 3 + 5) = <strong>22</strong>. Só francês: 30 − (5 + 3 + 5) = <strong>17</strong>.
     </div>
     <div class="ex-step">
         <span class="step-tag tag-calc">Etapa 3: Resolução dos Cálculos</span><br>
-        42 = 55 − x<br>
-        x = 55 − 42 = <strong>13</strong>.
+        Dentro dos círculos: 5 + 10 + 5 + 3 + 30 + 22 + 17 = <strong>92</strong> estudantes.<br>Conferindo com a fórmula: 50 + 40 + 30 − 15 − 10 − 8 + 5 = 92 ✔.<br>Fora dos círculos: 120 − 92 = <strong>28</strong>.
     </div>
     <div class="ex-step result">
         <span class="step-tag tag-concl">Etapa 4: Conclusão Contextualizada</span><br>
-        Exatamente <strong>13 candidatos</strong> têm interesse conjunto em cursar tanto Informática quanto Mecatrônica. (Checagem rápida: Apenas Informática = 30 − 13 = 17; Apenas Mecatrônica = 25 − 13 = 12; Ambos = 13; Nenhum = 8. Soma: 17 + 12 + 13 + 8 = 50 alunos!).
+        <strong>28 estudantes</strong> não estudam nenhum dos três idiomas. A chave do problema foi subtrair cada interseção de dois do valor do miolo (os 5 que estudam tudo) para não contar ninguém duas vezes.
     </div>
 </div>`,
             questions: [
@@ -336,14 +327,69 @@ window.curriculum = [
                     q: "Se um conjunto A tem 3 elementos, quantos subconjuntos ele possui no total? (2ⁿ)",
                     a: ["8"],
                     exp: "2³ = 8 subconjuntos."
+                },
+                {
+                    type: "mc",
+                    q: "Sendo A = {1, 2, 3}, qual das afirmações abaixo é VERDADEIRA?",
+                    options: ["1 ⊂ A", "{1} ⊂ A", "{1} ∈ A", "A ∈ A"],
+                    correct: 1,
+                    exp: "{1} é um conjunto e todos os seus elementos estão em A, logo {1} ⊂ A. Já '1 ⊂ A' erra a relação (1 é elemento: seria 1 ∈ A), e '{1} ∈ A' também, pois {1} não é elemento de A."
+                },
+                {
+                    type: "mc",
+                    q: "Se n(A) = 12, n(B) = 8 e n(A ∩ B) = 5, quanto vale n(A ∪ B)?",
+                    options: ["25", "20", "15", "13"],
+                    correct: 2,
+                    exp: "n(A ∪ B) = n(A) + n(B) − n(A ∩ B) = 12 + 8 − 5 = 15. Subtraímos 5 porque os elementos da interseção foram contados duas vezes."
+                },
+                {
+                    type: "text",
+                    q: "Em uma pesquisa com 100 pessoas, 60 bebem café, 45 bebem chá e 25 bebem os dois. Quantas pessoas não bebem nenhuma das duas bebidas? (Responda só com o número)",
+                    a: ["20"],
+                    exp: "Pelo menos uma: 60 + 45 − 25 = 80. Nenhuma: 100 − 80 = 20."
+                },
+                {
+                    type: "mc",
+                    q: "O conjunto B = {x ∈ ℕ | 2 < x ≤ 6} é igual a:",
+                    options: ["{3, 4, 5, 6}", "{2, 3, 4, 5, 6}", "{3, 4, 5}", "{2, 3, 4, 5}"],
+                    correct: 0,
+                    exp: "x é natural, maior que 2 (o 2 fica de fora) e menor ou igual a 6 (o 6 entra). Logo B = {3, 4, 5, 6}."
+                },
+                {
+                    type: "mc",
+                    q: "Um conjunto possui 32 subconjuntos. Quantos elementos ele tem?",
+                    options: ["4", "5", "6", "16"],
+                    correct: 1,
+                    exp: "O número de subconjuntos é 2ⁿ. Como 2⁵ = 32, o conjunto tem n = 5 elementos."
+                },
+                {
+                    type: "mc",
+                    q: "Sendo U = {1, 2, ..., 10} e A = {2, 4, 6, 8, 10}, o complementar de A em relação a U é:",
+                    options: ["{2, 4, 6, 8, 10}", "{1, 3, 5, 7, 9}", "{1, 2, 3, 4, 5}", "{}"],
+                    correct: 1,
+                    exp: "O complementar de A em U reúne os elementos de U que NÃO estão em A: os ímpares {1, 3, 5, 7, 9}."
+                },
+                {
+                    type: "mc",
+                    q: "Em uma turma de 40 alunos, 25 gostam de matemática, 20 gostam de física e 10 gostam das duas. Quantos alunos gostam de matemática, mas NÃO de física?",
+                    options: ["5", "10", "15", "25"],
+                    correct: 2,
+                    exp: "'Só matemática' = total de matemática − interseção = 25 − 10 = 15. (Os 25 incluíam os 10 que também gostam de física.)"
+                },
+                {
+                    type: "text",
+                    q: "Se A = {1, 2, 3, 4} e B = {3, 4, 5, 6}, quantos elementos tem A ∪ B? (Responda só com o número)",
+                    a: ["6"],
+                    exp: "A ∪ B = {1, 2, 3, 4, 5, 6}: os elementos repetidos (3 e 4) são contados uma vez só. Por fórmula: 4 + 4 − 2 = 6."
                 }
             ]
         },
         {
-            id: "mat-03", title: "3. Conjuntos Numéricos, Dízimas & Racionalização", time: "30 min", difficulty: "médio",
+            id: "mat-03", title: "3. Conjuntos Numéricos, Dízimas & Racionalização", time: "45 min", difficulty: "médio",
             track: "selecao", prerequisites: ["mat-01"], examTopics: ["Edital 1.3: Sistemas de numeração, naturais, inteiros, racionais e reais, valor absoluto, notação científica, potenciação e racionalização"],
             simpleExplanation: `
-                <p><strong>Em palavras simples:</strong> Os números são como caixas: os <em>Naturais</em> (0, 1, 2...) cabem dentro dos <em>Inteiros</em> (...-2, -1, 0, 1, 2...), que cabem dentro dos <em>Racionais</em> (qualquer número que vira fração, incluindo dízimas periódicas como 0,333...). Já os <em>Irracionais</em> são números infinitos sem repetição como π e √2. E racionalizar é tirar a raiz da parte de baixo multiplicando em cima e embaixo pela raiz!</p>
+                <p><strong>Em palavras simples:</strong> Os números foram ganhando &ldquo;famílias&rdquo; conforme a humanidade precisava: <strong>naturais</strong> (contar), <strong>inteiros</strong> (dívidas e temperaturas negativas), <strong>racionais</strong> (qualquer número que vira fração, inclusive dízimas periódicas) e <strong>irracionais</strong> (decimais infinitos <em>sem</em> padrão, como π e √2). Juntos formam os <strong>reais</strong>.</p>
+<p><strong>Racionalizar</strong> é tirar a raiz do denominador multiplicando em cima e embaixo pela mesma coisa (o que equivale a multiplicar por 1, e por isso o valor não muda). Se o denominador for uma soma ou diferença de raízes, usamos o <strong>conjugado</strong> (troca o sinal do meio) para a raiz sumir.</p>
             `,
             content: `
 <div class="card" style="margin-bottom:20px; border-left: 5px solid var(--accent);">
@@ -378,46 +424,79 @@ window.curriculum = [
 </div>
 
 <div class="card" style="margin-bottom:20px;">
-    <h3><span class="step-num">🔬</span> Teoria Descomplicada: A Mágica do Conjugado & Dízimas Periódicas</h3>
-    <p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">
-        Para eliminar a raiz do denominador quando temos uma soma ou subtração (como <code>√a − b</code>), usamos o <strong>Conjugado</strong> (trocamos o sinal do meio). Veja a demonstração pelo produto notável da diferença de quadrados:
-    </p>
-    <div class="box-formula" style="line-height:1.8;">
-        (√a − b) · (√a + b) = (√a)² − (b)² = <strong>a − b² (Livre de Raízes!)</strong><br><br>
-        <strong>Como achar a Fração Geratriz de Dízimas (Ex: 0,777...):</strong><br>
-        1) Seja x = 0,777...<br>
-        2) Multiplicamos por 10: 10x = 7,777...<br>
-        3) Subtraímos: 10x − x = 7,777... − 0,777... → 9x = 7 → <strong>x = 7/9 (Portanto é RACIONAL ℚ!)</strong>
-    </div>
+    <h3><span class="step-num">🔬</span> Teoria do Zero: Conjuntos Numéricos, Dízimas, Módulo, Raízes e Racionalização</h3>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Este módulo tem quatro ideias ligadas: <strong>(a)</strong> quais tipos de número existem e por quê, <strong>(b)</strong> como transformar um decimal periódico em fração, <strong>(c)</strong> o que são o módulo e a ordem na reta, e <strong>(d)</strong> como lidar com raízes (simplificar e racionalizar). Vamos construir cada uma a partir do zero.</p>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 1. De onde vêm os conjuntos numéricos (cada um resolve um problema)</h4><ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Naturais (ℕ = {0, 1, 2, 3, ...}):</strong> nasceram para <em>contar</em> coisas. Problema: 3 − 5 não tem resposta.</li>
+<li><strong>Inteiros (ℤ = {..., −2, −1, 0, 1, 2, ...}):</strong> surgiram para representar dívidas, temperaturas abaixo de zero, andares do subsolo. Problema: 3 ÷ 4 não tem resposta inteira.</li>
+<li><strong>Racionais (ℚ):</strong> todo número que pode ser escrito como fração <code>a/b</code> com a e b inteiros e <strong>b ≠ 0</strong>. Resolve as divisões (3/4, −7/2). Problema: qual número multiplicado por ele mesmo dá 2?</li>
+<li><strong>Irracionais (𝕀):</strong> os números que <em>não</em> podem ser escritos como fração, como √2 e π. Os gregos antigos ficaram chocados ao descobrir que a diagonal de um quadrado de lado 1 mede √2, um número que não é fração nenhuma.</li>
+<li><strong>Reais (ℝ):</strong> a união de racionais e irracionais. É a reta numérica completa, sem buracos.</li>
+</ul>
+<div class="box-formula" style="line-height:1.8;"><strong>ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</strong> &nbsp;&nbsp; e &nbsp;&nbsp; <strong>𝕀 ⊂ ℝ</strong> (os irracionais ficam fora de ℚ)<br>Todo natural é inteiro; todo inteiro é racional (5 = 5/1); todo racional é real.</div></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 2. Como reconhecer um racional ou um irracional</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">A pista está na <strong>forma decimal</strong> do número:</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Forma decimal</th><th>Classificação</th><th>Exemplos</th></tr>
+<tr><td>Decimal <strong>finito</strong> (acaba)</td><td>Racional</td><td>0,75 = 3/4; 2,5 = 5/2</td></tr>
+<tr><td>Decimal infinito <strong>periódico</strong> (repete um bloco)</td><td>Racional (dízima periódica)</td><td>0,333... = 1/3; 0,1212... = 4/33</td></tr>
+<tr><td>Decimal infinito <strong>não periódico</strong> (sem padrão)</td><td>Irracional</td><td>π = 3,14159...; √2 = 1,41421...</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Raízes:</strong> a raiz quadrada de um <em>quadrado perfeito</em> é racional (√16 = 4, √25 = 5, √(1/4) = 1/2). A raiz de um número que <em>não</em> é quadrado perfeito (√2, √3, √5, √7, √10...) é <strong>irracional</strong>. Cuidado: √16 <em>parece</em> raiz, mas é o inteiro 4!</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Classificando:</strong> 7 (ℕ, ℤ, ℚ, ℝ); −3 (ℤ, ℚ, ℝ); 0,75 (ℚ, ℝ); 0,333... (ℚ, ℝ); √16 = 4 (ℕ, ℤ, ℚ, ℝ); −√9 = −3 (ℤ, ℚ, ℝ); √2 e π (𝕀, ℝ). O número 22/7 é racional (é uma fração!), apesar de aproximar π.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 3. Dízima periódica → fração (a geratriz), passo a passo</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Toda dízima periódica é uma fração disfarçada. O truque é multiplicar por uma potência de 10 para &ldquo;alinhar&rdquo; as repetições e depois subtrair, para que a parte infinita desapareça.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Dízima simples (período logo após a vírgula):</strong> transformar <code>x = 0,333...</code></p>
+<ol style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li>O período (bloco que repete) tem 1 algarismo, então multiplique por 10: <code>10x = 3,333...</code></li>
+<li>Subtraia a equação original: <code>10x − x = 3,333... − 0,333...</code>, ou seja, <code>9x = 3</code>.</li>
+<li>Isole: <code>x = 3/9 = 1/3</code>.</li>
+</ol>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Outro exemplo:</strong> <code>x = 0,1212...</code> (período de 2 algarismos: multiplica por 100). <code>100x = 12,1212...</code> e então <code>99x = 12</code>, logo <code>x = 12/99 = 4/33</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Dízima composta (tem uma parte que não repete antes do período):</strong> <code>x = 0,2555...</code> Multiplique de modo a ter duas versões com o mesmo período depois da vírgula: <code>10x = 2,555...</code> e <code>100x = 25,555...</code>. Subtraia: <code>100x − 10x = 25 − 2</code>, ou seja, <code>90x = 23</code> e <code>x = 23/90</code>.</p>
+<div class="box-formula" style="line-height:1.8;"><strong>Atalho para a prova:</strong><br>• Simples: período no numerador, tantos 9 no denominador quantos algarismos tem o período. 0,444... = <strong>4/9</strong>; 0,2323... = <strong>23/99</strong>.<br>• Composta: (parte toda sem a vírgula − parte que não repete) ÷ (9s para o período, 0s para a parte que não repete). 0,1666... = (16 − 1)/90 = <strong>15/90 = 1/6</strong>.</div>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Curiosidade que cai em prova: <code>0,999... = 9/9 = 1</code>. Não é &ldquo;quase 1&rdquo;: é <em>igual</em> a 1.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 4. Reta numérica, ordem e valor absoluto (módulo)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Os reais ficam alinhados numa reta: quanto mais à <strong>direita</strong>, maior o número. Por isso <code>−2 &gt; −5</code> (−2 está mais à direita) e todo número negativo é menor que zero e menor que qualquer positivo.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O <strong>valor absoluto</strong> (ou módulo) de x, escrito <code>|x|</code>, é a <strong>distância de x até o zero</strong> na reta, e distância nunca é negativa. <code>|5| = 5</code> e <code>|−5| = 5</code> (os dois estão a 5 passos do zero). Formalmente: <code>|x| = x</code> se x ≥ 0 e <code>|x| = −x</code> se x &lt; 0 (o sinal de menos &ldquo;vira&rdquo; o negativo em positivo).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Equação modular:</strong> <code>|x| = 5</code> tem duas soluções, x = 5 ou x = −5. De modo geral, <code>|x − 2| = 3</code> significa &ldquo;x está a 3 passos de distância do 2&rdquo;, então x = 5 ou x = −1.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 5. Mexendo com raízes: simplificar e somar</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Duas regras bastam: <code>√(a·b) = √a · √b</code> (a raiz de um produto é o produto das raízes) e, na soma, só podemos juntar <strong>radicais semelhantes</strong> (com o mesmo número dentro da raiz), do mesmo jeito que somamos 2 maçãs + 3 maçãs, mas não 2 maçãs + 3 bananas.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Simplificar:</strong> procure o maior quadrado perfeito que divide o número. <code>√72 = √(36 · 2) = √36 · √2 = 6√2</code>. <code>√50 = √(25 · 2) = 5√2</code>.<br><strong>Somar:</strong> <code>√12 + √27 = 2√3 + 3√3 = 5√3</code> (depois de simplificar, ficaram semelhantes).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Armadilha:</strong> <code>√(a + b)</code> <u>não</u> é <code>√a + √b</code>. Por exemplo, √(9 + 16) = √25 = 5, mas √9 + √16 = 3 + 4 = 7.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 6. Racionalização: tirar a raiz do denominador (e por quê)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Por convenção, não deixamos raiz no denominador. Além de padronizar as respostas (a banca espera a forma racionalizada!), isso facilita contas: dividir por um número inteiro é muito mais fácil que dividir por 1,41421356... A ideia é <strong>multiplicar a fração por 1 disfarçado</strong> (algo/algo), o que muda a aparência mas não o valor.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Caso 1: denominador é uma raiz só (√a).</strong> Multiplicamos em cima e embaixo por √a. Isso funciona porque <code>√a · √a = a</code>, e a raiz desaparece.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><code>10/√5 = (10 · √5)/(√5 · √5) = 10√5/5 = 2√5</code></p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Caso 2: denominador é soma ou diferença com raiz (√a + √b ou √a − b).</strong> Multiplicamos pelo <strong>conjugado</strong>: o mesmo termo com o sinal do meio trocado. Isso funciona por causa do produto notável <code>(x + y)(x − y) = x² − y²</code>, que elimina a raiz porque o quadrado de √a é a.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><code>6/(√5 − √2) · (√5 + √2)/(√5 + √2) = 6(√5 + √2)/(5 − 2) = 6(√5 + √2)/3 = 2(√5 + √2)</code></p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Perceba que no denominador foi <code>(√5)² − (√2)² = 5 − 2 = 3</code>: nenhuma raiz sobrou.</p></div>
 </div>
 
 <div class="box-warning" style="margin-bottom:20px;">
-    <div class="box-header">⚠️ A Pegadinha Clássica da Banca do CEFET</div>
-    <p>A banca do CEFET adora perguntar se números com dízimas periódicas como <code>0,999...</code> ou <code>2,333...</code> são números Irracionais. <strong>NUNCA CAIA NESSA: se tem repetição periódica, SEMPRE vira fração, logo É RACIONAL (ℚ)!</strong> Os únicos Irracionais reais são raízes não exatas (√2, √3, √5, ∛4) e constantes transcendentais (π, e, φ).</p>
+    <div class="box-header">⚠️ As Pegadinhas da Banca do CEFET em Conjuntos Numéricos</div>
+<p><strong>1. Dízima periódica NÃO é irracional.</strong> 0,333... tem infinitas casas, mas elas repetem, então vira fração (1/3) e é <strong>racional</strong>. Irracional exige decimais infinitos <em>sem padrão</em>.</p>
+<p><strong>2. Raiz nem sempre é irracional.</strong> √16 = 4 e √(1/4) = 1/2 são racionais. A banca coloca √16 e √2 na mesma lista para ver quem classifica pela aparência.</p>
+<p><strong>3. 22/7 não é irracional.</strong> É uma fração de inteiros, então é racional (só aproxima o π). O próprio π é irracional.</p>
+<p><strong>4. Racionalizar com o conjugado errado.</strong> Para <code>1/(√5 − √2)</code> multiplica-se por <code>(√5 + √2)</code> (sinal trocado). Multiplicar por (√5 − √2) de novo produziria um quadrado e a raiz não sumiria. Lembre também de multiplicar o <em>numerador inteiro</em>.</p>
+<p><strong>5. Módulo nunca dá negativo.</strong> <code>|−8| = 8</code>, e a equação |x| = −3 não tem solução real.</p>
 </div>
 
 <div class="example-solved">
     <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas</div>
     <div class="ex-problem">
-        <strong>Situação-Problema:</strong> Racionalize e determine o valor numérico simplificado da expressão: <code>E = 6 / (√7 − 1)</code>.
+        <strong>Situação-Problema:</strong> Racionalize o denominador da expressão <code>3 / (√7 − 2)</code> e escreva o resultado na forma mais simples.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-interp">Etapa 1: Interpretação do Problema</span><br>
-        Temos uma raiz no denominador acompanhada de uma subtração: (√7 − 1). Não podemos deixar a raiz na parte inferior.
+        <span class="step-tag tag-interp">Etapa 1: Interpretação do Enunciado</span><br>
+        O denominador tem uma <strong>diferença com raiz</strong> (√7 − 2). Estamos no Caso 2: precisamos do <strong>conjugado</strong>, que é o mesmo par de termos com o sinal do meio trocado: (√7 + 2).
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-model">Etapa 2: Modelagem por Conjugado</span><br>
-        Multiplicamos tanto o numerador quanto o denominador pelo conjugado <strong>(√7 + 1)</strong>:
+        <span class="step-tag tag-model">Etapa 2: Modelagem Matemática</span><br>
+        Multiplicamos a fração por 1 disfarçado: <code>(√7 + 2)/(√7 + 2)</code>. Em cima e embaixo, a multiplicação deve ser feita no <em>numerador inteiro</em>:<br><code>3/(√7 − 2) · (√7 + 2)/(√7 + 2) = 3(√7 + 2) / [(√7 − 2)(√7 + 2)]</code>
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-calc">Etapa 3: Execução dos Cálculos</span><br>
-        Numerador: 6 · (√7 + 1)<br>
-        Denominador: (√7 − 1) · (√7 + 1) = (√7)² − 1² = 7 − 1 = 6.<br>
-        Substituindo na fração: E = [6(√7 + 1)] / 6. Cancelamos o fator 6!
+        <span class="step-tag tag-calc">Etapa 3: Resolução dos Cálculos</span><br>
+        Denominador, pelo produto notável (x − y)(x + y) = x² − y²: <code>(√7)² − 2² = 7 − 4 = 3</code>.<br>Então: <code>3(√7 + 2)/3 = √7 + 2</code>.<br>Conferindo numericamente: √7 ≈ 2,6458. O original dá 3 ÷ (2,6458 − 2) = 3 ÷ 0,6458 ≈ 4,6458, e √7 + 2 ≈ 4,6458 ✔.
     </div>
     <div class="ex-step result">
         <span class="step-tag tag-concl">Etapa 4: Conclusão Contextualizada</span><br>
-        O valor simplificado e racionalizado é exatamente <strong>√7 + 1</strong>.
+        A forma racionalizada e simplificada é <strong>√7 + 2</strong>. Repare que o 3 do numerador cortou com o 3 do denominador: quando a banca acerta o conjugado, a resposta costuma ficar surpreendentemente curta, e isso serve como confirmação de que o caminho está certo.
     </div>
 </div>`,
             questions: [
@@ -433,14 +512,76 @@ window.curriculum = [
                     q: "Ao racionalizar a fração 10/√5, qual número inteiro multiplica a raiz √5 no numerador simplificado?",
                     a: ["2"],
                     exp: "10√5 / 5 = 2√5 → O coeficiente é 2."
+                },
+                {
+                    type: "mc",
+                    q: "A fração geratriz da dízima periódica 0,444... é:",
+                    options: ["4/9", "4/10", "44/99", "1/4"],
+                    correct: 0,
+                    exp: "x = 0,444...; 10x = 4,444...; subtraindo: 9x = 4, então x = 4/9. (O período tem 1 algarismo, por isso um 9 no denominador.)"
+                },
+                {
+                    type: "mc",
+                    q: "Qual dos números abaixo é irracional?",
+                    options: ["√25", "0,333...", "√3", "22/7"],
+                    correct: 2,
+                    exp: "√25 = 5 (racional), 0,333... = 1/3 (racional, dízima periódica) e 22/7 é fração (racional). Já √3 = 1,7320508... é decimal infinito sem padrão: irracional."
+                },
+                {
+                    type: "text",
+                    q: "Calcule |−8| + |3|. (Responda só com o número)",
+                    a: ["11"],
+                    exp: "Módulo é distância até o zero: |−8| = 8 e |3| = 3. A soma é 8 + 3 = 11."
+                },
+                {
+                    type: "mc",
+                    q: "Racionalizando 6/√3, obtém-se:",
+                    options: ["2√3", "3√2", "6√3", "√3"],
+                    correct: 0,
+                    exp: "Multiplicando em cima e embaixo por √3: 6√3/3 = 2√3. Como √3 · √3 = 3, a raiz some do denominador."
+                },
+                {
+                    type: "mc",
+                    q: "A dízima periódica composta 0,1666... é igual à fração:",
+                    options: ["1/6", "16/99", "1/60", "8/50"],
+                    correct: 0,
+                    exp: "x = 0,1666...; 10x = 1,666...; 100x = 16,666.... Subtraindo: 90x = 15, então x = 15/90 = 1/6."
+                },
+                {
+                    type: "mc",
+                    q: "O radical √50 simplificado é igual a:",
+                    options: ["25√2", "5√2", "2√5", "10√5"],
+                    correct: 1,
+                    exp: "50 = 25 · 2, então √50 = √25 · √2 = 5√2."
+                },
+                {
+                    type: "text",
+                    q: "Qual é a soma das soluções reais da equação |x − 3| = 4? (Responda só com o número)",
+                    a: ["6"],
+                    exp: "|x − 3| = 4 significa x − 3 = 4 (x = 7) ou x − 3 = −4 (x = −1). A soma é 7 + (−1) = 6."
+                },
+                {
+                    type: "mc",
+                    q: "Assinale a afirmação FALSA:",
+                    options: ["ℕ ⊂ ℤ", "ℚ ⊂ ℝ", "𝕀 ⊂ ℚ", "ℤ ⊂ ℚ"],
+                    correct: 2,
+                    exp: "Os irracionais são, por definição, os reais que NÃO são racionais. Logo 𝕀 não está contido em ℚ."
+                },
+                {
+                    type: "mc",
+                    q: "O valor de √12 + √27 é:",
+                    options: ["√39", "5√3", "13√3", "5√6"],
+                    correct: 1,
+                    exp: "√12 = 2√3 e √27 = 3√3. Como os radicais ficaram semelhantes, somam-se os coeficientes: 2√3 + 3√3 = 5√3. (√39 vem do erro de somar os radicandos.)"
                 }
             ]
         },
         {
-            id: "mat-04", title: "4. MDC, MMC & Potenciação", time: "25 min", difficulty: "fácil",
+            id: "mat-04", title: "4. MDC, MMC & Potenciação", time: "45 min", difficulty: "fácil",
             track: "selecao", prerequisites: [], examTopics: ["Edital 1.3: Múltiplos e divisores, MDC e MMC, potenciação e propriedades"],
             simpleExplanation: `
-                <p><strong>Em palavras simples:</strong> <em>MMC</em> é quando coisas periódicas voltam a se encontrar. <em>MDC</em> é quando você quer cortar coisas de tamanhos diferentes no maior pedaço igual possível sem sobrar nada.</p>
+                <p><strong>Em palavras simples:</strong> <strong>MMC</strong> responde &ldquo;<em>quando</em> as coisas voltam a coincidir?&rdquo; (o menor número que está na tabuada de todos). <strong>MDC</strong> responde &ldquo;qual o <em>maior pedaço</em> que cabe certinho em todos?&rdquo; (o maior número que divide todos). Para achar os dois, decomponha cada número em fatores primos: o MMC usa os fatores de <em>todos</em> com o <em>maior</em> expoente; o MDC usa só os fatores <em>comuns</em> com o <em>menor</em> expoente.</p>
+<p><strong>Potência</strong> é multiplicação repetida (2⁴ = 2·2·2·2). As regras (somar expoentes ao multiplicar, subtrair ao dividir, a⁰ = 1, expoente negativo inverte) vêm de &ldquo;abrir&rdquo; as multiplicações. Números enormes ou minúsculos se escrevem em <strong>notação científica</strong>: a × 10ⁿ com 1 ≤ a &lt; 10.</p>
             `,
             content: `
 <div class="card" style="margin-bottom:20px; border-left: 5px solid var(--accent);">
@@ -476,51 +617,86 @@ window.curriculum = [
 </div>
 
 <div class="card" style="margin-bottom:20px;">
-    <h3><span class="step-num">🔬</span> Teoria Descomplicada: Por que $a^0 = 1$ e $a^{-n} = 1/a^n$?</h3>
-    <p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">
-        Você não precisa apenas decorar as propriedades das potências: elas são deduções lógicas puras da divisão!
-    </p>
-    <div class="box-formula" style="line-height:1.8;">
-        <strong>Por que todo número elevado a zero dá 1? ($a^0 = 1$)</strong><br>
-        Pela regra da divisão de potências de mesma base: <code>a³ ÷ a³ = a³⁻³ = a⁰</code>.<br>
-        Mas qualquer número dividido por ele mesmo é igual a 1 (ex: 8 ÷ 8 = 1). Logo, <strong>a⁰ DEVE ser igual a 1</strong>!<br><br>
-        <strong>Por que expoente negativo inverte a base? ($a⁻ⁿ = 1/aⁿ$)</strong><br>
-        Veja: <code>a² ÷ a⁵ = a²⁻⁵ = a⁻³</code>.<br>
-        Agora abrindo em frações: <code>(a · a) / (a · a · a · a · a) = 1 / (a · a · a) = 1/a³</code>. Por isso o sinal de menos no expoente significa "inverta a fração"!
-    </div>
+    <h3><span class="step-num">🔬</span> Teoria do Zero: Divisores, Primos, MMC, MDC, Potências e Notação Científica</h3>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Este módulo parece ter assuntos soltos, mas tudo gira em torno de uma ferramenta: a <strong>decomposição em fatores primos</strong> (&ldquo;desmontar&rdquo; um número em tijolinhos). Depois que você domina isso, MMC, MDC e as regras de potência ficam naturais.</p>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 1. Múltiplos, divisores e números primos</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Múltiplos</strong> de um número são os resultados da sua tabuada: múltiplos de 6 = 0, 6, 12, 18, 24... (infinitos). <strong>Divisores</strong> são os números que o dividem sem deixar resto: divisores de 12 = 1, 2, 3, 4, 6, 12 (sempre em quantidade limitada).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Um <strong>número primo</strong> tem exatamente dois divisores: 1 e ele mesmo. Os primeiros: <strong>2, 3, 5, 7, 11, 13, 17, 19, 23...</strong> O 2 é o único primo par. O 1 <em>não</em> é primo (tem só um divisor). Todos os outros números (4, 6, 8, 9...) são <strong>compostos</strong>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Critérios de divisibilidade (para não precisar fazer a conta):</strong></p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Divisível por</th><th>Quando...</th><th>Exemplo</th></tr>
+<tr><td><strong>2</strong></td><td>termina em 0, 2, 4, 6 ou 8</td><td>3.458 ✔</td></tr>
+<tr><td><strong>3</strong></td><td>a <em>soma dos algarismos</em> é divisível por 3</td><td>2.457: 2+4+5+7 = 18 ✔</td></tr>
+<tr><td><strong>5</strong></td><td>termina em 0 ou 5</td><td>1.230 ✔</td></tr>
+<tr><td><strong>9</strong></td><td>a soma dos algarismos é divisível por 9</td><td>2.457: 18 ✔</td></tr>
+<tr><td><strong>10</strong></td><td>termina em 0</td><td>4.500 ✔</td></tr>
+<tr><td><strong>6</strong></td><td>divisível por 2 <em>e</em> por 3 ao mesmo tempo</td><td>114 ✔</td></tr>
+</table></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 2. Fatoração: desmontando um número em primos</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Todo número composto é um produto de primos, e de um jeito só (como uma &ldquo;impressão digital&rdquo; do número). Para fatorar, divida repetidamente pelo menor primo possível:</p>
+<p style="padding-left:14px;"><code>60 | 2</code> → <code>30 | 2</code> → <code>15 | 3</code> → <code>5 | 5</code> → <code>1</code><br>Logo <strong>60 = 2 · 2 · 3 · 5 = 2² · 3 · 5</strong>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Repetições viram expoentes. Exemplos: <code>48 = 2⁴ · 3</code>, <code>72 = 2³ · 3²</code>, <code>120 = 2³ · 3 · 5</code>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 3. MMC: o primeiro reencontro (e como calcular)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O <strong>Mínimo Múltiplo Comum</strong> é o <em>menor</em> número (diferente de zero) que é múltiplo de todos os números dados. Ele responde perguntas do tipo: &ldquo;dois eventos se repetem de tempos em tempos; quando acontecem juntos de novo?&rdquo;.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Por que a fatoração dá o MMC?</strong> Para ser múltiplo de um número, o resultado precisa conter <em>todos os tijolos primos</em> dele. Para ser múltiplo de vários números ao mesmo tempo e ainda ser o menor possível, pegamos cada primo <strong>com o maior expoente</strong> em que ele aparece (assim os tijolos de todos estão lá, sem sobrar nenhum).</p>
+<div class="box-formula" style="line-height:1.8;"><strong>MMC = todos os primos (comuns e não comuns), cada um com o MAIOR expoente</strong><br>Exemplo: 12 = 2² · 3 e 18 = 2 · 3². Maior expoente do 2 é 2; do 3 é 2. MMC = 2² · 3² = 4 · 9 = <strong>36</strong>.</div></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 4. MDC: o maior pedaço que cabe certinho</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O <strong>Máximo Divisor Comum</strong> é o <em>maior</em> número que divide todos os números dados. Ele responde: &ldquo;qual o maior tamanho de pedaço (ou o maior número de grupos iguais) que usa tudo sem sobrar nada?&rdquo;.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Por que a fatoração dá o MDC?</strong> Para dividir <em>todos</em> os números, o divisor só pode usar tijolos que existem em <em>todos</em> eles. Por isso pegamos apenas os primos <strong>comuns</strong>, cada um com o <strong>menor</strong> expoente.</p>
+<div class="box-formula" style="line-height:1.8;"><strong>MDC = só os primos COMUNS, cada um com o MENOR expoente</strong><br>Exemplo: 48 = 2⁴ · 3 e 72 = 2³ · 3². Comuns: 2 (menor expoente 3) e 3 (menor expoente 1). MDC = 2³ · 3 = 8 · 3 = <strong>24</strong>.</div>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Relação útil entre os dois (para <u>dois</u> números):</strong> <code>MMC(a, b) · MDC(a, b) = a · b</code>. Conferindo com 12 e 18: 36 · 6 = 216 = 12 · 18 ✔. Se você sabe um dos dois, descobre o outro.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 5. Como saber, no problema, se é MMC ou MDC?</h4><table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Palavras-chave do enunciado</th><th>Use</th></tr>
+<tr><td>&ldquo;voltam a se encontrar&rdquo;, &ldquo;ao mesmo tempo&rdquo;, &ldquo;de quanto em quanto tempo coincidem&rdquo;, &ldquo;menor número que...&rdquo;</td><td><strong>MMC</strong> (o resultado é maior ou igual aos números)</td></tr>
+<tr><td>&ldquo;dividir em partes iguais&rdquo;, &ldquo;maior tamanho possível&rdquo;, &ldquo;sem sobras&rdquo;, &ldquo;maior número de grupos/equipes&rdquo;</td><td><strong>MDC</strong> (o resultado é menor ou igual aos números)</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Teste de bom senso:</strong> o MMC nunca é menor que o maior número da lista, e o MDC nunca é maior que o menor número da lista.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 6. Potenciação: multiplicação repetida</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><code>aⁿ</code> significa multiplicar <strong>a</strong> por ele mesmo <strong>n</strong> vezes. O <code>a</code> é a <strong>base</strong> e o <code>n</code> é o <strong>expoente</strong>. Exemplo: <code>2⁴ = 2 · 2 · 2 · 2 = 16</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Regra dos sinais:</strong> base positiva sempre dá positivo. Base negativa: expoente <strong>par</strong> dá positivo ((−2)⁴ = +16) e expoente <strong>ímpar</strong> dá negativo ((−2)³ = −8). Isso acontece porque cada par de sinais negativos se cancela (− · − = +).</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 7. As propriedades, deduzidas (nada de decoreba)</h4><ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Produto de mesma base: some os expoentes.</strong> <code>2³ · 2² = (2·2·2)·(2·2) = 2⁵</code>. Você só juntou os fatores: 3 + 2 = 5 deles. Logo <code>aᵐ · aⁿ = aᵐ⁺ⁿ</code>.</li>
+<li><strong>Divisão de mesma base: subtraia os expoentes.</strong> <code>2⁵ ÷ 2² = (2·2·2·2·2)/(2·2) = 2³</code>: dois 2 do topo cortam com os dois de baixo. Logo <code>aᵐ ÷ aⁿ = aᵐ⁻ⁿ</code>.</li>
+<li><strong>Potência de potência: multiplique os expoentes.</strong> <code>(2³)² = 2³ · 2³ = 2⁶</code>. Logo <code>(aᵐ)ⁿ = aᵐ·ⁿ</code>.</li>
+<li><strong>Potência de produto e de quociente:</strong> <code>(a·b)ⁿ = aⁿ · bⁿ</code> e <code>(a/b)ⁿ = aⁿ/bⁿ</code> (o expoente se distribui na multiplicação e na divisão, mas <u>não</u> na soma!).</li>
+<li><strong>Expoente zero:</strong> <code>a⁰ = 1</code>. Pela divisão: <code>a³ ÷ a³ = a³⁻³ = a⁰</code>, mas qualquer número dividido por ele mesmo é 1. Então a⁰ <em>precisa</em> valer 1 (para a ≠ 0).</li>
+<li><strong>Expoente negativo: inverte a base.</strong> <code>a² ÷ a⁵ = a⁻³</code>, mas abrindo: <code>(a·a)/(a·a·a·a·a) = 1/a³</code>. Logo <code>a⁻ⁿ = 1/aⁿ</code>. Exemplo: <code>2⁻³ = 1/8</code> e <code>(2/3)⁻² = (3/2)² = 9/4</code>.</li>
+</ul>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Base 10:</strong> as potências de 10 são as mais usadas: <code>10³ = 1.000</code> (3 zeros), <code>10⁻² = 1/100 = 0,01</code>. Multiplicar por 10ⁿ anda a vírgula n casas para a direita; por 10⁻ⁿ, n casas para a esquerda.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 8. Notação científica e ordem de grandeza</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Para escrever números gigantes (a distância Terra–Sol, 150.000.000 km) ou minúsculos (o diâmetro de um vírus), usamos a <strong>notação científica</strong>: <code>N = a × 10ⁿ</code> com <strong>1 ≤ a &lt; 10</strong> e n inteiro.</p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Número grande:</strong> ande com a vírgula para a <em>esquerda</em> até sobrar um algarismo (não zero) antes dela; o expoente positivo é o número de casas andadas. <code>150.000.000 = 1,5 × 10⁸</code> (8 casas).</li>
+<li><strong>Número pequeno:</strong> ande para a <em>direita</em>; o expoente é negativo. <code>0,00045 = 4,5 × 10⁻⁴</code> (4 casas).</li>
+<li><strong>Multiplicar:</strong> multiplique os números a e some os expoentes. <code>(3 × 10⁴) · (2 × 10⁻⁷) = 6 × 10⁻³</code>.</li>
+<li><strong>Cuidado:</strong> se o resultado ficar fora da faixa 1 ≤ a &lt; 10, ajuste. <code>(4 × 10³) · (5 × 10²) = 20 × 10⁵ = 2 × 10⁶</code>.</li>
+</ul>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Ordem de grandeza</strong> é a potência de 10 <em>mais próxima</em> do número. Escreva N = a × 10ⁿ: se <strong>a &lt; 3,16</strong> (aproximadamente √10), a ordem de grandeza é 10ⁿ; se <strong>a ≥ 3,16</strong>, é 10ⁿ⁺¹. Exemplos: 2 × 10⁵ → ordem 10⁵; 7 × 10⁵ → ordem 10⁶.</p></div>
 </div>
 
 <div class="box-warning" style="margin-bottom:20px;">
-    <div class="box-header">⚠️ As Duas Pegadinhas Letais da Banca do CEFET</div>
-    <p>1. <strong>O Parêntese com Sinal Negativo:</strong> <code>(−2)⁴ = +16</code> (o sinal de menos está dentro do parêntese e foi multiplicado 4 vezes), mas <code>−2⁴ = −16</code> (o menos não está sendo elevado, apenas o 2!).<br>
-    2. <strong>Potência de Potência vs Expoente em Cascata:</strong> <code>(2³)² = 2³ˣ² = 2⁶ = 64</code>, mas <code>2^(3²) = 2⁹ = 512</code>! Essa diferença de 64 para 512 derruba centenas de candidatos todo ano.</p>
+    <div class="box-header">⚠️ As Pegadinhas da Banca do CEFET em MMC, MDC e Potências</div>
+<p><strong>1. Trocar MMC por MDC.</strong> Se o enunciado fala de <em>encontro/coincidência no tempo</em>, é MMC; se fala de <em>repartir em pedaços iguais, sem sobra, o maior possível</em>, é MDC. Faça o teste de bom senso: o MMC não pode ser menor que o maior número, e o MDC não pode ser maior que o menor.</p>
+<p><strong>2. Sinal fora × dentro do parêntese.</strong> <code>(−2)⁴ = +16</code> (o menos está no parêntese e é elevado), mas <code>−2⁴ = −16</code> (só o 2 é elevado; o menos é uma subtração/oposto do resultado).</p>
+<p><strong>3. Potência de potência × torre de expoentes.</strong> <code>(2³)² = 2⁶ = 64</code>, mas <code>2^(3²) = 2⁹ = 512</code>. Resolva sempre o expoente de cima primeiro.</p>
+<p><strong>4. Expoente na soma.</strong> <code>(a + b)² ≠ a² + b²</code> (a banca adora). E <code>2³ + 2² ≠ 2⁵</code>: a regra de somar expoentes só vale na <em>multiplicação</em> de mesma base.</p>
+<p><strong>5. Expoente negativo não deixa o número negativo.</strong> <code>2⁻³ = 1/8</code>, positivo. O sinal do expoente manda inverter, não trocar o sinal.</p>
 </div>
 
 <div class="example-solved">
-    <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas</div>
+    <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas (MDC em Problema de Corte)</div>
     <div class="ex-problem">
-        <strong>Situação-Problema:</strong> Dois semáforos de uma avenida movimentada piscam em amarelo piscante durante a madrugada em ciclos de 15 segundos e 20 segundos. Se eles piscaram juntos exatamente às 02h00 da manhã, a que horas voltarão a piscar juntos pela primeira vez?
+        <strong>Situação-Problema:</strong> Uma costureira tem três rolos de fita com 48 m, 72 m e 120 m. Ela quer cortar todos em pedaços de mesmo comprimento, o maior possível, sem sobrar nenhum retalho. Qual o comprimento de cada pedaço e quantos pedaços serão obtidos no total?
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-interp">Etapa 1: Interpretação do Problema</span><br>
-        O problema envolve eventos periódicos que se repetem em intervalos fixos e pede o próximo momento de encontro futuro → Aplicação direta do <strong>MMC(15, 20)</strong>.
+        <span class="step-tag tag-interp">Etapa 1: Interpretação do Enunciado</span><br>
+        &ldquo;Pedaços de mesmo comprimento&rdquo;, &ldquo;o maior possível&rdquo; e &ldquo;sem sobra&rdquo; são as palavras-chave do <strong>MDC</strong>: o tamanho do pedaço precisa dividir 48, 72 e 120 exatamente, e queremos o maior desses divisores.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-model">Etapa 2: Modelagem por Fatoração Prima</span><br>
-        Fatorando simultaneamente por números primos:<br>
-        15, 20 | ÷ 2 → 15, 10<br>
-        15, 10 | ÷ 2 → 15, 5<br>
-        15,  5 | ÷ 3 →  5, 5<br>
-         5,  5 | ÷ 5 →  1, 1<br>
-        MMC = 2 · 2 · 3 · 5 = 2² · 3 · 5 = <strong>60 segundos</strong>.
+        <span class="step-tag tag-model">Etapa 2: Modelagem por Fatoração</span><br>
+        <code>48 = 2⁴ · 3</code>; &nbsp;<code>72 = 2³ · 3²</code>; &nbsp;<code>120 = 2³ · 3 · 5</code>.<br>Primos comuns aos três: 2 e 3 (o 5 aparece só no 120). Menores expoentes: 2³ e 3¹.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-calc">Etapa 3: Conversão de Unidades Temporais</span><br>
-        60 segundos equivalem a exatamente <strong>1 minuto</strong>.
+        <span class="step-tag tag-calc">Etapa 3: Resolução dos Cálculos</span><br>
+        MDC = 2³ · 3 = 8 · 3 = <strong>24 m</strong> por pedaço.<br>Quantidade de pedaços de cada rolo: 48 ÷ 24 = 2; 72 ÷ 24 = 3; 120 ÷ 24 = 5.<br>Total: 2 + 3 + 5 = <strong>10 pedaços</strong>.<br>Teste: 24 &lt; 48 (menor número da lista), como deve ser para um MDC ✔.
     </div>
     <div class="ex-step result">
         <span class="step-tag tag-concl">Etapa 4: Conclusão Contextualizada</span><br>
-        Os dois semáforos voltarão a piscar juntos exatamente às <strong>02h01min00s</strong>.
+        Cada pedaço medirá <strong>24 metros</strong> e a costureira obterá <strong>10 pedaços</strong> no total, sem desperdiçar nenhum centímetro. Perceba que a pergunta tinha duas partes: o MDC dá o tamanho, mas o total exige ainda dividir cada rolo pelo MDC.
     </div>
 </div>`,
             questions: [
@@ -536,14 +712,76 @@ window.curriculum = [
                     options: ["6", "12", "18", "72"],
                     correct: 1,
                     exp: "O maior divisor comum a 24 e 36 é 12."
+                },
+                {
+                    type: "mc",
+                    q: "Qual dos números abaixo é divisível por 3?",
+                    options: ["1.234", "2.457", "3.502", "4.001"],
+                    correct: 1,
+                    exp: "Critério do 3: a soma dos algarismos deve ser divisível por 3. 2+4+5+7 = 18 ✔ (e 18 também é divisível por 9, então 2.457 é divisível por 9). Nos outros: 10, 10 e 5 não são múltiplos de 3."
+                },
+                {
+                    type: "text",
+                    q: "Qual é o MMC entre 8, 12 e 20? (Responda só com o número)",
+                    a: ["120"],
+                    exp: "8 = 2³, 12 = 2² · 3, 20 = 2² · 5. Tomando todos os primos com o maior expoente: 2³ · 3 · 5 = 8 · 15 = 120."
+                },
+                {
+                    type: "mc",
+                    q: "Duas luzes piscam, uma a cada 6 segundos e outra a cada 8 segundos. Se piscaram juntas agora, daqui a quantos segundos piscarão juntas pela primeira vez de novo?",
+                    options: ["2 s", "14 s", "24 s", "48 s"],
+                    correct: 2,
+                    exp: "Encontro no tempo é MMC. 6 = 2 · 3 e 8 = 2³, então MMC = 2³ · 3 = 24 s. (48 também é múltiplo comum, mas não o menor.)"
+                },
+                {
+                    type: "mc",
+                    q: "Qual é o MDC entre 60 e 84?",
+                    options: ["6", "12", "24", "420"],
+                    correct: 1,
+                    exp: "60 = 2² · 3 · 5 e 84 = 2² · 3 · 7. Comuns com o menor expoente: 2² · 3 = 12. (420 é o MMC, o 'irmão' que não pedimos.)"
+                },
+                {
+                    type: "mc",
+                    q: "O valor de (2⁵ · 2⁻²) ÷ 2⁴ é:",
+                    options: ["2", "1/2", "8", "1/8"],
+                    correct: 1,
+                    exp: "Somamos os expoentes no produto e subtraímos na divisão: 2^(5 − 2 − 4) = 2⁻¹ = 1/2."
+                },
+                {
+                    type: "text",
+                    q: "Calcule (−2)³ + (−2)². (Responda só com o número)",
+                    a: ["-4", "−4"],
+                    exp: "(−2)³ = −8 (expoente ímpar mantém o sinal negativo) e (−2)² = +4 (expoente par). Soma: −8 + 4 = −4."
+                },
+                {
+                    type: "mc",
+                    q: "O número 0,00045 escrito em notação científica (a × 10ⁿ, com 1 ≤ a < 10) é:",
+                    options: ["4,5 × 10⁻⁴", "4,5 × 10⁻³", "45 × 10⁻⁵", "0,45 × 10⁻³"],
+                    correct: 0,
+                    exp: "Andamos 4 casas para a direita para chegar em 4,5, então o expoente é −4. As outras opções valem o mesmo número, mas o coeficiente não está entre 1 e 10, logo não são notação científica."
+                },
+                {
+                    type: "mc",
+                    q: "O produto (3 × 10⁴) · (2 × 10⁻⁷) vale:",
+                    options: ["6 × 10⁻³", "6 × 10⁻¹¹", "5 × 10⁻³", "6 × 10³"],
+                    correct: 0,
+                    exp: "Multiplicamos os coeficientes (3 · 2 = 6) e somamos os expoentes (4 + (−7) = −3): 6 × 10⁻³."
+                },
+                {
+                    type: "mc",
+                    q: "Um professor quer formar equipes com o mesmo número de meninos e o mesmo número de meninas, usando todos os 36 meninos e as 48 meninas, no maior número possível de equipes. Quantas equipes serão formadas?",
+                    options: ["6", "12", "24", "144"],
+                    correct: 1,
+                    exp: "Repartir sem sobra no maior número possível é MDC(36, 48) = 12 (36 = 2²·3² e 48 = 2⁴·3, comuns: 2²·3 = 12). Cada equipe terá 3 meninos e 4 meninas."
                 }
             ]
         },
         {
-            id: "mat-05", title: "5. Razão, Proporção, Escalas & Regra de Três", time: "30 min", difficulty: "médio",
+            id: "mat-05", title: "5. Razão, Proporção, Escalas & Regra de Três", time: "40 min", difficulty: "médio",
             track: "selecao", prerequisites: ["mat-01"], examTopics: ["Edital 1.3: Proporcionalidade — grandezas diretamente e inversamente proporcionais, ordem"],
             simpleExplanation: `
-                <p><strong>Em palavras simples:</strong> Se duas grandezas aumentam juntas, é <em>proporção direta</em> (multiplica cruzado). Se uma aumenta e a outra diminui (mais operários = menos dias), é <em>inversa</em> (multiplica em linha reta)!</p>
+                <p><strong>Em palavras simples:</strong> <em>Razão</em> é comparar dois números dividindo um pelo outro (3 meninas para cada 5 crianças = 3/5). <em>Proporção</em> é quando duas razões são iguais (3/5 = 6/10). Duas grandezas são <strong>diretamente proporcionais</strong> quando dobrar uma faz a outra dobrar (mais pães, mais dinheiro). São <strong>inversamente proporcionais</strong> quando dobrar uma faz a outra cair pela metade (mais pintores, menos tempo). A regra de três é só um jeito organizado de achar o número que falta, depois de decidir se é direta ou inversa.</p>
+<p><strong>Pergunta que resolve 90% das questões:</strong> &ldquo;se eu <em>aumentar</em> uma grandeza, a outra <em>aumenta</em> ou <em>diminui</em>?&rdquo; Aumenta junto = direta. Uma sobe e a outra desce = inversa.</p>
             `,
             content: `
 <div class="card" style="margin-bottom:20px; border-left: 5px solid var(--accent);">
@@ -578,49 +816,108 @@ window.curriculum = [
 </div>
 
 <div class="card" style="margin-bottom:20px;">
-    <h3><span class="step-num">🔬</span> Teoria Descomplicada: Escalas & Como Nunca Errar a Conversão</h3>
-    <p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">
-        A <strong>Escala (E)</strong> é uma fração adimensional pura: <code>E = d / D</code>, onde <code>d</code> é o tamanho no desenho e <code>D</code> é o tamanho real. Para calcular sem errar, você DEVE colocar ambos na mesma unidade (centímetros!):
-    </p>
-    <div class="box-formula" style="line-height:1.8;">
-        <strong>Tabela Mágica de Conversão de Distâncias:</strong><br>
-        1 km = 1.000 metros = <strong>100.000 centímetros</strong> (ande 5 casas com a vírgula!)<br>
-        1 metro = <strong>100 centímetros</strong> (ande 2 casas com a vírgula!)<br><br>
-        <strong>Exemplo Prático:</strong> Se um mapa tem escala <code>1 : 50.000</code> e a distância entre o Maracanã e a Central é de 6 cm no mapa:<br>
-        Real = 6 cm · 50.000 = 300.000 cm = 3.000 m = <strong>3 km na vida real</strong>!
-    </div>
+    <h3><span class="step-num">🔬</span> Teoria do Zero: Razão, Proporção, Grandezas e Regra de Três</h3>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Este módulo parece ter muitos nomes, mas tudo nasce de uma única ideia: <strong>comparar quantidades usando a divisão</strong>. Vamos construir cada conceito em cima do anterior, para você entender <em>por que</em> as regras funcionam e não precisar decorar nada.</p>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 1. Razão: comparar dois números dividindo</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Uma <strong>razão</strong> é o resultado de comparar duas quantidades por meio da divisão. A razão entre <code>a</code> e <code>b</code> escreve-se <code>a/b</code> ou <code>a : b</code> e lê-se &ldquo;a para b&rdquo;. O número de cima é o <strong>antecedente</strong> e o de baixo é o <strong>consequente</strong>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo:</strong> numa sala há 12 meninas e 18 meninos. A razão entre meninas e meninos é <code>12/18</code>. Simplificando (dividindo os dois por 6), fica <code>2/3</code>: &ldquo;para cada 2 meninas há 3 meninos&rdquo;. Repare que a razão não diz quantas pessoas existem, diz como as quantidades se <em>relacionam</em>.</p>
+<div style="padding:12px 16px; border-radius:var(--radius-sm); font-size:14.5px; line-height:1.65; color:var(--text-primary); margin:12px 0; background:rgba(16,185,129,0.1); border-left:4px solid var(--positive);"><strong>A ordem importa!</strong> A razão entre meninos e meninas é 18/12 = 3/2, que é diferente de 2/3. Leia sempre &ldquo;razão <u>entre A e B</u>&rdquo; como A em cima e B embaixo.</div>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Razões que você já usa sem saber:</strong> velocidade média (km <em>para</em> cada hora), densidade (gramas <em>para</em> cada cm³), escala de mapa (cm no desenho <em>para</em> cm na realidade), porcentagem (quantos <em>para cada 100</em>). Quando as duas quantidades têm unidades diferentes (km e h), a razão ganha unidade (km/h). Quando têm a mesma unidade (cm e cm), a razão fica <strong>sem unidade</strong>, é só um número.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 2. Proporção: duas razões que são iguais</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Uma <strong>proporção</strong> é a igualdade entre duas razões: <code>a/b = c/d</code> (lê-se &ldquo;a está para b assim como c está para d&rdquo;). Exemplo: <code>2/3 = 8/12</code>. As duas frações valem o mesmo (ambas são 0,666...), só estão escritas em &ldquo;tamanhos&rdquo; diferentes.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Os termos têm nomes: <code>a</code> e <code>d</code> são os <strong>extremos</strong> (pontas) e <code>b</code> e <code>c</code> são os <strong>meios</strong> (miolo), quando escrevemos <code>a : b = c : d</code>.</p>
+<div class="box-formula" style="line-height:1.8;"><strong>Propriedade fundamental:</strong> a/b = c/d &nbsp;⟹&nbsp; <strong>a · d = b · c</strong><br>(produto dos extremos = produto dos meios, o famoso &ldquo;multiplicar em cruz&rdquo;)</div>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Por que multiplicar em cruz funciona?</strong> Não é mágica, é só uma conta. Parta de <code>a/b = c/d</code> e multiplique os dois lados por <code>b</code> e por <code>d</code>:</p>
+<p style="padding-left:14px;"><code>(a/b) · b · d = (c/d) · b · d</code><br>No lado esquerdo o <code>b</code> corta com o <code>b</code> de baixo e sobra <code>a · d</code>. No lado direito o <code>d</code> corta e sobra <code>c · b</code>. Resultado: <code>a · d = c · b</code>. Pronto, o &ldquo;X&rdquo; é só isso.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Como achar o valor que falta:</strong> em <code>3/5 = 12/x</code>, multiplicamos em cruz: <code>3 · x = 5 · 12</code>, logo <code>3x = 60</code> e <code>x = 20</code>. Conferindo: 3/5 = 0,6 e 12/20 = 0,6. ✔</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 3. Grandezas: tudo aquilo que se pode medir</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Grandeza</strong> é qualquer coisa que pode ser medida ou contada: tempo, distância, número de operários, litros de água, preço, velocidade. A regra de três é uma ferramenta para quando <strong>duas grandezas estão ligadas</strong> e conhecemos três valores, faltando um.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 4. Grandezas diretamente proporcionais (caminham juntas)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Duas grandezas são <strong>diretamente proporcionais</strong> quando <strong>a razão entre elas é sempre a mesma</strong>. Na prática: se uma dobra, a outra dobra; se uma triplica, a outra triplica; se uma cai pela metade, a outra cai pela metade.</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Pães comprados</th><th>Preço pago</th><th>Preço ÷ pães</th></tr>
+<tr><td>2</td><td>R$ 3</td><td>1,50</td></tr>
+<tr><td>4</td><td>R$ 6</td><td>1,50</td></tr>
+<tr><td>10</td><td>R$ 15</td><td>1,50</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O número que nunca muda (1,50) é o <strong>preço de 1 pão</strong>, chamado de <strong>constante de proporcionalidade</strong> (k). Direta significa <code>y/x = k</code>, ou seja, <code>y = k · x</code>. Por isso as razões são iguais (<code>3/2 = 6/4 = 15/10</code>) e por isso vale multiplicar em cruz.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 5. Grandezas inversamente proporcionais (uma sobe, a outra desce)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Duas grandezas são <strong>inversamente proporcionais</strong> quando <strong>o produto entre elas é sempre o mesmo</strong>. Na prática: se uma dobra, a outra cai para a metade; se uma triplica, a outra cai para a terça parte.</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Pintores</th><th>Horas para pintar a quadra</th><th>Pintores × horas</th></tr>
+<tr><td>1</td><td>12</td><td>12</td></tr>
+<tr><td>2</td><td>6</td><td>12</td></tr>
+<tr><td>4</td><td>3</td><td>12</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O número que não muda (12) é a <strong>quantidade total de trabalho</strong>: 12 &ldquo;horas de um pintor&rdquo;. Dividir esse trabalho entre mais gente diminui o tempo de cada um, mas o trabalho total é o mesmo. Em fórmula: <code>x · y = k</code>.</p>
+<div style="padding:12px 16px; border-radius:var(--radius-sm); font-size:14.5px; line-height:1.65; color:var(--text-primary); margin:12px 0; background:rgba(16,185,129,0.1); border-left:4px solid var(--positive);"><strong>Cuidado com um erro muito comum:</strong> &ldquo;uma aumenta e a outra diminui&rdquo; <em>não é suficiente</em> para ser inversamente proporcional. A idade e o cabelo restante de uma pessoa não têm relação de produto constante. A inversa de verdade exige que o <strong>produto fique igual</strong> (dobra → metade, triplica → terça parte).</div></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 6. Regra de Três Simples: o método em 4 passos</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">A regra de três simples resolve problemas com <strong>duas grandezas</strong>, três valores conhecidos e um desconhecido (o <code>x</code>).</p>
+<ol style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Monte uma tabela</strong> com uma coluna para cada grandeza e uma linha para cada situação. Mesma unidade na mesma coluna (se necessário, converta antes!).</li>
+<li><strong>Faça a pergunta decisiva:</strong> &ldquo;se eu aumentar a grandeza da coluna 1, a da coluna 2 aumenta ou diminui?&rdquo; Aumenta = <strong>direta</strong>. Diminui = <strong>inversa</strong>.</li>
+<li><strong>Monte a igualdade:</strong> na direta, razão da coluna 1 = razão da coluna 2, mantendo a ordem (linha 1 em cima nos dois lados). Na inversa, <strong>inverta uma das razões</strong> (equivale a multiplicar os valores na mesma linha).</li>
+<li><strong>Resolva e confira se faz sentido:</strong> se era inversa e o tempo deveria diminuir, a resposta tem que ser menor!</li>
+</ol>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo direto:</strong> 3 kg de arroz custam R$ 18. Quanto custam 5 kg?</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Arroz (kg)</th><th>Preço (R$)</th></tr>
+<tr><td>3</td><td>18</td></tr>
+<tr><td>5</td><td>x</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Mais arroz, mais dinheiro: <strong>direta</strong>. Então <code>3/5 = 18/x</code>. Multiplicando em cruz: <code>3x = 90</code>, logo <code>x = 30</code>. Resposta: <strong>R$ 30</strong>. Confira: 18 ÷ 3 = 6 reais por kg, e 5 × 6 = 30 ✔.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo inverso:</strong> 4 operários fazem um serviço em 9 dias. Em quantos dias 6 operários, no mesmo ritmo, fazem o mesmo serviço?</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Operários</th><th>Dias</th></tr>
+<tr><td>4</td><td>9</td></tr>
+<tr><td>6</td><td>x</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Mais operários, menos dias: <strong>inversa</strong>. O produto é constante (o serviço é o mesmo): <code>4 · 9 = 6 · x</code>, logo <code>36 = 6x</code> e <code>x = 6</code>. Resposta: <strong>6 dias</strong>. Faz sentido: mais gente, tempo menor (6 &lt; 9) ✔.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 7. Regra de Três Composta: três ou mais grandezas</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Quando o problema tem <strong>mais de duas grandezas</strong> (por exemplo: máquinas, dias <em>e</em> peças), usamos a regra composta. O truque é nunca comparar tudo de uma vez: <strong>compare cada grandeza, separadamente, com aquela que contém o x</strong>, e multiplique as razões.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo:</strong> 4 máquinas produzem 600 peças em 3 dias. Quantas peças 6 máquinas produzem em 5 dias?</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Máquinas</th><th>Dias</th><th>Peças</th></tr>
+<tr><td>4</td><td>3</td><td>600</td></tr>
+<tr><td>6</td><td>5</td><td>x</td></tr>
+</table>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li>Peças × máquinas: mais máquinas, mais peças → <strong>direta</strong>. Fator: <code>6/4</code>.</li>
+<li>Peças × dias: mais dias, mais peças → <strong>direta</strong>. Fator: <code>5/3</code>.</li>
+</ul>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Cada fator direto multiplica o valor original: <code>x = 600 · (6/4) · (5/3) = 600 · 1,5 · 1,666... = 1.500</code>. Resposta: <strong>1.500 peças</strong>. Se alguma grandeza fosse <em>inversa</em> à do x, o fator dela entraria <strong>invertido</strong> (a razão de cabeça para baixo).</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 8. Escalas: a razão entre o desenho e a realidade</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Escala</strong> é a razão entre uma medida no desenho e a medida real do mesmo objeto: <code>E = d / D</code> (desenho sobre real), <strong>sempre na mesma unidade</strong>. Escala <code>1 : 50.000</code> significa que 1 cm no mapa equivale a 50.000 cm no chão (500 m).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Conversões que você precisa dominar:</strong> 1 m = 100 cm; 1 km = 1.000 m = 100.000 cm. Por isso, ao transformar cm em km, &ldquo;ande 5 casas com a vírgula&rdquo;.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Uma escala é só uma regra de três direta fixa: distância no mapa e distância real são diretamente proporcionais. No mapa 1 : 50.000, 6 cm viram 6 × 50.000 = 300.000 cm = 3.000 m = <strong>3 km</strong>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 9. Divisão proporcional: repartir de forma justa</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Às vezes é preciso dividir um total em partes <em>proporcionais</em> a certos números. Exemplo: dividir R$ 600 entre três sócios que investiram nas razões 1, 2 e 3. Método:</p>
+<ol style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li>Some as partes: 1 + 2 + 3 = <strong>6</strong> (o total foi cortado em 6 &ldquo;fatias&rdquo; iguais).</li>
+<li>Valor de uma fatia: 600 ÷ 6 = <strong>R$ 100</strong>.</li>
+<li>Cada um recebe suas fatias: 1 × 100 = <strong>R$ 100</strong>; 2 × 100 = <strong>R$ 200</strong>; 3 × 100 = <strong>R$ 300</strong>.</li>
+</ol>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Confira se a soma dá o total: 100 + 200 + 300 = 600 ✔. Se a divisão fosse <em>inversamente</em> proporcional, usaríamos os inversos (1/1, 1/2, 1/3) como &ldquo;pesos&rdquo;.</p></div>
 </div>
 
 <div class="box-warning" style="margin-bottom:20px;">
-    <div class="box-header">⚠️ A Pegadinha Fatal da Banca do CEFET</div>
-    <p>A banca adora colocar <strong>Regra de Três Inversa</strong> disfarçada de direta! Toda vez que o enunciado falar sobre: <em>velocidade vs. tempo de viagem</em>, <em>quantidade de torneiras/ralos vs. tempo para encher/esvaziar</em> ou <em>número de operários vs. prazo de entrega</em>, PARE e pense: <strong>é inversa!</strong> Se você multiplicar cruzado como faz no automático, você vai marcar a alternativa errada que a banca colocou na letra A de propósito!</p>
+    <div class="box-header">⚠️ As 3 Pegadinhas da Banca do CEFET em Proporcionalidade</div>
+<p><strong>1. Inversa disfarçada de direta.</strong> Toda vez que o enunciado falar de <em>velocidade × tempo de viagem</em>, <em>torneiras × tempo para encher</em> ou <em>operários × prazo</em>, pare e faça a pergunta decisiva: &ldquo;se uma aumenta, a outra aumenta ou diminui?&rdquo;. Se diminui, é inversa, e multiplicar em cruz no automático leva direto à alternativa errada que a banca colocou de propósito na letra A.</p>
+<p><strong>2. Unidades diferentes na mesma coluna.</strong> Se a questão dá 2 horas e 30 minutos, ou metros e quilômetros, converta tudo para a mesma unidade <em>antes</em> de montar a tabela. Metade dos erros em escala vem de misturar cm com km.</p>
+<p><strong>3. Escala vale para comprimento, não para área.</strong> Numa escala 1 : 100, os comprimentos reais são 100 vezes maiores, mas as <strong>áreas são 100 × 100 = 10.000 vezes maiores</strong>. Um quadrado de 2 cm de lado no desenho (área 4 cm²) tem lado real de 200 cm = 2 m e área real de 4 m², e não 4 cm² × 100. Em dúvida, converta primeiro os lados reais e só depois calcule a área.</p>
 </div>
 
 <div class="example-solved">
-    <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas</div>
+    <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas (Regra de Três Composta Mista)</div>
     <div class="ex-problem">
-        <strong>Situação-Problema:</strong> Um caminhão de entregas viajando à velocidade média constante de 60 km/h realiza um percurso entre o Rio de Janeiro e Petrópolis em exatamente 2 horas. Se o motorista conseguisse elevar com segurança sua velocidade média para 80 km/h, qual seria o novo tempo total de viagem?
+        <strong>Situação-Problema:</strong> 12 pedreiros, trabalhando 8 horas por dia, constroem um muro em 15 dias. Se apenas 10 pedreiros forem designados e trabalharem 9 horas por dia (todos no mesmo ritmo), em quantos dias terminarão o mesmo muro?
     </div>
     <div class="ex-step">
         <span class="step-tag tag-interp">Etapa 1: Interpretação das Grandezas</span><br>
-        Grandezas envolvidas: Velocidade (km/h) e Tempo (horas).<br>
-        Análise crítica: Se a velocidade do veículo aumenta, o tempo de viagem <strong>diminui</strong>. Portanto, as grandezas são <strong>Inversamente Proporcionais</strong>.
+        Três grandezas: <strong>pedreiros</strong>, <strong>horas por dia</strong> e <strong>dias</strong>. O x está em <em>dias</em>, então comparamos cada uma das outras com os dias, uma de cada vez.<br>• Pedreiros × dias: com <em>menos</em> pedreiros (12 → 10), o serviço demora <em>mais</em> dias → <strong>inversa</strong>.<br>• Horas/dia × dias: trabalhando <em>mais</em> horas por dia (8 → 9), o serviço termina em <em>menos</em> dias → <strong>inversa</strong>.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-model">Etapa 2: Modelagem por Produto Constante</span><br>
-        Na proporção inversa, o produto entre as grandezas é sempre o mesmo (a distância percorrida não mudou!):<br>
-        V₁ · T₁ = V₂ · T₂<br>
-        60 · 2 = 80 · T₂
+        <span class="step-tag tag-model">Etapa 2: Modelagem</span><br>
+        Como as duas relações com os dias são inversas, o fator de cada uma entra <strong>invertido</strong> sobre os 15 dias originais:<br><code>x = 15 · (12/10) · (8/9)</code><br>(o 12/10 cresce o prazo porque há menos gente; o 8/9 encurta porque cada um trabalha mais horas).
     </div>
     <div class="ex-step">
         <span class="step-tag tag-calc">Etapa 3: Resolução dos Cálculos</span><br>
-        120 = 80 · T₂<br>
-        T₂ = 120 / 80 = 12 / 8 = 3 / 2 = <strong>1,5 horas</strong>.<br>
-        Cuidado com a conversão: 0,5 hora = metade de 60 minutos = 30 minutos!
+        <code>x = 15 · 12 · 8 / (10 · 9) = 1.440 / 90 = 16</code>.<br>Teste de bom senso: menos pedreiros alongam o prazo e mais horas diárias encurtam. O efeito de ter 2 pedreiros a menos (−16,7% de mão de obra) é maior que o de 1 hora a mais (+12,5% de jornada), então o prazo sobe um pouco: 15 → 16 ✔.
     </div>
     <div class="ex-step result">
         <span class="step-tag tag-concl">Etapa 4: Conclusão Contextualizada</span><br>
-        O tempo total da viagem à nova velocidade será de exatamente <strong>1 hora e 30 minutos</strong>.
+        Os 10 pedreiros, trabalhando 9 horas por dia, terminarão o muro em <strong>16 dias</strong>. O ponto-chave da questão era identificar que <em>ambas</em> as grandezas eram inversas ao tempo; quem tratasse alguma como direta chegaria a um prazo errado (por exemplo, 20,25 dias se tratasse as horas por dia como direta).
     </div>
 </div>`,
             questions: [
@@ -629,15 +926,62 @@ window.curriculum = [
                     q: "Em um mapa com escala 1:50.000, a distância de 4 cm corresponde na realidade a:",
                     options: ["2 km", "4 km", "20 km", "200 km"],
                     correct: 0,
-                    exp: "4 cm · 50.000 = 200.000 cm = 2 km."
+                    exp: "4 cm × 50.000 = 200.000 cm. Como 1 km = 100.000 cm, são 2 km."
+                },
+                {
+                    type: "mc",
+                    q: "Uma torneira enche um tanque em 6 horas. Se abrirmos 3 torneiras iguais a ela ao mesmo tempo, o tanque encherá em:",
+                    options: ["18 horas", "9 horas", "3 horas", "2 horas"],
+                    correct: 3,
+                    exp: "Mais torneiras, menos tempo: grandezas inversamente proporcionais. 1 × 6 = 3 × x, então x = 2 horas. O produto (trabalho total) fica constante."
+                },
+                {
+                    type: "text",
+                    q: "Uma receita para 4 pessoas usa 300 g de farinha. Quantos gramas de farinha são necessários para a mesma receita servir 10 pessoas? (Responda só com o número)",
+                    a: ["750", "750 g", "750g"],
+                    exp: "Mais pessoas, mais farinha: direta. 4/10 = 300/x → 4x = 3.000 → x = 750 g. Outro caminho: 300 ÷ 4 = 75 g por pessoa, e 10 × 75 = 750 g."
+                },
+                {
+                    type: "mc",
+                    q: "Se 3/x = 12/20, o valor de x é:",
+                    options: ["4", "5", "7,2", "80"],
+                    correct: 1,
+                    exp: "Multiplicando em cruz: 12 · x = 3 · 20, logo 12x = 60 e x = 5. Conferindo: 3/5 = 0,6 e 12/20 = 0,6."
+                },
+                {
+                    type: "mc",
+                    q: "Três sócios dividem um lucro de R$ 360 em partes diretamente proporcionais a 2, 3 e 4. Quanto recebe o sócio de maior participação?",
+                    options: ["R$ 120", "R$ 160", "R$ 180", "R$ 200"],
+                    correct: 1,
+                    exp: "Soma das partes: 2 + 3 + 4 = 9. Cada parte vale 360 ÷ 9 = R$ 40. O maior sócio tem 4 partes: 4 × 40 = R$ 160 (os outros recebem R$ 80 e R$ 120, e 80 + 120 + 160 = 360)."
+                },
+                {
+                    type: "mc",
+                    q: "Em uma planta na escala 1:100, uma sala retangular mede 4 cm por 3 cm. A área real da sala é:",
+                    options: ["0,12 m²", "12 m²", "120 m²", "1.200 m²"],
+                    correct: 1,
+                    exp: "Comprimentos reais: 4 cm × 100 = 400 cm = 4 m e 3 cm × 100 = 300 cm = 3 m. Área real = 4 × 3 = 12 m². A escala vale para comprimentos; multiplicar a área do desenho (12 cm²) por 100 daria erro."
+                },
+                {
+                    type: "text",
+                    q: "6 operários constroem 90 m de muro em 10 dias. Quantos metros de muro 4 operários, no mesmo ritmo, constroem em 12 dias? (Responda só com o número)",
+                    a: ["72", "72 m", "72m"],
+                    exp: "Metros × operários: direta (fator 4/6). Metros × dias: direta (fator 12/10). x = 90 · (4/6) · (12/10) = 90 · 0,666... · 1,2 = 72 m."
+                },
+                {
+                    type: "mc",
+                    q: "Um carro a 90 km/h faz uma viagem em 4 horas. Mantendo a mesma distância, a que velocidade média ele deveria andar para fazer a viagem em 3 horas?",
+                    options: ["67,5 km/h", "100 km/h", "120 km/h", "360 km/h"],
+                    correct: 2,
+                    exp: "Menos tempo exige mais velocidade: inversa. 90 · 4 = v · 3 → 360 = 3v → v = 120 km/h. O produto velocidade × tempo é a distância (360 km), que não muda."
                 }
             ]
         },
         {
-            id: "mat-06", title: "6. Probabilidade & Estatística Básica", time: "25 min", difficulty: "nivelamento",
+            id: "mat-06", title: "6. Probabilidade & Estatística Básica", time: "35 min", difficulty: "nivelamento",
             track: "reforco", prerequisites: ["mat-01"], examTopics: ["BNCC 8º/9º Ano — Tratamento da Informação (leitura de gráficos e estatística básica)"],
             simpleExplanation: `
-                <p><strong>Em palavras simples:</strong> <em>Probabilidade</em> é 'o que eu quero' dividido por 'todas as chances'. <em>Média</em> é somar tudo e dividir pela quantidade. <em>Mediana</em> é o termo do meio no rol ordenado!</p>
+                <p><strong>Em palavras simples:</strong> <strong>Probabilidade</strong> é uma fração: (casos que eu quero) ÷ (todos os casos possíveis). Vai sempre de 0 (impossível) a 1 (certeza), ou de 0% a 100%. <strong>Média</strong> é o valor que cada um teria se tudo fosse repartido igualmente; <strong>mediana</strong> é o valor do meio da fila ordenada; <strong>moda</strong> é o valor que mais aparece.</p>
             `,
             content: `
 <div class="card" style="margin-bottom:20px; border-left: 5px solid var(--accent);">
@@ -673,48 +1017,60 @@ window.curriculum = [
 </div>
 
 <div class="card" style="margin-bottom:20px;">
-    <h3><span class="step-num">🔬</span> Teoria Descomplicada: Média Simples, Ponderada, Moda e Mediana</h3>
-    <div class="box-formula" style="line-height:1.8;">
-        <strong>Probabilidade Simples:</strong> P(A) = Casos Favoráveis / Total de Casos Possíveis (Sempre entre 0 e 1)<br><br>
-        <strong>Média Ponderada:</strong> Mp = (N₁·P₁ + N₂·P₂ + ...) / (P₁ + P₂ + ...)<br>
-        <em>Atenção: Você divide pela soma dos PESOS, e nunca pela quantidade de notas!</em><br><br>
-        <strong>Moda:</strong> É o valor mais "popular" (que mais se repete na lista). Se nenhum se repete, é amodal.<br>
-        <strong>Mediana:</strong> É o termo central do ROL (dados colocados rigorosamente em ordem crescente!). Se a quantidade de elementos for par, tira-se a média dos dois termos centrais.
-    </div>
+    <h3><span class="step-num">🔬</span> Teoria do Zero: Probabilidade, Média, Mediana e Moda</h3>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Estatística e probabilidade respondem a duas perguntas: <strong>&ldquo;qual a chance de isso acontecer?&rdquo;</strong> e <strong>&ldquo;como resumir uma lista enorme de números em um só?&rdquo;</strong>. Tudo se resume a contar e dividir.</p>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 1. Probabilidade: contar casos e dividir</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Um <strong>experimento aleatório</strong> é algo cujo resultado não dá para prever com certeza (jogar um dado, sortear uma bola). O <strong>espaço amostral</strong> é o conjunto de <em>todos</em> os resultados possíveis; um <strong>evento</strong> é o resultado (ou conjunto de resultados) que nos interessa.</p>
+<div class="box-formula" style="line-height:1.8;"><strong>P(evento) = número de casos favoráveis ÷ número de casos possíveis</strong></div>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo:</strong> no lançamento de um dado de 6 faces, qual a chance de sair número par? Casos possíveis: 6 (1, 2, 3, 4, 5, 6). Favoráveis: 3 (2, 4, 6). <code>P = 3/6 = 1/2 = 50%</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Propriedades que ajudam muito:</strong></p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><code>0 ≤ P ≤ 1</code>. P = 0 é evento impossível (tirar 7 num dado); P = 1 é evento certo (tirar um número menor que 7).</li>
+<li><strong>Evento complementar:</strong> a chance de <em>não</em> acontecer é <code>1 − P</code>. Chance de não tirar 6 no dado: 1 − 1/6 = 5/6. Muito útil quando contar o &ldquo;não&rdquo; é mais fácil.</li>
+<li><strong>Atenção:</strong> a fórmula só vale se todos os casos forem <em>igualmente prováveis</em> (dado honesto, bolas iguais).</li>
+</ul></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 2. Eventos &ldquo;E&rdquo; (multiplica) e eventos &ldquo;OU&rdquo; (soma)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Um evento E depois outro (independentes): multiplique as probabilidades.</strong> Chance de tirar cara numa moeda <em>e depois</em> um 6 no dado: <code>1/2 · 1/6 = 1/12</code>. Por quê? Em 12 combinações possíveis (2 lados × 6 faces), só 1 é cara-e-6.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Um evento OU outro (que não podem acontecer juntos): some as probabilidades.</strong> Chance de sair 1 <em>ou</em> 2 num dado: <code>1/6 + 1/6 = 2/6 = 1/3</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Sorteio sem reposição:</strong> numa urna com 3 bolas vermelhas e 2 azuis, tirando duas bolas seguidas sem devolver, a chance de as duas serem vermelhas é <code>3/5 · 2/4 = 6/20 = 3/10</code>. (Na segunda retirada sobram só 4 bolas, 2 delas vermelhas.)</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 3. Média aritmética: a divisão &ldquo;justa&rdquo;</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">A <strong>média</strong> é o valor que todos teriam se o total fosse dividido igualmente. Some tudo e divida pela <em>quantidade</em> de valores.</p>
+<div class="box-formula" style="line-height:1.8;"><strong>Média = (soma dos valores) ÷ (quantidade de valores)</strong><br>Notas 6, 8 e 7: (6 + 8 + 7) ÷ 3 = 21 ÷ 3 = <strong>7</strong></div>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Média ponderada:</strong> quando alguns valores &ldquo;pesam&rdquo; mais que outros. Multiplique cada valor pelo seu peso, some, e divida pela <strong>soma dos pesos</strong> (não pela quantidade de valores!). Exemplo: prova (peso 3) nota 8 e trabalho (peso 1) nota 4: <code>(8·3 + 4·1) ÷ (3 + 1) = 28 ÷ 4 = 7</code>. A nota da prova pesou mais e puxou a média para perto de 8.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Quanto preciso tirar?</strong> Use a ideia da soma total. Para média 7,5 em 4 notas, a soma deve ser 7,5 · 4 = 30. Se as três primeiras somam 6 + 8 + 7 = 21, falta <code>30 − 21 = 9</code> na quarta.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 4. Mediana e moda</h4><ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Mediana:</strong> o valor que está <em>no meio</em> quando os dados estão <strong>em ordem crescente</strong> (o ROL). Se a quantidade de dados é ímpar, é o termo do meio. Se for par, é a <strong>média dos dois termos do meio</strong>. Exemplo: [2, 3, 5, 8, 10] → mediana 5. Já [2, 3, 5, 8] → mediana (3 + 5)/2 = 4.</li>
+<li><strong>Moda:</strong> o valor que <strong>mais se repete</strong>. [2, 3, 3, 5, 8] → moda 3. Pode haver duas modas (bimodal) ou nenhuma (amodal).</li>
+</ul>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Quando usar cada uma?</strong> A média é sensível a valores extremos: um bilionário num bar faz a média salarial disparar, mas a mediana continua mostrando o salário típico. A moda serve para dados que não são números (cor mais vendida, tamanho de camiseta mais pedido).</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 5. Lendo gráficos e tabelas de frequência</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Muitas questões trazem uma tabela com valores e quantas vezes cada um aparece (a <strong>frequência</strong>). Para a média, multiplique cada valor pela sua frequência (é uma média ponderada!). Exemplo: 2 alunos com nota 6, 3 com nota 8 e 5 com nota 10: média = <code>(6·2 + 8·3 + 10·5) ÷ (2 + 3 + 5) = (12 + 24 + 50) ÷ 10 = 8,6</code>. A moda é o valor de maior frequência (10). Para a mediana, escreva os 10 dados em ordem: 6, 6, 8, 8, 8, 10, 10, 10, 10, 10. Com quantidade par, a mediana é a média dos dois termos centrais (o 5º = 8 e o 6º = 10): (8 + 10) ÷ 2 = 9.</p></div>
 </div>
 
 <div class="box-warning" style="margin-bottom:20px;">
-    <div class="box-header">⚠️ As Duas Pegadinhas Letais da Banca do CEFET</div>
-    <p>1. <strong>Calcular a Mediana sem Ordenar os Dados:</strong> Se a questão der a sequência <code>[10, 2, 8, 3, 5]</code> e você marcar o número 8 porque ele está visualmente no meio, você caiu na armadilha! O primeiro passo OBRIGATÓRIO é ordenar: <code>[2, 3, 5, 8, 10]</code>. A mediana verdadeira é <strong>5</strong>!<br>
-    2. <strong>Probabilidade SEM Reposição:</strong> Se você retira uma carta ou bola de uma urna e NÃO a devolve, tanto o número de casos favoráveis quanto o <em>total de casos possíveis (denominador) diminuem em 1</em> para a segunda retirada!</p>
+    <div class="box-header">⚠️ As Pegadinhas da Banca do CEFET em Probabilidade e Estatística</div>
+<p><strong>1. Mediana sem ordenar.</strong> Na sequência [10, 2, 8, 3, 5], o termo &ldquo;do meio&rdquo; visualmente é o 8, mas a mediana verdadeira exige colocar em ordem: [2, 3, 5, 8, 10], mediana = <strong>5</strong>. Em quantidade par, não esqueça de fazer a média dos dois centrais.</p>
+<p><strong>2. Média ponderada dividida pela quantidade errada.</strong> Divida sempre pela <em>soma dos pesos</em>. Com pesos 3 e 1, o divisor é 4 (e não 2).</p>
+<p><strong>3. Probabilidade fora de 0 a 1.</strong> Uma resposta como 3/2 ou 120% de chance denuncia erro de conta (o numerador não pode ser maior que o denominador).</p>
+<p><strong>4. Sorteio com e sem reposição.</strong> Sem devolver a bola, os totais mudam na segunda retirada (5 → 4). Com reposição, voltam ao original.</p>
 </div>
 
 <div class="example-solved">
     <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas</div>
     <div class="ex-problem">
-        <strong>Situação-Problema:</strong> Em uma urna da gincana de matemática do CEFET há 12 fichas verdes, 8 amarelas e 10 azuis. Uma ficha é retirada aleatoriamente, sua cor é anotada e ela NÃO é reposta na urna. Em seguida, retira-se uma segunda ficha. Qual é a probabilidade de ambas as fichas sorteadas serem amarelas?
+        <strong>Situação-Problema:</strong> Um estudante tirou as notas 6, 8 e 7 nos três primeiros bimestres. Para ser aprovado ele precisa de média aritmética final igual a 7,5 nos quatro bimestres. Que nota ele precisa tirar no 4º bimestre? E, se o sorteio de uma entre 20 questões de revisão (8 de Matemática) fosse feito, qual a probabilidade de cair uma de Matemática?
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-interp">Etapa 1: Interpretação do Problema</span><br>
-        Total inicial de fichas = 12 + 8 + 10 = <strong>30 fichas</strong>.<br>
-        Fichas amarelas favoráveis na 1ª rodada = 8.<br>
-        Evento composto com retiradas sucessivas <strong>SEM REPOSIÇÃO</strong>.
+        <span class="step-tag tag-interp">Etapa 1: Interpretação do Enunciado</span><br>
+        Parte A: média aritmética de 4 notas igual a 7,5; falta a 4ª nota. Parte B: probabilidade = casos favoráveis ÷ casos possíveis, com 8 favoráveis em 20 possíveis.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-model">Etapa 2: Modelagem das Probabilidades Sucessivas</span><br>
-        P(1ª Amarela) = 8 / 30.<br>
-        Após retirar uma amarela sem devolver, restam 7 amarelas e um total de 29 fichas na urna.<br>
-        P(2ª Amarela | 1ª Amarela) = 7 / 29.<br>
-        P(Total) = P(1ª) · P(2ª) = (8 / 30) · (7 / 29).
+        <span class="step-tag tag-model">Etapa 2: Modelagem Matemática</span><br>
+        Média = soma ÷ quantidade, logo <code>soma = média · quantidade = 7,5 · 4 = 30</code>.<br>Chamando a 4ª nota de x: <code>6 + 8 + 7 + x = 30</code>.<br>Probabilidade: <code>P = 8/20</code>.
     </div>
     <div class="ex-step">
         <span class="step-tag tag-calc">Etapa 3: Resolução dos Cálculos</span><br>
-        Simplificamos 8/30 dividindo por 2: 4/15.<br>
-        Multiplicação direta: (4 · 7) / (15 · 29) = <strong>28 / 435</strong> (aproximadamente 0,0644 ou 6,44%).
+        <code>21 + x = 30</code> ⟹ <code>x = 9</code>.<br><code>P = 8/20 = 2/5 = 0,4 = 40%</code>.
     </div>
     <div class="ex-step result">
         <span class="step-tag tag-concl">Etapa 4: Conclusão Contextualizada</span><br>
-        A probabilidade exata de sortear duas fichas amarelas consecutivas sem reposição é de <strong>28/435</strong>.
+        O estudante precisa tirar <strong>9,0</strong> no 4º bimestre (conferindo: (6 + 8 + 7 + 9)/4 = 30/4 = 7,5 ✔). A probabilidade de sair uma questão de Matemática é de <strong>2/5, ou 40%</strong> (um valor entre 0 e 1, como deve ser).
     </div>
 </div>`,
             questions: [
@@ -724,14 +1080,62 @@ window.curriculum = [
                     options: ["8,5", "9,0", "9,5", "10,0"],
                     correct: 1,
                     exp: "Soma necessária = 7,5 · 4 = 30. Atual = 21. Nota necessária = 9,0."
+                },
+                {
+                    type: "mc",
+                    q: "Um dado honesto de 6 faces é lançado. A probabilidade de sair um número maior que 4 é:",
+                    options: ["1/6", "1/3", "1/2", "2/3"],
+                    correct: 1,
+                    exp: "Favoráveis: 5 e 6 (2 casos). Possíveis: 6. P = 2/6 = 1/3."
+                },
+                {
+                    type: "mc",
+                    q: "Qual é a mediana do conjunto de dados 12, 3, 9, 5, 7?",
+                    options: ["5", "7", "9", "7,2"],
+                    correct: 1,
+                    exp: "Primeiro ordene: 3, 5, 7, 9, 12. Com 5 dados, a mediana é o termo central: 7. (7,2 é a média, que é outra medida.)"
+                },
+                {
+                    type: "text",
+                    q: "Qual é a média aritmética dos valores 4, 8, 6 e 10? (Responda só com o número)",
+                    a: ["7"],
+                    exp: "Soma: 4 + 8 + 6 + 10 = 28. Dividindo pela quantidade (4): 28 ÷ 4 = 7."
+                },
+                {
+                    type: "mc",
+                    q: "Em uma prova, a questão A tem peso 2 e a B tem peso 3. Um aluno tirou 5 na A e 10 na B. Sua média ponderada foi:",
+                    options: ["7,5", "8", "6,5", "8,5"],
+                    correct: 1,
+                    exp: "(5·2 + 10·3) ÷ (2 + 3) = (10 + 30) ÷ 5 = 8. A média simples seria 7,5 (opção que cai no erro de ignorar os pesos), mas o peso maior da B puxa o resultado para cima."
+                },
+                {
+                    type: "mc",
+                    q: "Uma urna tem 3 bolas vermelhas e 2 azuis. Retirando duas bolas seguidas, sem devolver, a probabilidade de ambas serem vermelhas é:",
+                    options: ["9/25", "3/10", "3/5", "6/5"],
+                    correct: 1,
+                    exp: "Primeira vermelha: 3/5. Sobram 4 bolas, 2 vermelhas: 2/4. Multiplicando: 3/5 · 2/4 = 6/20 = 3/10."
+                },
+                {
+                    type: "text",
+                    q: "Quantos por cento é a probabilidade de NÃO sair o número 6 ao lançar um dado honesto? (Responda só com o número aproximado, sem o símbolo %, pode usar uma casa decimal)",
+                    a: ["83,3", "83.3", "83", "83,33"],
+                    exp: "P(sair 6) = 1/6. P(não sair 6) = 1 − 1/6 = 5/6 ≈ 0,833 = 83,3%."
+                },
+                {
+                    type: "mc",
+                    q: "Cinco funcionários ganham R$ 2.000 e um chefe ganha R$ 14.000. Qual medida melhor representa o salário 'típico' do grupo?",
+                    options: ["A média, R$ 4.000", "A mediana, R$ 2.000", "A soma dos salários", "O maior salário"],
+                    correct: 1,
+                    exp: "A média (24.000 ÷ 6 = 4.000) é puxada pelo salário muito alto do chefe. A mediana (valor central, R$ 2.000) representa melhor o salário típico."
                 }
             ]
         },
         {
-            id: "mat-07", title: "7. Polinômios, Fatoração & Produtos Notáveis", time: "30 min", difficulty: "médio",
+            id: "mat-07", title: "7. Polinômios, Fatoração & Produtos Notáveis", time: "45 min", difficulty: "médio",
             track: "selecao", prerequisites: ["mat-01"], examTopics: ["Edital 1.2: Polinômios — operações, fatoração, produtos notáveis"],
             simpleExplanation: `
-                <p><strong>Em palavras simples:</strong> Produtos notáveis são fórmulas rápidas de multiplicação: <code>(a + b)² = a² + 2ab + b²</code>. Fatorar é o caminho de volta: empacotar termos para poder cortar e simplificar contas.</p>
+                <p><strong>Em palavras simples:</strong> Um <strong>polinômio</strong> é uma &ldquo;conta com letras&rdquo; (como 3x² + 2x − 5). Só dá para somar termos <em>semelhantes</em> (mesma letra, mesmo expoente). Para multiplicar, todo mundo de um parêntese multiplica todo mundo do outro (propriedade distributiva). <strong>Produtos notáveis</strong> são multiplicações que aparecem tanto que vale decorar o resultado, e <strong>fatorar</strong> é voltar atrás: transformar uma soma em uma multiplicação, o que permite simplificar frações.</p>
+<p>O erro número 1 do assunto: (a + b)² <strong>não</strong> é a² + b². Falta o termo do meio, 2ab.</p>
             `,
             content: `
 <div class="card" style="margin-bottom:20px; border-left: 5px solid var(--accent);">
@@ -766,48 +1170,72 @@ window.curriculum = [
 </div>
 
 <div class="card" style="margin-bottom:20px;">
-    <h3><span class="step-num">🔬</span> Teoria Descomplicada: As Fórmulas Sagradas da Fatoração</h3>
-    <div class="box-formula" style="line-height:1.8;">
-        <strong>1. Quadrado da Soma:</strong> (a + b)² = a² + <strong>2ab</strong> + b²<br>
-        <strong>2. Quadrado da Diferença:</strong> (a − b)² = a² − <strong>2ab</strong> + b²<br>
-        <strong>3. Produto da Soma pela Diferença:</strong> (a + b)(a − b) = <strong>a² − b²</strong> (O termo do meio se anula!)<br><br>
-        <strong>As 3 Técnicas de Fatoração Obrigatórias no CEFET:</strong><br>
-        • <em>Fator Comum em Evidência:</em> 3x² + 6x = <strong>3x(x + 2)</strong><br>
-        • <em>Diferença de Quadrados:</em> x² − 36 = <strong>(x − 6)(x + 6)</strong><br>
-        • <em>Trinômio Quadrado Perfeito:</em> x² + 8x + 16 = <strong>(x + 4)²</strong> (Verifique: 2·x·4 = 8x!)
-    </div>
+    <h3><span class="step-num">🔬</span> Teoria do Zero: Polinômios, Produtos Notáveis e Fatoração</h3>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Álgebra é a aritmética com <strong>letras no lugar de números desconhecidos</strong>. As regras são as mesmas que você já usa nos números; só falta enxergar por que elas funcionam. Vamos do mais básico (o que é um termo) até a fatoração.</p>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 1. Monômios e polinômios: o vocabulário</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Um <strong>monômio</strong> é um termo com número (<strong>coeficiente</strong>) e letras (<strong>parte literal</strong>): <code>5x²y</code> tem coeficiente 5 e parte literal x²y. Um <strong>polinômio</strong> é uma soma de monômios: <code>3x² + 2x − 5</code> (três termos).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O <strong>grau</strong> de um monômio é a soma dos expoentes das letras (5x²y tem grau 2 + 1 = 3). O grau de um polinômio é o maior grau entre seus termos (3x² + 2x − 5 tem grau 2). <strong>Termos semelhantes</strong> têm a <em>mesma parte literal</em> (3x² e −7x² são semelhantes; 3x² e 3x não são).</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 2. Soma e subtração: só junta o que é semelhante</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Pense em letras como frutas: 3 maçãs + 2 maçãs = 5 maçãs, mas 3 maçãs + 2 bananas continua sendo &ldquo;3 maçãs e 2 bananas&rdquo;. Assim: <code>3x² + 5x² = 8x²</code> (soma os coeficientes, mantém a parte literal) e <code>3x² + 5x</code> não se junta.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Subtração: o sinal de menos na frente do parêntese troca TODOS os sinais lá dentro.</strong> Subtrair é somar o oposto:</p>
+<p style="padding-left:14px;"><code>(5x² − 3x + 2) − (2x² − x − 4) = 5x² − 3x + 2 − 2x² + x + 4 = 3x² − 2x + 6</code></p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O erro clássico é trocar o sinal só do primeiro termo do parêntese. Cuidado: <code>−(−x) = +x</code> e <code>−(−4) = +4</code>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 3. Multiplicação: a propriedade distributiva (por quê?)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Monômio × monômio:</strong> multiplique os coeficientes e some os expoentes das letras iguais (lembra da regra de potências?). <code>(3x²y)(−2xy³) = (3 · −2)(x² · x)(y · y³) = −6x³y⁴</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Monômio × polinômio:</strong> distribui. <code>3x(2x − 5) = 6x² − 15x</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Polinômio × polinômio:</strong> cada termo do primeiro multiplica cada termo do segundo. Por quê? Imagine um retângulo de lados (x + 3) e (x + 2): sua área é o retângulo grande, que se divide em 4 retângulos menores (x·x, x·2, 3·x, 3·2). A área total é a soma das 4 partes:</p>
+<div class="box-formula" style="line-height:1.8;">(x + 3)(x + 2) = x·x + x·2 + 3·x + 3·2 = x² + 2x + 3x + 6 = <strong>x² + 5x + 6</strong></div>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Depois, sempre junte os termos semelhantes.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 4. Divisão (o essencial)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Polinômio ÷ monômio:</strong> divida cada termo. <code>(6x³ − 9x²) ÷ 3x = 2x² − 3x</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Polinômio ÷ polinômio:</strong> o jeito mais rápido em prova é <em>fatorar</em> e cortar fatores iguais (veja a seção 6). Exemplo: <code>(x² + 5x + 6) ÷ (x + 2) = (x + 2)(x + 3) ÷ (x + 2) = x + 3</code>. Você pode conferir multiplicando de volta: (x + 2)(x + 3) = x² + 5x + 6 ✔.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 5. Produtos notáveis: os atalhos (e a prova geométrica)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Quadrado da soma:</strong> <code>(a + b)² = a² + 2ab + b²</code>. Por quê? É um quadrado de lado (a + b). Ele se divide em: um quadrado a·a, um quadrado b·b e <strong>dois retângulos</strong> a·b. É por isso que existe o termo <strong>2ab</strong>: os dois retângulos do meio. Quem escreve a² + b² esquece esses dois retângulos.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Quadrado da diferença:</strong> <code>(a − b)² = a² − 2ab + b²</code>. (Só muda o sinal do meio. Note que o último termo b² é sempre positivo.)</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Produto da soma pela diferença:</strong> <code>(a + b)(a − b) = a² − b²</code>. Por quê? Distribuindo: a² − ab + ab − b². Os termos do meio se cancelam!</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Produto notável</th><th>Desenvolvimento</th><th>Exemplo</th></tr>
+<tr><td>(a + b)²</td><td>a² + 2ab + b²</td><td>(x + 4)² = x² + 8x + 16</td></tr>
+<tr><td>(a − b)²</td><td>a² − 2ab + b²</td><td>(x − 3)² = x² − 6x + 9</td></tr>
+<tr><td>(a + b)(a − b)</td><td>a² − b²</td><td>(x + 5)(x − 5) = x² − 25</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Truque de cálculo mental:</strong> <code>101² − 99² = (101 − 99)(101 + 99) = 2 · 200 = 400</code>. E <code>51² = (50 + 1)² = 2.500 + 100 + 1 = 2.601</code>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 6. Fatoração: transformar soma em multiplicação</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Fatorar é o caminho inverso do produto notável: pegar uma soma e reescrevê-la como produto. Para quê? Porque só podemos <strong>cortar fatores</strong> (coisas que multiplicam), nunca parcelas (coisas que somam). Fatorar libera o corte. Os casos que você precisa:</p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Fator comum em evidência:</strong> ache o que se repete em todos os termos e coloque para fora. <code>3x² + 6x = 3x(x + 2)</code>. Confira distribuindo: 3x·x + 3x·2 ✔.</li>
+<li><strong>Diferença de dois quadrados:</strong> <code>a² − b² = (a + b)(a − b)</code>. Exemplo: <code>x² − 36 = (x + 6)(x − 6)</code>; <code>4x² − 9 = (2x + 3)(2x − 3)</code>.</li>
+<li><strong>Trinômio quadrado perfeito:</strong> <code>a² + 2ab + b² = (a + b)²</code>. Teste: o termo do meio deve ser o dobro do produto das raízes dos extremos. <code>x² + 8x + 16</code>: raízes x e 4; 2·x·4 = 8x ✔, então <code>(x + 4)²</code>.</li>
+<li><strong>Agrupamento:</strong> <code>ax + ay + bx + by = a(x + y) + b(x + y) = (a + b)(x + y)</code>.</li>
+<li><strong>Trinômio x² + Sx + P:</strong> procure dois números que <em>somam</em> S e <em>multiplicam</em> P. <code>x² + 5x + 6</code>: números 2 e 3 (soma 5, produto 6) → <code>(x + 2)(x + 3)</code>.</li>
+</ul>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Ordem prática:</strong> sempre procure primeiro o fator comum; depois veja se sobrou uma diferença de quadrados ou um trinômio especial.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 7. Simplificando frações algébricas</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Para simplificar <code>(x² − 25)/(x − 5)</code>, <strong>não</strong> corte x² com x nem 25 com 5 (são parcelas). Fatore o numerador: <code>(x − 5)(x + 5)/(x − 5)</code>. Agora o bloco (x − 5) aparece multiplicando em cima e embaixo e pode ser cortado inteiro: resultado <code>x + 5</code>, com a condição <code>x ≠ 5</code> (porque o denominador nunca pode ser zero).</p></div>
 </div>
 
 <div class="box-warning" style="margin-bottom:20px;">
-    <div class="box-header">⚠️ A Pegadinha Mais Fatal da História da Banca do CEFET</div>
-    <p>O esquecimento do termo do meio: <code>(a + b)² NÃO É a² + b²</code>! Quem escreve que <code>(x + 4)² = x² + 16</code> comete um dos maiores pecados matemáticos do concurso e perde a vaga! Falta o dobro do primeiro pelo segundo: <strong>2 · x · 4 = 8x</strong>! O correto é <code>x² + 8x + 16</code>!</p>
+    <div class="box-header">⚠️ As Pegadinhas da Banca do CEFET em Polinômios e Fatoração</div>
+<p><strong>1. (a + b)² = a² + b² ✘.</strong> O correto é a² + 2ab + b². Com números: (3 + 4)² = 49, mas 3² + 4² = 25. Falta o 2ab = 24. O mesmo vale para (a − b)²: o último termo é +b² (e não −b²).</p>
+<p><strong>2. Sinal de menos na frente do parêntese.</strong> −(2x − 3) = −2x + 3. Quem muda só o primeiro sinal erra o resultado inteiro.</p>
+<p><strong>3. Cortar parcelas em vez de fatores.</strong> Em (x² − 25)/(x − 5) é proibido cortar x² com x. Primeiro fatore, depois corte blocos inteiros que multiplicam.</p>
+<p><strong>4. Esquecer a restrição do denominador.</strong> Ao simplificar (x² − 25)/(x − 5) para x + 5, vale apenas para x ≠ 5.</p>
+<p><strong>5. Somar termos que não são semelhantes.</strong> 3x² + 5x não vira 8x³ nem 8x². Fica como está.</p>
 </div>
 
 <div class="example-solved">
-    <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas</div>
+    <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas (Produto Notável Sem Resolver o Sistema)</div>
     <div class="ex-problem">
-        <strong>Situação-Problema:</strong> Simplifique a fração algébrica a seguir para todos os valores reais onde ela existe (x ≠ 5):<br>
-        <code>E = (x² − 25) / (x² − 10x + 25)</code>
+        <strong>Situação-Problema:</strong> Sabendo que a + b = 7 e a · b = 12, calcule o valor de a² + b² sem descobrir os valores de a e de b.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-interp">Etapa 1: Interpretação Algébrica</span><br>
-        No numerador temos uma <em>Diferença de Dois Quadrados</em>: x² − 5².<br>
-        No denominador temos um <em>Trinômio Quadrado Perfeito</em>: x² − 2(x)(5) + 5².
+        <span class="step-tag tag-interp">Etapa 1: Interpretação do Enunciado</span><br>
+        Queremos a² + b², mas só conhecemos a <strong>soma</strong> e o <strong>produto</strong> de a e b. O produto notável (a + b)² contém exatamente essas três peças: a², b² e 2ab.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-model">Etapa 2: Fatoração dos Termos</span><br>
-        Numerador: x² − 25 = <strong>(x − 5)(x + 5)</strong>.<br>
-        Denominador: x² − 10x + 25 = <strong>(x − 5)² = (x − 5)(x − 5)</strong>.
+        <span class="step-tag tag-model">Etapa 2: Modelagem Matemática</span><br>
+        Desenvolvendo o quadrado da soma: <code>(a + b)² = a² + 2ab + b²</code>.<br>Reorganizando: <code>a² + b² = (a + b)² − 2ab</code>.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-calc">Etapa 3: Simplificação e Cancelamento de Fatores</span><br>
-        Substituindo na fração:<br>
-        E = [(x − 5)(x + 5)] / [(x − 5)(x − 5)]<br>
-        Cancelamos o fator idêntico (x − 5) do numerador e do denominador:
+        <span class="step-tag tag-calc">Etapa 3: Resolução dos Cálculos</span><br>
+        Substituindo os valores dados: <code>a² + b² = 7² − 2 · 12 = 49 − 24 = 25</code>.<br>Conferindo: os números 3 e 4 têm soma 7 e produto 12, e 3² + 4² = 9 + 16 = 25 ✔.
     </div>
     <div class="ex-step result">
         <span class="step-tag tag-concl">Etapa 4: Conclusão Contextualizada</span><br>
-        A fração simplificada irredutível é <strong>(x + 5) / (x − 5)</strong>.
+        O valor de a² + b² é <strong>25</strong>. Esse tipo de questão premia quem entende de onde vem o termo 2ab: dá para achar soma de quadrados sem resolver nenhum sistema.
     </div>
 </div>`,
             questions: [
@@ -817,17 +1245,75 @@ window.curriculum = [
                     options: ["4x² + 9", "4x² + 12x + 9", "4x² + 6x + 9", "2x² + 12x + 9"],
                     correct: 1,
                     exp: "(2x)² + 2(2x)(3) + 3² = 4x² + 12x + 9."
+                },
+                {
+                    type: "mc",
+                    q: "O produto (x + 5)(x − 5) é igual a:",
+                    options: ["x² − 25", "x² + 25", "x² − 10x + 25", "x² + 10x − 25"],
+                    correct: 0,
+                    exp: "Soma pela diferença: (a + b)(a − b) = a² − b². Aqui, x² − 25. Distribuindo: x² − 5x + 5x − 25, e os termos do meio se cancelam."
+                },
+                {
+                    type: "text",
+                    q: "Calcule 101² − 99² usando fatoração. (Responda só com o número)",
+                    a: ["400"],
+                    exp: "Diferença de quadrados: (101 − 99)(101 + 99) = 2 · 200 = 400."
+                },
+                {
+                    type: "mc",
+                    q: "Colocando em evidência o MAIOR fator comum, a expressão 6x² − 9x fica:",
+                    options: ["3x(2x − 3)", "3(2x² − 3x)", "x(6x − 9)", "3x(2x + 3)"],
+                    correct: 0,
+                    exp: "O maior fator comum é 3x (coeficiente 3 e letra x). Dividindo cada termo por 3x: 6x² ÷ 3x = 2x e 9x ÷ 3x = 3. As opções 2 e 3 também são igualdades verdadeiras, mas não colocam em evidência o MAIOR fator comum (que é 3x)."
+                },
+                {
+                    type: "mc",
+                    q: "O trinômio x² − 10x + 25 é igual a:",
+                    options: ["(x − 5)²", "(x + 5)²", "(x − 25)²", "(x − 5)(x + 5)"],
+                    correct: 0,
+                    exp: "Raízes dos extremos: x e 5. O termo do meio é −2·x·5 = −10x ✔, e o sinal negativo indica quadrado da diferença: (x − 5)²."
+                },
+                {
+                    type: "mc",
+                    q: "O resultado de (5x² − 3x + 2) − (2x² − x − 4) é:",
+                    options: ["3x² − 2x + 6", "3x² − 4x − 2", "3x² − 2x − 2", "7x² − 4x − 2"],
+                    correct: 0,
+                    exp: "Trocando todos os sinais do segundo parêntese: 5x² − 3x + 2 − 2x² + x + 4. Agrupando: 3x² − 2x + 6."
+                },
+                {
+                    type: "text",
+                    q: "Se x + y = 8 e x − y = 3, qual é o valor de x² − y²? (Responda só com o número)",
+                    a: ["24"],
+                    exp: "x² − y² = (x + y)(x − y) = 8 · 3 = 24. Não é preciso descobrir x e y."
+                },
+                {
+                    type: "mc",
+                    q: "Simplificando (x² − 16)/(x − 4), com x ≠ 4, obtém-se:",
+                    options: ["x + 4", "x − 4", "x² − 4", "4"],
+                    correct: 0,
+                    exp: "Fatorando o numerador: x² − 16 = (x − 4)(x + 4). Cortando o fator (x − 4): sobra x + 4."
+                },
+                {
+                    type: "mc",
+                    q: "A forma fatorada de x² + 5x + 6 é:",
+                    options: ["(x + 1)(x + 6)", "(x + 2)(x + 3)", "(x + 5)(x + 1)", "(x − 2)(x − 3)"],
+                    correct: 1,
+                    exp: "Procuramos dois números com soma 5 e produto 6: são 2 e 3. Logo (x + 2)(x + 3). Conferindo: x² + 3x + 2x + 6 = x² + 5x + 6."
+                },
+                {
+                    type: "mc",
+                    q: "O desenvolvimento de (x − 3)² é:",
+                    options: ["x² − 9", "x² − 6x + 9", "x² + 6x + 9", "x² − 6x − 9"],
+                    correct: 1,
+                    exp: "(a − b)² = a² − 2ab + b² = x² − 2·x·3 + 3² = x² − 6x + 9. Note que o último termo é sempre positivo."
                 }
             ]
         },
         {
-            id: "mat-08", title: "8. Equações de 1º/2º Graus & Fracionárias", time: "30 min", difficulty: "médio",
+            id: "mat-08", title: "8. Equações de 1º/2º Graus & Fracionárias", time: "45 min", difficulty: "médio",
             track: "selecao", prerequisites: ["mat-01", "mat-07"], examTopics: ["Edital 1.6: Equações de 1º e 2º graus, equações fracionárias, interpretação gráfica"],
             simpleExplanation: `
-                <p><strong>Em palavras simples:</strong> Uma equação é uma balança em equilíbrio: o que você faz de um lado, tem que fazer exatamente igual do outro para descobrir o valor escondido de $x$.</p>
-                <p>• <strong>1º Grau ($ax + b = 0$):</strong> Relação linear direta. Isole o $x$ passando o número com sinal invertido.<br>
-                • <strong>2º Grau ($ax^2 + bx + c = 0$):</strong> Relação com aceleração ou área. Usa-se a Fórmula de Bhaskara, e o $\Delta$ revela quantas respostas existem!<br>
-                • <strong>Fracionárias (com $x$ no denominador):</strong> É proibido dividir por zero no universo. Sempre declare a Condição de Existência (C.E.) primeiro!</p>
+                <p><strong>Em palavras simples:</strong> Uma equação é uma balança equilibrada com um valor escondido (x). Para descobrir x, você faz <em>a mesma operação nos dois lados</em> até deixar o x sozinho. A equação do 2º grau (com x²) pode ter até duas respostas e se resolve com a <strong>fórmula de Bhaskara</strong>: x = (−b ± √Δ) ÷ 2a, onde Δ = b² − 4ac. Se Δ &lt; 0, não há solução real. Em equações com x no denominador, <strong>confira no fim</strong> se a resposta não zera o denominador.</p>
             `,
             content: `
 <div class="card" style="margin-bottom:20px; border-left: 5px solid var(--accent);">
@@ -880,38 +1366,88 @@ window.curriculum = [
     </div>
 </div>
 
-<div class="box-warning">
-    <div class="box-header">⚠️ A Pegadinha Mortal do CEFET: A Condição de Existência (C.E.)</div>
-    <p style="font-size:14.5px; line-height:1.65; margin:0;">
-        Em equações fracionárias (aquelas que possuem a letra <strong>x no denominador</strong>), existe um mandamento inegociável na matemática: <strong>NUNCA DIVIDIRÁS POR ZERO!</strong>
-        <br><br>
-        • Antes de fazer qualquer multiplicação cruzada, iguale cada denominador a zero e escreva a <strong>Condição de Existência (C.E.)</strong>.<br>
-        • <em>Exemplo:</em> Se aparecer <code>5 / (x − 4)</code>, declare imediatamente: <strong>x ≠ 4</strong>.<br>
-        • Se no final das suas contas você encontrar <code>x = 4</code>, esse valor é INVÁLIDO e a solução da equação é o conjunto vazio ∅! Todo ano dezenas de candidatos caem nessa armadilha da banca!
-    </p>
+<div class="card" style="margin-bottom:20px;">
+    <h3><span class="step-num">🔬</span> Teoria do Zero: Equações do 1º Grau, do 2º Grau (Bhaskara) e Fracionárias</h3>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Resolver uma equação é <strong>descobrir o número que torna a igualdade verdadeira</strong>. Você não precisa de truques: precisa entender a ideia da balança e as operações inversas. Vamos do degrau mais simples ao mais difícil.</p>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 1. O que é uma equação (e o que é &ldquo;resolver&rdquo;)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Uma <strong>equação</strong> é uma igualdade com um valor desconhecido (a <strong>incógnita</strong>, geralmente x). A <strong>solução</strong> (ou <strong>raiz</strong>) é o valor de x que deixa os dois lados iguais. Em <code>x + 3 = 10</code>, a raiz é 7, porque 7 + 3 = 10.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Verificar sempre:</strong> depois de resolver, substitua o x no enunciado original. Se os dois lados derem o mesmo valor, está certo. É a melhor forma de caçar erros de sinal.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 2. Equação do 1º grau: a balança e as operações inversas</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Uma balança só fica equilibrada se você fizer <strong>a mesma coisa nos dois pratos</strong>. Para isolar o x, desfaça cada operação com a <strong>operação inversa</strong>: a soma desfaz a subtração, a divisão desfaz a multiplicação. Em <code>3x + 5 = 20</code>:</p>
+<ol style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li>Tire 5 dos dois lados: <code>3x = 15</code>. (&ldquo;Passar o 5 para o outro lado trocando o sinal&rdquo; é só um apelido para isso.)</li>
+<li>Divida os dois lados por 3: <code>x = 5</code>.</li>
+<li>Confira: 3 · 5 + 5 = 20 ✔.</li>
+</ol>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Incógnita dos dois lados:</strong> junte os x de um lado e os números do outro. <code>3x − 7 = 2x + 5</code> → tirar 2x dos dois lados: <code>x − 7 = 5</code> → somar 7: <code>x = 12</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Com parênteses:</strong> distribua primeiro. <code>2(x − 3) = x + 4</code> → <code>2x − 6 = x + 4</code> → <code>x = 10</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Com frações:</strong> multiplique tudo pelo <strong>MMC</strong> dos denominadores para eliminá-los (é multiplicar os dois pratos pelo mesmo número). <code>x/2 + x/3 = 10</code>: MMC = 6 → <code>3x + 2x = 60</code> → <code>5x = 60</code> → <code>x = 12</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Casos especiais:</strong> se ao simplificar sobrar <code>0x = 5</code> (algo falso), a equação <em>não tem solução</em>. Se sobrar <code>0x = 0</code> (sempre verdadeiro), tem <em>infinitas</em> soluções.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 3. Traduzindo problemas de texto em equação</h4><table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Em português</th><th>Em matemática</th></tr>
+<tr><td>um número</td><td>x</td></tr>
+<tr><td>o dobro / o triplo / a metade</td><td>2x / 3x / x/2</td></tr>
+<tr><td>5 a mais que um número / 5 a menos</td><td>x + 5 / x − 5</td></tr>
+<tr><td>o quadrado de um número</td><td>x²</td></tr>
+<tr><td>dois números consecutivos</td><td>x e x + 1</td></tr>
+<tr><td>três pares consecutivos</td><td>x, x + 2, x + 4</td></tr>
+<tr><td>&ldquo;é&rdquo;, &ldquo;resulta&rdquo;, &ldquo;dá&rdquo;, &ldquo;igual a&rdquo;</td><td>=</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo:</strong> &ldquo;O triplo de um número, aumentado de 4, é igual ao dobro desse número mais 10&rdquo; → <code>3x + 4 = 2x + 10</code> → <code>x = 6</code>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 4. Equação do 2º grau: a forma geral e os casos incompletos</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">É toda equação que pode ser escrita como <code>ax² + bx + c = 0</code> com <strong>a ≠ 0</strong> (se a fosse 0, o x² sumiria e viraria 1º grau). Ela pode ter <strong>até duas raízes</strong>, porque um número positivo tem duas raízes quadradas (+ e −).</p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Incompleta com b = 0</strong> (<code>ax² + c = 0</code>): isole o x² e tire a raiz dos dois lados. <code>x² − 16 = 0</code> → <code>x² = 16</code> → <code>x = ±4</code>. Se der x² = número negativo, não há raiz real.</li>
+<li><strong>Incompleta com c = 0</strong> (<code>ax² + bx = 0</code>): coloque x em evidência. <code>x² − 3x = 0</code> → <code>x(x − 3) = 0</code>. Um produto só é zero se um dos fatores for zero: <code>x = 0</code> ou <code>x = 3</code>. (Nunca &ldquo;corte&rdquo; o x: você perderia a raiz 0!)</li>
+</ul></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 5. A fórmula de Bhaskara (de onde vem e como usar)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Para a equação completa, usamos <code>x = (−b ± √Δ) / (2a)</code> com <code>Δ = b² − 4ac</code> (o <strong>discriminante</strong>). Ela vem de transformar a equação num quadrado perfeito (&ldquo;completar o quadrado&rdquo;) e depois tirar a raiz, e por isso aparecem o ± e a raiz.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>O Δ diz quantas raízes reais existem:</strong></p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Δ &gt; 0:</strong> duas raízes reais diferentes (a √Δ existe e o ± dá dois resultados).</li>
+<li><strong>Δ = 0:</strong> uma raiz real (dupla): a √0 = 0 faz o ± não mudar nada.</li>
+<li><strong>Δ &lt; 0:</strong> nenhuma raiz real (não existe raiz quadrada real de número negativo).</li>
+</ul>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Passo a passo para x² − 7x + 10 = 0:</strong></p>
+<ol style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li>Identifique <code>a = 1</code>, <code>b = −7</code>, <code>c = 10</code> (guarde o sinal de cada um!).</li>
+<li>Δ = b² − 4ac = (−7)² − 4 · 1 · 10 = 49 − 40 = <strong>9</strong>.</li>
+<li>x = (−(−7) ± √9) / (2 · 1) = (7 ± 3) / 2.</li>
+<li>x₁ = (7 + 3)/2 = <strong>5</strong> e x₂ = (7 − 3)/2 = <strong>2</strong>.</li>
+</ol></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 6. Soma e produto das raízes (o atalho que dispensa Bhaskara)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Se x₁ e x₂ são as raízes de ax² + bx + c = 0, então:</p>
+<div class="box-formula" style="line-height:1.8;"><strong>Soma: S = x₁ + x₂ = −b / a</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Produto: P = x₁ · x₂ = c / a</strong></div>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Por quê?</strong> Uma equação com raízes x₁ e x₂ pode ser escrita como <code>(x − x₁)(x − x₂) = 0</code>. Desenvolvendo: <code>x² − (x₁ + x₂)x + x₁x₂ = 0</code>. Comparando com x² + (b/a)x + (c/a) = 0, aparecem a soma (com sinal trocado) e o produto.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Uso 1 (sem resolver):</strong> em 2x² − 10x + 8 = 0, S = −(−10)/2 = 5 e P = 8/2 = 4. <strong>Uso 2 (resolver de cabeça):</strong> em x² − 7x + 10 = 0, procure dois números que somam 7 e multiplicam 10: são 2 e 5.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 7. Equações fracionárias: o cuidado com o denominador</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">São equações com x no denominador. A <strong>divisão por zero não existe</strong>, então primeiro anote a <strong>condição de existência</strong> (os valores de x que zeram algum denominador estão proibidos). Depois, multiplique tudo pelo MMC dos denominadores para eliminá-los e resolva a equação que sobrar. No final, <strong>descarte</strong> qualquer solução proibida (as chamadas raízes estranhas).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo:</strong> <code>2/(x − 1) = 4/(x + 1)</code>, com x ≠ 1 e x ≠ −1. Multiplicando em cruz: <code>2(x + 1) = 4(x − 1)</code> → <code>2x + 2 = 4x − 4</code> → <code>6 = 2x</code> → <code>x = 3</code>. Está permitido (3 ≠ ±1). Confira: 2/2 = 1 e 4/4 = 1 ✔.</p></div>
+</div>
+
+<div class="box-warning" style="margin-bottom:20px;">
+    <div class="box-header">⚠️ As Pegadinhas da Banca do CEFET em Equações</div>
+<p><strong>1. Sinal de b e de c em Bhaskara.</strong> Em x² − 7x + 10 = 0, o b é −7 (e não 7). Em −b, o sinal troca para +7, e em b² o quadrado de −7 é +49. Erros de sinal aqui derrubam muita gente.</p>
+<p><strong>2. Perder a raiz zero.</strong> Em x² − 3x = 0, dividir os dois lados por x &ldquo;cancela&rdquo; a raiz x = 0. Em vez disso, ponha o x em evidência: x(x − 3) = 0.</p>
+<p><strong>3. Raiz que zera o denominador.</strong> Em (x² − 9)/(x − 3) = 6 chega-se a x + 3 = 6, logo x = 3. Mas x = 3 zera o denominador, então a equação <strong>não tem solução</strong> (conjunto vazio). A banca ama esse tipo de armadilha.</p>
+<p><strong>4. Raiz quadrada com ±.</strong> Em x² = 16, as raízes são +4 <em>e</em> −4. Mas em um problema de geometria (comprimento de lado), só vale o valor positivo.</p>
+<p><strong>5. Soma e produto: o sinal da soma.</strong> A soma é −b/a (com o sinal trocado). Em 2x² − 10x + 8 = 0, a soma é +5, e não −5.</p>
 </div>
 
 <div class="example-solved">
-    <div class="ex-title">✏️ Exemplo Real Estilo Prova do CEFET-RJ em 4 Etapas</div>
+    <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas (Problema que Vira Equação do 2º Grau)</div>
     <div class="ex-problem">
-        <strong>Situação-Problema:</strong> Resolva a equação fracionária no conjunto dos números reais: <code>3 / (x − 2) = 6 / (x + 4)</code>.
+        <strong>Situação-Problema:</strong> A área de um terreno retangular é de 84 m². O comprimento é 5 metros maior que a largura. Quais são as dimensões do terreno?
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-interp">Etapa 1: Condição de Existência (C.E.)</span><br>
-        Denominadores não podem ser zero: x − 2 ≠ 0 → <strong>x ≠ 2</strong>, e x + 4 ≠ 0 → <strong>x ≠ −4</strong>.
+        <span class="step-tag tag-interp">Etapa 1: Interpretação do Enunciado</span><br>
+        Duas medidas desconhecidas, mas ligadas: chamamos a <strong>largura</strong> de x e o <strong>comprimento</strong> de x + 5. A área do retângulo é largura × comprimento = 84.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-model">Etapa 2: Modelagem e Multiplicação Cruzada</span><br>
-        Aplicamos a propriedade fundamental das proporções: 3 · (x + 4) = 6 · (x − 2).
+        <span class="step-tag tag-model">Etapa 2: Modelagem Matemática</span><br>
+        <code>x · (x + 5) = 84</code> ⟹ <code>x² + 5x = 84</code> ⟹ <code>x² + 5x − 84 = 0</code> (forma geral, com a = 1, b = 5, c = −84).
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-calc">Etapa 3: Execução dos Cálculos</span><br>
-        3x + 12 = 6x − 12.<br>
-        12 + 12 = 6x − 3x → 24 = 3x → x = 24 / 3 = <strong>8</strong>.
+        <span class="step-tag tag-calc">Etapa 3: Resolução dos Cálculos</span><br>
+        Δ = 5² − 4 · 1 · (−84) = 25 + 336 = <strong>361</strong>, e √361 = 19.<br>x = (−5 ± 19)/2 ⟹ x₁ = 14/2 = <strong>7</strong> e x₂ = −24/2 = <strong>−12</strong>.<br>Uma largura não pode ser negativa, então descartamos −12.
     </div>
     <div class="ex-step result">
-        <span class="step-tag tag-concl">Etapa 4: Validação pela C.E. e Conclusão</span><br>
-        Como 8 ≠ 2 e 8 ≠ −4, a solução é perfeitamente válida: <strong>S = {8}</strong>.
+        <span class="step-tag tag-concl">Etapa 4: Conclusão Contextualizada</span><br>
+        Largura = <strong>7 m</strong> e comprimento = 7 + 5 = <strong>12 m</strong>. Conferindo: 7 · 12 = 84 ✔. A segunda raiz (−12) é solução da equação, mas não do problema: sempre verifique se a resposta faz sentido no contexto.
     </div>
 </div>`,
             questions: [
@@ -921,15 +1457,74 @@ window.curriculum = [
                     options: ["Soma = 5 e Produto = 4", "Soma = −5 e Produto = 4", "Soma = 10 e Produto = 8", "Soma = 5 e Produto = −4"],
                     correct: 0,
                     exp: "Soma = −(−10)/2 = 5. Produto = 8/2 = 4."
+                },
+                {
+                    type: "mc",
+                    q: "A solução da equação 3x − 7 = 2x + 5 é:",
+                    options: ["x = −2", "x = 2", "x = 12", "x = 6"],
+                    correct: 2,
+                    exp: "Tirando 2x dos dois lados: x − 7 = 5. Somando 7: x = 12. Conferindo: 3·12 − 7 = 29 e 2·12 + 5 = 29 ✔."
+                },
+                {
+                    type: "text",
+                    q: "Resolva 2(x − 3) = x + 4. Qual o valor de x? (Responda só com o número)",
+                    a: ["10"],
+                    exp: "Distribuindo: 2x − 6 = x + 4. Tirando x e somando 6: x = 10. Conferindo: 2·7 = 14 e 10 + 4 = 14 ✔."
+                },
+                {
+                    type: "mc",
+                    q: "As raízes da equação x² − 7x + 10 = 0 são:",
+                    options: ["2 e 5", "−2 e −5", "1 e 10", "−2 e 5"],
+                    correct: 0,
+                    exp: "Δ = 49 − 40 = 9 e x = (7 ± 3)/2, ou seja, 5 e 2. Também dá para pensar: dois números que somam 7 e multiplicam 10 são 2 e 5."
+                },
+                {
+                    type: "mc",
+                    q: "Quantas raízes reais distintas tem a equação x² − 6x + 9 = 0?",
+                    options: ["0", "1", "2", "3"],
+                    correct: 1,
+                    exp: "Δ = (−6)² − 4·1·9 = 36 − 36 = 0. Com Δ = 0 há uma raiz real dupla (x = 3). Note que x² − 6x + 9 = (x − 3)²."
+                },
+                {
+                    type: "mc",
+                    q: "O conjunto solução de x² − 16 = 0 é:",
+                    options: ["{4}", "{−4}", "{−4, 4}", "{16}"],
+                    correct: 2,
+                    exp: "x² = 16 tem duas raízes quadradas: +4 e −4, porque (−4)² = 16 também."
+                },
+                {
+                    type: "text",
+                    q: "Qual é a soma das raízes da equação x² − 3x = 0? (Responda só com o número)",
+                    a: ["3"],
+                    exp: "x(x − 3) = 0 dá x = 0 ou x = 3. A soma é 3. (Pela fórmula S = −b/a = 3 ✔.)"
+                },
+                {
+                    type: "mc",
+                    q: "A solução de 2/(x − 1) = 4/(x + 1) é:",
+                    options: ["x = 1", "x = 3", "x = −3", "x = 5"],
+                    correct: 1,
+                    exp: "Em cruz: 2(x + 1) = 4(x − 1), logo 2x + 2 = 4x − 4 e x = 3. Está permitido (x ≠ 1 e x ≠ −1) e confere: 2/2 = 1 = 4/4."
+                },
+                {
+                    type: "mc",
+                    q: "O conjunto solução da equação (x² − 9)/(x − 3) = 6 é:",
+                    options: ["{3}", "{9}", "vazio (sem solução)", "{−3}"],
+                    correct: 2,
+                    exp: "Para x ≠ 3, (x² − 9)/(x − 3) = x + 3 = 6, que daria x = 3. Mas x = 3 zera o denominador, então é raiz estranha e a equação não tem solução."
+                },
+                {
+                    type: "text",
+                    q: "Um número positivo somado ao seu quadrado dá 30. Qual é esse número? (Responda só com o número)",
+                    a: ["5"],
+                    exp: "x + x² = 30 → x² + x − 30 = 0. Δ = 1 + 120 = 121, x = (−1 ± 11)/2 = 5 ou −6. O número positivo é 5 (conferindo: 5 + 25 = 30)."
                 }
             ]
         },
         {
-            id: "mat-09", title: "9. Sistemas de Equações & Interpretação Gráfica", time: "25 min", difficulty: "médio",
+            id: "mat-09", title: "9. Sistemas de Equações & Interpretação Gráfica", time: "40 min", difficulty: "médio",
             track: "selecao", prerequisites: ["mat-08"], examTopics: ["Edital 1.6: Sistemas de equações de 1º e 2º graus, interpretação gráfica"],
             simpleExplanation: `
-                <p><strong>Em palavras simples:</strong> Um sistema é quando você tem duas pistas para descobrir dois mistérios ao mesmo tempo (como saber quantos carros e motos estão em um estacionamento olhando o total de veículos e o total de rodas).</p>
-                <p>• <strong>No gráfico:</strong> A resposta do sistema é o ponto exato onde as duas retas se cruzam no mapa!</p>
+                <p><strong>Em palavras simples:</strong> Um sistema é um conjunto de equações que precisam ser verdadeiras <em>ao mesmo tempo</em> para os mesmos valores de x e y. Há dois jeitos de resolver: <strong>substituição</strong> (isola uma letra numa equação e troca na outra) e <strong>adição</strong> (soma as equações para uma letra sumir). No gráfico, cada equação do 1º grau é uma <strong>reta</strong> e a solução é o ponto onde as retas se cruzam. Retas paralelas = sem solução; retas iguais = infinitas soluções.</p>
             `,
             content: `
 <div class="card" style="margin-bottom:20px; border-left: 5px solid var(--accent);">
@@ -978,32 +1573,66 @@ window.curriculum = [
     </div>
 </div>
 
+<div class="card" style="margin-bottom:20px;">
+    <h3><span class="step-num">🔬</span> Teoria do Zero: Sistemas de Equações e sua Interpretação Gráfica</h3>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Muitos problemas têm <strong>duas coisas desconhecidas</strong> e duas informações sobre elas (preço da coxinha e do suco, número de carros e de motos). Cada informação vira uma equação, e as duas juntas formam um <strong>sistema</strong>. Resolver o sistema é achar o par (x, y) que satisfaz as duas equações ao mesmo tempo.</p>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 1. Por que uma equação só não basta?</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">A equação <code>x + y = 10</code> sozinha tem <strong>infinitas</strong> soluções: (1, 9), (2, 8), (5, 5), (3,5; 6,5)... Cada uma delas é um ponto de uma reta. A segunda equação funciona como um filtro: de todas essas soluções, só <em>uma</em> também serve para ela. É assim que o sistema chega a uma resposta única.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 2. Método da substituição (isole, troque e resolva)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>A ideia:</strong> se uma equação diz &ldquo;y é igual a tal coisa&rdquo;, podemos trocar o y por &ldquo;tal coisa&rdquo; na outra equação, e ela fica com uma incógnita só. Sistema: <code>x + y = 12</code> e <code>x − y = 2</code>.</p>
+<ol style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Isole</strong> uma letra na equação mais simples: <code>x = 12 − y</code>.</li>
+<li><strong>Substitua</strong> na outra: <code>(12 − y) − y = 2</code>.</li>
+<li><strong>Resolva:</strong> <code>12 − 2y = 2</code> → <code>−2y = −10</code> → <code>y = 5</code>.</li>
+<li><strong>Volte</strong> para achar a outra letra: <code>x = 12 − 5 = 7</code>.</li>
+<li><strong>Confira nas duas equações:</strong> 7 + 5 = 12 ✔ e 7 − 5 = 2 ✔.</li>
+</ol>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Este método é o melhor quando uma letra já está sozinha ou tem coeficiente 1.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 3. Método da adição (some e faça uma letra sumir)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>A ideia:</strong> se somamos dois lados iguais com dois lados iguais, a igualdade se mantém. Somando as equações, uma letra pode &ldquo;desaparecer&rdquo; se os coeficientes forem opostos (+y e −y). Para o mesmo sistema:</p>
+<p style="padding-left:14px;"><code>x + y = 12</code><br><code>x − y = 2</code><br><code>―――――――</code><br><code>2x = 14</code> → <code>x = 7</code>, e então <code>y = 12 − 7 = 5</code>.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>E se os coeficientes não forem opostos?</strong> Multiplique uma (ou as duas) equações por um número para criar coeficientes opostos. Em <code>2x + 3y = 17</code> e <code>3x + y = 15</code>: multiplique a segunda por −3: <code>−9x − 3y = −45</code>. Somando com a primeira: <code>−7x = −28</code> → <code>x = 4</code>, e <code>y = 15 − 12 = 3</code>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 4. Interpretação gráfica: cada equação é uma reta</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Toda equação do 1º grau com duas letras (<code>ax + by = c</code>) desenha uma <strong>reta</strong> no plano. Para desenhar, basta achar <strong>dois pontos</strong> (escolha valores para x e calcule y). Em <code>x + y = 4</code>: se x = 0, y = 4; se x = 4, y = 0. Ligue (0, 4) e (4, 0).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>A solução do sistema é o ponto onde as duas retas se cruzam</strong>: é o único ponto que pertence às duas retas, ou seja, que satisfaz as duas equações. Existem três situações:</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Posição das retas</th><th>Soluções</th><th>Nome</th><th>Como aparece na conta</th></tr>
+<tr><td><strong>Concorrentes</strong> (se cruzam num ponto)</td><td>Exatamente 1</td><td>Sistema possível e determinado</td><td>Encontra-se um par (x, y)</td></tr>
+<tr><td><strong>Paralelas</strong> (nunca se cruzam)</td><td>Nenhuma</td><td>Sistema impossível</td><td>Aparece algo falso, como 0 = 5</td></tr>
+<tr><td><strong>Coincidentes</strong> (uma sobre a outra)</td><td>Infinitas</td><td>Sistema possível e indeterminado</td><td>Aparece algo sempre verdadeiro, como 0 = 0</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplos:</strong> <code>y = 2x + 1</code> e <code>y = 2x − 3</code> têm a mesma inclinação (2) mas alturas diferentes: paralelas, sem solução. <code>2x + 4y = 6</code> e <code>x + 2y = 3</code> são a mesma reta (a primeira é o dobro da segunda): infinitas soluções.</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Lendo no gráfico:</strong> as retas <code>y = x + 1</code> e <code>y = −x + 5</code> se cruzam onde as alturas são iguais: <code>x + 1 = −x + 5</code> → <code>2x = 4</code> → <code>x = 2</code> e <code>y = 3</code>. O cruzamento é o ponto <strong>(2, 3)</strong>. Lembre: o par é sempre (x, y), com o x primeiro.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 5. Problemas de texto com sistema</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Passo a passo: (1) dê uma letra a cada incógnita, dizendo o que ela representa; (2) escreva uma equação para cada informação; (3) resolva; (4) responda ao que foi perguntado (às vezes não é o x nem o y, mas a soma, o produto...).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo:</strong> em um estacionamento há carros (4 rodas) e motos (2 rodas), 20 veículos e 56 rodas no total. Seja c = carros e m = motos: <code>c + m = 20</code> e <code>4c + 2m = 56</code>. Da primeira, <code>m = 20 − c</code>. Substituindo: <code>4c + 40 − 2c = 56</code> → <code>2c = 16</code> → <code>c = 8</code> carros e <code>m = 12</code> motos.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 6. Sistemas com uma equação do 2º grau</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O edital pede também sistemas em que uma equação é do 2º grau. O método é sempre a <strong>substituição</strong>: isole uma letra na equação do 1º grau, substitua na do 2º grau e resolva a equação que aparecer (que pode ter 2 raízes, logo 2 soluções).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo:</strong> <code>x + y = 5</code> e <code>x · y = 6</code>. Da primeira, <code>y = 5 − x</code>. Na segunda: <code>x(5 − x) = 6</code> → <code>5x − x² = 6</code> → <code>x² − 5x + 6 = 0</code> → <code>x = 2</code> ou <code>x = 3</code>. Se x = 2, y = 3; se x = 3, y = 2. Soluções: <strong>(2, 3) e (3, 2)</strong>. Graficamente, a reta corta a curva em 2 pontos.</p></div>
+</div>
+
+<div class="box-warning" style="margin-bottom:20px;">
+    <div class="box-header">⚠️ As Pegadinhas da Banca do CEFET em Sistemas</div>
+<p><strong>1. Achar só uma das letras.</strong> A banca costuma colocar nas alternativas o valor de x <em>e</em> o de y. Releia a pergunta: ela pode pedir y, x + y ou x · y. Depois de achar x, não esqueça de voltar para achar y.</p>
+<p><strong>2. Erro de sinal ao multiplicar a equação inteira.</strong> Ao multiplicar uma equação por −3, o número do lado direito também muda de sinal e é multiplicado: <code>3x + y = 15</code> vira <code>−9x − 3y = −45</code> (todos os termos, inclusive o 15).</p>
+<p><strong>3. Retas com a mesma inclinação.</strong> Se as duas equações têm os mesmos coeficientes de x e y (ou proporcionais) mas números diferentes na direita, não há solução. Se são totalmente proporcionais, há infinitas. Não tente forçar uma resposta única.</p>
+<p><strong>4. Trocar a ordem do par.</strong> A solução (2, 3) significa x = 2 e y = 3, e não o contrário.</p>
+</div>
+
 <div class="example-solved">
-    <div class="ex-title">✏️ Exemplo Real Estilo Prova do CEFET-RJ em 4 Etapas</div>
+    <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas</div>
     <div class="ex-problem">
-        <strong>Situação-Problema Clássica:</strong> Em um estacionamento no Maracanã há carros (4 rodas) e motos (2 rodas), totalizando 25 veículos e 74 rodas no chão. Quantos carros e quantas motos estão no estacionamento?
+        <strong>Situação-Problema:</strong> Em uma lanchonete, 2 coxinhas e 3 sucos custam R$ 17,00, e 3 coxinhas e 1 suco custam R$ 15,00. Qual é o preço de uma coxinha e o de um suco?
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-interp">Etapa 1: Interpretação e Definição das Variáveis</span><br>
-        Seja <code>c</code> a quantidade de carros e <code>m</code> a quantidade de motos.<br>
-        Total de veículos: c + m = 25.<br>
-        Total de rodas: 4c + 2m = 74.
+        <span class="step-tag tag-interp">Etapa 1: Interpretação do Enunciado</span><br>
+        Duas incógnitas: <strong>c</strong> = preço de uma coxinha e <strong>s</strong> = preço de um suco. Duas informações, logo duas equações.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-model">Etapa 2: Escolha do Método (Adição ou Substituição)</span><br>
-        Multiplicamos a primeira equação por (−2) para cancelar a variável m pelo método da adição:<br>
-        −2c − 2m = −50<br>
-        4c + 2m = 74
+        <span class="step-tag tag-model">Etapa 2: Modelagem Matemática</span><br>
+        Compra 1: <code>2c + 3s = 17</code>.<br>Compra 2: <code>3c + s = 15</code>.<br>Na segunda equação, o suco tem coeficiente 1, então o melhor método é a <strong>substituição</strong>: <code>s = 15 − 3c</code>.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-calc">Etapa 3: Execução dos Cálculos</span><br>
-        Somando as duas linhas: (−2c + 4c) + (−2m + 2m) = −50 + 74.<br>
-        2c = 24 → c = 24 / 2 = <strong>12 carros</strong>.<br>
-        Substituindo em c + m = 25: 12 + m = 25 → m = 25 − 12 = <strong>13 motos</strong>.
+        <span class="step-tag tag-calc">Etapa 3: Resolução dos Cálculos</span><br>
+        Substituindo na primeira: <code>2c + 3(15 − 3c) = 17</code> → <code>2c + 45 − 9c = 17</code> → <code>−7c = −28</code> → <code>c = 4</code>.<br>Voltando: <code>s = 15 − 3 · 4 = 3</code>.<br>Conferindo na primeira: 2 · 4 + 3 · 3 = 17 ✔. Na segunda: 3 · 4 + 3 = 15 ✔.
     </div>
     <div class="ex-step result">
-        <span class="step-tag tag-concl">Etapa 4: Conclusão e Checagem</span><br>
-        Há <strong>12 carros</strong> e <strong>13 motos</strong> no estacionamento. (Checagem das rodas: 12·4 + 13·2 = 48 + 26 = 74 rodas!).
+        <span class="step-tag tag-concl">Etapa 4: Conclusão Contextualizada</span><br>
+        A coxinha custa <strong>R$ 4,00</strong> e o suco custa <strong>R$ 3,00</strong>. No gráfico, as duas retas (uma para cada compra) se cruzariam exatamente no ponto (4, 3), o único preço que explica as duas compras ao mesmo tempo.
     </div>
 </div>`,
             questions: [
@@ -1011,18 +1640,70 @@ window.curriculum = [
                     type: "text",
                     q: "Em um sistema onde x + y = 20 e x − y = 4, qual é o valor de x?",
                     a: ["12"],
-                    exp: "Somando as duas equações: 2x = 24 → x = 12."
+                    exp: "Somando as equações: 2x = 24, então x = 12 (e y = 8)."
+                },
+                {
+                    type: "mc",
+                    q: "Sendo x + y = 12 e x − y = 2, o valor do produto x · y é:",
+                    options: ["24", "35", "40", "10"],
+                    correct: 1,
+                    exp: "Somando: 2x = 14 → x = 7. Então y = 5. O produto é 7 · 5 = 35."
+                },
+                {
+                    type: "text",
+                    q: "No sistema 3x + 2y = 16 e x = 2y, qual é o valor de y? (Responda só com o número)",
+                    a: ["2"],
+                    exp: "Substituindo x = 2y na primeira: 3(2y) + 2y = 16 → 8y = 16 → y = 2 (e x = 4)."
+                },
+                {
+                    type: "mc",
+                    q: "As retas y = 2x + 1 e y = 2x − 3, desenhadas no mesmo plano, são paralelas. O sistema formado por elas:",
+                    options: ["tem uma única solução", "não tem solução", "tem infinitas soluções", "tem duas soluções"],
+                    correct: 1,
+                    exp: "Mesma inclinação (2) e alturas diferentes (1 e −3): as retas nunca se cruzam, então não há par (x, y) que satisfaça as duas. Algebricamente: 2x + 1 = 2x − 3 leva a 1 = −3, o que é falso."
+                },
+                {
+                    type: "mc",
+                    q: "As retas y = x + 1 e y = −x + 5 se cruzam no ponto:",
+                    options: ["(2, 3)", "(3, 2)", "(1, 2)", "(4, 1)"],
+                    correct: 0,
+                    exp: "Igualando as alturas: x + 1 = −x + 5, então 2x = 4 e x = 2, e y = 2 + 1 = 3. O ponto é (2, 3)."
+                },
+                {
+                    type: "mc",
+                    q: "O sistema 2x + 4y = 6 e x + 2y = 3:",
+                    options: ["tem uma única solução", "não tem solução", "tem infinitas soluções", "tem solução (3, 3)"],
+                    correct: 2,
+                    exp: "A primeira equação é o dobro da segunda, então representam a mesma reta (coincidentes), com infinitos pontos em comum."
+                },
+                {
+                    type: "mc",
+                    q: "A soma de dois números é 30 e a diferença entre eles é 6. O maior desses números é:",
+                    options: ["12", "18", "24", "36"],
+                    correct: 1,
+                    exp: "x + y = 30 e x − y = 6. Somando: 2x = 36, x = 18 (e y = 12)."
+                },
+                {
+                    type: "text",
+                    q: "Em um estacionamento há carros (4 rodas) e motos (2 rodas): são 20 veículos e 56 rodas. Quantos carros há? (Responda só com o número)",
+                    a: ["8"],
+                    exp: "c + m = 20 e 4c + 2m = 56. Substituindo m = 20 − c: 4c + 40 − 2c = 56, então 2c = 16 e c = 8 carros (e 12 motos)."
+                },
+                {
+                    type: "mc",
+                    q: "Quais são as soluções (x, y) do sistema x + y = 5 e x · y = 6?",
+                    options: ["(2, 3) e (3, 2)", "(1, 4) e (4, 1)", "(−2, −3) e (−3, −2)", "(6, −1) e (−1, 6)"],
+                    correct: 0,
+                    exp: "Com y = 5 − x: x(5 − x) = 6 → x² − 5x + 6 = 0, de raízes 2 e 3. Então (2, 3) e (3, 2). Os outros pares não têm soma 5 e produto 6 ao mesmo tempo."
                 }
             ]
         },
         {
-            id: "mat-10", title: "10. Funções Constante, Afim & Quadrática (Estudo do Sinal)", time: "35 min", difficulty: "difícil",
+            id: "mat-10", title: "10. Funções Constante, Afim & Quadrática (Estudo do Sinal)", time: "55 min", difficulty: "difícil",
             track: "selecao", prerequisites: ["mat-07", "mat-08", "mat-09"], examTopics: ["Edital 1.5: Funções — gráficos e operações; Constante, Afim e Quadrática: gráfico e estudo de sinal"],
             simpleExplanation: `
-                <p><strong>Em palavras simples:</strong> Uma função é uma máquina matemática de causa e efeito: você aperta um botão de entrada ($x$), ela processa a regra e entrega um resultado de saída ($y$).</p>
-                <p>• <strong>Função Constante ($f(x) = c$):</strong> É a mensalidade da Netflix: não importa quanto você use, o preço é sempre o mesmo (reta deitada horizontal).<br>
-                • <strong>Função Afim ($f(x) = ax + b$):</strong> É a corrida do Uber: taxa fixa de entrada ($b$) mais valor por quilômetro rodado ($a$). Gráfico em reta inclinada.<br>
-                • <strong>Função Quadrática ($f(x) = ax^2 + bx + c$):</strong> É a bola chutada para o alto: sobe, atinge o ponto mais alto de todos (o Vértice) e desce em curva de Parábola!</p>
+                <p><strong>Em palavras simples:</strong> Uma <strong>função</strong> é uma máquina: você digita um x e ela devolve <em>um único</em> y. A <strong>função afim</strong> (y = ax + b) desenha uma reta: <em>b</em> é a altura onde ela corta o eixo y e <em>a</em> é a inclinação (se a &gt; 0 sobe, se a &lt; 0 desce). A <strong>função quadrática</strong> (y = ax² + bx + c) desenha uma parábola: se a &gt; 0 abre para cima (tem ponto mínimo), se a &lt; 0 abre para baixo (tem ponto máximo). O ponto mais alto ou mais baixo é o <strong>vértice</strong>, que fica no meio das raízes.</p>
+<p><strong>Estudo do sinal</strong> é só dizer em que valores de x o gráfico está acima do eixo (positivo), sobre ele (zero) ou abaixo dele (negativo).</p>
             `,
             content: `
 <div class="card" style="margin-bottom:20px; border-left: 5px solid var(--accent);">
@@ -1078,107 +1759,84 @@ window.curriculum = [
 </div>
 
 <div class="card" style="margin-bottom:20px;">
-    <h3><span class="step-num">2</span> As 3 Funções que o CEFET-RJ Cobra no Edital</h3>
-
-    <div style="margin:16px 0;">
-        <h4 style="color:var(--accent); margin-bottom:6px;">🔹 1. Função Constante: f(x) = c</h4>
-        <p style="font-size:14.5px; line-height:1.65; color:var(--text-secondary);">
-            • <strong>O que é:</strong> O valor de saída não depende de x. Não importa o que entra, sempre sai o número fixo c.<br>
-            • <strong>Gráfico:</strong> É uma <strong>reta horizontal (deitada)</strong>, perfeitamente paralela ao eixo x. Ela corta o eixo vertical y na altura c.<br>
-            • <strong>Inclinação:</strong> Vale zero (a = 0), pois a reta não sobe nem desce.
-        </p>
-    </div>
-
-    <div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);">
-        <h4 style="color:var(--accent); margin-bottom:6px;">🔹 2. Função Afim ou do 1º Grau: f(x) = ax + b</h4>
-        <p style="font-size:14.5px; line-height:1.65; color:var(--text-secondary);">
-            <strong>O que significa cada letra na fórmula?</strong><br>
-            • <strong>b (Coeficiente Linear / Termo Fixo):</strong> É o ponto de partida! Onde a reta corta o eixo vertical y quando x = 0 (é a bandeirada fixa do táxi).<br>
-            • <strong>a (Coeficiente Angular / Taxa de Variação):</strong> É a inclinação da reta! Mostra quanto y sobe ou desce a cada unidade de x.<br>
-            &nbsp;&nbsp;↳ Se <strong>a > 0</strong>: Função <strong>Crescente</strong> (a reta sobe para a direita ↗️).<br>
-            &nbsp;&nbsp;↳ Se <strong>a < 0</strong>: Função <strong>Decrescente</strong> (a reta desce para a direita ↘️, como o nível de água esvaziando).<br>
-            • <strong>Raiz ou Zero da Função (x = −b/a):</strong> É o valor de x que faz y = 0. No gráfico, é o ponto exato onde a reta <strong>cruza o chão (eixo horizontal x)</strong>.
-        </p>
-    </div>
-
-    <div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);">
-        <h4 style="color:var(--accent); margin-bottom:6px;">🔹 3. Função Quadrática ou do 2º Grau: f(x) = ax² + bx + c</h4>
-        <p style="font-size:14.5px; line-height:1.65; color:var(--text-secondary);">
-            <strong>Por que tem x ao quadrado (x²)?</strong> Porque a taxa de variação acelera! O gráfico não é uma reta, é uma curva suave chamada <strong>Parábola</strong>.<br>
-            • <strong>O sinal de 'a' define para onde a curva abre:</strong><br>
-            &nbsp;&nbsp;↳ Se <strong>a > 0</strong>: Concavidade para <strong>CIMA</strong> (sorriso feliz 🙂). A curva desce até o fundo e volta a subir. Possui um ponto de <strong>MÍNIMO</strong>!<br>
-            &nbsp;&nbsp;↳ Se <strong>a < 0</strong>: Concavidade para <strong>BAIXO</strong> (arco de montanha 🙁). A curva sobe até o topo e cai. Possui um ponto de <strong>MÁXIMO</strong>!<br>
-            • <strong>O Vértice da Parábola V(Xv, Yv) — O Conceito Mais Cobrado do Concurso:</strong><br>
-            O Vértice é a ponta da montanha ou o fundo do vale. Suas coordenadas são dadas por:
-        </p>
-        <div class="box-formula">
-            Xv = −b / (2a) &nbsp;&nbsp;|&nbsp;&nbsp; Yv = −Δ / (4a), com Δ = b² − 4ac
-        </div>
-    </div>
+    <h3><span class="step-num">🔬</span> Teoria do Zero: Funções Constante, Afim e Quadrática, Gráficos e Estudo do Sinal</h3>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Funções são a ferramenta matemática para descrever como uma coisa <strong>depende</strong> de outra: o preço da corrida depende dos km rodados, a altura de uma bola depende do tempo. Vamos construir o conceito do zero e depois estudar os três tipos que o edital cobra: constante, afim e quadrática.</p>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 1. O que é uma função (a máquina e a tabela)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Uma <strong>função</strong> é uma regra que associa <strong>cada valor de x a um único valor de y</strong>. Escrevemos <code>y = f(x)</code> (lê-se &ldquo;f de x&rdquo;). Em <code>f(x) = 3x − 2</code>, para saber o que a função faz com x = 4, é só substituir: <code>f(4) = 3 · 4 − 2 = 10</code>.</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>x (entrada)</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><td><strong>f(x) = 3x − 2</strong></td><td>−2</td><td>1</td><td>4</td><td>7</td><td>10</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Vocabulário:</strong> o conjunto dos x permitidos é o <strong>domínio</strong>; o conjunto dos y obtidos é a <strong>imagem</strong>. A regra de ouro é &ldquo;um x, um só y&rdquo;: a máquina não pode devolver duas respostas para a mesma entrada.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 2. O plano cartesiano: onde as funções &ldquo;moram&rdquo;</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O plano tem dois eixos que se cruzam no zero (origem): o <strong>horizontal (x)</strong> e o <strong>vertical (y)</strong>. Cada ponto é um par <strong>(x, y)</strong>: o primeiro número diz quantos passos andar na horizontal e o segundo, quantos na vertical. O <strong>gráfico</strong> de uma função é o conjunto de todos os pontos (x, f(x)). Dois lugares especiais:</p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Onde o gráfico corta o eixo y</strong> (vertical): é quando x = 0. O ponto é (0, f(0)).</li>
+<li><strong>Onde o gráfico corta o eixo x</strong> (horizontal): é quando y = 0. Esses valores de x são as <strong>raízes</strong> (ou zeros) da função, que se obtêm resolvendo <code>f(x) = 0</code>.</li>
+</ul></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 3. Função constante: f(x) = c</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O valor de saída <strong>não depende</strong> de x: qualquer que seja a entrada, sai sempre o mesmo número c. O gráfico é uma <strong>reta horizontal</strong> na altura c. Exemplo: a taxa fixa de uma assinatura de R$ 30 por mês, não importa quantas vezes você use. Ela não tem raiz (a menos que c = 0) e não é nem crescente nem decrescente.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 4. Função afim: f(x) = ax + b (a reta)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">É a função que cresce (ou decresce) <strong>sempre no mesmo ritmo</strong>. Pense na corrida de táxi: bandeirada de R$ 5 (<code>b</code>) mais R$ 2 por km (<code>a</code>): <code>f(x) = 2x + 5</code>.</p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>b (coeficiente linear):</strong> o valor inicial, onde a reta corta o eixo y (quando x = 0).</li>
+<li><strong>a (coeficiente angular):</strong> a <em>taxa de variação</em>, quanto y muda quando x aumenta 1. Se <strong>a &gt; 0</strong>: reta que sobe (↗, <strong>crescente</strong>). Se <strong>a &lt; 0</strong>: reta que desce (↘, <strong>decrescente</strong>). Quanto maior |a|, mais íngreme.</li>
+<li><strong>Raiz:</strong> resolva ax + b = 0, então <code>x = −b/a</code>. Em f(x) = 2x − 6, a raiz é 3: ali a reta cruza o eixo x.</li>
+</ul>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Para desenhar:</strong> basta achar dois pontos (a raiz e o intercepto em y, por exemplo) e ligá-los com uma régua. Para f(x) = 2x − 6: (3, 0) e (0, −6).</p>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Para descobrir a lei a partir de dois pontos:</strong> o coeficiente angular é &ldquo;quanto sobe ÷ quanto andou&rdquo;: <code>a = (y₂ − y₁)/(x₂ − x₁)</code>. Pontos (1, 3) e (3, 7): <code>a = (7 − 3)/(3 − 1) = 2</code>. Depois use um dos pontos: 3 = 2·1 + b → <code>b = 1</code>. Lei: <code>f(x) = 2x + 1</code>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 5. Estudo do sinal da função afim</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">&ldquo;Estudar o sinal&rdquo; é responder: para quais valores de x o gráfico está <strong>acima do eixo x</strong> (f(x) &gt; 0), <strong>sobre</strong> ele (f(x) = 0) ou <strong>abaixo</strong> (f(x) &lt; 0)? Na reta há uma única raiz, que divide o eixo em dois lados:</p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>a &gt; 0 (crescente):</strong> antes da raiz é negativa, depois da raiz é positiva. Ex.: f(x) = 2x − 6, raiz 3: f(x) &lt; 0 para x &lt; 3 e f(x) &gt; 0 para x &gt; 3.</li>
+<li><strong>a &lt; 0 (decrescente):</strong> é o contrário. Ex.: f(x) = −2x + 10, raiz 5: f(x) &gt; 0 para x &lt; 5 e f(x) &lt; 0 para x &gt; 5.</li>
+</ul>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Dica:</strong> o sinal de &ldquo;depois da raiz&rdquo; é sempre o sinal de <strong>a</strong>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 6. Função quadrática: f(x) = ax² + bx + c (a parábola)</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Aqui o x aparece ao quadrado e a taxa de variação deixa de ser constante: o gráfico é uma curva chamada <strong>parábola</strong>. É o caminho de uma bola chutada, de um jato d&rsquo;água e de um salto de basquete.</p>
+<ul style="margin:6px 0 12px; padding-left:20px; font-size:15px; line-height:1.7; color:var(--text-secondary);">
+<li><strong>Concavidade:</strong> <code>a &gt; 0</code> → abre para <strong>cima</strong> (U), tem ponto <strong>mínimo</strong>. <code>a &lt; 0</code> → abre para <strong>baixo</strong> (∩), tem ponto <strong>máximo</strong>.</li>
+<li><strong>Intercepto em y:</strong> quando x = 0, y = c. Então a parábola corta o eixo y no ponto (0, c).</li>
+<li><strong>Raízes:</strong> resolva ax² + bx + c = 0 (Bhaskara). Há 2 raízes se Δ &gt; 0 (corta o eixo x em 2 pontos), 1 se Δ = 0 (apenas encosta no eixo) e nenhuma se Δ &lt; 0 (flutua sem tocar o eixo x).</li>
+<li><strong>Eixo de simetria:</strong> a parábola é espelhada em torno de uma reta vertical que passa pelo vértice.</li>
+</ul></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 7. O vértice: o ponto mais alto (ou mais baixo) e por que a fórmula é assim</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Como a parábola é simétrica, o vértice fica <strong>exatamente no meio das duas raízes</strong>. A média das raízes é (x₁ + x₂)/2, e como a soma das raízes é −b/a, o meio é <code>−b/(2a)</code>. Daí a fórmula:</p>
+<div class="box-formula" style="line-height:1.8;"><strong>Xv = −b / (2a)</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Yv = f(Xv) = −Δ / (4a)</strong>, com Δ = b² − 4ac</div>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">O jeito mais seguro de achar o Yv é <strong>calcular Xv primeiro e depois substituir na função</strong>: Yv = f(Xv). Funciona sempre e evita decorar duas fórmulas. Exemplo: <code>f(x) = −x² + 4x</code> tem Xv = −4/(2·(−1)) = 2 e Yv = f(2) = −4 + 8 = 4. Como a &lt; 0, o ponto (2, 4) é o <strong>máximo</strong>.</p></div>
+<div style="margin:20px 0; padding-top:16px; border-top:1px solid var(--border);"><h4 style="color:var(--accent); margin-bottom:6px;">🔹 8. Estudo do sinal da quadrática</h4><p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">Procedimento: (1) ache as raízes; (2) veja se a parábola abre para cima ou para baixo; (3) leia o gráfico: onde está acima do eixo x, f &gt; 0; abaixo, f &lt; 0.</p>
+<table class="comp-table" style="width:100%; margin:10px 0; font-size:14px;">
+<tr style="background:var(--card-bg-header);"><th>Caso</th><th>Como é o gráfico</th><th>Sinal</th></tr>
+<tr><td><strong>a &gt; 0, Δ &gt; 0</strong> (raízes x₁ &lt; x₂)</td><td>U cortando o eixo x em 2 pontos</td><td>f &gt; 0 <em>fora</em> das raízes; f &lt; 0 <em>entre</em> as raízes</td></tr>
+<tr><td><strong>a &lt; 0, Δ &gt; 0</strong> (raízes x₁ &lt; x₂)</td><td>∩ cortando o eixo x em 2 pontos</td><td>f &gt; 0 <em>entre</em> as raízes; f &lt; 0 <em>fora</em> das raízes</td></tr>
+<tr><td><strong>Δ = 0</strong></td><td>encosta no eixo x num ponto</td><td>mesmo sinal de a em todo lugar, exceto na raiz (onde vale 0)</td></tr>
+<tr><td><strong>Δ &lt; 0</strong></td><td>não toca o eixo x</td><td>sempre o sinal de a</td></tr>
+</table>
+<p style="font-size:15px; line-height:1.7; color:var(--text-secondary);"><strong>Exemplo:</strong> <code>f(x) = x² − 4x + 3</code> tem raízes 1 e 3 e a &gt; 0 (U). Então f(x) &lt; 0 para <code>1 &lt; x &lt; 3</code> (o U está abaixo do eixo entre as raízes) e f(x) &gt; 0 para x &lt; 1 ou x &gt; 3.</p></div>
 </div>
 
-<div class="card" style="margin-bottom:20px;">
-    <h3><span class="step-num">3</span> O que Significa o "Estudo do Sinal"? (Traduzido Sem Complicação)</h3>
-    <p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">
-        Quando a questão do CEFET pede para <em>'estudar o sinal da função'</em>, ela quer apenas que você descubra em quais trechos o resultado y fica acima do chão, no chão ou debaixo da terra:
-    </p>
-    <div style="display:flex; flex-direction:column; gap:10px; margin:14px 0;">
-        <div style="padding:12px 16px; background:rgba(16,185,129,0.1); border-left:4px solid var(--positive); border-radius:var(--radius-sm); font-size:14px; color:var(--text-primary);">
-            <strong style="color:var(--positive);">1. Onde a função é POSITIVA [f(x) > 0]?</strong><br>
-            São os valores de x onde o gráfico fica desenhado <strong>acima do eixo x</strong> (acima do chão / lucro positivo).
-        </div>
-        <div style="padding:12px 16px; background:rgba(37,99,235,0.1); border-left:4px solid var(--accent); border-radius:var(--radius-sm); font-size:14px; color:var(--text-primary);">
-            <strong style="color:var(--accent);">2. Onde a função é NULA [f(x) = 0]?</strong><br>
-            São os pontos exatos onde o gráfico <strong>toca o eixo x</strong> (as raízes da equação, onde não há nem lucro nem prejuízo).
-        </div>
-        <div style="padding:12px 16px; background:rgba(239,68,68,0.1); border-left:4px solid var(--danger); border-radius:var(--radius-sm); font-size:14px; color:var(--text-primary);">
-            <strong style="color:var(--danger);">3. Onde a função é NEGATIVA [f(x) < 0]?</strong><br>
-            São os valores de x onde o gráfico mergulha <strong>abaixo do eixo x</strong> (debaixo do chão / prejuízo).
-        </div>
-    </div>
-    <p style="font-size:14px; line-height:1.65; color:var(--text-secondary); margin-top:10px;">
-        <strong>Exemplo Visual da Parábola no Estudo do Sinal:</strong><br>
-        Se uma parábola tem raízes nos números 2 e 6 e abre para baixo (a < 0): entre 2 e 6 ela está voando alto no céu (positiva); antes do 2 e depois do 6 ela afundou no subsolo (negativa). Simples assim!
-    </p>
-</div>
-
-<div class="box-warning">
-    <div class="box-header">⚠️ A Pegadinha Mortal da Banca do CEFET: Xv versus Yv</div>
-    <p style="font-size:14.5px; line-height:1.7; margin:0;">
-        A banca examinadora adora colocar tanto o valor de Xv quanto de Yv nas opções de múltipla escolha para induzir ao erro. Aprenda a regra definitiva:
-        <br><br>
-        • Se o enunciado perguntar: <strong>'Em quantos segundos atinge a altura máxima?'</strong> ou <strong>'Quantas unidades a fábrica deve produzir para ter lucro máximo?'</strong> $\rightarrow$ Está perguntando a variável de entrada (tempo / quantidade). <strong>Calcule Xv = −b / (2a)</strong>!
-        <br><br>
-        • Se o enunciado perguntar: <strong>'Qual é o valor da altura máxima em metros?'</strong> ou <strong>'Qual é o lucro máximo em reais?'</strong> $\rightarrow$ Está perguntando a variável de saída (altura / dinheiro). <strong>Calcule Yv = −Δ / (4a)</strong>!
-    </p>
+<div class="box-warning" style="margin-bottom:20px;">
+    <div class="box-header">⚠️ As Pegadinhas da Banca do CEFET em Funções</div>
+<p><strong>1. Xv versus Yv.</strong> Se a pergunta é &ldquo;em quantos segundos atinge a altura máxima?&rdquo; ou &ldquo;quantas unidades produzir para ter lucro máximo?&rdquo;, pede a <em>variável de entrada</em>: calcule <strong>Xv</strong>. Se pergunta &ldquo;qual é a altura máxima?&rdquo; ou &ldquo;qual é o lucro máximo?&rdquo;, pede a <em>saída</em>: calcule <strong>Yv</strong>. A banca coloca os dois valores nas alternativas.</p>
+<p><strong>2. Zero não é o intercepto em y.</strong> A raiz é onde o gráfico corta o eixo x (f(x) = 0). O ponto onde corta o eixo y é (0, c) ou (0, b), quando x = 0. Não os confunda.</p>
+<p><strong>3. Sinal entre ou fora das raízes.</strong> Parábola para cima (a &gt; 0): negativa <em>entre</em> as raízes. Parábola para baixo (a &lt; 0): positiva <em>entre</em> as raízes. Em dúvida, faça um desenho rápido.</p>
+<p><strong>4. Sinal de b na fórmula do vértice.</strong> Em f(x) = x² − 6x + 5, b = −6, então Xv = −(−6)/(2·1) = +3. Quem esquece de trocar o sinal encontra −3.</p>
+<p><strong>5. Domínio realista.</strong> Em problemas, o tempo e a quantidade não podem ser negativos: descarte raízes negativas quando o contexto exigir.</p>
 </div>
 
 <div class="example-solved">
-    <div class="ex-title">✏️ Exemplo Real Estilo Prova do CEFET-RJ em 4 Etapas</div>
+    <div class="ex-title">✏️ Exemplo Real Estilo CEFET Resolvido em 4 Etapas (Máximo e Estudo do Sinal)</div>
     <div class="ex-problem">
-        <strong>Situação-Problema:</strong> Um drone agrícola pulveriza uma lavoura. Sua altura em metros após t segundos de voo é modelada pela função quadrática: <code>h(t) = −5t² + 40t</code>. Determine:
-        <br><strong>a)</strong> Após quantos segundos de voo o drone atinge sua altura máxima?
-        <br><strong>b)</strong> Qual é a altura máxima alcançada pelo drone?
+        <strong>Situação-Problema:</strong> O lucro mensal de uma lanchonete, em milhares de reais, é dado por <code>L(x) = −x² + 12x − 20</code>, em que x é o número de centenas de lanches vendidos. Determine: <strong>a)</strong> quantas centenas de lanches geram lucro máximo; <strong>b)</strong> o valor desse lucro máximo; <strong>c)</strong> para quais valores de x o lucro é positivo.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-interp">Etapa 1: Interpretação e Identificação dos Coeficientes</span><br>
-        A função é h(t) = at² + bt + c, com coeficientes: a = −5, b = 40 e c = 0.<br>
-        Como o coeficiente a é negativo (a = −5 < 0), a parábola tem concavidade voltada para baixo (formato de montanha), garantindo que seu Vértice representa o <strong>ponto máximo de altura</strong>.
+        <span class="step-tag tag-interp">Etapa 1: Interpretação do Enunciado</span><br>
+        L(x) é uma função quadrática com a = −1, b = 12 e c = −20. Como a &lt; 0, a parábola abre para baixo e tem <strong>máximo</strong>. Em (a) pergunta-se a <em>quantidade</em> (entrada, Xv); em (b), o <em>lucro</em> (saída, Yv); em (c), o intervalo onde L &gt; 0 (estudo do sinal).
     </div>
     <div class="ex-step">
         <span class="step-tag tag-model">Etapa 2: Modelagem Matemática</span><br>
-        • Pergunta (a): pede o <em>tempo</em> para atingir o topo → Calculamos a coordenada t do vértice: <code>t_max = Xv = −b / (2a)</code>.<br>
-        • Pergunta (b): pede a <em>altura máxima</em> em metros → Calculamos a coordenada vertical do vértice: <code>h_max = Yv = −Δ / (4a)</code>, ou substituímos t_max diretamente na função.
+        Xv = −b/(2a) = −12/(2 · (−1)) = 6.<br>Yv = L(6) (substituir é o caminho seguro).<br>Para o sinal: raízes de −x² + 12x − 20 = 0, ou x² − 12x + 20 = 0.
     </div>
     <div class="ex-step">
-        <span class="step-tag tag-calc">Etapa 3: Execução dos Cálculos</span><br>
-        • Item (a): t_max = −40 / [2 · (−5)] = −40 / (−10) = <strong>4 segundos</strong>.<br>
-        • Item (b): Substituindo t = 4 na função:<br>
-        h(4) = −5 · (4)² + 40 · (4) = −5 · 16 + 160 = −80 + 160 = <strong>80 metros</strong>.
+        <span class="step-tag tag-calc">Etapa 3: Resolução dos Cálculos</span><br>
+        <strong>a)</strong> Xv = <strong>6</strong>.<br><strong>b)</strong> L(6) = −36 + 72 − 20 = <strong>16</strong>.<br><strong>c)</strong> Δ = 144 − 80 = 64, √Δ = 8 → x = (12 ± 8)/2 → raízes <strong>2</strong> e <strong>10</strong>. Como a &lt; 0, o gráfico (∩) está acima do eixo <em>entre</em> as raízes: L(x) &gt; 0 para <strong>2 &lt; x &lt; 10</strong>.<br>Conferência: o vértice está no meio das raízes (2 + 10)/2 = 6 ✔.
     </div>
     <div class="ex-step result">
         <span class="step-tag tag-concl">Etapa 4: Conclusão Contextualizada</span><br>
-        O drone atinge sua altitude máxima aos <strong>4 segundos</strong> de voo, alcançando exatamente <strong>80 metros de altura</strong>.
+        O lucro máximo é de <strong>R$ 16 mil</strong> e ocorre com <strong>600 lanches</strong> vendidos. A lanchonete tem lucro positivo vendendo entre 200 e 1.000 lanches (abaixo de 200 ou acima de 1.000, tem prejuízo). Repare como o &ldquo;quanto vender&rdquo; (6) e o &ldquo;quanto lucrar&rdquo; (16) são respostas diferentes.
     </div>
 </div>`,
             questions: [
@@ -1201,6 +1859,67 @@ window.curriculum = [
                     options: ["Entre 1 e 5 (1 < x < 5)", "Para x < 1 ou x > 5", "Apenas quando x = 3", "Ela nunca é positiva"],
                     correct: 0,
                     exp: "Com concavidade para baixo (a < 0), a parábola fica ACIMA do eixo x entre as duas raízes (1 < x < 5)."
+                },
+                {
+                    type: "mc",
+                    q: "Dada a função f(x) = 3x − 2, o valor de f(4) é:",
+                    options: ["6", "10", "12", "14"],
+                    correct: 1,
+                    exp: "Substituindo x por 4: f(4) = 3 · 4 − 2 = 12 − 2 = 10."
+                },
+                {
+                    type: "mc",
+                    q: "O gráfico da função f(x) = 2x − 6 corta os eixos x e y, respectivamente, nos pontos:",
+                    options: ["(3, 0) e (0, −6)", "(−3, 0) e (0, 6)", "(0, 3) e (−6, 0)", "(6, 0) e (0, 2)"],
+                    correct: 0,
+                    exp: "Eixo x: f(x) = 0 → 2x = 6 → x = 3, ponto (3, 0). Eixo y: x = 0 → f(0) = −6, ponto (0, −6)."
+                },
+                {
+                    type: "text",
+                    q: "Uma reta passa pelos pontos (1, 3) e (3, 7). Qual é o seu coeficiente angular a? (Responda só com o número)",
+                    a: ["2"],
+                    exp: "a = (7 − 3)/(3 − 1) = 4/2 = 2. A reta sobe 2 unidades para cada unidade que anda para a direita."
+                },
+                {
+                    type: "mc",
+                    q: "A função f(x) = −3x + 1 é:",
+                    options: ["crescente, pois b > 0", "decrescente, pois a < 0", "constante", "crescente, pois a < 0"],
+                    correct: 1,
+                    exp: "O sentido da reta depende só do coeficiente angular a. Como a = −3 < 0, a função é decrescente (o valor de b = 1 só informa onde a reta corta o eixo y)."
+                },
+                {
+                    type: "mc",
+                    q: "O valor máximo da função f(x) = −x² + 4x é:",
+                    options: ["2", "4", "−4", "8"],
+                    correct: 1,
+                    exp: "Xv = −4/(2·(−1)) = 2 e Yv = f(2) = −4 + 8 = 4. Cuidado: 2 é onde ocorre o máximo (Xv); o valor do máximo é 4 (Yv)."
+                },
+                {
+                    type: "mc",
+                    q: "Para quais valores de x a função f(x) = x² − 4x + 3 é negativa?",
+                    options: ["x < 1 ou x > 3", "1 < x < 3", "x < 3", "x > 1"],
+                    correct: 1,
+                    exp: "Raízes: 1 e 3. Como a = 1 > 0, a parábola abre para cima e fica abaixo do eixo x entre as raízes: 1 < x < 3."
+                },
+                {
+                    type: "mc",
+                    q: "O gráfico da função f(x) = x² − 5x + 6 corta o eixo y no ponto:",
+                    options: ["(0, 6)", "(6, 0)", "(0, −5)", "(2, 0)"],
+                    correct: 0,
+                    exp: "O corte com o eixo y ocorre em x = 0: f(0) = c = 6, ponto (0, 6). Os pontos (2, 0) e (3, 0) são onde corta o eixo x (raízes)."
+                },
+                {
+                    type: "text",
+                    q: "Qual é a raiz da função f(x) = −2x + 10? (Responda só com o número)",
+                    a: ["5"],
+                    exp: "Basta resolver −2x + 10 = 0: x = −b/a = −10/(−2) = 5."
+                },
+                {
+                    type: "mc",
+                    q: "Uma bola é lançada e sua altura (em metros) após t segundos é h(t) = −5t² + 20t. Qual é a altura máxima atingida?",
+                    options: ["2 m", "10 m", "20 m", "40 m"],
+                    correct: 2,
+                    exp: "Xv = −20/(2·(−5)) = 2 s. Altura máxima = h(2) = −5·4 + 20·2 = −20 + 40 = 20 m. (O valor 2 é o tempo, não a altura.)"
                 }
             ]
         },

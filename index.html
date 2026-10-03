@@ -7976,8 +7976,12 @@
 
         /* ─── Module View ─── */
         function toggleSimpleExplanation(modId) {
-            const boxes = document.querySelectorAll(`[id^="simple-exp-"][id$="-${modId}"], #simple-exp-${modId}`);
-            boxes.forEach(box => box.classList.toggle('show'));
+            const box = document.getElementById(`simple-exp-${modId}`);
+            if (box) box.classList.toggle('show');
+        }
+        function toggleStep2Scaffolding(modId) {
+            const box = document.getElementById(`simple-exp-step2-${modId}`);
+            if (box) box.classList.toggle('show');
         }
 
         /* ─── PARSER PEDAGÓGICO DE 5 ETAPAS (ESTILO BRILLIANT.ORG) ─── */
@@ -8001,7 +8005,7 @@
                     step4HTML += outer;
                 } else if (el.classList.contains('box-analogy') || text.includes('grande sacada') || text.includes('analogia intuitiva') || (text.includes('por que') && (text.includes('inventad') || text.includes('história') || text.includes('surgi')))) {
                     step1HTML += outer;
-                } else if (text.includes('vida real') || text.includes('tecnologia') || text.includes('teoria descomplicada') || el.querySelector('.box-formula') || text.includes('fórmul')) {
+                } else if (text.includes('vida real') || text.includes('tecnologia') || text.includes('teoria descomplicada') || text.includes('teoria do zero') || el.querySelector('.box-formula') || text.includes('fórmul')) {
                     step2HTML += outer;
                 } else {
                     if (!step1HTML) {
@@ -8038,9 +8042,9 @@
                 <div class="didnt-understand-box" style="margin-top:24px; border-color: #00d6b6; background: rgba(0, 214, 182, 0.05);">
                     <div class="didnt-understand-trigger">
                         <div class="trigger-text">
-                            <strong style="color:#00d6b6;">🪜 Andaime de Nivelamento:</strong> Esqueceu como calcular MMC, MDC ou somar frações?
+                            <strong style="color:#00d6b6;">🔧 Andaime de Nivelamento:</strong> Sentiu dificuldade com alguma base que apareceu nesta aula?
                         </div>
-                        <button class="btn-warning-action" onclick="toggleSimpleExplanation('${mod.id}')" style="background: linear-gradient(135deg, #00d6b6, #0284c7); box-shadow: 0 4px 14px rgba(0, 214, 182, 0.35);">
+                        <button class="btn-warning-action" onclick="toggleStep2Scaffolding('${mod.id}')" style="background: linear-gradient(135deg, #00d6b6, #0284c7); box-shadow: 0 4px 14px rgba(0, 214, 182, 0.35);">
                             🧭 Ver Degrau Zero Passo a Passo
                         </button>
                     </div>
