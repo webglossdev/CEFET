@@ -14,7 +14,13 @@ window.curriculum = [
             id: "mat-01", title: "1. Frações, Decimais & Porcentagens", time: "25 min", difficulty: "nivelamento",
             track: "reforco", prerequisites: [], examTopics: ["BNCC 6º/7º Ano — Base de Aritmética", "Edital 1.3: Números racionais e reais, operações, proporcionalidade"],
             simpleExplanation: `
-                <p><strong>Em palavras simples:</strong> Uma fração é como fatias de pizza. O número de baixo (denominador) diz em quantas fatias a pizza foi cortada, e o de cima (numerador) diz quantas fatias você comeu. <code>1/2</code> é meia pizza (50% ou 0,50). <code>1/4</code> é um quarto da pizza (25% ou 0,25).</p>
+                <div style="line-height:1.75; font-size:14.5px;">
+                    <p><strong>🍞 1. O que é Fração?</strong> Pense numa barra de chocolate dividida em pedaços iguais. O número de baixo (<strong>Denominador</strong>) diz em quantos pedaços a barra foi cortada. O de cima (<strong>Numerador</strong>) diz quantos pedaços você pegou. Se cortou em 4 e pegou 1, você tem <code>1/4</code> (25% ou 0,25).</p>
+                    
+                    <p><strong>🪜 2. Por que precisamos do MMC para somar?</strong> Imagine somar 1 pedaço de uma barra cortada em 2 partes (<code>1/2</code>) com 1 pedaço de uma barra cortada em 3 partes (<code>1/3</code>). Os pedaços têm <em>tamanhos diferentes</em>! Não dá para somar direto. O <strong>MMC (Mínimo Múltiplo Comum)</strong> é apenas encontrar um novo corte de barra que sirva para as duas ao mesmo tempo: cortando tudo em 6 pedaços (porque 6 está na tabuada do 2 e do 3), <code>1/2</code> vira <code>3/6</code> e <code>1/3</code> vira <code>2/6</code>. Agora sim: <code>3/6 + 2/6 = 5/6</code>!</p>
+                    
+                    <p><strong>✂️ 3. E para que serve o MDC?</strong> O <strong>MDC (Máximo Divisor Comum)</strong> serve para o caminho inverso: <strong>simplificar</strong>! Se a sua conta der <code>12/18</code>, você não vai achar essa resposta no gabarito do CEFET. Dividindo em cima e embaixo pelo MDC (que é 6), você acha a resposta oficial: <code>2/3</code>.</p>
+                </div>
             `,
             content: `
 <div class="card" style="margin-bottom:20px; border-left: 5px solid var(--accent);">
@@ -49,18 +55,128 @@ window.curriculum = [
     </ul>
 </div>
 
-<div class="card" style="margin-bottom:20px;">
-    <h3><span class="step-num">🔬</span> Teoria Descomplicada: Operações & Por que o MMC é Obrigatório</h3>
-    <p style="font-size:15px; line-height:1.7; color:var(--text-secondary);">
-        Por que não podemos simplesmente somar o topo com o topo e a base com a base? Porque <strong>não se somam grandezas de tamanhos diferentes</strong>! Imagine somar 1 moeda de 1 real com 1 moeda de 50 centavos: você tem 2 moedas, mas não tem 2 reais! Para somar, você precisa converter tudo para a mesma unidade de medida:
+<div class="card" style="margin-bottom:20px; border-left: 5px solid #00d6b6;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+        <span style="font-size:26px;">🔬</span>
+        <h3 style="margin:0; font-size:18px; color:var(--text-primary);">Teoria Descomplicada: Operações, o Segredo do MMC e a Simplificação por MDC</h3>
+    </div>
+    <p style="font-size:15px; line-height:1.75; color:var(--text-secondary); margin-bottom:16px;">
+        Muitos estudantes tentam decorar que <em>"soma de fração divide pelo de baixo e multiplica pelo de cima"</em>, mas na hora da prova esquecem a ordem ou travam porque nunca entenderam <strong>por onde a conta começa a andar</strong>. Vamos desmontar esse mistério passo a passo para que você nunca mais dependa de sorte ou decoreba.
     </p>
-    <div class="box-formula" style="line-height:1.8;">
-        <strong>Soma/Subtração (Mesma Unidade):</strong> 1/2 + 1/3 = (3/6) + (2/6) = <strong>5/6</strong><br>
-        <em>O MMC dos denominadores (2 e 3 = 6) é a faca que fatia as duas pizzas no mesmo tamanho de pedaço!</em><br><br>
-        <strong>Multiplicação (Fração de Fração):</strong> (2/3) · (4/5) = (2·4) / (3·5) = <strong>8/15</strong><br>
-        <em>Multiplicar frações é pegar "uma parte de uma parte" (ex: metade de um terço é um sexto: 1/2 · 1/3 = 1/6).</em><br><br>
-        <strong>Divisão (Inversão Lógica):</strong> (2/3) ÷ (4/5) = (2/3) · (5/4) = 10/12 = <strong>5/6</strong><br>
-        <em>Dividir por 1/2 é o mesmo que dobrar (quantas metades cabem no inteiro? Cabem 2!). Por isso invertemos a segunda fração!</em>
+
+    <!-- Alerta: O Erro Fatal que Elimina Candidatos -->
+    <div style="background: rgba(235, 155, 10, 0.08); border-left: 4px solid #eb9b0a; padding: 14px 18px; border-radius: 8px; margin-bottom: 20px;">
+        <strong style="color: #eb9b0a; font-size: 15px;">⚠️ O Erro Fatal que Elimina Candidatos:</strong>
+        <p style="font-size: 14px; line-height: 1.7; color: var(--text-secondary); margin: 6px 0 0 0;">
+            Se você fizer <code>1/2 + 1/3 = (1 + 1)/(2 + 3) = 2/5</code>, você acabou de cometer o erro mais comum da matemática básica! Pense com a lógica da vida real: <code>1/2</code> é meia pizza inteira (50%). Se você somar mais um terço (33%), você tem quase a pizza inteira (83%). Mas <code>2/5</code> é apenas 40% (menos do que a metade que você já tinha no início!). <strong>Não se pode somar frações com pedaços de tamanhos diferentes!</strong>
+        </p>
+    </div>
+
+    <!-- Degrau 1: O que é MMC de verdade -->
+    <h4 style="color: #00d6b6; font-size: 16px; margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px;">
+        <span>🪜</span> Degrau 1: O que é o MMC e de Onde Ele Surge?
+    </h4>
+    <p style="font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 12px;">
+        Para somar <code>1/2</code> com <code>1/3</code>, precisamos encontrar um <strong>tamanho de corte em comum</strong> que sirva tanto para quem divide por 2 quanto para quem divide por 3. Esse tamanho é o <strong>Mínimo Múltiplo Comum (MMC)</strong>.
+    </p>
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 16px;">
+        <div style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.8;">
+            • <strong>Múltiplo de um número</strong> é simplesmente o resultado da tabuada dele:<br>
+            &nbsp;&nbsp;Tabuada do 2: 2, 4, <strong style="color:#00d6b6;">6</strong>, 8, 10, <strong style="color:#00d6b6;">12</strong>, 14, 16, <strong style="color:#00d6b6;">18</strong>...<br>
+            &nbsp;&nbsp;Tabuada do 3: 3, <strong style="color:#00d6b6;">6</strong>, 9, <strong style="color:#00d6b6;">12</strong>, 15, <strong style="color:#00d6b6;">18</strong>, 21...<br>
+            • <strong>Múltiplos Comuns:</strong> Números que aparecem nas DUAS tabuadas ao mesmo tempo: <code>6, 12, 18, 24...</code><br>
+            • <strong>MÍNIMO Múltiplo Comum (MMC):</strong> É o primeiro encontro das duas tabuadas, o menor de todos: <strong style="color:#00d6b6; font-size:15px;">6</strong>!
+        </div>
+    </div>
+
+    <!-- Degrau 2: A Fatoração Simultânea -->
+    <h4 style="color: #00d6b6; font-size: 16px; margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px;">
+        <span>⚙️</span> Degrau 2: A Fatoração Simultânea (A Famosa "Barrinha")
+    </h4>
+    <p style="font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 10px;">
+        Quando os números forem maiores (ex: somar frações com denominadores 4 e 6), não precisamos escrever a tabuada inteira. Usamos a divisão simultânea por números primos (2, 3, 5, 7...):
+    </p>
+    <div style="background: #0b0f19; border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; font-family: monospace; font-size: 13.5px; line-height: 1.7; color: #e2e8f0; margin-bottom: 16px;">
+        &nbsp;&nbsp;4 , 6 | <strong>2</strong>&nbsp;&nbsp;(4 ÷ 2 = 2;&nbsp; 6 ÷ 2 = 3)<br>
+        &nbsp;&nbsp;2 , 3 | <strong>2</strong>&nbsp;&nbsp;(2 ÷ 2 = 1;&nbsp; 3 não divide por 2, apenas repete)<br>
+        &nbsp;&nbsp;1 , 3 | <strong>3</strong>&nbsp;&nbsp;(3 ÷ 3 = 1)<br>
+        &nbsp;&nbsp;1 , 1 | <strong>Fim!</strong> Multiplique a coluna da direita: <strong>2 × 2 × 3 = 12</strong>.<br>
+        &nbsp;&nbsp;<span style="color:#00d6b6;">➔ O MMC entre 4 e 6 é exatamente 12!</span>
+    </div>
+
+    <!-- Degrau 3: O Mistério de Divide pelo de baixo -->
+    <h4 style="color: #00d6b6; font-size: 16px; margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px;">
+        <span>💡</span> Degrau 3: O Mistério de "Divide Pelo de Baixo e Multiplica Pelo de Cima"
+    </h4>
+    <p style="font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 12px;">
+        Agora que sabemos que o novo denominador comum entre 2 e 3 é <strong>6</strong>, por que fazemos essa regra? Veja o significado visual de cada etapa:
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-bottom: 18px;">
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px;">
+            <strong style="color: var(--accent); font-size: 14px;">Convertendo a Fração 1/2:</strong>
+            <p style="font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); margin: 8px 0 0 0;">
+                1º) <code>6 ÷ 2 = 3</code>: "Quantas fatias novas de tamanho 1/6 cabem na minha metade antiga?" Cabem <strong>3</strong>!<br>
+                2º) <code>3 × 1 = 3</code>: "Como eu tinha 1 metade, agora fico com <strong>3 fatias de 1/6</strong>."<br>
+                ➔ Resultado: <code>1/2 = 3/6</code>.
+            </p>
+        </div>
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px;">
+            <strong style="color: var(--accent); font-size: 14px;">Convertendo a Fração 1/3:</strong>
+            <p style="font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); margin: 8px 0 0 0;">
+                1º) <code>6 ÷ 3 = 2</code>: "Quantas fatias novas de tamanho 1/6 cabem no meu terço antigo?" Cabem <strong>2</strong>!<br>
+                2º) <code>2 × 1 = 2</code>: "Como eu tinha 1 terço, agora fico com <strong>2 fatias de 1/6</strong>."<br>
+                ➔ Resultado: <code>1/3 = 2/6</code>.
+            </p>
+        </div>
+    </div>
+    <div style="background: rgba(0, 214, 182, 0.08); border: 1px solid rgba(0, 214, 182, 0.25); border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; font-size: 14.5px; line-height: 1.7;">
+        <strong>Conclusão da Soma:</strong> Agora que todas as fatias têm o mesmo tamanho (sextos), somamos apenas os numeradores:<br>
+        <span style="font-size: 16px; font-weight: 800; color: #00d6b6;">1/2 + 1/3 = 3/6 + 2/6 = (3 + 2)/6 = 5/6</span>
+    </div>
+
+    <!-- O Método da Borboleta -->
+    <div style="background: linear-gradient(135deg, rgba(138, 87, 235, 0.08), rgba(235, 155, 10, 0.05)); border: 1px dashed rgba(138, 87, 235, 0.35); border-radius: 12px; padding: 16px 18px; margin-bottom: 22px;">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+            <span style="font-size:20px;">🦋</span>
+            <strong style="color: #a78bfa; font-size: 15px;">Atalho Ninja para a Prova: O Método da Borboleta (Multiplicação Cruzada)</strong>
+        </div>
+        <p style="font-size: 13.5px; line-height: 1.65; color: var(--text-secondary); margin-bottom: 10px;">
+            Se a questão tiver apenas <strong>duas frações</strong> para somar ou subtrair, você não precisa armar a barrinha do MMC na hora da prova. Multiplique cruzado:
+        </p>
+        <div style="font-family: monospace; font-size: 14px; background: rgba(0,0,0,0.3); padding: 10px 14px; border-radius: 8px; color: #e2e8f0; line-height: 1.6;">
+            1/2 + 1/3 = [(1 × 3) + (2 × 1)] / (2 × 3) = (3 + 2) / 6 = <strong>5/6</strong>
+        </div>
+        <p style="font-size: 12.5px; color: var(--text-tertiary); margin: 8px 0 0 0;">
+            <em>Regra prática: Multiplica a diagonal principal + diagonal secundária no topo; multiplica os denominadores retos na base!</em>
+        </p>
+    </div>
+
+    <!-- Degrau 4: E o MDC? -->
+    <h4 style="color: #00d6b6; font-size: 16px; margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px;">
+        <span>✂️</span> Degrau 4: E o MDC? Para que Serve e Onde Entra na Prova?
+    </h4>
+    <p style="font-size: 14.5px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 12px;">
+        Enquanto o MMC serve para <strong>iniciar</strong> a soma unificando os denominadores, o <strong>MDC (Máximo Divisor Comum)</strong> serve para o <strong>final da conta: simplificar a fração</strong> até a forma irredutível que aparece nas opções do gabarito!
+    </p>
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 16px;">
+        <div style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.75;">
+            • Imagine que sua conta terminou na fração <code>48/72</code>. Essa opção NÃO vai existir na prova.<br>
+            • Os divisores de 48 são: 1, 2, 3, 4, 6, 8, 12, 16, <strong style="color:#eb9b0a;">24</strong>, 48.<br>
+            • Os divisores de 72 são: 1, 2, 3, 4, 6, 8, 9, 12, 18, <strong style="color:#eb9b0a;">24</strong>, 36, 72.<br>
+            • O <strong>MAIOR</strong> número que divide ambos ao mesmo tempo é o <strong>24</strong> (o MDC).<br>
+            • Dividindo o de cima e o de baixo por 24 em uma única etapa: <code>(48 ÷ 24) / (72 ÷ 24) = 2/3</code>! Pronto, você achou a alternativa correta!
+        </div>
+    </div>
+
+    <!-- Resumo das 4 Operações -->
+    <h4 style="color: #00d6b6; font-size: 16px; margin: 20px 0 10px 0; display: flex; align-items: center; gap: 8px;">
+        <span>📊</span> Resumo Visual das 4 Operações com Frações
+    </h4>
+    <div class="box-formula" style="line-height: 1.9; font-size: 14px;">
+        <strong>➕ Soma & ➖ Subtração:</strong> EXIGEM denominadores iguais. Use o <strong>MMC</strong> para igualar os pedaços (ou o Método da Borboleta para 2 frações).<br>
+        <strong>✖️ Multiplicação:</strong> NÃO usa MMC! Multiplica direto: topo × topo e base × base: <code>(2/3) · (4/5) = (2·4)/(3·5) = 8/15</code>.<br>
+        <strong>➗ Divisão:</strong> NÃO usa MMC! Mantém a primeira fração, inverte a segunda e multiplica: <code>(2/3) ÷ (4/5) = (2/3) · (5/4) = 10/12 = 5/6</code>.<br>
+        <strong>✂️ Simplificação Final:</strong> Divida numerador e denominador pelo <strong>MDC</strong> para chegar na fração irredutível do gabarito.
     </div>
 </div>
 

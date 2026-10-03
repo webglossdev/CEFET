@@ -1222,6 +1222,99 @@
             margin-bottom: 8px;
         }
 
+        /* ─── ANDAIMES COGNITIVOS & DEGRAU ZERO (SCAFFOLDING PEDAGÓGICO) ─── */
+        .scaffolding-bridge-card {
+            margin: 24px 0;
+            padding: 22px;
+            border-radius: var(--radius-card);
+            background: linear-gradient(135deg, rgba(0, 214, 182, 0.05), rgba(78, 207, 233, 0.03));
+            border: 1px solid rgba(0, 214, 182, 0.28);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(0, 214, 182, 0.15);
+        }
+
+        .scaffolding-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .scaffolding-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: rgba(0, 214, 182, 0.15);
+            border: 1px solid rgba(0, 214, 182, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 0 14px rgba(0, 214, 182, 0.2);
+        }
+
+        .scaffolding-title-block h4 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 800;
+            color: #00d6b6;
+            letter-spacing: -0.01em;
+        }
+
+        .scaffolding-subtitle {
+            font-size: 12.5px;
+            color: var(--text-secondary);
+        }
+
+        .scaffolding-step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-top: 14px;
+        }
+
+        .scaffolding-step-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 18px;
+            transition: border-color var(--t-fast);
+        }
+
+        .scaffolding-step-item:hover {
+            border-color: rgba(78, 207, 233, 0.4);
+        }
+
+        .scaffolding-step-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 2px 8px;
+            border-radius: var(--radius-pill);
+            margin-bottom: 8px;
+        }
+
+        .tag-mint {
+            background: rgba(0, 214, 182, 0.15);
+            color: #00d6b6;
+            border: 1px solid rgba(0, 214, 182, 0.3);
+        }
+
+        .tag-amber {
+            background: rgba(235, 155, 10, 0.15);
+            color: #eb9b0a;
+            border: 1px solid rgba(235, 155, 10, 0.3);
+        }
+
+        .tag-violet {
+            background: rgba(138, 87, 235, 0.15);
+            color: #8a57eb;
+            border: 1px solid rgba(138, 87, 235, 0.3);
+        }
+
         .reforco-redirect-box {
             margin-top: 16px;
             padding: 14px 18px;
@@ -7883,8 +7976,8 @@
 
         /* ─── Module View ─── */
         function toggleSimpleExplanation(modId) {
-            const box = document.getElementById('simple-exp-' + modId);
-            if (box) box.classList.toggle('show');
+            const boxes = document.querySelectorAll(`[id^="simple-exp-"][id$="-${modId}"], #simple-exp-${modId}`);
+            boxes.forEach(box => box.classList.toggle('show'));
         }
 
         /* ─── PARSER PEDAGÓGICO DE 5 ETAPAS (ESTILO BRILLIANT.ORG) ─── */
@@ -7922,7 +8015,7 @@
             if (!step1HTML && elements.length > 0) step1HTML = elements[0].outerHTML;
             if (!step2HTML && elements.length > 1) step2HTML = elements[1].outerHTML;
 
-            // Se o módulo tiver explicação simples, anexa ao Passo 1 de forma expansível e elegante
+            // Se o módulo tiver explicação simples, anexa ao Passo 1 e ao Passo 2 (Teoria) como andaime cognitivo
             if (mod.simpleExplanation) {
                 step1HTML += `
                 <div class="didnt-understand-box" style="margin-top:20px;">
@@ -7936,6 +8029,23 @@
                     </div>
                     <div class="simple-exp-content" id="simple-exp-${mod.id}">
                         <h4>💡 Explicação Alternativa Descomplicada:</h4>
+                        ${mod.simpleExplanation}
+                    </div>
+                </div>`;
+
+                // Andaime de resgate no Passo 2 (onde as contas e teorias são explicadas)
+                step2HTML += `
+                <div class="didnt-understand-box" style="margin-top:24px; border-color: #00d6b6; background: rgba(0, 214, 182, 0.05);">
+                    <div class="didnt-understand-trigger">
+                        <div class="trigger-text">
+                            <strong style="color:#00d6b6;">🪜 Andaime de Nivelamento:</strong> Esqueceu como calcular MMC, MDC ou somar frações?
+                        </div>
+                        <button class="btn-warning-action" onclick="toggleSimpleExplanation('${mod.id}')" style="background: linear-gradient(135deg, #00d6b6, #0284c7); box-shadow: 0 4px 14px rgba(0, 214, 182, 0.35);">
+                            🧭 Ver Degrau Zero Passo a Passo
+                        </button>
+                    </div>
+                    <div class="simple-exp-content" id="simple-exp-step2-${mod.id}">
+                        <h4 style="color:#00d6b6;">💡 Explicação Alternativa & Degrau Zero:</h4>
                         ${mod.simpleExplanation}
                     </div>
                 </div>`;
@@ -8203,7 +8313,7 @@
                 <div class="full-lesson-content">
                     ${mod.content}`;
 
-                if (isSel && mod.simpleExplanation) {
+                if (mod.simpleExplanation) {
                     h += `<div class="didnt-understand-box">
                     <div class="didnt-understand-trigger">
                         <div class="trigger-text">
