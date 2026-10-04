@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏛️ CEFET-RJ 2027 — Plataforma de Estudos & Engenharia Pedagógica
+# 🏛️ CEFET-RJ 2027 — Plataforma de Estudos & Preparação Didática
 
 ### *Ambiente aberto, ultraveloz e anti-decoreba para o Processo Seletivo do Ensino Médio Técnico Integrado (Campus Maracanã)*
 
@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="#-visão-geral">Visão Geral</a> •
-  <a href="#-pilares-pedagógicos-framework-anti-decoreba">Framework Pedagógico</a> •
+  <a href="#-pilares-didáticos-método-anti-decoreba">Método Anti-Decoreba</a> •
   <a href="#-as-3-trilhas-de-aprendizagem">Trilhas de Estudo</a> •
   <a href="#-matriz-curricular-completa-64-módulos">Matriz Curricular</a> •
   <a href="#-recursos-da-plataforma">Recursos</a> •
@@ -32,7 +32,7 @@
 
 ## 📖 Visão Geral
 
-A **Plataforma CEFET-RJ 2027** é uma solução educacional e tecnológica completa, desenvolvida especificamente para apoiar estudantes de escolas públicas na preparação para o concorrido exame de admissão ao **Ensino Médio Técnico Integrado do CEFET-RJ (Campus Maracanã)**.
+A **Plataforma CEFET-RJ 2027** é uma solução educacional e tecnológica desenvolvida para apoiar estudantes na preparação para o concorrido exame de admissão ao **Ensino Médio Técnico Integrado do CEFET-RJ (Campus Maracanã)**. O projeto foi construído por entusiasmo por tecnologia e estudos, com conteúdos estruturados a partir das diretrizes da **BNCC**, dos editais oficiais e com apoio de agentes de IA.
 
 O processo seletivo do CEFET-RJ é conhecido pelo rigor técnico de sua prova e pelo perfil conceitual das questões: **a banca pune severamente a decoreba mecânica** e premia candidatos capazes de interpretar textos complexos, raciocinar logicamente e conectar os conceitos científicos a problemas da vida real.
 
@@ -43,13 +43,13 @@ Esta plataforma foi construída sob a premissa da **democratização do ensino d
 
 ---
 
-## 🧠 Pilares Pedagógicos: Framework Anti-Decoreba
+## 🧠 Pilares Didáticos: Método Anti-Decoreba
 
-A espinha dorsal metodológica do projeto baseia-se na **Engenharia Pedagógica EBAC** e nos princípios da neurociência da aprendizagem (*Active Recall*, *Spaced Repetition* e *Dual Coding*):
+A espinha dorsal metodológica do projeto baseia-se no método didático **EBAC**, alinhado às diretrizes da BNCC e nos princípios da neurociência da aprendizagem (*Active Recall*, *Spaced Repetition* e *Dual Coding*), desenvolvido em conjunto com agentes de IA:
 
 ```
                         ┌──────────────────────────────────────────────┐
-                        │        FRAMEWORK PEDAGÓGICO EBAC             │
+                        │          MÉTODO DIDÁTICO EBAC                │
                         └──────────────────────┬───────────────────────┘
                                                │
      ┌──────────────────────┬──────────────────┴─────────────────┬──────────────────────┐
