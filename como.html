@@ -7,6 +7,16 @@
     <title>Manual de Engenharia & Neurodesign — Plataforma CEFET-RJ 2027</title>
     <meta name="description"
         content="Documentação viva, fundamentação pedagógica e manual de engenharia da plataforma de estudos para o processo seletivo do CEFET-RJ Maracanã 2027.">
+    <meta name="author" content="Leonardo P. Soares">
+    <meta name="copyright" content="© 2026 Leonardo P. Soares - Lei 9.610/98">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CEFET Quest — por Leonardo P. Soares">
+    <meta property="og:title" content="Manual de Engenharia & Neurodesign — Plataforma CEFET-RJ 2027">
+    <meta property="og:description" content="Documentação viva, fundamentação pedagógica e manual de engenharia da plataforma de estudos CEFET-RJ por Leonardo P. Soares. Licença GNU AGPLv3 e Lei 9.610/98.">
+    <meta property="og:url" content="https://github.com/webglossdev/CEFET">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Manual de Engenharia & Neurodesign — Plataforma CEFET-RJ 2027">
+    <meta name="twitter:description" content="Documentação viva e manual de engenharia pedagógica por Leonardo P. Soares.">
 
     <!-- Tailwind CSS com plugin Typography via CDN -->
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
@@ -322,6 +332,27 @@
             background: #090d16 !important;
             margin: 1.5em 0;
             position: relative;
+        }
+
+        /* ─── MARCA D'ÁGUA EM IMPRESSÃO (@media print) ─── */
+        @media print {
+            body::after {
+                content: "CEFET Quest • Manual de Engenharia • Conteúdo Autoral por Leonardo P. Soares (Lei 9.610/98) • Software Livre sob GNU AGPLv3 • https://github.com/webglossdev/CEFET";
+                display: block;
+                text-align: center;
+                font-size: 10pt;
+                color: #333;
+                padding: 16px 0;
+                border-top: 1px solid #ccc;
+                margin-top: 24px;
+            }
+
+            header,
+            .mobile-toc-btn,
+            .mobile-toc-drawer,
+            aside {
+                display: none !important;
+            }
         }
     </style>
 </head>
@@ -999,9 +1030,22 @@
                                 class="inline-flex items-center gap-2 mt-4 px-6 py-2.5 rounded-full bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold text-sm shadow-lg shadow-blue-500/25 hover:scale-105 transition-all no-underline">
                                 <span>🚀</span> Ir para a Plataforma de Estudos do CEFET-RJ
                             </a>
-                            <div class="mt-6 pt-5 border-t border-white/10 text-xs text-slate-400 space-y-1">
-                                <p>© 2026 Leonardo P. Soares. O conteúdo deste site é protegido por direitos autorais de acordo com a <a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="_blank" rel="noopener" class="text-sky-400 underline hover:text-sky-300">Lei 9.610/98</a>.</p>
-                                <p>O <a href="https://github.com/webglossdev/CEFET" target="_blank" rel="noopener" class="text-sky-400 underline hover:text-sky-300">código-fonte</a> está disponível sob a licença <a href="https://www.gnu.org/licenses/agpl-3.0.pt-br.html" target="_blank" rel="noopener" class="text-sky-400 underline hover:text-sky-300">GNU AFFERO GPL V3</a>.</p>
+                            <div class="mt-6 pt-5 border-t border-white/10 flex flex-wrap items-center justify-center gap-3">
+                                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-sky-400/30 text-xs font-bold text-sky-300">
+                                    🏛️ Autor: Leonardo P. Soares
+                                </span>
+                                <a href="https://github.com/webglossdev/CEFET" target="_blank" rel="noopener"
+                                    class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/15 text-xs font-bold text-slate-200 hover:bg-sky-500 hover:text-white transition-all no-underline">
+                                    <svg height="14" width="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                                    webglossdev / CEFET
+                                </a>
+                                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-slate-300">
+                                    ⚖️ GNU AGPL v3
+                                </span>
+                            </div>
+                            <div class="mt-4 text-xs text-slate-400 space-y-1">
+                                <p>© 2026 <strong>Leonardo P. Soares</strong>. O conteúdo pedagógico e documentação deste projeto são protegidos por direitos autorais de acordo com a <a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="_blank" rel="noopener" class="text-sky-400 underline hover:text-sky-300">Lei 9.610/98</a>.</p>
+                                <p>O <a href="https://github.com/webglossdev/CEFET" target="_blank" rel="noopener" class="text-sky-400 underline hover:text-sky-300">código-fonte da plataforma</a> está disponível sob a licença livre <a href="https://www.gnu.org/licenses/agpl-3.0.pt-br.html" target="_blank" rel="noopener" class="text-sky-400 underline hover:text-sky-300">GNU AFFERO GPL V3</a>.</p>
                             </div>
                         </div>
                     </div>

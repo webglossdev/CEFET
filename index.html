@@ -7,6 +7,16 @@
     <title>CEFET-RJ 2027 — Plataforma de Estudos</title>
     <meta name="description"
         content="Plataforma gratuita de estudos para o processo seletivo do CEFET-RJ: edital, reforço de base, redação, simulados e plano semanal.">
+    <meta name="author" content="Leonardo P. Soares">
+    <meta name="copyright" content="© 2026 Leonardo P. Soares - Lei 9.610/98">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CEFET Quest — por Leonardo P. Soares">
+    <meta property="og:title" content="CEFET-RJ 2027 — Plataforma de Estudos Anti-Decoreba">
+    <meta property="og:description" content="Plataforma de estudos para o processo seletivo do CEFET-RJ. Desenvolvida por Leonardo P. Soares. Conteúdo didático autoral (Lei 9.610/98) e código livre sob GNU AGPLv3.">
+    <meta property="og:url" content="https://github.com/webglossdev/CEFET">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CEFET-RJ 2027 — Plataforma de Estudos Anti-Decoreba">
+    <meta name="twitter:description" content="Plataforma de estudos para o processo seletivo do CEFET-RJ por Leonardo P. Soares. Software Livre sob licença AGPLv3 e conteúdo didático autoral.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -4991,12 +5001,12 @@
         /* ─── SITE FOOTER & LEGAL COPYRIGHT ─── */
         .site-footer {
             width: 100%;
-            border-top: var(--glass-border);
-            background: var(--glass-bg-subtle);
+            border-top: 1px solid var(--track-sel-border);
+            background: linear-gradient(180deg, var(--glass-bg-subtle), rgba(10, 10, 15, 0.98));
             backdrop-filter: var(--blur-glass);
             -webkit-backdrop-filter: var(--blur-glass);
             box-shadow: var(--glass-highlight-top);
-            padding: 32px 24px 38px;
+            padding: 36px 24px 44px;
             margin-top: 48px;
             text-align: center;
             position: relative;
@@ -5008,7 +5018,7 @@
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 12px;
             align-items: center;
         }
 
@@ -5016,9 +5026,32 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             flex-wrap: wrap;
             justify-content: center;
+        }
+
+        .footer-author-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 18px;
+            border-radius: var(--radius-pill);
+            background: var(--surface-raised);
+            border: 1px solid var(--track-sel-border);
+            color: var(--text-primary);
+            font-size: 13px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all var(--t-fast) var(--ease-tactile);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .footer-author-pill:hover {
+            background: var(--accent-soft);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            color: var(--accent);
         }
 
         .footer-repo-link {
@@ -5059,9 +5092,9 @@
         .footer-copy-text,
         .footer-license-text {
             margin: 0;
-            font-size: 13px;
+            font-size: 13.5px;
             line-height: 1.65;
-            color: var(--text-tertiary);
+            color: var(--text-secondary);
         }
 
         .site-footer a {
@@ -5079,6 +5112,383 @@
         @media (max-width: 900px) {
             .site-footer {
                 padding-bottom: 96px;
+            }
+        }
+
+        /* ─── SIDEBAR AUTHOR CARD ─── */
+        .sidebar-author-card {
+            margin-top: 14px;
+            padding: 12px 14px;
+            background: var(--glass-bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+            box-shadow: var(--glass-highlight-top);
+            cursor: pointer;
+            transition: all var(--t-fast) var(--ease-tactile);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            text-align: left;
+        }
+
+        .sidebar-author-card:hover {
+            background: var(--surface-strong);
+            border-color: var(--accent);
+            transform: translateY(-1px);
+            box-shadow: var(--glass-shadow-hover);
+        }
+
+        .sidebar-author-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+        }
+
+        .sidebar-author-badge {
+            font-size: 10.5px;
+            font-weight: 800;
+            padding: 2px 7px;
+            border-radius: var(--radius-pill);
+            background: var(--accent-soft);
+            color: var(--accent);
+            border: 1px solid var(--track-sel-border);
+        }
+
+        .sidebar-author-name {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .sidebar-author-sub {
+            font-size: 11px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .sidebar-author-action {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 2px;
+        }
+
+        /* ─── MODAL: COMPARTILHAMENTO & DIREITOS AUTORAIS ─── */
+        .share-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.72);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            z-index: 1100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.22s ease;
+        }
+
+        .share-modal {
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            border: var(--glass-border-strong);
+            border-radius: var(--radius-squircle);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55), var(--glass-highlight-top);
+            max-width: 660px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 28px 26px;
+            position: relative;
+            color: var(--text-primary);
+        }
+
+        .share-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            transition: all var(--t-fast);
+        }
+
+        .share-modal-close:hover {
+            color: var(--text-primary);
+            background: var(--surface-strong);
+            border-color: var(--accent);
+        }
+
+        .share-modal-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .share-icon-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: var(--accent-soft);
+            border: 1px solid var(--track-sel-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .share-modal-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin-bottom: 3px;
+        }
+
+        .share-modal-title {
+            font-size: 20px;
+            font-weight: 800;
+            margin: 0;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .share-author-highlight {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: linear-gradient(135deg, rgba(108, 172, 255, 0.12), rgba(72, 214, 160, 0.08));
+            border: 1px solid rgba(108, 172, 255, 0.28);
+            border-radius: var(--radius-card);
+            padding: 16px 18px;
+            margin-bottom: 20px;
+        }
+
+        .share-author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--surface-raised);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .share-author-name {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .share-author-role {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .share-author-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .share-legal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+
+        @media (max-width: 600px) {
+            .share-legal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .share-legal-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+            padding: 16px;
+            font-size: 12.5px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .share-legal-card-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13.5px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .share-legal-card-title strong {
+            color: var(--text-primary);
+        }
+
+        .share-legal-card a {
+            color: var(--accent);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .share-actions-section {
+            background: var(--surface-muted);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+            padding: 18px;
+            margin-bottom: 20px;
+        }
+
+        .share-section-title {
+            font-size: 14px;
+            font-weight: 800;
+            margin: 0 0 4px 0;
+            color: var(--text-primary);
+        }
+
+        .share-section-desc {
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            margin: 0 0 14px 0;
+        }
+
+        .share-buttons-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-share-whatsapp {
+            background: #25d366 !important;
+            color: #0b2e13 !important;
+            font-weight: 800 !important;
+            border: none !important;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35) !important;
+            cursor: pointer;
+        }
+
+        .btn-share-whatsapp:hover {
+            background: #20bd5a !important;
+            transform: translateY(-2px);
+        }
+
+        .btn-share-copy {
+            background: var(--accent) !important;
+            color: #ffffff !important;
+            font-weight: 800 !important;
+            border: none !important;
+            cursor: pointer;
+        }
+
+        .btn-share-copy:hover {
+            background: #4d8dff !important;
+            transform: translateY(-2px);
+        }
+
+        .btn-share-native {
+            background: var(--surface) !important;
+            border: 1px solid var(--border) !important;
+            color: var(--text-primary) !important;
+            cursor: pointer;
+        }
+
+        .copy-feedback-msg {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--positive);
+            animation: fadeIn 0.2s ease;
+        }
+
+        .share-citation-box {
+            background: var(--surface);
+            border: 1px dashed var(--border);
+            border-radius: var(--radius-card);
+            padding: 14px 16px;
+        }
+
+        .share-citation-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .btn-micro-copy {
+            background: var(--surface-strong);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-pill);
+            padding: 2px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent);
+            cursor: pointer;
+            transition: all var(--t-fast);
+        }
+
+        .btn-micro-copy:hover {
+            background: var(--accent);
+            color: #ffffff;
+        }
+
+        .share-citation-box code {
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            user-select: all;
+            word-break: break-word;
+        }
+
+        /* ─── MARCA D'ÁGUA EM IMPRESSÃO (@media print) ─── */
+        @media print {
+            body::after {
+                content: "CEFET Quest • Conteúdo Autoral por Leonardo P. Soares (Lei 9.610/98) • Software Livre sob GNU AGPLv3 • https://github.com/webglossdev/CEFET";
+                display: block;
+                text-align: center;
+                font-size: 10pt;
+                color: #333;
+                padding: 16px 0;
+                border-top: 1px solid #ccc;
+                margin-top: 24px;
+            }
+
+            .share-modal-overlay,
+            .profile-modal-overlay,
+            .exam-alert-overlay,
+            .site-header,
+            .mobile-bottom-bar,
+            .lesson-bottom-dock,
+            .sidebar {
+                display: none !important;
             }
         }
 
@@ -5499,6 +5909,9 @@
             <button class="nav-pillar-btn" data-hub="preparar" onclick="switchHub('preparar')">🎯 Preparar para a Prova</button>
         </nav>
         <div class="header-right">
+            <button class="header-btn" onclick="showShareModal()" title="Compartilhar plataforma e ver direitos autorais">
+                <span>🔗</span> <span class="btn-label">Compartilhar</span>
+            </button>
             <button class="header-btn profile-header-btn" onclick="showProfileModal()" title="Gerenciar perfil e dados do estudante" id="headerProfileBtn">
                 <span class="profile-avatar-mini" id="headerProfileAvatar">🎓</span>
                 <span class="btn-label" id="headerProfileName">Estudante 1</span>
@@ -5538,6 +5951,16 @@
             <div class="sidebar-doc-link">
                 <a href="como.html" target="_blank" rel="noopener">⚙️ Manual Técnico & Arquitetura</a>
             </div>
+            <div class="sidebar-author-card" onclick="showShareModal()" role="button" tabindex="0" title="Ver direitos autorais e opções de compartilhamento">
+                <div class="sidebar-author-header">
+                    <span class="sidebar-author-badge">© 2026</span>
+                    <strong class="sidebar-author-name">Leonardo P. Soares</strong>
+                </div>
+                <p class="sidebar-author-sub">Plataforma Livre (AGPLv3) • Conteúdo Autoral (Lei 9.610/98)</p>
+                <div class="sidebar-author-action">
+                    <span>🔗 Compartilhar & Direitos</span>
+                </div>
+            </div>
         </nav>
         <main class="main-content" id="main"></main>
     </div>
@@ -5546,14 +5969,20 @@
     <footer class="site-footer" id="siteFooter">
         <div class="site-footer-inner">
             <div class="site-footer-badges">
+                <button class="footer-author-pill" onclick="showShareModal()" title="Ver autoria e termos de direitos autorais">
+                    <span>🏛️</span>
+                    <span>Criado por Leonardo P. Soares</span>
+                    <span style="font-size:11px; opacity:0.8; font-weight:600;">(Lei 9.610/98)</span>
+                </button>
                 <a href="https://github.com/webglossdev/CEFET" target="_blank" rel="noopener" class="footer-repo-link" title="Ver repositório oficial no GitHub">
                     <svg height="15" width="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
                     <span>webglossdev / CEFET</span>
                 </a>
                 <span class="footer-license-pill">⚖️ GNU AFFERO GPL V3</span>
+                <button class="footer-license-pill" onclick="showShareModal()" style="cursor:pointer; background:var(--accent-soft); border-color:var(--track-sel-border); color:var(--accent); font-weight:700;">🔗 Compartilhar</button>
             </div>
-            <p class="footer-copy-text">© 2026 Leonardo P. Soares. O conteúdo deste site é protegido por direitos autorais de acordo com a <a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="_blank" rel="noopener">Lei 9.610/98</a>.</p>
-            <p class="footer-license-text">O <a href="https://github.com/webglossdev/CEFET" target="_blank" rel="noopener">código-fonte</a> está disponível sob a licença <a href="https://www.gnu.org/licenses/agpl-3.0.pt-br.html" target="_blank" rel="noopener">GNU AFFERO GPL V3</a>.</p>
+            <p class="footer-copy-text">© 2026 <strong>Leonardo P. Soares</strong>. O conteúdo deste site é protegido por direitos autorais de acordo com a <a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="_blank" rel="noopener">Lei 9.610/98</a>.</p>
+            <p class="footer-license-text">O <a href="https://github.com/webglossdev/CEFET" target="_blank" rel="noopener">código-fonte da plataforma</a> está disponível sob a licença de software livre <a href="https://www.gnu.org/licenses/agpl-3.0.pt-br.html" target="_blank" rel="noopener">GNU AFFERO GPL V3</a>.</p>
         </div>
     </footer>
 
@@ -5666,6 +6095,79 @@
             </div>
             <div id="profileModalContent"></div>
             <input type="file" id="importProfileFileInput" accept=".json" style="display:none;" onchange="handleImportProfileFile(event)">
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         POP-UP MODAL: COMPARTILHAMENTO, AUTORIA & DIREITOS AUTORAIS
+         ══════════════════════════════════════════════════════════════ -->
+    <div class="share-modal-overlay" id="shareModalOverlay" style="display:none;"
+        onclick="if(event.target===this) closeShareModal()">
+        <div class="share-modal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle">
+            <button class="share-modal-close" onclick="closeShareModal()" aria-label="Fechar janela">✕</button>
+            
+            <div class="share-modal-header">
+                <div class="share-icon-badge">⚖️</div>
+                <div>
+                    <div class="share-modal-badge">Autoria • Propriedade Intelectual • Licença Livre</div>
+                    <h2 id="shareModalTitle" class="share-modal-title">Direitos Autorais & Compartilhamento</h2>
+                </div>
+            </div>
+
+            <div class="share-author-highlight">
+                <div class="share-author-avatar">🏛️</div>
+                <div class="share-author-info">
+                    <div class="share-author-name">Leonardo P. Soares</div>
+                    <div class="share-author-role">Autor, Desenvolvedor & Engenharia Pedagógica</div>
+                    <div class="share-author-meta">CEFET-RJ Maracanã 2027 • Democratização do Ensino de Alta Qualidade</div>
+                </div>
+            </div>
+
+            <div class="share-legal-grid">
+                <div class="share-legal-card">
+                    <div class="share-legal-card-title">
+                        <span>📖</span> <strong>Conteúdo Pedagógico</strong>
+                    </div>
+                    <p>
+                        Todas as explicações, analogias didáticas, resumos, metodologia anti-decoreba e materiais autorais são protegidos pela <strong><a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="_blank" rel="noopener">Lei Federal nº 9.610/98</a></strong> (Direitos Autorais). O uso para estudo individual ou em sala de aula é livre e incentivado, desde que citada a fonte original e a autoria.
+                    </p>
+                </div>
+
+                <div class="share-legal-card">
+                    <div class="share-legal-card-title">
+                        <span>💻</span> <strong>Código-Fonte da Plataforma</strong>
+                    </div>
+                    <p>
+                        A infraestrutura e o software da plataforma são livres sob a licença <strong><a href="https://www.gnu.org/licenses/agpl-3.0.pt-br.html" target="_blank" rel="noopener">GNU AGPL v3</a></strong>. Você tem total liberdade para estudar, executar e colaborar via <strong><a href="https://github.com/webglossdev/CEFET" target="_blank" rel="noopener">GitHub (webglossdev/CEFET)</a></strong>, mantendo as derivações sob a mesma licença.
+                    </p>
+                </div>
+            </div>
+
+            <div class="share-actions-section">
+                <h3 class="share-section-title">🚀 Compartilhar com Amigos, Grupos & Professores</h3>
+                <p class="share-section-desc">Ao compartilhar a plataforma, os créditos e a licença original são preservados automaticamente:</p>
+                
+                <div class="share-buttons-row">
+                    <button class="btn btn-share-whatsapp" onclick="shareWhatsApp()">
+                        <span>📲</span> Enviar no WhatsApp
+                    </button>
+                    <button class="btn btn-share-copy" onclick="copyShareLink(this)" id="copyShareBtn">
+                        <span>📋</span> Copiar Link com Créditos
+                    </button>
+                    <button class="btn btn-share-native" onclick="shareNative()" id="nativeShareBtn" style="display:none;">
+                        <span>📱</span> Mais Opções
+                    </button>
+                </div>
+                <div id="copyFeedbackMsg" class="copy-feedback-msg" style="display:none;">✅ Link e créditos autorais copiados para a área de transferência!</div>
+            </div>
+
+            <div class="share-citation-box">
+                <div class="share-citation-header">
+                    <strong>Referência / Citação Acadêmica e Escolar:</strong>
+                    <button class="btn-micro-copy" onclick="copyCitation(this)">Copiar citação</button>
+                </div>
+                <code id="citationText">SOARES, Leonardo P. CEFET Quest: Plataforma de Estudos &amp; Engenharia Pedagógica CEFET-RJ. 2026. Disponível em: https://github.com/webglossdev/CEFET. Licença GNU AGPLv3 / Lei 9.610/98.</code>
+            </div>
         </div>
     </div>
 
@@ -8557,6 +9059,97 @@
                 bar.style.width = pct + '%';
                 txt.textContent = pct + '%';
             }
+        }
+
+        /* ─── Compartilhamento & Direitos Autorais ─── */
+        function showShareModal() {
+            const m = document.getElementById('shareModalOverlay');
+            if (m) {
+                m.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeShareModal() {
+            const m = document.getElementById('shareModalOverlay');
+            if (m) {
+                m.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        }
+
+        function getShareText() {
+            const url = window.location.href.split('#')[0];
+            return `🏛️ CEFET Quest — Plataforma Aberta de Estudos para o CEFET-RJ 2027\n\nDesenvolvido por Leonardo P. Soares • Software Livre sob licença GNU AGPLv3 e Conteúdo Didático Autoral (Lei 9.610/98).\n\nAcesse gratuitamente: ${url}\nCódigo-fonte e documentação: https://github.com/webglossdev/CEFET`;
+        }
+
+        function shareWhatsApp() {
+            const text = encodeURIComponent(getShareText());
+            window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+        }
+
+        function copyTextToClipboard(text) {
+            if (navigator.clipboard && window.isSecureContext) {
+                return navigator.clipboard.writeText(text);
+            }
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand('copy');
+            } catch (e) {
+                console.warn('Falha ao copiar:', e);
+            }
+            document.body.removeChild(ta);
+            return Promise.resolve();
+        }
+
+        function copyShareLink(btn) {
+            const text = getShareText();
+            copyTextToClipboard(text).then(() => {
+                const fb = document.getElementById('copyFeedbackMsg');
+                if (fb) {
+                    fb.style.display = 'block';
+                    setTimeout(() => { fb.style.display = 'none'; }, 3500);
+                }
+                if (btn) {
+                    const original = btn.innerHTML;
+                    btn.innerHTML = '<span>✅</span> Copiado!';
+                    setTimeout(() => { btn.innerHTML = original; }, 2000);
+                }
+            });
+        }
+
+        function copyCitation(btn) {
+            const text = document.getElementById('citationText')?.innerText || '';
+            copyTextToClipboard(text).then(() => {
+                if (btn) {
+                    const original = btn.innerText;
+                    btn.innerText = 'Copiado!';
+                    setTimeout(() => { btn.innerText = original; }, 2000);
+                }
+            });
+        }
+
+        function shareNative() {
+            const url = window.location.href.split('#')[0];
+            if (navigator.share) {
+                navigator.share({
+                    title: 'CEFET Quest — por Leonardo P. Soares',
+                    text: 'Plataforma aberta de estudos para o CEFET-RJ desenvolvida por Leonardo P. Soares (AGPLv3 / Lei 9.610/98).',
+                    url: url
+                }).catch(() => {});
+            }
+        }
+
+        if (navigator.share) {
+            setTimeout(() => {
+                const nativeBtn = document.getElementById('nativeShareBtn');
+                if (nativeBtn) nativeBtn.style.display = 'inline-flex';
+            }, 100);
         }
 
         /* ─── Inicialização ─── */
