@@ -1404,6 +1404,13 @@
             border-color: var(--accent);
         }
 
+        .quiz-option:has(input:checked),
+        .quiz-option.selected {
+            background: var(--surface-strong);
+            border-color: var(--accent);
+            box-shadow: 0 0 12px rgba(99, 102, 241, 0.25);
+        }
+
         .quiz-option.correct {
             background: var(--positive-soft);
             border-color: var(--positive);
@@ -2615,6 +2622,334 @@
             background: var(--danger-soft);
             border-left: 4px solid var(--danger);
             color: var(--text-primary);
+        }
+
+        /* ─── SIMULATOR ADVANCED SUITE & DRILLS ─── */
+        .sim-subnav-bar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 18px 0 24px 0;
+            padding: 8px;
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            border-radius: var(--radius-squircle);
+            border: var(--glass-border);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .sim-subnav-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: var(--radius-pill);
+            border: 1px solid transparent;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all var(--transition-bounce);
+        }
+
+        .sim-subnav-pill:hover {
+            color: var(--text-primary);
+            background: var(--bg-hover);
+        }
+
+        .sim-subnav-pill.active {
+            color: #ffffff;
+            background: var(--gradient-accent);
+            box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .sim-counter-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 20px;
+            height: 20px;
+            padding: 0 6px;
+            border-radius: 10px;
+            background: #ef4444;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .sim-subnav-pill.active .sim-counter-badge {
+            background: #ffffff;
+            color: var(--accent);
+        }
+
+        /* ─── SPRINT MODE ─── */
+        .sprint-container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .sprint-header-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            border: var(--glass-border);
+            border-radius: var(--radius-squircle);
+            padding: 22px 28px;
+            margin-bottom: 20px;
+            box-shadow: var(--glass-shadow), var(--glass-highlight-top);
+        }
+
+        .sprint-timer-bar {
+            width: 100%;
+            height: 10px;
+            background: var(--glass-bg-subtle);
+            border-radius: var(--radius-pill);
+            overflow: hidden;
+            margin-top: 14px;
+            border: 1px solid var(--border);
+        }
+
+        .sprint-timer-fill {
+            height: 100%;
+            background: var(--gradient-accent);
+            border-radius: var(--radius-pill);
+            transition: width 1s linear, background-color 0.3s ease;
+        }
+
+        .sprint-timer-fill.warning {
+            background: #f59e0b;
+        }
+
+        .sprint-timer-fill.danger {
+            background: #ef4444;
+        }
+
+        .sprint-question-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            border: var(--glass-border);
+            border-radius: var(--radius-squircle);
+            padding: 26px 30px;
+            box-shadow: var(--glass-shadow), var(--glass-highlight-top);
+            margin-bottom: 24px;
+        }
+
+        /* ─── BATERIAS TEMÁTICAS ─── */
+        .bateria-filter-bar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .bateria-filter-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--border);
+            background: var(--glass-bg);
+            color: var(--text-secondary);
+            font-size: 13.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .bateria-filter-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--accent);
+        }
+
+        .bateria-filter-btn.active {
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+            box-shadow: 0 2px 10px rgba(14, 165, 233, 0.3);
+        }
+
+        /* ─── CADERNO DE ERROS ─── */
+        .mistake-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            border: var(--glass-border);
+            border-radius: var(--radius-squircle);
+            padding: 22px 26px;
+            margin-bottom: 18px;
+            box-shadow: var(--glass-shadow), var(--glass-highlight-top);
+            transition: transform var(--transition-fast), border-color var(--transition-fast);
+        }
+
+        .mistake-card.resolved {
+            opacity: 0.75;
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        .mistake-badge-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .mistake-tag {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: var(--radius-pill);
+        }
+
+        .mistake-tag.pending {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .mistake-tag.resolved {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        /* ─── RASCUNHO DE REDAÇÃO ACOPLADO ─── */
+        .essay-draft-drawer {
+            margin-bottom: 24px;
+            border-radius: var(--radius-squircle);
+            background: var(--glass-bg);
+            border: var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            overflow: hidden;
+        }
+
+        .essay-draft-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 22px;
+            cursor: pointer;
+            background: var(--glass-bg-subtle);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .essay-draft-body {
+            padding: 22px;
+        }
+
+        .essay-timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .essay-time-step {
+            padding: 12px 14px;
+            border-radius: var(--radius-card);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            font-size: 13px;
+        }
+
+        .essay-time-step strong {
+            display: block;
+            color: var(--accent);
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .essay-draft-textarea {
+            width: 100%;
+            min-height: 180px;
+            border-radius: var(--radius-card);
+            border: 1px solid var(--border);
+            background: var(--bg-surface);
+            color: var(--text-primary);
+            padding: 14px;
+            font-size: 14px;
+            line-height: 1.6;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .essay-counter-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* ─── DASHBOARD HOJE MISTAKES ALERT ─── */
+        .hoje-mistakes-alert {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 18px 24px;
+            border-radius: var(--radius-squircle);
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.12), var(--glass-highlight-top);
+            margin: 20px 0;
+            cursor: pointer;
+            transition: all var(--transition-bounce);
+        }
+
+        .hoje-mistakes-alert:hover {
+            transform: translateY(-2px);
+            border-color: rgba(245, 158, 11, 0.7);
+            box-shadow: 0 8px 26px rgba(245, 158, 11, 0.2);
+        }
+
+        .hoje-mistakes-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+
+        .hoje-mistakes-content {
+            flex: 1;
+        }
+
+        .hoje-mistakes-tag {
+            font-size: 11.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #f59e0b;
+            margin-bottom: 4px;
+        }
+
+        .hoje-mistakes-title {
+            display: block;
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .hoje-mistakes-desc {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .hoje-mistakes-action {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--accent);
+            flex-shrink: 0;
         }
 
         /* ─── STUDY PLAN CHECKLIST ─── */
@@ -6240,6 +6575,15 @@
             }
         }
 
+        function readStorageArray(key) {
+            try {
+                const value = JSON.parse(localStorage.getItem(key) || '[]');
+                return Array.isArray(value) ? value : [];
+            } catch (error) {
+                return [];
+            }
+        }
+
         let state = {
             currentDiscipline: null,
             currentModule: 0,
@@ -6254,6 +6598,20 @@
             completed: readStorageObject(getProfileStorageKey('cefet2027_progress')),
             collapsed: readStorageObject(getProfileStorageKey('cefet2027_collapsed')),
             flashcardsMastered: readStorageObject(getProfileStorageKey('cefet2027_fc_mastered')),
+            mistakes: readStorageObject(getProfileStorageKey('cefet2027_mistakes')),
+            simHistory: readStorageArray(getProfileStorageKey('cefet2027_sim_history')),
+            essayDraft: localStorage.getItem(getProfileStorageKey('cefet2027_essay_draft')) || '',
+            simSubMode: 'oficial', // 'oficial' | 'baterias' | 'sprint' | 'mistakes' | 'historico'
+            sprintTimer: null,
+            sprintTimeLeft: 150,
+            sprintCurrentQIndex: 0,
+            sprintQuestions: [],
+            sprintAnswers: {},
+            sprintActive: false,
+            bateriaDisc: 'Matemática',
+            bateriaCount: 10,
+            bateriaAnswers: {},
+            bateriaSubmitted: {},
             fcCurrentIndex: 0,
             fcFilter: 'all',
             maracanaTab: 'cursos', // 'cursos' | 'regras' | 'pais' | 'cotas'
@@ -6262,6 +6620,32 @@
             calendarFilter: 'all', // 'all' | 'destaques' | 'isencao' | 'prova' | 'matricula'
             moduleMode: 'complete' // 'complete' | 'focus'
         };
+
+        function getUnresolvedMistakesCount() {
+            if (!state.mistakes) return 0;
+            return Object.values(state.mistakes).filter(m => m && !m.resolved).length;
+        }
+
+        function saveMistakesState() {
+            try {
+                localStorage.setItem(getProfileStorageKey('cefet2027_mistakes'), JSON.stringify(state.mistakes));
+            } catch (e) { }
+        }
+
+        function saveSimHistoryState() {
+            try {
+                localStorage.setItem(getProfileStorageKey('cefet2027_sim_history'), JSON.stringify(state.simHistory));
+            } catch (e) { }
+        }
+
+        function shuffleArray(origArray) {
+            const arr = [...origArray];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
 
         /* ─── Profile Management Functions ─── */
         function updateHeaderProfileBadge() {
@@ -6444,6 +6828,9 @@
             state.completed = readStorageObject(getProfileStorageKey('cefet2027_progress'));
             state.collapsed = readStorageObject(getProfileStorageKey('cefet2027_collapsed'));
             state.flashcardsMastered = readStorageObject(getProfileStorageKey('cefet2027_fc_mastered'));
+            state.mistakes = readStorageObject(getProfileStorageKey('cefet2027_mistakes'));
+            state.simHistory = readStorageArray(getProfileStorageKey('cefet2027_sim_history'));
+            state.essayDraft = localStorage.getItem(getProfileStorageKey('cefet2027_essay_draft')) || '';
             state.activeTrack = localStorage.getItem(getProfileStorageKey('cefet2027_active_track')) || 'aprovacao';
             state.playerMode = localStorage.getItem(getProfileStorageKey('cefet2027_player_mode')) || 'steps';
 
@@ -6468,6 +6855,14 @@
 
         function deleteProfile(profileId) {
             const profiles = getProfilesList();
+            if (profiles.length <= 1) {
+                alert('Você não pode excluir o único perfil existente no navegador.');
+                return;
+            }
+            if (profileId === getActiveProfileId()) {
+                alert('Você não pode excluir o perfil que está ativo no momento. Alterne para outro estudante antes de excluir este.');
+                return;
+            }
             const target = profiles.find(p => p.id === profileId);
             if (!target) return;
             if (confirm('Tem certeza que deseja excluir o perfil "' + target.name + '" e todos os seus registros de estudo deste navegador?')) {
@@ -6478,6 +6873,9 @@
                     `cefet2027_p_${profileId}_last_module`,
                     `cefet2027_p_${profileId}_active_track`,
                     `cefet2027_p_${profileId}_fc_mastered`,
+                    `cefet2027_p_${profileId}_mistakes`,
+                    `cefet2027_p_${profileId}_sim_history`,
+                    `cefet2027_p_${profileId}_essay_draft`,
                     `cefet2027_p_${profileId}_essay`,
                     `cefet2027_p_${profileId}_checklist`,
                     `cefet2027_p_${profileId}_player_mode`,
@@ -6504,6 +6902,9 @@
                 lastModule: localStorage.getItem(getProfileStorageKey('cefet2027_last_module')) || null,
                 activeTrack: localStorage.getItem(getProfileStorageKey('cefet2027_active_track')) || 'aprovacao',
                 flashcardsMastered: readStorageObject(getProfileStorageKey('cefet2027_fc_mastered')),
+                mistakes: readStorageObject(getProfileStorageKey('cefet2027_mistakes')),
+                simHistory: readStorageArray(getProfileStorageKey('cefet2027_sim_history')),
+                essayDraft: localStorage.getItem(getProfileStorageKey('cefet2027_essay_draft')) || '',
                 essay: localStorage.getItem(getProfileStorageKey('cefet2027_essay')) || '',
                 checklist: readStorageObject(getProfileStorageKey('cefet2027_checklist'))
             };
@@ -6547,6 +6948,9 @@
                     if (data.lastModule) localStorage.setItem(`cefet2027_p_${newId}_last_module`, data.lastModule);
                     if (data.activeTrack) localStorage.setItem(`cefet2027_p_${newId}_active_track`, data.activeTrack);
                     if (data.flashcardsMastered) localStorage.setItem(`cefet2027_p_${newId}_fc_mastered`, JSON.stringify(data.flashcardsMastered));
+                    if (data.mistakes) localStorage.setItem(`cefet2027_p_${newId}_mistakes`, JSON.stringify(data.mistakes));
+                    if (data.simHistory) localStorage.setItem(`cefet2027_p_${newId}_sim_history`, JSON.stringify(data.simHistory));
+                    if (data.essayDraft) localStorage.setItem(`cefet2027_p_${newId}_essay_draft`, data.essayDraft);
                     if (data.essay) localStorage.setItem(`cefet2027_p_${newId}_essay`, data.essay);
                     if (data.checklist) localStorage.setItem(`cefet2027_p_${newId}_checklist`, JSON.stringify(data.checklist));
 
@@ -6569,12 +6973,18 @@
                     localStorage.removeItem(getProfileStorageKey('cefet2027_activity_days'));
                     localStorage.removeItem(getProfileStorageKey('cefet2027_last_module'));
                     localStorage.removeItem(getProfileStorageKey('cefet2027_fc_mastered'));
+                    localStorage.removeItem(getProfileStorageKey('cefet2027_mistakes'));
+                    localStorage.removeItem(getProfileStorageKey('cefet2027_sim_history'));
+                    localStorage.removeItem(getProfileStorageKey('cefet2027_essay_draft'));
                     localStorage.removeItem(getProfileStorageKey('cefet2027_essay'));
                     localStorage.removeItem(getProfileStorageKey('cefet2027_checklist'));
                 } catch (e) { }
 
                 state.completed = {};
                 state.flashcardsMastered = {};
+                state.mistakes = {};
+                state.simHistory = [];
+                state.essayDraft = '';
                 updateProgress();
                 renderSidebar();
                 if (state.activeHub === 'hoje') renderHome();
@@ -6724,6 +7134,8 @@
 
         /* ─── Navegação de Hubs e Trilhas ─── */
         function switchHub(hubName) {
+            clearAllSimTimers();
+            state.sprintActive = false;
             state.currentDiscipline = null;
             let target = hubName;
             if (hubName === 'painel') target = 'hoje';
@@ -6865,8 +7277,22 @@
 
             renderSidebar();
 
+            clearAllSimTimers();
+            if (page !== 'simulado') {
+                state.sprintActive = false;
+            }
             if (page === 'simulado') {
-                renderSimulator();
+                if (state.simSubMode === 'baterias') {
+                    renderBateriasTematicas();
+                } else if (state.simSubMode === 'sprint') {
+                    renderSprintMode();
+                } else if (state.simSubMode === 'mistakes') {
+                    renderMistakesNotebook();
+                } else if (state.simSubMode === 'historico') {
+                    renderSimHistory();
+                } else {
+                    renderSimulator();
+                }
             } else if (page === 'flashcards') {
                 renderFlashcards();
             } else if (page === 'calendario') {
@@ -7249,90 +7675,258 @@
             main.innerHTML = h;
         }
 
-        /* ─── Simulador Oficial CEFET-RJ (30 Questões & Modo Rápido) ─── */
+        /* ══════════════════════════════════════════════════════════════
+           CENTRAL DE PREPARAÇÃO & SUITE DE TREINAMENTO AVANÇADO (CEFET-RJ)
+           1. Simulado Oficial & Rápido (com Rascunho de Redação Integrado)
+           2. Baterias Temáticas por Matéria (Feedback Imediato)
+           3. Desafio Sprint (Gestão de Ritmo e 2m30s por questão)
+           4. Caderno de Erros Ativo (Reteste e Eliminação de Lacunas)
+           5. Histórico de Desempenho e Evolução
+           ══════════════════════════════════════════════════════════════ */
         let simulatorTimer = null;
         let simulatorSeconds = 4 * 60 * 60;
         let simulatorAnswers = {};
         let simulatorMode = 'oficial'; // 'oficial' (30q) ou 'rapido' (15q)
+        let simulatorFinished = false;
+        let currentSimQuestions = [];
+        let essayDrawerOpen = false;
 
+        function clearAllSimTimers() {
+            if (simulatorTimer) {
+                clearInterval(simulatorTimer);
+                simulatorTimer = null;
+            }
+            if (state.sprintTimer) {
+                clearInterval(state.sprintTimer);
+                state.sprintTimer = null;
+            }
+        }
+
+        function switchSimulatorSubMode(subMode) {
+            clearAllSimTimers();
+            if (subMode !== 'sprint') {
+                state.sprintActive = false;
+            }
+            state.simSubMode = subMode;
+            if (subMode === 'baterias') {
+                renderBateriasTematicas();
+            } else if (subMode === 'sprint') {
+                renderSprintMode();
+                if (state.sprintActive) {
+                    runSprintTimer();
+                }
+            } else if (subMode === 'mistakes') {
+                renderMistakesNotebook();
+            } else if (subMode === 'historico') {
+                renderSimHistory();
+            } else {
+                renderSimulator();
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function getSimulatorSubNavHTML(activeMode) {
+            const unresCount = getUnresolvedMistakesCount();
+            const histCount = (state.simHistory || []).length;
+            return `
+            <div class="sim-subnav-bar">
+                <button class="sim-subnav-pill ${activeMode === 'oficial' ? 'active' : ''}" onclick="switchSimulatorSubMode('oficial')">
+                    <span>🎯</span> <span>Simulado Geral</span>
+                </button>
+                <button class="sim-subnav-pill ${activeMode === 'baterias' ? 'active' : ''}" onclick="switchSimulatorSubMode('baterias')">
+                    <span>📚</span> <span>Baterias por Matéria</span>
+                </button>
+                <button class="sim-subnav-pill ${activeMode === 'sprint' ? 'active' : ''}" onclick="switchSimulatorSubMode('sprint')">
+                    <span>⚡</span> <span>Desafio Sprint (2m30s)</span>
+                </button>
+                <button class="sim-subnav-pill ${activeMode === 'mistakes' ? 'active' : ''}" onclick="switchSimulatorSubMode('mistakes')">
+                    <span>📓</span> <span>Caderno de Erros</span>
+                    ${unresCount > 0 ? `<span class="sim-counter-badge">${unresCount}</span>` : ''}
+                </button>
+                <button class="sim-subnav-pill ${activeMode === 'historico' ? 'active' : ''}" onclick="switchSimulatorSubMode('historico')">
+                    <span>📊</span> <span>Histórico ${histCount > 0 ? `(${histCount})` : ''}</span>
+                </button>
+            </div>`;
+        }
+
+        /* ─── MODALIDADE 1: SIMULADO OFICIAL & RÁPIDO ─── */
         function setSimulatorMode(mode) {
             simulatorMode = mode;
             renderSimulator();
         }
 
+        function toggleEssayDrawer() {
+            essayDrawerOpen = !essayDrawerOpen;
+            const body = document.getElementById('essayDrawerBody');
+            const icon = document.getElementById('essayDrawerIcon');
+            if (body) body.style.display = essayDrawerOpen ? 'block' : 'none';
+            if (icon) icon.textContent = essayDrawerOpen ? '▲ Recolher Rascunho' : '▼ Abrir Rascunho da Redação';
+        }
+
+        function updateEssayDraftLive(val) {
+            state.essayDraft = val;
+            try {
+                localStorage.setItem(getProfileStorageKey('cefet2027_essay_draft'), val);
+            } catch (e) { }
+            const lines = val.split('\n');
+            let approxLines = 0;
+            lines.forEach(l => {
+                approxLines += Math.max(1, Math.ceil(l.length / 65));
+            });
+            if (!val.trim()) approxLines = 0;
+            const counterEl = document.getElementById('essayLiveCounter');
+            if (counterEl) {
+                const isOptimal = approxLines >= 20 && approxLines <= 30;
+                counterEl.innerHTML = `Extensão aproximada: <strong style="color:${isOptimal ? 'var(--positive)' : 'var(--solar-amber)'}; font-size:14px;">${approxLines} linhas</strong> (Ideal no Edital: 20 a 30 linhas)`;
+            }
+        }
+
         function renderSimulator() {
+            clearAllSimTimers();
             const main = document.getElementById('main');
             simulatorAnswers = {};
+            simulatorFinished = false;
 
-            // Filtrar perguntas pelo modo
-            let questions = window.questionBank;
+            // Filtrar perguntas pelo modo mantendo rigor da matriz do edital
+            const bank = window.questionBank || [];
+            const portAll = bank.filter(q => q.discipline === 'Língua Portuguesa');
+            const matAll = bank.filter(q => q.discipline === 'Matemática');
+            const natAll = bank.filter(q => q.discipline === 'Ciências da Natureza');
+            const humAll = bank.filter(q => q.discipline === 'Ciências Humanas');
+
             if (simulatorMode === 'rapido') {
-                // Seleciona 5 Port, 5 Mat, 3 Nat, 2 Hum
-                const p = window.questionBank.filter(q => q.discipline === 'Língua Portuguesa').slice(0, 5);
-                const m = window.questionBank.filter(q => q.discipline === 'Matemática').slice(0, 5);
-                const n = window.questionBank.filter(q => q.discipline === 'Ciências da Natureza').slice(0, 3);
-                const h = window.questionBank.filter(q => q.discipline === 'Ciências Humanas').slice(0, 2);
-                questions = [...p, ...m, ...n, ...h];
+                // 15 Questões (5 Port, 5 Mat, 3 Nat, 2 Hum)
+                currentSimQuestions = [
+                    ...shuffleArray(portAll).slice(0, 5),
+                    ...shuffleArray(matAll).slice(0, 5),
+                    ...shuffleArray(natAll).slice(0, 3),
+                    ...shuffleArray(humAll).slice(0, 2)
+                ];
+            } else {
+                // 30 Questões Oficiais (10 Port, 10 Mat, 5 Nat, 5 Hum) com amostragem aleatória do banco
+                currentSimQuestions = [
+                    ...shuffleArray(portAll).slice(0, 10),
+                    ...shuffleArray(matAll).slice(0, 10),
+                    ...shuffleArray(natAll).slice(0, 5),
+                    ...shuffleArray(humAll).slice(0, 5)
+                ];
             }
 
-            const totalQ = questions.length;
-            const totalPoints = totalQ * 5; // 5 pontos por questão
+            const totalQ = currentSimQuestions.length;
+            const totalPoints = totalQ * 5;
 
-            main.innerHTML = `<div class="support-page">
-            <div class="breadcrumb"><a onclick="goHome()">Início</a><span class="breadcrumb-sep">></span><span>Simulado</span></div>
-            <h1 class="page-title">Simulado CEFET-RJ (Modelo Oficial da Prova)</h1>
-            <p class="support-intro">
-                Treine com questões calibradas fielmente no padrão do Edital nº 05/2026. A prova oficial possui <strong>30 questões objetivas</strong> valendo 5 pontos cada (Total: 150 pontos). Use o cronômetro para treinar o controle do tempo!
-            </p>
+            main.innerHTML = `
+            <div class="support-page">
+                <div class="breadcrumb">
+                    <a onclick="goHome()">Início</a>
+                    <span class="breadcrumb-sep">></span>
+                    <a onclick="showSupportPage('simulado')">Preparação</a>
+                    <span class="breadcrumb-sep">></span>
+                    <span>Simulado Geral</span>
+                </div>
 
-            <div class="sim-mode-bar">
-                <div class="sim-mode-btns">
-                    <button class="btn ${simulatorMode === 'oficial' ? 'btn-primary' : ''}" onclick="setSimulatorMode('oficial')">
-                        🎯 Simulado Oficial Completo (30 Questões • 4h)
-                    </button>
-                    <button class="btn ${simulatorMode === 'rapido' ? 'btn-primary' : ''}" onclick="setSimulatorMode('rapido')">
-                        ⚡ Simulado Rápido de Treino (15 Questões • 1h30)
+                <div class="central-cefet-header" style="margin-bottom:12px;">
+                    <div class="tracks-badge">🎯 Treino Prático & Edital Oficial</div>
+                    <h1 class="page-title" style="margin:6px 0;">Preparação para a Prova CEFET-RJ 2027</h1>
+                    <p style="font-size:14.5px; color:var(--text-secondary); margin:0;">
+                        Escolha entre o simulado cronometrado de prova real, baterias por disciplina, desafios rápidos de ritmo ou o caderno de erros.
+                    </p>
+                </div>
+
+                ${getSimulatorSubNavHTML('oficial')}
+
+                <!-- GAVETA DE RASCUNHO & ESTRATÉGIA DE REDAÇÃO (4 HORAS) -->
+                <div class="essay-draft-drawer">
+                    <div class="essay-draft-header" onclick="toggleEssayDrawer()">
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <span style="font-size:22px;">✍️</span>
+                            <div>
+                                <strong style="font-size:15px; color:var(--text-primary);">Gestão Tática do Tempo & Rascunho da Redação Oficial (4 Horas)</strong>
+                                <div style="font-size:12.5px; color:var(--text-tertiary);">A prova do CEFET-RJ exige 30 questões objetivas + 1 redação dissertativo-argumentativa em 4 horas.</div>
+                            </div>
+                        </div>
+                        <span id="essayDrawerIcon" style="font-weight:700; color:var(--accent); font-size:13px;">${essayDrawerOpen ? '▲ Recolher Rascunho' : '▼ Abrir Rascunho da Redação'}</span>
+                    </div>
+                    <div class="essay-draft-body" id="essayDrawerBody" style="display:${essayDrawerOpen ? 'block' : 'none'};">
+                        <div class="essay-timeline-grid">
+                            <div class="essay-time-step">
+                                <strong>1. 00h00 - 01h00 (60 min)</strong>
+                                Leitura dos textos motivadores, tempestade de ideias e rascunho completo da Redação.
+                            </div>
+                            <div class="essay-time-step">
+                                <strong>2. 01h00 - 03h20 (2h20)</strong>
+                                Resolução com atenção das 30 questões objetivas (comece por Português e Humanas).
+                            </div>
+                            <div class="essay-time-step">
+                                <strong>3. 03h20 - 03h45 (25 min)</strong>
+                                Passar a redação a limpo na folha definitiva com letra legível e sem rasuras.
+                            </div>
+                            <div class="essay-time-step">
+                                <strong>4. 03h45 - 04h00 (15 min)</strong>
+                                Preenchimento cuidadoso das 30 bolinhas do Cartão-Resposta.
+                            </div>
+                        </div>
+
+                        <label style="display:block; font-size:13px; font-weight:700; color:var(--text-secondary); margin-bottom:8px;">
+                            Área de Rascunho da Redação (Salva automaticamente no seu navegador):
+                        </label>
+                        <textarea class="essay-draft-textarea" id="essayDraftTextarea" placeholder="Digite aqui o seu rascunho de redação (introdução com tese, 2 argumentos e proposta de conclusão)..." oninput="updateEssayDraftLive(this.value)">${state.essayDraft || ''}</textarea>
+                        <div class="essay-counter-row">
+                            <span id="essayLiveCounter">Extensão aproximada: <strong>0 linhas</strong> (Ideal no Edital: 20 a 30 linhas)</span>
+                            <span style="color:var(--text-tertiary); font-size:12px;">Dica: Parágrafos entre 5 a 7 linhas garantem boa coesão.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sim-mode-bar">
+                    <div class="sim-mode-btns">
+                        <button class="btn ${simulatorMode === 'oficial' ? 'btn-primary' : ''}" onclick="setSimulatorMode('oficial')">
+                            🎯 Simulado Oficial Completo (30 Questões • 4h)
+                        </button>
+                        <button class="btn ${simulatorMode === 'rapido' ? 'btn-primary' : ''}" onclick="setSimulatorMode('rapido')">
+                            ⚡ Simulado Rápido de Treino (15 Questões • 1h30)
+                        </button>
+                    </div>
+                    <div style="font-size:13px; color:var(--text-secondary);">
+                        <strong>${totalQ} Questões</strong> • Vale até <strong>${totalPoints} pontos</strong>
+                    </div>
+                </div>
+
+                <div class="simulator-toolbar">
+                    <span>Tempo restante de prova:</span>
+                    <span class="timer" id="simTimer">${simulatorMode === 'oficial' ? '04:00:00' : '01:30:00'}</span>
+                    <button class="btn btn-primary" onclick="finishSimulator()" id="simTopFinishBtn">Finalizar e Corrigir Prova</button>
+                </div>
+
+                <div id="simulatorQuestions">
+                    ${currentSimQuestions.map((q, i) => `
+                        <section class="q-block sim-question" id="sim_card_${q.id}">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                                <span class="meta-badge disc">${q.discipline}</span>
+                                <span style="font-size:12px; color:var(--text-quaternary); font-weight:600;">Questão ${i + 1} de ${totalQ} (5,0 pts)</span>
+                            </div>
+                            <h3 style="font-size:15px; line-height:1.5; margin-bottom:12px;">${i + 1}. ${q.question}</h3>
+                            <div class="quiz-options">
+                                ${q.options.map((option, j) => `
+                                    <label class="quiz-option" id="label_${q.id}_${j}">
+                                        <input type="radio" name="${q.id}" value="${j}" onchange="simulatorAnswers['${q.id}']=${j}">
+                                        <span><strong>${String.fromCharCode(65 + j)})</strong> ${option}</span>
+                                    </label>
+                                `).join('')}
+                            </div>
+                            <div id="feedback_${q.id}"></div>
+                        </section>
+                    `).join('')}
+                </div>
+
+                <div style="margin-top:24px; text-align:center;">
+                    <button class="btn btn-primary" style="padding:14px 32px; font-size:16px;" onclick="finishSimulator()" id="simBottomFinishBtn">
+                        ✓ Finalizar e Gerar Relatório de Desempenho
                     </button>
                 </div>
-                <div style="font-size:13px; color:var(--text-secondary);">
-                    <strong>${totalQ} Questões</strong> • Vale até <strong>${totalPoints} pontos</strong>
-                </div>
-            </div>
+            </div>`;
 
-            <div class="simulator-toolbar">
-                <span>Tempo restante de prova:</span>
-                <span class="timer" id="simTimer">04:00:00</span>
-                <button class="btn btn-primary" onclick="finishSimulator()">Finalizar e Corrigir Prova</button>
-            </div>
-
-            <div id="simulatorQuestions">
-                ${questions.map((q, i) => `
-                    <section class="q-block sim-question" id="sim_card_${q.id}">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span class="meta-badge disc">${q.discipline}</span>
-                            <span style="font-size:12px; color:var(--text-quaternary); font-weight:600;">Questão ${i + 1} de ${totalQ} (5,0 pts)</span>
-                        </div>
-                        <h3 style="font-size:15px; line-height:1.5; margin-bottom:12px;">${i + 1}. ${q.question}</h3>
-                        <div class="quiz-options">
-                            ${q.options.map((option, j) => `
-                                <label class="quiz-option" id="label_${q.id}_${j}">
-                                    <input type="radio" name="${q.id}" value="${j}" onchange="simulatorAnswers['${q.id}']=${j}">
-                                    <span><strong>${String.fromCharCode(65 + j)})</strong> ${option}</span>
-                                </label>
-                            `).join('')}
-                        </div>
-                        <div id="feedback_${q.id}"></div>
-                    </section>
-                `).join('')}
-            </div>
-            
-            <div style="margin-top:24px; text-align:center;">
-                <button class="btn btn-primary" style="padding:14px 32px; font-size:16px;" onclick="finishSimulator()">
-                    ✓ Finalizar e Gerar Relatório de Desempenho
-                </button>
-            </div>
-        </div>`;
-
+            updateEssayDraftLive(state.essayDraft || '');
             startSimulatorTimer();
         }
 
@@ -7353,31 +7947,49 @@
         }
 
         function finishSimulator() {
+            if (simulatorFinished) return;
+            simulatorFinished = true;
             clearInterval(simulatorTimer);
 
-            let questions = window.questionBank;
-            if (simulatorMode === 'rapido') {
-                const p = window.questionBank.filter(q => q.discipline === 'Língua Portuguesa').slice(0, 5);
-                const m = window.questionBank.filter(q => q.discipline === 'Matemática').slice(0, 5);
-                const n = window.questionBank.filter(q => q.discipline === 'Ciências da Natureza').slice(0, 3);
-                const h = window.questionBank.filter(q => q.discipline === 'Ciências Humanas').slice(0, 2);
-                questions = [...p, ...m, ...n, ...h];
-            }
+            // Desabilitar botões de finalizar para prevenir duplicatas
+            const topBtn = document.getElementById('simTopFinishBtn');
+            const btmBtn = document.getElementById('simBottomFinishBtn');
+            if (topBtn) { topBtn.disabled = true; topBtn.textContent = 'Prova Finalizada'; }
+            if (btmBtn) { btmBtn.disabled = true; btmBtn.textContent = 'Prova Finalizada e Corrigida'; }
 
+            // Travar inputs de rádio
+            document.querySelectorAll('#simulatorQuestions input[type="radio"]').forEach(r => r.disabled = true);
+
+            const questions = currentSimQuestions;
             const byDiscipline = {};
             let correctCount = 0;
+            const mistakesRecorded = [];
 
             questions.forEach(q => {
-                const hit = simulatorAnswers[q.id] === q.correct;
+                const isAnswered = simulatorAnswers[q.id] !== undefined;
+                const hit = isAnswered && simulatorAnswers[q.id] === q.correct;
                 if (hit) correctCount++;
+
                 if (!byDiscipline[q.discipline]) byDiscipline[q.discipline] = { total: 0, correct: 0 };
                 byDiscipline[q.discipline].total++;
                 if (hit) byDiscipline[q.discipline].correct++;
 
-                // Exibir feedback na própria questão
+                // Apenas questões respondidas INCORRETAMENTE entram no Caderno de Erros
+                // Questões em branco / não respondidas NÃO entram no Caderno de Erros
+                if (isAnswered && !hit) {
+                    if (!state.mistakes[q.id]) {
+                        state.mistakes[q.id] = { errorCount: 0, lastAttemptDate: Date.now(), resolved: false };
+                    }
+                    state.mistakes[q.id].errorCount++;
+                    state.mistakes[q.id].lastAttemptDate = Date.now();
+                    state.mistakes[q.id].resolved = false;
+                    mistakesRecorded.push(q.id);
+                }
+
+                // Feedback visual na questão
                 const fb = document.getElementById(`feedback_${q.id}`);
                 if (fb) {
-                    const userChoice = simulatorAnswers[q.id] !== undefined ? String.fromCharCode(65 + simulatorAnswers[q.id]) : 'Nenhuma';
+                    const userChoice = isAnswered ? String.fromCharCode(65 + simulatorAnswers[q.id]) : null;
                     const correctLetter = String.fromCharCode(65 + q.correct);
                     if (hit) {
                         fb.innerHTML = `
@@ -7385,19 +7997,46 @@
                             <strong>✓ Você acertou! (Alternativa ${correctLetter})</strong><br>
                             ${q.explanation}
                         </div>`;
-                    } else {
+                    } else if (isAnswered) {
                         fb.innerHTML = `
                         <div class="sim-q-feedback wrong">
-                            <strong>✗ Você marcou ${userChoice}, mas a correta é a Alternativa ${correctLetter}</strong><br>
+                            <strong>✗ Você marcou Alternativa ${userChoice}, mas a correta é a Alternativa ${correctLetter}</strong><br>
+                            ${q.explanation}
+                            <div style="margin-top:6px; font-size:12px; color:var(--text-secondary);">
+                                📓 <em>Esta questão foi adicionada automaticamente ao seu Caderno de Erros para reteste.</em>
+                            </div>
+                        </div>`;
+                    } else {
+                        fb.innerHTML = `
+                        <div class="sim-q-feedback" style="background:rgba(255,255,255,0.04); border-left:4px solid var(--text-tertiary); padding:12px 16px; border-radius:8px; margin-top:12px;">
+                            <strong style="color:var(--text-secondary);">⚪ Questão não respondida (em branco). A resposta correta é a Alternativa ${correctLetter}.</strong><br>
                             ${q.explanation}
                         </div>`;
                     }
                 }
             });
 
+            // Persistir erros no LocalStorage
+            saveMistakesState();
+
             const totalPoints = correctCount * 5;
             const maxPoints = questions.length * 5;
-            const pct = Math.round((correctCount / questions.length) * 100);
+            const pct = questions.length > 0 ? Math.round((correctCount / questions.length) * 100) : 0;
+
+            // Gravar tentativa no histórico de simulados
+            state.simHistory.unshift({
+                id: 'sim_' + Date.now(),
+                date: Date.now(),
+                mode: simulatorMode === 'oficial' ? 'Simulado Oficial (30Q)' : 'Simulado Rápido (15Q)',
+                totalQuestions: questions.length,
+                correctCount: correctCount,
+                points: totalPoints,
+                maxPoints: maxPoints,
+                pct: pct,
+                byDiscipline: byDiscipline
+            });
+            if (state.simHistory.length > 25) state.simHistory.pop();
+            saveSimHistoryState();
 
             // Verificação dos critérios eliminatórios oficiais
             const portHits = byDiscipline['Língua Portuguesa'] ? byDiscipline['Língua Portuguesa'].correct : 0;
@@ -7414,13 +8053,20 @@
             const result = document.createElement('section');
             result.className = 'sim-score-card';
             result.innerHTML = `
-            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
                 <div>
                     <span class="track-badge badge-sel">Relatório Oficial de Desempenho</span>
                     <div class="sim-score-total">${totalPoints} <span style="font-size:18px; color:var(--text-tertiary);">/ ${maxPoints} pontos</span></div>
                     <div style="font-size:14px; color:var(--text-secondary);">Você acertou <strong>${correctCount} de ${questions.length} questões</strong> (${pct}% de aproveitamento).</div>
                 </div>
-                <button class="btn btn-primary" onclick="window.scrollTo({top:800, behavior:'smooth'})">🔍 Ver Gabarito Comentado Abaixo</button>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    ${mistakesRecorded.length > 0 ? `
+                        <button class="btn btn-secondary" onclick="switchSimulatorSubMode('mistakes')">
+                            📓 Revisar ${mistakesRecorded.length} Erros no Caderno
+                        </button>
+                    ` : ''}
+                    <button class="btn btn-primary" onclick="document.getElementById('simulatorQuestions')?.scrollIntoView({behavior:'smooth'})">🔍 Ver Gabarito Comentado</button>
+                </div>
             </div>
 
             ${alertBanner}
@@ -7428,24 +8074,23 @@
             <h4 style="margin:20px 0 10px;">Desempenho Detalhado por Área do Conhecimento:</h4>
             <div class="sim-disc-grid">
                 ${Object.entries(byDiscipline).map(([name, score]) => {
-                const pts = score.correct * 5;
-                const maxPts = score.total * 5;
-                const dPct = Math.round((score.correct / score.total) * 100);
-                return `
-                        <div class="sim-disc-card">
-                            <strong>${name}</strong>
-                            <div style="font-size:18px; font-weight:700; color:var(--accent);">${pts} / ${maxPts} pts</div>
-                            <div style="font-size:12px; color:var(--text-tertiary);">${score.correct} de ${score.total} acertos (${dPct}%)</div>
-                            <div class="disc-progress-bar" style="margin-top:6px;"><div class="fill" style="width:${dPct}%"></div></div>
-                        </div>`;
-            }).join('')}
+                    const pts = score.correct * 5;
+                    const maxPts = score.total * 5;
+                    const dPct = Math.round((score.correct / score.total) * 100);
+                    return `
+                    <div class="sim-disc-card">
+                        <strong>${name}</strong>
+                        <div style="font-size:18px; font-weight:700; color:var(--accent);">${pts} / ${maxPts} pts</div>
+                        <div style="font-size:12px; color:var(--text-tertiary);">${score.correct} de ${score.total} acertos (${dPct}%)</div>
+                        <div class="disc-progress-bar" style="margin-top:6px;"><div class="fill" style="width:${dPct}%"></div></div>
+                    </div>`;
+                }).join('')}
             </div>
 
             <div class="box-analogy" style="margin-top:16px;">
-                <div class="box-header">💡 Lembre-se da Estratégia de Aprovação do CEFET-RJ</div>
-                <p>Para ter a sua redação corrigida, você precisa ficar classificado até o <strong>dobro (2x) do número de vagas</strong> do seu curso na Prova Objetiva. Português e Matemática juntos valem 100 dos 150 pontos! Role a página abaixo para ler a resolução comentada de cada questão que você errou.</p>
-            </div>
-        `;
+                <div class="box-header">💡 Estratégia de Aprovação do CEFET-RJ</div>
+                <p>Para ter a sua redação corrigida, você precisa ficar classificado até o <strong>dobro (2x) do número de vagas</strong> do seu curso na Prova Objetiva. Português e Matemática juntos valem 100 dos 150 pontos! Role a página abaixo para ler a resolução comentada de cada questão.</p>
+            </div>`;
 
             const mainContent = document.getElementById('main');
             if (mainContent) {
@@ -7453,6 +8098,743 @@
                 if (page) page.prepend(result);
             }
             result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        /* ─── MODALIDADE 2: BATERIAS TEMÁTICAS (PRÁTICA DELIBERADA) ─── */
+        function renderBateriasTematicas() {
+            clearAllSimTimers();
+            const main = document.getElementById('main');
+            const disc = state.bateriaDisc || 'Matemática';
+            const count = state.bateriaCount || 10;
+            const bank = window.questionBank || [];
+            const filteredAll = bank.filter(q => q.discipline === disc);
+
+            let questions = [...filteredAll];
+            if (count !== 'all') {
+                questions = shuffleArray([...filteredAll]).slice(0, Number(count));
+            }
+
+            state.bateriaAnswers = {};
+            state.bateriaSubmitted = {};
+
+            const disciplines = [
+                { id: 'Matemática', label: '📐 Matemática' },
+                { id: 'Língua Portuguesa', label: '📚 Língua Portuguesa' },
+                { id: 'Ciências da Natureza', label: '🧪 Ciências da Natureza' },
+                { id: 'Ciências Humanas', label: '🌍 Ciências Humanas' }
+            ];
+
+            let h = `
+            <div class="support-page">
+                <div class="breadcrumb">
+                    <a onclick="goHome()">Início</a>
+                    <span class="breadcrumb-sep">></span>
+                    <a onclick="showSupportPage('simulado')">Preparação</a>
+                    <span class="breadcrumb-sep">></span>
+                    <span>Baterias Temáticas</span>
+                </div>
+
+                <div class="central-cefet-header" style="margin-bottom:12px;">
+                    <div class="tracks-badge">📚 Prática Deliberada & Foco Imediato</div>
+                    <h1 class="page-title" style="margin:6px 0;">Baterias Temáticas por Disciplina</h1>
+                    <p style="font-size:14.5px; color:var(--text-secondary); margin:0;">
+                        Treine sessões focadas na matéria em que você precisa evoluir, com resolução comentada instantânea após cada clique.
+                    </p>
+                </div>
+
+                ${getSimulatorSubNavHTML('baterias')}
+
+                <!-- FILTROS DE DISCIPLINA E QUANTIDADE -->
+                <div class="bateria-filter-bar">
+                    <span style="font-size:13px; font-weight:700; color:var(--text-secondary);">Matéria:</span>
+                    ${disciplines.map(d => `
+                        <button class="bateria-filter-btn ${disc === d.id ? 'active' : ''}" onclick="setBateriaDiscipline('${d.id}')">
+                            ${d.label}
+                        </button>
+                    `).join('')}
+                </div>
+
+                <div class="sim-mode-bar" style="margin-bottom:24px;">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <span style="font-size:13px; font-weight:700; color:var(--text-secondary);">Tamanho do Treino:</span>
+                        <button class="bateria-filter-btn ${count === 5 ? 'active' : ''}" onclick="setBateriaCount(5)">5 Questões</button>
+                        <button class="bateria-filter-btn ${count === 10 ? 'active' : ''}" onclick="setBateriaCount(10)">10 Questões</button>
+                        <button class="bateria-filter-btn ${count === 'all' ? 'active' : ''}" onclick="setBateriaCount('all')">Todas (${filteredAll.length})</button>
+                    </div>
+                    <div id="bateriaLiveScore" style="font-size:14px; font-weight:700; color:var(--accent);">
+                        Progresso: 0 de ${questions.length} respondidas
+                    </div>
+                </div>
+
+                <div id="bateriaQuestionsList">
+                    ${questions.map((q, i) => `
+                        <section class="q-block sim-question" id="bat_card_${q.id}">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                                <span class="meta-badge disc">${q.discipline}</span>
+                                <span style="font-size:12px; color:var(--text-quaternary); font-weight:600;">Questão ${i + 1} de ${questions.length}</span>
+                            </div>
+                            <h3 style="font-size:15px; line-height:1.5; margin-bottom:12px;">${i + 1}. ${q.question}</h3>
+                            <div class="quiz-options" id="bat_opts_${q.id}">
+                                ${q.options.map((opt, j) => `
+                                    <label class="quiz-option" id="bat_label_${q.id}_${j}" onclick="handleBateriaAnswer('${q.id}', ${j})">
+                                        <input type="radio" name="bat_${q.id}" value="${j}">
+                                        <span><strong>${String.fromCharCode(65 + j)})</strong> ${opt}</span>
+                                    </label>
+                                `).join('')}
+                            </div>
+                            <div id="bat_fb_${q.id}"></div>
+                        </section>
+                    `).join('')}
+                </div>
+            </div>`;
+
+            main.innerHTML = h;
+        }
+
+        function setBateriaDiscipline(d) {
+            state.bateriaDisc = d;
+            state.bateriaAnswers = {};
+            state.bateriaSubmitted = {};
+            renderBateriasTematicas();
+        }
+
+        function setBateriaCount(c) {
+            state.bateriaCount = c;
+            state.bateriaAnswers = {};
+            state.bateriaSubmitted = {};
+            renderBateriasTematicas();
+        }
+
+        function handleBateriaAnswer(qId, selectedIdx) {
+            if (state.bateriaSubmitted[qId]) return;
+            state.bateriaSubmitted[qId] = true;
+            state.bateriaAnswers[qId] = selectedIdx;
+
+            const bank = window.questionBank || [];
+            const q = bank.find(item => item.id === qId);
+            if (!q) return;
+
+            const hit = selectedIdx === q.correct;
+            const container = document.getElementById(`bat_opts_${qId}`);
+            if (container) {
+                container.querySelectorAll('input').forEach(inp => inp.disabled = true);
+            }
+
+            const chosenLabel = document.getElementById(`bat_label_${qId}_${selectedIdx}`);
+            const correctLabel = document.getElementById(`bat_label_${qId}_${q.correct}`);
+
+            if (hit) {
+                if (chosenLabel) chosenLabel.style.borderColor = 'var(--positive)';
+            } else {
+                if (chosenLabel) chosenLabel.style.borderColor = 'var(--danger)';
+                if (correctLabel) correctLabel.style.borderColor = 'var(--positive)';
+
+                // Registrar no Caderno de Erros
+                if (!state.mistakes[q.id]) {
+                    state.mistakes[q.id] = { errorCount: 0, lastAttemptDate: Date.now(), resolved: false };
+                }
+                state.mistakes[q.id].errorCount++;
+                state.mistakes[q.id].lastAttemptDate = Date.now();
+                state.mistakes[q.id].resolved = false;
+                saveMistakesState();
+            }
+
+            const fb = document.getElementById(`bat_fb_${qId}`);
+            if (fb) {
+                const correctLetter = String.fromCharCode(65 + q.correct);
+                if (hit) {
+                    fb.innerHTML = `
+                    <div class="sim-q-feedback correct">
+                        <strong>✓ Acertou em cheio! (Alternativa ${correctLetter})</strong><br>
+                        ${q.explanation}
+                    </div>`;
+                } else {
+                    fb.innerHTML = `
+                    <div class="sim-q-feedback wrong">
+                        <strong>✗ Alternativa incorreta. A resposta correta é a ${correctLetter}.</strong><br>
+                        ${q.explanation}
+                        <div style="margin-top:6px; font-size:12px; color:var(--text-secondary);">
+                            📓 <em>Questão anotada no Caderno de Erros para reteste futuro.</em>
+                        </div>
+                    </div>`;
+                }
+            }
+
+            // Atualizar placar de respostas respondidas
+            const totalSubmitted = Object.keys(state.bateriaSubmitted).length;
+            let hits = 0;
+            Object.keys(state.bateriaSubmitted).forEach(id => {
+                const question = bank.find(x => x.id === id);
+                if (question && state.bateriaAnswers[id] === question.correct) hits++;
+            });
+
+            const scoreEl = document.getElementById('bateriaLiveScore');
+            if (scoreEl) {
+                scoreEl.innerHTML = `Acertos: <strong>${hits} de ${totalSubmitted} respondidas</strong>`;
+            }
+        }
+
+        /* ─── MODALIDADE 3: DESAFIO SPRINT (RITMO & 2m30s POR QUESTÃO) ─── */
+        function renderSprintMode() {
+            const main = document.getElementById('main');
+
+            if (!state.sprintActive) {
+                main.innerHTML = `
+                <div class="support-page">
+                    <div class="breadcrumb">
+                        <a onclick="goHome()">Início</a>
+                        <span class="breadcrumb-sep">></span>
+                        <a onclick="showSupportPage('simulado')">Preparação</a>
+                        <span class="breadcrumb-sep">></span>
+                        <span>Desafio Sprint</span>
+                    </div>
+
+                    <div class="central-cefet-header" style="margin-bottom:12px;">
+                        <div class="tracks-badge">⚡ Treino de Agilidade Mental & Pressão</div>
+                        <h1 class="page-title" style="margin:6px 0;">Desafio Sprint: Gestão de Ritmo</h1>
+                        <p style="font-size:14.5px; color:var(--text-secondary); margin:0;">
+                            No CEFET-RJ, travar por 15 minutos em uma questão de conta elimina candidatos. Treine seu foco e tomada rápida de decisão.
+                        </p>
+                    </div>
+
+                    ${getSimulatorSubNavHTML('sprint')}
+
+                    <div class="sprint-container">
+                        <div class="sprint-header-card" style="text-align:center; padding:36px 24px;">
+                            <div style="font-size:48px; margin-bottom:12px;">⏱️</div>
+                            <h2 style="font-size:22px; font-weight:800; color:var(--text-primary); margin-bottom:8px;">
+                                Regras do Desafio Sprint (5 Questões)
+                            </h2>
+                            <p style="font-size:14.5px; color:var(--text-secondary); max-width:540px; margin:0 auto 24px;">
+                                Você terá <strong>2 minutos e 30 segundos (150 segundos)</strong> para cada questão. O cronômetro regressivo avança automaticamente se o tempo esgotar!
+                            </p>
+                            <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-bottom:28px;">
+                                <span class="profile-stat-chip">🎯 <strong>5 Questões</strong> Sorteadas</span>
+                                <span class="profile-stat-chip">⏱️ <strong>2m30s</strong> por questão</span>
+                                <span class="profile-stat-chip">🚀 <strong>Feedback</strong> ao final</span>
+                            </div>
+                            <button class="btn btn-primary" style="padding:14px 36px; font-size:16px;" onclick="startSprintChallenge()">
+                                🚀 Iniciar Desafio Sprint Agora
+                            </button>
+                        </div>
+                    </div>
+                </div>`;
+                return;
+            }
+
+            // Exibir questão ativa do Sprint
+            const q = state.sprintQuestions[state.sprintCurrentQIndex];
+            if (!q) {
+                finishSprintChallenge();
+                return;
+            }
+
+            const qNum = state.sprintCurrentQIndex + 1;
+            const totalQ = state.sprintQuestions.length;
+            const currentSelected = state.sprintAnswers[q.id];
+
+            main.innerHTML = `
+            <div class="support-page">
+                <div class="sprint-container">
+                    <div class="sprint-header-card">
+                        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+                            <div>
+                                <span class="track-badge badge-sel">⚡ Desafio Sprint em Andamento</span>
+                                <div style="font-size:18px; font-weight:800; color:var(--text-primary); margin-top:4px;">
+                                    Questão ${qNum} de ${totalQ}
+                                </div>
+                            </div>
+                            <div style="text-align:right;">
+                                <span style="font-size:12px; color:var(--text-tertiary); display:block;">Tempo restante nesta questão:</span>
+                                <span id="sprintTimerText" style="font-size:24px; font-weight:800; color:var(--accent); font-family:monospace;">02:30</span>
+                            </div>
+                        </div>
+                        <div class="sprint-timer-bar">
+                            <div class="sprint-timer-fill" id="sprintTimerFill" style="width:100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="sprint-question-card">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                            <span class="meta-badge disc">${q.discipline}</span>
+                            <span style="font-size:12px; color:var(--text-quaternary); font-weight:600;">Valendo 5,0 pontos</span>
+                        </div>
+                        <h3 style="font-size:16px; line-height:1.6; margin-bottom:18px;">${qNum}. ${q.question}</h3>
+                        <div class="quiz-options">
+                            ${q.options.map((opt, j) => {
+                                const isSelected = currentSelected === j;
+                                return `
+                                <label class="quiz-option ${isSelected ? 'selected' : ''}" id="sprint_opt_${j}">
+                                    <input type="radio" name="sprint_q" value="${j}" ${isSelected ? 'checked' : ''} onchange="handleSprintSelect('${q.id}', ${j})">
+                                    <span><strong>${String.fromCharCode(65 + j)})</strong> ${opt}</span>
+                                </label>
+                                `;
+                            }).join('')}
+                        </div>
+
+                        <div style="margin-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                            <button type="button" class="btn btn-secondary" style="font-size:13px; padding:10px 18px;" onclick="cancelSprintChallenge()">
+                                ✕ Abandonar Sprint
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="submitSprintQuestion()">
+                                ${qNum === totalQ ? 'Finalizar Desafio Sprint ➔' : 'Confirmar e Próxima Questão ➔'}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        function handleSprintSelect(qid, optIndex) {
+            state.sprintAnswers[qid] = optIndex;
+            document.querySelectorAll('.quiz-option').forEach((el, idx) => {
+                el.classList.toggle('selected', idx === optIndex);
+            });
+        }
+
+        function cancelSprintChallenge() {
+            if (confirm('Deseja realmente cancelar este Desafio Sprint? O progresso da rodada atual será descartado.')) {
+                clearAllSimTimers();
+                state.sprintActive = false;
+                renderSprintMode();
+            }
+        }
+
+        function startSprintChallenge() {
+            clearAllSimTimers();
+            const bank = window.questionBank || [];
+            if (!bank || bank.length === 0) {
+                showCustomToast('⚠️ Nenhuma questão disponível no momento.');
+                return;
+            }
+            state.sprintQuestions = shuffleArray(bank).slice(0, 5);
+            state.sprintCurrentQIndex = 0;
+            state.sprintAnswers = {};
+            state.sprintActive = true;
+            state.sprintTimeLeft = 150; // 2 minutos e 30 segundos
+            sprintSubmitting = false;
+            renderSprintMode();
+            runSprintTimer();
+        }
+
+        function updateSprintTimerDisplay() {
+            const cur = Math.max(0, state.sprintTimeLeft);
+            const m = Math.floor(cur / 60);
+            const s = cur % 60;
+            const txt = document.getElementById('sprintTimerText');
+            const fill = document.getElementById('sprintTimerFill');
+
+            if (txt) {
+                txt.textContent = [m, s].map(v => String(v).padStart(2, '0')).join(':');
+            }
+            if (fill) {
+                const pct = Math.max(0, (cur / 150) * 100);
+                fill.style.width = pct + '%';
+                fill.classList.toggle('warning', cur <= 45 && cur > 15);
+                fill.classList.toggle('danger', cur <= 15);
+            }
+        }
+
+        function runSprintTimer() {
+            clearInterval(state.sprintTimer);
+            updateSprintTimerDisplay();
+            state.sprintTimer = setInterval(() => {
+                state.sprintTimeLeft -= 1;
+                updateSprintTimerDisplay();
+
+                if (state.sprintTimeLeft <= 0) {
+                    submitSprintQuestion();
+                }
+            }, 1000);
+        }
+
+        let sprintSubmitting = false;
+        function submitSprintQuestion() {
+            if (sprintSubmitting) return;
+            sprintSubmitting = true;
+
+            clearInterval(state.sprintTimer);
+            state.sprintTimer = null;
+
+            if (state.sprintCurrentQIndex + 1 < state.sprintQuestions.length) {
+                state.sprintCurrentQIndex++;
+                state.sprintTimeLeft = 150;
+                renderSprintMode();
+                runSprintTimer();
+                setTimeout(() => { sprintSubmitting = false; }, 250);
+            } else {
+                finishSprintChallenge();
+                sprintSubmitting = false;
+            }
+        }
+
+        function finishSprintChallenge() {
+            clearAllSimTimers();
+            state.sprintActive = false;
+
+            const questions = state.sprintQuestions;
+            let hits = 0;
+            questions.forEach(q => {
+                const isAnswered = state.sprintAnswers[q.id] !== undefined;
+                const hit = isAnswered && state.sprintAnswers[q.id] === q.correct;
+                if (hit) hits++;
+                else if (isAnswered) {
+                    if (!state.mistakes[q.id]) {
+                        state.mistakes[q.id] = { errorCount: 0, lastAttemptDate: Date.now(), resolved: false };
+                    }
+                    state.mistakes[q.id].errorCount++;
+                    state.mistakes[q.id].lastAttemptDate = Date.now();
+                    state.mistakes[q.id].resolved = false;
+                }
+            });
+            saveMistakesState();
+
+            // Gravar no histórico
+            const pts = hits * 5;
+            const maxPts = questions.length * 5;
+            const pct = questions.length > 0 ? Math.round((hits / questions.length) * 100) : 0;
+
+            state.simHistory.unshift({
+                id: 'sprint_' + Date.now(),
+                date: Date.now(),
+                mode: 'Desafio Sprint (5Q • 2m30s)',
+                totalQuestions: questions.length,
+                correctCount: hits,
+                points: pts,
+                maxPoints: maxPts,
+                pct: pct,
+                byDiscipline: {}
+            });
+            if (state.simHistory.length > 25) state.simHistory.pop();
+            saveSimHistoryState();
+
+            const main = document.getElementById('main');
+            main.innerHTML = `
+            <div class="support-page">
+                <div class="breadcrumb">
+                    <a onclick="goHome()">Início</a>
+                    <span class="breadcrumb-sep">></span>
+                    <a onclick="showSupportPage('simulado')">Preparação</a>
+                    <span class="breadcrumb-sep">></span>
+                    <span>Resultado do Sprint</span>
+                </div>
+
+                ${getSimulatorSubNavHTML('sprint')}
+
+                <div class="sprint-container">
+                    <div class="sim-score-card">
+                        <span class="track-badge badge-sel">⚡ Desafio Sprint Finalizado</span>
+                        <div class="sim-score-total">${pts} <span style="font-size:18px; color:var(--text-tertiary);">/ ${maxPts} pontos</span></div>
+                        <div style="font-size:14.5px; color:var(--text-secondary); margin-bottom:14px;">
+                            Você acertou <strong>${hits} de ${questions.length} questões</strong> (${pct}%) sob o cronômetro de 2m30s.
+                        </div>
+                        <div class="box-analogy" style="margin:16px 0;">
+                            <div class="box-header">⚡ Diagnóstico de Agilidade do Candidato</div>
+                            <p>${pct >= 80 ? 'Excelente! Você demonstra alto nível de segurança e agilidade sob pressão, essencial para garantir tempo para a Redação.' : (pct >= 50 ? 'Bom ritmo! Continue treinando para aumentar a precisão na leitura rápida dos enunciados.' : 'Treino importante: quando não souber a conta em 1 minuto, aprenda a pular e voltar nela no final.')}</p>
+                        </div>
+                        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:20px;">
+                            <button class="btn btn-primary" onclick="startSprintChallenge()">🔄 Tentar Outro Desafio Sprint</button>
+                            <button class="btn btn-secondary" onclick="switchSimulatorSubMode('mistakes')">📓 Abrir Caderno de Erros</button>
+                        </div>
+                    </div>
+
+                    <h3 style="margin:24px 0 14px;">Gabarito Comentado das Questões do Sprint:</h3>
+                    ${questions.map((q, i) => {
+                        const isAnswered = state.sprintAnswers[q.id] !== undefined;
+                        const isHit = isAnswered && state.sprintAnswers[q.id] === q.correct;
+                        const userAns = isAnswered ? `Alternativa ${String.fromCharCode(65 + state.sprintAnswers[q.id])}` : 'Não respondida (em branco)';
+                        const corrAns = String.fromCharCode(65 + q.correct);
+                        const statusLabel = isHit ? '✓ Acerto' : (isAnswered ? '✗ Erro' : '⚪ Em branco');
+                        const statusColor = isHit ? 'var(--positive)' : (isAnswered ? 'var(--danger)' : 'var(--text-tertiary)');
+                        return `
+                        <section class="q-block sim-question" style="margin-bottom:16px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                                <span class="meta-badge disc">${q.discipline}</span>
+                                <span style="font-size:12px; font-weight:700; color:${statusColor};">
+                                    ${statusLabel} (Sua resposta: ${userAns})
+                                </span>
+                            </div>
+                            <h4 style="font-size:14.5px; margin-bottom:10px;">${i + 1}. ${q.question}</h4>
+                            <div class="sim-q-feedback ${isHit ? 'correct' : (isAnswered ? 'wrong' : '')}" style="${!isAnswered ? 'background:rgba(255,255,255,0.04); border-left:4px solid var(--text-tertiary); padding:12px 16px; border-radius:8px;' : ''}">
+                                <strong>Gabarito Oficial: Alternativa ${corrAns}</strong><br>
+                                ${q.explanation}
+                            </div>
+                        </section>`;
+                    }).join('')}
+                </div>
+            </div>`;
+        }
+
+        /* ─── MODALIDADE 4: CADERNO DE ERROS ATIVO (RETESTE DE LACUNAS) ─── */
+        function renderMistakesNotebook(filterDisc = 'all', filterStatus = 'all') {
+            clearAllSimTimers();
+            state.mistakesFilterDisc = filterDisc;
+            state.mistakesFilterStatus = filterStatus;
+            const main = document.getElementById('main');
+            const bank = window.questionBank || [];
+            const mistakes = state.mistakes || {};
+
+            const mistakeIds = Object.keys(mistakes);
+            let mistakeList = mistakeIds.map(id => {
+                const q = bank.find(item => item.id === id);
+                return { ...mistakes[id], question: q, id };
+            }).filter(item => item.question);
+
+            const totalErrors = mistakeList.length;
+            const resolvedCount = mistakeList.filter(m => m.resolved).length;
+            const pendingCount = totalErrors - resolvedCount;
+
+            // Filtros
+            if (filterDisc !== 'all') {
+                mistakeList = mistakeList.filter(m => m.question.discipline === filterDisc);
+            }
+            if (filterStatus === 'pending') {
+                mistakeList = mistakeList.filter(m => !m.resolved);
+            } else if (filterStatus === 'resolved') {
+                mistakeList = mistakeList.filter(m => m.resolved);
+            }
+
+            main.innerHTML = `
+            <div class="support-page">
+                <div class="breadcrumb">
+                    <a onclick="goHome()">Início</a>
+                    <span class="breadcrumb-sep">></span>
+                    <a onclick="showSupportPage('simulado')">Preparação</a>
+                    <span class="breadcrumb-sep">></span>
+                    <span>Caderno de Erros</span>
+                </div>
+
+                <div class="central-cefet-header" style="margin-bottom:12px;">
+                    <div class="tracks-badge">📓 Recuperação Ativa de Pontos</div>
+                    <h1 class="page-title" style="margin:6px 0;">Caderno de Erros Inteligente</h1>
+                    <p style="font-size:14.5px; color:var(--text-secondary); margin:0;">
+                        Toda questão que você erra nos simulados ou sprints vem para cá. Refaça com calma até dominar o conceito e transformar erros em pontos na prova.
+                    </p>
+                </div>
+
+                ${getSimulatorSubNavHTML('mistakes')}
+
+                <!-- PLACAR DE RECUPERAÇÃO -->
+                <div class="sim-mode-bar">
+                    <div>
+                        <span style="font-size:14px; color:var(--text-secondary);">Diagnóstico Geral:</span>
+                        <div style="font-size:20px; font-weight:800; color:var(--text-primary); margin-top:2px;">
+                            ${pendingCount} pendente${pendingCount === 1 ? '' : 's'} • <span style="color:var(--positive);">${resolvedCount} superada${resolvedCount === 1 ? '' : 's'}</span>
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                        <button class="bateria-filter-btn ${filterStatus === 'all' ? 'active' : ''}" onclick="renderMistakesNotebook('${filterDisc}', 'all')">Todas (${totalErrors})</button>
+                        <button class="bateria-filter-btn ${filterStatus === 'pending' ? 'active' : ''}" onclick="renderMistakesNotebook('${filterDisc}', 'pending')">⚠️ Pendentes (${pendingCount})</button>
+                        <button class="bateria-filter-btn ${filterStatus === 'resolved' ? 'active' : ''}" onclick="renderMistakesNotebook('${filterDisc}', 'resolved')">✓ Superadas (${resolvedCount})</button>
+                        ${resolvedCount > 0 ? `<button class="bateria-filter-btn" onclick="clearMistakesNotebook()" style="color:var(--text-tertiary);" title="Limpar do caderno as questões já superadas">🗑️ Limpar Superadas</button>` : ''}
+                    </div>
+                </div>
+
+                <!-- LISTA DE ERROS -->
+                <div id="mistakesCardsContainer">
+                    ${mistakeList.length === 0 ? `
+                        <div class="hoje-mission-card" style="text-align:center; padding:40px 24px;">
+                            <div style="font-size:48px; margin-bottom:12px;">🎉</div>
+                            <h3 style="font-size:20px; font-weight:800; color:var(--positive); margin-bottom:8px;">
+                                ${totalErrors === 0 ? 'Nenhum erro registrado ainda!' : 'Nenhuma questão nesta categoria!'}
+                            </h3>
+                            <p style="font-size:14px; color:var(--text-secondary); max-width:480px; margin:0 auto 20px;">
+                                ${totalErrors === 0 ? 'Conforme você fizer os simulados e sprints, as questões que você errar aparecerão aqui automaticamente para você retestar.' : 'Você superou todas as falhas desta categoria ou não há itens pendentes.'}
+                            </p>
+                            <button class="btn btn-primary" onclick="switchSimulatorSubMode('oficial')">🎯 Praticar no Simulado</button>
+                        </div>
+                    ` : mistakeList.map(m => {
+                        const q = m.question;
+                        const isResolved = m.resolved;
+                        return `
+                        <div class="mistake-card ${isResolved ? 'resolved' : ''}" id="mistake_box_${m.id}">
+                            <div class="mistake-badge-row">
+                                <div style="display:flex; align-items:center; gap:8px;">
+                                    <span class="meta-badge disc">${q.discipline}</span>
+                                    <span class="mistake-tag ${isResolved ? 'resolved' : 'pending'}">
+                                        ${isResolved ? '✓ Superada no Reteste' : `⚠️ Pendente (${m.errorCount} falha${m.errorCount === 1 ? '' : 's'})`}
+                                    </span>
+                                </div>
+                                <div style="display:flex; align-items:center; gap:8px;">
+                                    <span style="font-size:12px; color:var(--text-tertiary);">Última tentativa: ${new Date(m.lastAttemptDate).toLocaleDateString('pt-BR')}</span>
+                                    <button onclick="removeMistakeFromNotebook('${m.id}')" title="Remover questão do Caderno de Erros" style="background:none; border:none; color:var(--text-quaternary); font-size:12px; cursor:pointer; padding:2px 6px; border-radius:4px;" onmouseover="this.style.color='var(--danger)'" onmouseout="this.style.color='var(--text-quaternary)'">🗑️</button>
+                                </div>
+                            </div>
+
+                            <h3 style="font-size:15px; line-height:1.5; margin-bottom:12px;">${q.question}</h3>
+
+                            <div class="quiz-options" id="mistake_opts_${m.id}">
+                                ${q.options.map((opt, j) => `
+                                    <label class="quiz-option" id="mistake_lbl_${m.id}_${j}">
+                                        <input type="radio" name="mistake_${m.id}" value="${j}">
+                                        <span><strong>${String.fromCharCode(65 + j)})</strong> ${opt}</span>
+                                    </label>
+                                `).join('')}
+                            </div>
+
+                            <div id="mistake_fb_${m.id}"></div>
+
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:16px; flex-wrap:wrap; gap:10px;">
+                                <button class="btn btn-secondary" onclick="testMistakeAnswer('${m.id}')">
+                                    🔍 Testar Minha Resposta Agora
+                                </button>
+                                ${!isResolved ? `
+                                    <button class="btn btn-primary" onclick="markMistakeResolved('${m.id}')">
+                                        ✓ Marcar como Superada (+15 XP)
+                                    </button>
+                                ` : `
+                                    <span style="font-size:13px; font-weight:700; color:var(--positive);">✓ Conceito consolidado!</span>
+                                `}
+                            </div>
+                        </div>`;
+                    }).join('')}
+                </div>
+            </div>`;
+        }
+
+        function testMistakeAnswer(qId) {
+            const bank = window.questionBank || [];
+            const q = bank.find(item => item.id === qId);
+            if (!q) return;
+
+            const selected = document.querySelector(`input[name="mistake_${qId}"]:checked`);
+            if (!selected) {
+                alert('Selecione uma alternativa antes de testar sua resposta!');
+                return;
+            }
+
+            const chosen = Number(selected.value);
+            const hit = chosen === q.correct;
+            const fb = document.getElementById(`mistake_fb_${qId}`);
+            const corrLetter = String.fromCharCode(65 + q.correct);
+
+            if (fb) {
+                if (hit) {
+                    if (state.mistakes && state.mistakes[qId]) {
+                        state.mistakes[qId].resolved = true;
+                        saveMistakesState();
+                    }
+                    fb.innerHTML = `
+                    <div class="sim-q-feedback correct">
+                        <strong>🎉 Parabéns! Desta vez você acertou em cheio! (Alternativa ${corrLetter})</strong><br>
+                        ${q.explanation}
+                        <div style="margin-top:8px; font-size:13px; font-weight:700; color:var(--positive);">✓ Lacuna superada com sucesso!</div>
+                    </div>`;
+                } else {
+                    fb.innerHTML = `
+                    <div class="sim-q-feedback wrong">
+                        <strong>✗ Ainda não é esta. A correta é a Alternativa ${corrLetter}.</strong><br>
+                        ${q.explanation}
+                    </div>`;
+                }
+            }
+        }
+
+        function markMistakeResolved(qId) {
+            if (state.mistakes && state.mistakes[qId]) {
+                state.mistakes[qId].resolved = true;
+                saveMistakesState();
+                showCustomToast('🎉 Questão marcada como superada!');
+                renderMistakesNotebook(state.mistakesFilterDisc || 'all', state.mistakesFilterStatus || 'all');
+            }
+        }
+
+        function removeMistakeFromNotebook(qId) {
+            if (state.mistakes && state.mistakes[qId]) {
+                delete state.mistakes[qId];
+                saveMistakesState();
+                showCustomToast('Questão removida do Caderno de Erros.');
+                renderMistakesNotebook(state.mistakesFilterDisc || 'all', state.mistakesFilterStatus || 'all');
+            }
+        }
+
+        function clearMistakesNotebook() {
+            if (!confirm('Deseja limpar do caderno as questões que você já superou no reteste? (Questões pendentes continuarão salvas).')) return;
+            if (state.mistakes) {
+                Object.keys(state.mistakes).forEach(id => {
+                    if (state.mistakes[id].resolved) delete state.mistakes[id];
+                });
+                saveMistakesState();
+                showCustomToast('Questões superadas foram arquivadas!');
+                renderMistakesNotebook(state.mistakesFilterDisc || 'all', state.mistakesFilterStatus || 'all');
+            }
+        }
+
+        /* ─── MODALIDADE 5: HISTÓRICO DE SIMULADOS ─── */
+        function renderSimHistory() {
+            clearAllSimTimers();
+            const main = document.getElementById('main');
+            const history = state.simHistory || [];
+
+            main.innerHTML = `
+            <div class="support-page">
+                <div class="breadcrumb">
+                    <a onclick="goHome()">Início</a>
+                    <span class="breadcrumb-sep">></span>
+                    <a onclick="showSupportPage('simulado')">Preparação</a>
+                    <span class="breadcrumb-sep">></span>
+                    <span>Histórico de Provas</span>
+                </div>
+
+                <div class="central-cefet-header" style="margin-bottom:12px;">
+                    <div class="tracks-badge">📊 Monitoramento de Evolução</div>
+                    <h1 class="page-title" style="margin:6px 0;">Histórico de Provas & Simulados</h1>
+                    <p style="font-size:14.5px; color:var(--text-secondary); margin:0;">
+                        Acompanhe o seu progresso de pontuação e aproveitamento ao longo das semanas de estudo.
+                    </p>
+                </div>
+
+                ${getSimulatorSubNavHTML('historico')}
+
+                ${history.length === 0 ? `
+                    <div class="hoje-mission-card" style="text-align:center; padding:40px 24px;">
+                        <div style="font-size:48px; margin-bottom:12px;">📈</div>
+                        <h3 style="font-size:20px; font-weight:800; color:var(--text-primary); margin-bottom:8px;">
+                            Nenhum simulado realizado ainda
+                        </h3>
+                        <p style="font-size:14px; color:var(--text-secondary); max-width:480px; margin:0 auto 20px;">
+                            Quando você concluir um Simulado Oficial, Simulado Rápido ou Desafio Sprint, o relatório de pontuação ficará registrado aqui.
+                        </p>
+                        <button class="btn btn-primary" onclick="switchSimulatorSubMode('oficial')">🎯 Fazer Primeiro Simulado</button>
+                    </div>
+                ` : `
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                        <span style="font-size:14px; color:var(--text-secondary);">Total de <strong>${history.length} simulados</strong> gravados:</span>
+                        <button class="btn btn-secondary" style="font-size:12.5px; padding:6px 14px;" onclick="clearSimHistory()">🗑️ Limpar Histórico</button>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:14px;">
+                        ${history.map(item => `
+                            <div class="sim-score-card" style="margin-bottom:0;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+                                    <div>
+                                        <span class="track-badge badge-sel">${item.mode || 'Simulado'}</span>
+                                        <span style="font-size:12px; color:var(--text-tertiary); margin-left:8px;">
+                                            ${new Date(item.date).toLocaleDateString('pt-BR')} às ${new Date(item.date).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
+                                        </span>
+                                        <div style="font-size:22px; font-weight:800; color:var(--accent); margin-top:4px;">
+                                            ${item.points} <span style="font-size:14px; color:var(--text-tertiary);">/ ${item.maxPoints} pts</span>
+                                        </div>
+                                    </div>
+                                    <div style="text-align:right;">
+                                        <div style="font-size:20px; font-weight:800; color:var(--text-primary);">${item.pct}%</div>
+                                        <div style="font-size:12px; color:var(--text-secondary);">${item.correctCount} de ${item.totalQuestions} acertos</div>
+                                    </div>
+                                </div>
+                                <div class="disc-progress-bar" style="margin-top:10px;"><div class="fill" style="width:${item.pct}%"></div></div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `}
+            </div>`;
+        }
+
+        function clearSimHistory() {
+            if (confirm('Deseja realmente limpar todo o histórico de simulados salvos neste perfil?')) {
+                state.simHistory = [];
+                saveSimHistoryState();
+                renderSimHistory();
+                showCustomToast('Histórico limpo com sucesso.');
+            }
         }
 
         /* ══════════════════════════════════════════════════════════════
@@ -8022,7 +9404,7 @@
                 <h1 style="font-size:24px; font-weight:800; color:var(--text-primary); margin:6px 0;">Preparação para a Prova CEFET-RJ 2027</h1>
                 <p style="font-size:14.5px; color:var(--text-secondary); margin:0 0 16px 0;">Ferramentas de treino prático, simulados com cronômetro, redação e orientações para o dia da prova:</p>
                 <div class="central-subtabs-nav">
-                    <button class="central-tab-pill ${activeTab === 'simulado' ? 'active' : ''}" onclick="showSupportPage('simulado')">⏱️ Simulado (30Q)</button>
+                    <button class="central-tab-pill ${activeTab === 'simulado' ? 'active' : ''}" onclick="showSupportPage('simulado')">⏱️ Treino & Simulado</button>
                     <button class="central-tab-pill ${activeTab === 'flashcards' ? 'active' : ''}" onclick="showSupportPage('flashcards')">🃏 Flashcards 3D</button>
                     <button class="central-tab-pill ${activeTab === 'redacao' ? 'active' : ''}" onclick="showSupportPage('redacao')">✍️ Redação Oficial</button>
                     <button class="central-tab-pill ${activeTab === 'calendario' ? 'active' : ''}" onclick="showSupportPage('calendario')">🗓️ Calendário & Checklist</button>
@@ -8084,10 +9466,18 @@
 
             h += `<div class="discipline-grid">`;
             const discMeta = {
-                'matematica': { color: '#2563eb', points: '50 pts (10 questões)', badge: 'Chave da Aprovação' },
-                'portugues': { color: '#8b5cf6', points: '50 pts (10 questões)', badge: 'Interpretação & Gramática' },
-                'ciencias': { color: '#10b981', points: '25 pts (5 questões)', badge: 'Física, Química & Bio' },
-                'humanas': { color: '#f59e0b', points: '25 pts (5 questões)', badge: 'História & Geografia' }
+                'mat': { color: '#2563eb', points: '10 questões na prova', badge: 'Chave da Aprovação' },
+                'port': { color: '#8b5cf6', points: '10 questões na prova', badge: 'Interpretação & Gramática' },
+                'fis': { color: '#06b6d4', points: 'Ciências da Natureza', badge: 'Mecânica, Ondas & Calor' },
+                'qui': { color: '#10b981', points: 'Ciências da Natureza', badge: 'Matéria, Átomos & Soluções' },
+                'bio': { color: '#14b8a6', points: 'Ciências da Natureza', badge: 'Ecologia, Célula & Genética' },
+                'hist': { color: '#f59e0b', points: 'Ciências Humanas', badge: 'Brasil & Cidadania' },
+                'geo': { color: '#f97316', points: 'Ciências Humanas', badge: 'Espaço, Clima & Sociedade' },
+                'trans': { color: '#ec4899', points: 'Fundamentos de Estudo', badge: 'Gráficos, Lógica & Método' },
+                'matematica': { color: '#2563eb', points: '10 questões na prova', badge: 'Chave da Aprovação' },
+                'portugues': { color: '#8b5cf6', points: '10 questões na prova', badge: 'Interpretação & Gramática' },
+                'ciencias': { color: '#10b981', points: '5 questões na prova', badge: 'Física, Química & Bio' },
+                'humanas': { color: '#f59e0b', points: '5 questões na prova', badge: 'História & Geografia' }
             };
 
             window.curriculum.forEach(disc => {
@@ -8246,6 +9636,21 @@
                             <span class="btn-sub-label">Teste seus conhecimentos com 30 questões do edital</span>
                         </button>
                     </div>
+                </div>`;
+            }
+
+            // 2.5 ALERTA DE CADERNO DE ERROS (SE HOUVER LACUNAS PENDENTES)
+            const unresCount = getUnresolvedMistakesCount();
+            if (unresCount > 0) {
+                h += `
+                <div class="hoje-mistakes-alert" onclick="switchHub('preparar'); switchSimulatorSubMode('mistakes');">
+                    <div class="hoje-mistakes-icon">📓</div>
+                    <div class="hoje-mistakes-content">
+                        <div class="hoje-mistakes-tag">Caderno de Erros Ativo</div>
+                        <strong class="hoje-mistakes-title">${unresCount} ${unresCount === 1 ? 'questão pendente para recuperar' : 'questões pendentes para recuperar'}</strong>
+                        <p class="hoje-mistakes-desc">Revise as questões em que você teve dúvida nos simulados para eliminar pontos cegos do edital.</p>
+                    </div>
+                    <div class="hoje-mistakes-action">Recuperar ➔</div>
                 </div>`;
             }
 
@@ -8931,11 +10336,21 @@
 
         /* ─── Atalhos Globais de Teclado (Brilliant Step Navigation & Modais) ─── */
         document.addEventListener('keydown', (e) => {
-            // Se o modal de alerta da prova estiver aberto, tecla Escape fecha o modal
+            // Tecla Escape fecha qualquer modal ou sobreposição aberta
             if (e.key === 'Escape') {
-                const overlay = document.getElementById('examAlertOverlay');
-                if (overlay && overlay.style.display !== 'none') {
+                const examOverlay = document.getElementById('examAlertOverlay');
+                if (examOverlay && examOverlay.style.display !== 'none') {
                     closeExamAlertModal();
+                    return;
+                }
+                const profileOverlay = document.getElementById('profileModalOverlay');
+                if (profileOverlay && profileOverlay.style.display !== 'none') {
+                    closeProfileModal();
+                    return;
+                }
+                const shareOverlay = document.getElementById('shareModalOverlay');
+                if (shareOverlay && shareOverlay.style.display !== 'none') {
+                    closeShareModal();
                     return;
                 }
             }
@@ -8944,15 +10359,15 @@
 
             if (state.currentDiscipline && state.playerMode === 'steps') {
                 const activeTag = (document.activeElement?.tagName || '').toLowerCase();
-                if (activeTag === 'input' || activeTag === 'textarea') return;
+                if (activeTag === 'input' || activeTag === 'textarea' || (activeTag === 'button' && (e.key === 'Enter' || e.code === 'Space' || e.key === ' '))) return;
 
-                if (e.key === 'Enter' || e.code === 'Space' || e.key === 'ArrowRight') {
+                if (e.key === 'Enter' || e.code === 'Space' || e.key === ' ' || e.key === 'ArrowRight') {
                     e.preventDefault();
                     if (state.currentStep < 4) {
                         goToStep(state.currentStep + 1);
                     } else {
                         const disc = window.curriculum.find(d => d.id === state.currentDiscipline);
-                        finishStepAndNextModule(disc.id, state.currentModule);
+                        if (disc) finishStepAndNextModule(disc.id, state.currentModule);
                     }
                 } else if (e.key === 'ArrowLeft') {
                     e.preventDefault();
@@ -8982,9 +10397,15 @@
             const correctVals = JSON.parse(input.dataset.a);
             const exp = input.dataset.exp;
             const norm = normalize(val);
+            const isShortOrNum = (s) => s.length <= 4 || /^[\d\s.,\/%+-]+$/.test(s);
+
             const ok = correctVals.some(cv => {
                 const ncv = normalize(cv);
-                return ncv === norm || norm.includes(ncv) || ncv.includes(norm);
+                if (ncv === norm) return true;
+                // Para respostas curtas ou numéricas (ex: '20', '-2', '0.5', '1/4'), exige correspondência exata
+                if (isShortOrNum(ncv) || isShortOrNum(norm)) return false;
+                // Para respostas conceituais longas, aceita se o estudante incluiu a expressão completa
+                return norm.includes(ncv);
             });
 
             fb.classList.add('show');

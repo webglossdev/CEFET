@@ -478,8 +478,43 @@ window.questionBank = [
         correct: 0,
         explanation: "'renomado autor brasileiro' explica e especifica quem é o substantivo anterior (Machado de Assis), caracterizando um aposto explicativo entre vírgulas."
     },
+    {
+        id: "sim-p11", year: "CEFET Modelo", discipline: "Língua Portuguesa",
+        question: "Assinale a opção em que a concordância nominal está plenamente de acordo com o padrão culto da língua:",
+        options: ["Seguem anexos ao formulário os comprovantes de renda exigidos.", "A candidata estava meia nervosa no momento de iniciar a prova.", "É proibido a entrada de pessoas não autorizadas na sala de aplicação.", "Elas mesmas disseram que haviam bastantes motivos para comemorar."],
+        correct: 0,
+        explanation: "'Anexo' é adjetivo e concorda em gênero e número com o substantivo a que se refere ('os comprovantes... anexos'). 'Meia' como advérbio é invariável ('meio nervosa'); com artigo 'a entrada' deve ser 'proibida a entrada'."
+    },
+    {
+        id: "sim-p12", year: "CEFET Modelo", discipline: "Língua Portuguesa",
+        question: "Na oração: 'Embora o cronograma fosse apertado, todos os candidatos conseguiram revisar a matéria', a conjunção subordinativa destacada expressa ideia de:",
+        options: ["Concessão", "Causa", "Consequência", "Condição"],
+        correct: 0,
+        explanation: "'Embora' introduz uma oração subordinada adverbial concessiva, indicando uma ideia de quebra de expectativa ou obstáculo que não impediu a realização da ação principal."
+    },
+    {
+        id: "sim-p13", year: "CEFET Modelo", discipline: "Língua Portuguesa",
+        question: "Identifique a figura de linguagem presente nos versos: 'Amor é fogo que arde sem se ver; é ferida que dói e não se sente':",
+        options: ["Paradoxo (ou Oximoro)", "Metonímia", "Hipérbole", "Pleonasmo"],
+        correct: 0,
+        explanation: "O paradoxo reúne ideias aparentemente contraditórias e inconciliáveis que, no contexto poético, adquirem um sentido profundo ('ferida que dói e não se sente')."
+    },
+    {
+        id: "sim-p14", year: "CEFET Modelo", discipline: "Língua Portuguesa",
+        question: "De acordo com a norma-padrão de regência verbal, assinale a oração redigida de forma CORRETA:",
+        options: ["O estudante aspira a uma vaga no curso técnico do CEFET.", "Todos os alunos assistiram o filme didático com atenção.", "O coordenador obedeceu o regulamento interno da escola.", "Prefiro mais estudar redação do que matemática."],
+        correct: 0,
+        explanation: "O verbo 'aspirar' no sentido de desejar/almejar é transitivo indireto e exige a preposição 'a' ('aspira a uma vaga'). 'Assistir' (ver) exige 'a'; 'obedecer' exige 'a'; e 'preferir' não aceita 'mais... do que'."
+    },
+    {
+        id: "sim-p15", year: "CEFET Modelo", discipline: "Língua Portuguesa",
+        question: "Em 'O candidato precisava de calma, POIS a prova exigia grande concentração', a conjunção 'pois' possui valor semântico:",
+        options: ["Explicativo", "Conclusivo", "Adversativo", "Temporal"],
+        correct: 0,
+        explanation: "O 'pois' antes do verbo introduz a justificativa ou explicação para a necessidade de calma do candidato, configurando valor explicativo."
+    },
 
-    /* ─── MATEMÁTICA (10 QUESTÕES) ─── */
+    /* ─── MATEMÁTICA (15 QUESTÕES) ─── */
     {
         id: "sim-m01", year: "CEFET Modelo", discipline: "Matemática",
         question: "Um curso técnico do CEFET-RJ tem 32 vagas. Se 50% das vagas são reservadas para estudantes de escola pública e, destas, 5 vagas são destinadas à cota LB_PPI, que porcentagem aproximada do TOTAL da turma representa a cota LB_PPI?",
@@ -550,8 +585,43 @@ window.questionBank = [
         correct: 0,
         explanation: "sen 30° = cateto oposto (altura h) / hipotenusa (linha) → 0,5 = h / 50 → h = 50 · 0,5 = 25 metros."
     },
+    {
+        id: "sim-m11", year: "CEFET Modelo", discipline: "Matemática",
+        question: "Em uma Progressão Aritmética (PA) de razão 4, o primeiro termo é 3. O décimo quinto termo (a₁₅) dessa sequência é:",
+        options: ["59", "60", "63", "55"],
+        correct: 0,
+        explanation: "Fórmula do termo geral da PA: aₙ = a₁ + (n − 1) · r → a₁₅ = 3 + (15 − 1) · 4 = 3 + 14 · 4 = 3 + 56 = 59."
+    },
+    {
+        id: "sim-m12", year: "CEFET Modelo", discipline: "Matemática",
+        question: "Uma urna contém 12 bolas numeradas de 1 a 12. Retirando-se ao acaso uma bola dessa urna, qual é a probabilidade de o número sorteado ser um múltiplo de 3?",
+        options: ["1/3 (ou 33,3%)", "1/4 (ou 25%)", "1/2 (ou 50%)", "5/12 (ou 41,7%)"],
+        correct: 0,
+        explanation: "Múltiplos de 3 entre 1 e 12: {3, 6, 9, 12} → 4 números favoráveis. Espaço amostral = 12 bolas. Probabilidade P = 4 / 12 = 1/3 ≈ 33,3%."
+    },
+    {
+        id: "sim-m13", year: "CEFET Modelo", discipline: "Matemática",
+        question: "Um terreno em formato de trapézio tem base maior de 18 metros, base menor de 10 metros e altura de 8 metros. A área total desse terreno é de:",
+        options: ["112 m²", "224 m²", "96 m²", "144 m²"],
+        correct: 0,
+        explanation: "Área do trapézio: A = [(B + b) · h] / 2 = [(18 + 10) · 8] / 2 = [28 · 8] / 2 = 224 / 2 = 112 m²."
+    },
+    {
+        id: "sim-m14", year: "CEFET Modelo", discipline: "Matemática",
+        question: "A soma de dois números reais é igual a 35 e a diferença entre eles é igual a 11. O produto entre esses dois números é:",
+        options: ["276", "240", "300", "196"],
+        correct: 0,
+        explanation: "Sistema: x + y = 35 e x − y = 11. Somando as duas equações: 2x = 46 → x = 23. Substituindo: y = 35 − 23 = 12. Produto: x · y = 23 · 12 = 276."
+    },
+    {
+        id: "sim-m15", year: "CEFET Modelo", discipline: "Matemática",
+        question: "Quatro operários de mesma capacidade de trabalho constroem um muro em 15 dias. Se o número de operários for aumentado para 6, em quantos dias o mesmo muro será construído?",
+        options: ["10 dias", "8 dias", "12 dias", "9 dias"],
+        correct: 0,
+        explanation: "Grandezas inversamente proporcionais: mais operários levam menos tempo. 4 · 15 = 6 · x → 60 = 6x → x = 10 dias."
+    },
 
-    /* ─── CIÊNCIAS DA NATUREZA (5 QUESTÕES) ─── */
+    /* ─── CIÊNCIAS DA NATUREZA (10 QUESTÕES) ─── */
     {
         id: "sim-n01", year: "CEFET Modelo", discipline: "Ciências da Natureza",
         question: "(Física) Um veículo de 1.000 kg parte do repouso e atinge uma velocidade de 20 m/s em 10 segundos. De acordo com a Segunda Lei de Newton (F = m · a), a intensidade da força resultante média aplicada sobre o veículo é de:",
@@ -587,8 +657,43 @@ window.questionBank = [
         correct: 0,
         explanation: "As mitocôndrias realizam a respiração celular aeróbica, oxidando moléculas orgânicas para produzir energia química na forma de ATP."
     },
+    {
+        id: "sim-n06", year: "CEFET Modelo", discipline: "Ciências da Natureza",
+        question: "(Física) Um objeto de massa 2 kg é solto do repouso do alto de um edifício de 20 metros de altura. Desprezando a resistência do ar e adotando g = 10 m/s², a energia mecânica do corpo e sua velocidade ao atingir o solo são:",
+        options: ["400 J e 20 m/s", "200 J e 10 m/s", "400 J e 14 m/s", "800 J e 20 m/s"],
+        correct: 0,
+        explanation: "Energia Potencial Gravitacional inicial: Ep = m · g · h = 2 · 10 · 20 = 400 J. Pela conservação da energia mecânica: Ec = 400 J no solo → (m · v²) / 2 = 400 → (2 · v²) / 2 = 400 → v² = 400 → v = 20 m/s."
+    },
+    {
+        id: "sim-n07", year: "CEFET Modelo", discipline: "Ciências da Natureza",
+        question: "(Física) Ao colocar uma colher de metal dentro de uma xícara de sopa quente, percebe-se que a ponta da colher esquenta rapidamente. Esse processo de transmissão de calor ocorre predominantemente por:",
+        options: ["Condução", "Convecção", "Irradiação", "Sublimação"],
+        correct: 0,
+        explanation: "A condução térmica é a transmissão de calor através de sólidos pelo contato direto partícula a partícula sem transporte de matéria, característica típica dos metais."
+    },
+    {
+        id: "sim-n08", year: "CEFET Modelo", discipline: "Ciências da Natureza",
+        question: "(Química) Uma substância pura no estado sólido que, ao ser aquecida, passa diretamente para o estado gasoso sem passar pelo estado líquido, sofreu o processo de:",
+        options: ["Sublimação", "Condensação", "Fusão", "Vaporização"],
+        correct: 0,
+        explanation: "A sublimação é a passagem direta do estado sólido para o estado gasoso (e vice-versa), como ocorre com o gelo seco e a naftalina."
+    },
+    {
+        id: "sim-n09", year: "CEFET Modelo", discipline: "Ciências da Natureza",
+        question: "(Biologia) Em uma teia alimentar florestal, os seres que realizam a reciclagem da matéria orgânica morta em sais minerais e nutrientes aproveitáveis pelos produtores são denominados:",
+        options: ["Decompositores (fungos e bactérias)", "Consumidores primários", "Consumidores terciários", "Autótrofos carnívoros"],
+        correct: 0,
+        explanation: "Fungos e bactérias são decompositores e atuam em todos os níveis tróficos, reciclando a matéria orgânica e devolvendo nutrientes minerais ao solo e ecossistema."
+    },
+    {
+        id: "sim-n10", year: "CEFET Modelo", discipline: "Ciências da Natureza",
+        question: "(Biologia) O cruzamento entre duas plantas heterozigotas (Aa x Aa) para uma característica de dominância completa resulta em uma proporção fenotípica esperada de:",
+        options: ["3 dominantes para 1 recessivo (3:1)", "1 dominante para 1 recessivo (1:1)", "4 dominantes para 0 recessivo", "1 dominante para 2 intermediários para 1 recessivo (1:2:1)"],
+        correct: 0,
+        explanation: "Pela 1ª Lei de Mendel (Monohibridismo): o cruzamento Aa x Aa produz genótipos 1 AA, 2 Aa e 1 aa. Os genótipos AA e Aa expressam o fenótipo dominante (3 partes) e aa expressa o recessivo (1 parte) → proporção 3:1."
+    },
 
-    /* ─── CIÊNCIAS HUMANAS (5 QUESTÕES) ─── */
+    /* ─── CIÊNCIAS HUMANAS (10 QUESTÕES) ─── */
     {
         id: "sim-h01", year: "CEFET Modelo", discipline: "Ciências Humanas",
         question: "(História) Durante os primeiros anos da colonização portuguesa no Brasil (período pré-colonial, 1500-1530), a principal atividade econômica desenvolvida pela Coroa baseava-se no escambo com os povos indígenas para a extração de:",
@@ -623,6 +728,409 @@ window.questionBank = [
         options: ["Êxodo rural", "Transumância", "Migração pendular", "Nomadismo sazonal"],
         correct: 0,
         explanation: "O êxodo rural foi a grande transferência da população do campo para as cidades no século XX no Brasil, acelerando a urbanização desenfreada e a expansão de periferias e favelas."
+    },
+    {
+        id: "sim-h06", year: "CEFET Modelo", discipline: "Ciências Humanas",
+        question: "(História) Durante a Era Vargas (1930-1945), a consolidação do projeto de industrialização nacional brasileira esteve diretamente atrelada à criação de empresas estatais de base, tais como:",
+        options: ["A Companhia Siderúrgica Nacional (CSN) e a Vale do Rio Doce", "A Petrobras e a Embraer durante o governo militar", "A Companhia das Índias Orientais", "A Companhia Docas de Santos e ferrovias inglesas"],
+        correct: 0,
+        explanation: "Vargas promoveu a indústria de base estatal: fundou a CSN (Volta Redonda/RJ em 1941) e a Companhia Vale do Rio Doce (1942) para fornecer aço e minério à expansão industrial brasileira."
+    },
+    {
+        id: "sim-h07", year: "CEFET Modelo", discipline: "Ciências Humanas",
+        question: "(História) Promulgado em dezembro de 1968, o Ato Institucional nº 5 (AI-5) representou o momento mais autoritário da Ditadura Militar brasileira porque:",
+        options: ["Suspendeu garantias constitucionais como o habeas corpus e ampliou a censura oficial", "Restaurou imediatamente as eleições diretas para presidente", "Instituiu o voto feminino obrigatório em todas as capitais", "Aboliu o bipartidarismo e criou mais de 30 partidos políticos"],
+        correct: 0,
+        explanation: "O AI-5 fechou o Congresso, suspendeu direitos civis, autorizou intervenções em estados e municípios, suspendeu o habeas corpus e intensificou a censura sobre jornais, artes e música."
+    },
+    {
+        id: "sim-h08", year: "CEFET Modelo", discipline: "Ciências Humanas",
+        question: "(História) A Primeira Revolução Industrial (século XVIII, Inglaterra) transformou radicalmente as relações de trabalho na Europa ao substituir o artesanato e a manufatura pela:",
+        options: ["Maquinofatura e concentração dos operários em fábricas com disciplina fabril rígida", "Agricultura de subsistência comunitária nos campos abertos", "Produção doméstica exclusiva de bens de luxo para a nobreza", "Robotização automatizada com semicondutores e microprocessadores"],
+        correct: 0,
+        explanation: "A introdução da máquina a vapor e do tear mecânico inaugurou a maquinofatura, separando o trabalhador dos meios de produção e submetendo-o a longas jornadas de trabalho fabril."
+    },
+    {
+        id: "sim-h09", year: "CEFET Modelo", discipline: "Ciências Humanas",
+        question: "(Geografia) Em um mapa com escala numérica 1:50.000, a distância em linha reta entre duas escolas técnicas é de 4 centímetros no papel. A distância real equivalente no terreno é de:",
+        options: ["2 quilômetros", "20 quilômetros", "200 metros", "8 quilômetros"],
+        correct: 0,
+        explanation: "Distância real D = d · E = 4 cm · 50.000 = 200.000 cm. Convertendo: 200.000 cm = 2.000 m = 2 km."
+    },
+    {
+        id: "sim-h10", year: "CEFET Modelo", discipline: "Ciências Humanas",
+        question: "(Geografia) O encontro físico e integração da malha urbana de dois ou mais municípios vizinhos em decorrência de seu crescimento contínuo recebe a denominação geográfica de:",
+        options: ["Conurbação", "Transumância", "Gentrifição", "Macrocrania"],
+        correct: 0,
+        explanation: "Conurbação é o fenômeno urbano em que os limites espaciais entre cidades contíguas deixam de ser perceptíveis devido à expansão territorial integrada, comum na Região Metropolitana do Rio de Janeiro."
+    },
+
+    /* ─── LÍNGUA PORTUGUESA (EXPANSÃO CEFET-RJ / SELECON) ─── */
+    {
+        id: "sim-p16", year: "CEFET-RJ 2024", discipline: "Língua Portuguesa",
+        question: "Em: 'Embora a tecnologia aproxime pessoas geograficamente distantes, ela pode provocar isolamento no convívio familiar', a oração subordinada em destaque introduzida por 'Embora' estabelece ideia de:",
+        options: ["Causa e explicação", "Concessão", "Consequência imediata", "Proporção temporal"],
+        correct: 1,
+        explanation: "A conjunção 'embora' introduz uma oração subordinada adverbial concessiva, que expressa uma ressalva ou oposição que não impede a ocorrência do fato principal."
+    },
+    {
+        id: "sim-p17", year: "CEFET-RJ 2024", discipline: "Língua Portuguesa",
+        question: "Assinale a alternativa em que o uso do acento grave indicativo de crase está empregado em conformidade com a norma-padrão da língua escrita:",
+        options: [
+            "Os alunos foram convidados à comparecer na secretaria do campus.",
+            "Ele entregou o projeto à uma comissão de professores avaliadores.",
+            "O candidato declarou apoio à causa ambiental durante a sabatina.",
+            "O jovem começou à estudar matemática logo pela manhã."
+        ],
+        correct: 2,
+        explanation: "Em 'apoio à causa ambiental', o substantivo 'apoio' rege a preposição 'a' e o termo feminino 'causa' é determinado pelo artigo 'a' (a + a = à). Não há crase antes de verbos ('comparecer', 'estudar') nem antes do artigo indefinido 'uma'."
+    },
+    {
+        id: "sim-p18", year: "CEFET-RJ 2023", discipline: "Língua Portuguesa",
+        question: "No trecho: 'Ele era um verdadeiro pavão ostentando suas conquistas virtuais nas redes sociais', a figura de linguagem predominante é a:",
+        options: ["Metonímia", "Eufemismo", "Hipérbole", "Metáfora"],
+        correct: 3,
+        explanation: "A metáfora estabelece uma associação de analogia implícita e direta (sem conectivo comparativo), transferindo atributos do animal (vaidade e exibicionismo) para o indivíduo."
+    },
+    {
+        id: "sim-p19", year: "CEFET-RJ 2023", discipline: "Língua Portuguesa",
+        question: "Quanto à regência verbal de acordo com a norma-padrão da língua portuguesa, assinale a opção correta:",
+        options: [
+            "O público assistiu ao documentário sobre energias renováveis no auditório.",
+            "O estagiário assistiu o documentário com muito entusiasmo.",
+            "Eles preferem mais trabalhar com robótica do que com redação.",
+            "O jovem aspira o cargo de monitor de física da escola."
+        ],
+        correct: 0,
+        explanation: "No sentido de presenciar/ver, o verbo 'assistir' é transitivo indireto e exige a preposição 'a' ('assistiu ao documentário'). 'Aspirar' no sentido de desejar também exige a preposição 'a' ('aspira ao cargo'). E o verbo 'preferir' não admite intensificadores nem a expressão 'do que' (deve ser 'preferir X a Y')."
+    },
+    {
+        id: "sim-p20", year: "CEFET-RJ 2024", discipline: "Língua Portuguesa",
+        question: "Considere a oração: 'Alberto Santos Dumont, o pioneiro da aviação mundial, realizou experimentos memoráveis em Paris'. O termo destacado entre vírgulas exerce a função sintática de:",
+        options: ["Vocativo", "Aposto explicativo", "Adjunto adverbial", "Predicativo do sujeito"],
+        correct: 1,
+        explanation: "O termo 'o pioneiro da aviação mundial' explica e qualifica o termo anterior ('Alberto Santos Dumont'), exercendo a função sintática de aposto explicativo, motivo pelo qual vem pontuado entre vírgulas."
+    },
+    {
+        id: "sim-p21", year: "CEFET-RJ 2022", discipline: "Língua Portuguesa",
+        question: "Na frase: 'Choveu torrencialmente durante toda a madrugada na cidade do Rio de Janeiro', o sujeito da oração classifica-se como:",
+        options: [
+            "Sujeito indeterminado",
+            "Sujeito oculto (desinencial)",
+            "Oração sem sujeito (sujeito inexistente)",
+            "Sujeito simples"
+        ],
+        correct: 2,
+        explanation: "Verbos que expressam fenômenos meteorológicos ou da natureza ('chover', 'nevar', 'ventar', 'trovejar') empregados em sentido literal e denotativo são impessoais, configurando oração sem sujeito."
+    },
+    {
+        id: "sim-p22", year: "CEFET-RJ 2023", discipline: "Língua Portuguesa",
+        question: "Assinale a alternativa que apresenta um vocábulo formado pelo processo de derivação parassintética:",
+        options: ["Enlouquecer", "Infelizmente", "Deslealdade", "Combate"],
+        correct: 0,
+        explanation: "Na parassíntese, o prefixo e o sufixo associam-se simultaneamente ao radical; se um deles for suprimido, a palavra não existe na língua ('enlouquecer': en- + louc- + -ecer; não existe 'enlouco' nem 'louquecer'). Em 'infelizmente', existem as palavras 'felizmente' e 'infeliz'."
+    },
+    {
+        id: "sim-p23", year: "CEFET-RJ 2024", discipline: "Língua Portuguesa",
+        question: "Em: 'Não hesite diante dos desafios do concurso, querida estudante!', o termo destacado entre vírgulas classifica-se sintaticamente como:",
+        options: ["Aposto especificativo", "Sujeito composto", "Adjunto adnominal", "Vocativo"],
+        correct: 3,
+        explanation: "O vocativo é o chamamento, interpelação ou invocação direta ao interlocutor, não mantendo relação de subordinação sintática com o sujeito ou com o predicado."
+    },
+    {
+        id: "sim-p24", year: "CEFET-RJ 2023", discipline: "Língua Portuguesa",
+        question: "Em relação à concordância nominal, assinale a opção redigida de acordo com a norma-padrão:",
+        options: [
+            "A candidata estava meia preocupada com o horário da prova.",
+            "A candidata estava meio preocupada com o horário da prova.",
+            "Seguem anexo as declarações requeridas pela coordenação.",
+            "Elas mesmo revisaram as questões do simulado técnico."
+        ],
+        correct: 1,
+        explanation: "Quando a palavra 'meio' funciona como advérbio (com sentido de 'um tanto', 'parcialmente'), é invariável: 'meio preocupada'. Os adjetivos 'anexo' e 'mesmo' concordam com o substantivo a que se referem: 'anexas as declarações', 'elas mesmas'."
+    },
+    {
+        id: "sim-p25", year: "CEFET-RJ 2024", discipline: "Língua Portuguesa",
+        question: "No trecho poético: 'O velho casarão suspirava a cada rajada de vento frio que varria a ladeira', identifica-se a figura de linguagem conhecida como:",
+        options: [
+            "Prosopopeia (ou personificação)",
+            "Sinestesia",
+            "Eufemismo",
+            "Antítese"
+        ],
+        correct: 0,
+        explanation: "A prosopopeia ou personificação consiste em atribuir atitudes, comportamentos ou sentimentos tipicamente humanos a seres inanimados, coisas ou animais irracionais (o ato de 'suspirar' atribuído ao casarão)."
+    },
+
+    /* ─── MATEMÁTICA (EXPANSÃO CEFET-RJ / SELECON) ─── */
+    {
+        id: "sim-m16", year: "CEFET-RJ 2024", discipline: "Matemática",
+        question: "Uma operadora de telefonia cobra uma taxa fixa mensal de R$ 35,00 acrescida de R$ 0,50 por minuto falado. Se no mês de março um usuário pagou uma conta total de R$ 67,50, quantos minutos de ligação ele utilizou?",
+        options: ["55 minutos", "65 minutos", "70 minutos", "60 minutos"],
+        correct: 1,
+        explanation: "Função afim: V(x) = 35 + 0,50x. Substituindo: 67,50 = 35 + 0,50x → 0,50x = 32,50 → x = 32,50 / 0,50 = 65 minutos."
+    },
+    {
+        id: "sim-m17", year: "CEFET-RJ 2024", discipline: "Matemática",
+        question: "O vértice da parábola correspondente à função quadrática f(x) = -x² + 6x - 5 representa o ponto de valor máximo da função. O valor máximo assumido por f(x) é igual a:",
+        options: ["3", "9", "4", "5"],
+        correct: 2,
+        explanation: "Como o coeficiente a = -1 < 0, a parábola tem concavidade voltada para baixo. O x do vértice é Xv = -b / (2a) = -6 / (2 · -1) = 3. O valor máximo é Yv = f(3) = -(3)² + 6(3) - 5 = -9 + 18 - 5 = 4."
+    },
+    {
+        id: "sim-m18", year: "CEFET-RJ 2023", discipline: "Matemática",
+        question: "A diagonal de um terreno retangular mede 25 metros e o menor de seus lados mede 15 metros. A área desse terreno, em metros quadrados, é igual a:",
+        options: ["300 m²", "375 m²", "200 m²", "225 m²"],
+        correct: 0,
+        explanation: "Pelo Teorema de Pitágoras no triângulo retângulo formado pela diagonal: 25² = 15² + c² → 625 = 225 + c² → c² = 400 → c = 20 metros. A área do retângulo é base · altura = 20 · 15 = 300 m²."
+    },
+    {
+        id: "sim-m19", year: "CEFET-RJ 2023", discipline: "Matemática",
+        question: "Em uma turma de 40 alunos do CEFET, as notas de uma avaliação foram distribuídas da seguinte forma: 10 alunos obtiveram nota 6,0; 20 alunos obtiveram nota 8,0; e 10 alunos obtiveram nota 10,0. A média aritmética das notas dessa turma foi:",
+        options: ["7,5", "8,5", "7,0", "8,0"],
+        correct: 3,
+        explanation: "Média ponderada = (10 · 6 + 20 · 8 + 10 · 10) / 40 = (60 + 160 + 100) / 40 = 320 / 40 = 8,0."
+    },
+    {
+        id: "sim-m20", year: "CEFET-RJ 2024", discipline: "Matemática",
+        question: "Duas grandezas X e Y são inversamente proporcionais. Quando X = 6, tem-se Y = 20. Qual será o valor de Y quando X for igual a 15?",
+        options: ["12", "8", "10", "5"],
+        correct: 1,
+        explanation: "Em grandezas inversamente proporcionais, o produto entre elas é constante: X · Y = k → 6 · 20 = 120. Para X = 15: 15 · Y = 120 → Y = 120 / 15 = 8."
+    },
+    {
+        id: "sim-m21", year: "CEFET-RJ 2022", discipline: "Matemática",
+        question: "Um casaco que custava R$ 200,00 sofreu um acréscimo de 20% e, no mês seguinte, sofreu um desconto de 20% sobre o novo valor. O preço final do casaco após as duas alterações passou a ser de:",
+        options: ["R$ 200,00", "R$ 196,00", "R$ 192,00", "R$ 180,00"],
+        correct: 2,
+        explanation: "Após o acréscimo de 20%: R$ 200,00 · 1,20 = R$ 240,00. Após o desconto sucessivo de 20%: R$ 240,00 · 0,80 = R$ 192,00. Em variações sucessivas iguais, o resultado final é sempre inferior ao original."
+    },
+    {
+        id: "sim-m22", year: "CEFET-RJ 2023", discipline: "Matemática",
+        question: "A área de uma placa metálica em formato de triângulo equilátero cujo lado mede 6 cm é igual a:",
+        options: ["9√3 cm²", "18 cm²", "12√3 cm²", "36√3 cm²"],
+        correct: 0,
+        explanation: "A fórmula da área do triângulo equilátero é A = (l² · √3) / 4. Para l = 6 cm: A = (6² · √3) / 4 = (36√3) / 4 = 9√3 cm²."
+    },
+    {
+        id: "sim-m23", year: "CEFET-RJ 2024", discipline: "Matemática",
+        question: "Uma urna contém 12 fichas idênticas numeradas de 1 a 12. Retirando-se aleatoriamente uma ficha da urna, a probabilidade de o número sorteado ser um múltiplo de 3 é de:",
+        options: ["1/4 (ou 25%)", "1/2 (ou 50%)", "5/12 (ou ~41,7%)", "1/3 (ou ~33,3%)"],
+        correct: 3,
+        explanation: "O espaço amostral tem 12 elementos {1, 2, ..., 12}. Os múltiplos de 3 presentes são {3, 6, 9, 12}, totalizando 4 casos favoráveis. P = 4 / 12 = 1 / 3."
+    },
+    {
+        id: "sim-m24", year: "CEFET-RJ 2023", discipline: "Matemática",
+        question: "Em uma Progressão Aritmética (PA), o primeiro termo é a₁ = 7 e a razão é r = 4. O décimo quinto termo (a₁₅) dessa sequência numérica é:",
+        options: ["63", "67", "60", "59"],
+        correct: 0,
+        explanation: "Fórmula do termo geral da PA: aₙ = a₁ + (n − 1) · r. Para n = 15: a₁₅ = 7 + (15 − 1) · 4 = 7 + 14 · 4 = 7 + 56 = 63."
+    },
+    {
+        id: "sim-m25", year: "CEFET-RJ 2024", discipline: "Matemática",
+        question: "O valor simplificado da expressão numérica com radicais √(50) + √(18) − √(8) é igual a:",
+        options: ["8√2", "6√2", "4√2", "10√2"],
+        correct: 1,
+        explanation: "Fatorando os radicandos: √(50) = √(25 · 2) = 5√2; √(18) = √(9 · 2) = 3√2; √(8) = √(4 · 2) = 2√2. Efetuando a soma algébrica: 5√2 + 3√2 − 2√2 = 6√2."
+    },
+
+    /* ─── CIÊNCIAS DA NATUREZA (EXPANSÃO CEFET-RJ / SELECON) ─── */
+    {
+        id: "sim-n11", year: "CEFET-RJ 2024", discipline: "Ciências da Natureza",
+        question: "(Física) Um resistor elétrico ôhmico de 20 Ω é conectado aos terminais de uma fonte de tensão contínua de 100 V. A intensidade da corrente elétrica que percorre o resistor e a potência térmica dissipada por efeito Joule são, respectivamente:",
+        options: ["2 A e 400 W", "5 A e 200 W", "5 A e 500 W", "10 A e 1000 W"],
+        correct: 2,
+        explanation: "Pela Primeira Lei de Ohm: U = R · I → 100 = 20 · I → I = 5 A. A potência dissipada é P = U · I = 100 · 5 = 500 W (ou P = R · I² = 20 · 5² = 500 W)."
+    },
+    {
+        id: "sim-n12", year: "CEFET-RJ 2023", discipline: "Ciências da Natureza",
+        question: "(Física) Um ciclista parte do repouso em uma pista reta e desenvolve uma aceleração constante de 3 m/s² durante 8 segundos. A distância total percorrida pelo ciclista nesse tempo é de:",
+        options: ["96 metros", "48 metros", "192 metros", "24 metros"],
+        correct: 0,
+        explanation: "No Movimento Uniformemente Variado com repouso inicial (v₀ = 0): Δs = v₀·t + (a·t²)/2 = 0 + (3 · 8²)/2 = (3 · 64)/2 = 192/2 = 96 metros."
+    },
+    {
+        id: "sim-n13", year: "CEFET-RJ 2024", discipline: "Ciências da Natureza",
+        question: "(Química) O cloreto de sódio (NaCl), sal de cozinha comum, é formado pela união entre o metal sódio e o ametal cloro. Essa ligação química ocorre pela transferência efetiva de elétrons e é classificada como:",
+        options: ["Ligação covalente polar", "Ligação metálica", "Ligação covalente apolar", "Ligação iônica"],
+        correct: 3,
+        explanation: "A ligação iônica ocorre devido à transferência definitiva de elétrons de um metal (sódio, Na⁺) para um ametal (cloro, Cl⁻), originando atração eletrostática entre os íons formados."
+    },
+    {
+        id: "sim-n14", year: "CEFET-RJ 2023", discipline: "Ciências da Natureza",
+        question: "(Química) Em um laboratório de química, dissolvem-se 25 gramas de sulfato de cobre em água destilada até atingir o volume final de 500 mL (0,5 L) de solução. A concentração comum dessa solução, em g/L, é de:",
+        options: ["12,5 g/L", "50 g/L", "25 g/L", "100 g/L"],
+        correct: 1,
+        explanation: "Concentração comum C = massa do soluto (g) / volume da solução (L) = 25 g / 0,5 L = 50 g/L."
+    },
+    {
+        id: "sim-n15", year: "CEFET-RJ 2024", discipline: "Ciências da Natureza",
+        question: "(Biologia) Nos alvéolos pulmonares humanos ocorre a difusão do oxigênio para os capilares sanguíneos e do dióxido de carbono do sangue para o ar alveolar. Esse processo fundamental de trocas gasosas denomina-se:",
+        options: ["Hematose", "Glicólise celular", "Peristaltismo", "Digestão aeróbica"],
+        correct: 0,
+        explanation: "A hematose é a troca de gases respiratórios (O₂ e CO₂) que ocorre nos alvéolos pulmonares, convertendo o sangue venoso em sangue arterial rico em oxigênio."
+    },
+    {
+        id: "sim-n16", year: "CEFET-RJ 2023", discipline: "Ciências da Natureza",
+        question: "(Biologia) A diferença essencial entre a ação da vacina e do soro reside no fato de que a vacina confere uma imunização:",
+        options: [
+            "Passiva, pois introduz anticorpos prontos para combate emergencial imediato",
+            "Ativa, pois introduz antígenos que estimulam o organismo a produzir seus próprios anticorpos e memória imunológica",
+            "Temporária e curta, servindo apenas para curar infecções agudas instaladas",
+            "Exclusivamente sintomática, agindo como anti-inflamatório sem participação de linfócitos"
+        ],
+        correct: 1,
+        explanation: "A vacinação é uma forma de imunização ativa preventiva: introduz antígenos atenuados ou fragmentados para estimular o sistema imunitário a sintetizar anticorpos e gerar células de memória duradouras. Já o soro terapêutico injeta anticorpos prontos (imunização passiva curativa)."
+    },
+    {
+        id: "sim-n17", year: "CEFET-RJ 2024", discipline: "Ciências da Natureza",
+        question: "(Biologia) A relação ecológica estabelecida entre os ruminantes e os microrganismos que habitam seu aparelho digestório, na qual ambos os seres se beneficiam e a sobrevivência de ambos depende dessa associação mútua, é classificada como:",
+        options: ["Comensalismo", "Inquilinismo", "Mutualismo", "Parasitismo"],
+        correct: 2,
+        explanation: "O mutualismo é uma relação ecológica harmônica interespecífica obrigatória em que ambas as espécies obtêm vantagens vitais para sua sobrevivência e funcionamento metabólico."
+    },
+    {
+        id: "sim-n18", year: "CEFET-RJ 2023", discipline: "Ciências da Natureza",
+        question: "(Física) Uma pessoa posiciona-se frontalmente a uma distância de 1,5 metro de um espelho plano vertical. A distância total entre a pessoa e a imagem fornecida pelo espelho é de:",
+        options: ["1,5 metro", "0,75 metro", "4,5 metros", "3,0 metros"],
+        correct: 3,
+        explanation: "No espelho plano, a imagem formada é virtual, direita e simétrica, localizando-se à mesma distância atrás da superfície refletora em que o objeto se encontra à frente dela (di = do = 1,5 m). Logo, a distância objeto-imagem é 1,5 + 1,5 = 3,0 metros."
+    },
+    {
+        id: "sim-n19", year: "CEFET-RJ 2024", discipline: "Ciências da Natureza",
+        question: "(Química) Em conformidade com a Lei de Conservação das Massas (Lei de Lavoisier), se 12 gramas de carbono reagem totalmente com 32 gramas de gás oxigênio em um recipiente hermeticamente fechado, a massa final de gás carbônico obtida será de:",
+        options: ["44 gramas", "20 gramas", "24 gramas", "56 gramas"],
+        correct: 0,
+        explanation: "Em um sistema fechado, a soma das massas dos reagentes é rigorosamente igual à soma das massas dos produtos formados: 12 g de Carbono + 32 g de Oxigênio = 44 g de Dióxido de Carbono."
+    },
+    {
+        id: "sim-n20", year: "CEFET-RJ 2022", discipline: "Ciências da Natureza",
+        question: "(Biologia) O processo de divisão celular biológica que produz as células sexuais ou gametas (espermatozoides e óvulos) nos seres humanos, reduzindo o número de cromossomos à metade (células haploides, n = 23), é denominado:",
+        options: ["Mitose", "Meiose", "Bipartição simples", "Esporogênese"],
+        correct: 1,
+        explanation: "A meiose é a divisão reducional responsável pela produção de gametas com metade do número de cromossomos (n = 23), garantindo que após a fecundação a carga genética característica da espécie (2n = 46) seja mantida."
+    },
+
+    /* ─── CIÊNCIAS HUMANAS (EXPANSÃO CEFET-RJ / SELECON) ─── */
+    {
+        id: "sim-h11", year: "CEFET-RJ 2024", discipline: "Ciências Humanas",
+        question: "(História) A Revolta da Vacina, ocorrida na capital federal (Rio de Janeiro) em 1904, teve como estopim imediato a vacinação obrigatória contra a varíola liderada por Oswaldo Cruz, mas expressou um descontentamento social mais profundo relacionado a:",
+        options: [
+            "A queda do Império e o retorno das capitanias hereditárias",
+            "A proibição do voto censitário no início da República Velha",
+            "A reforma urbana de Pereira Passos ('bota-abaixo'), que demoliu cortiços centrais e expulsou as famílias pobres para os morros e periferias",
+            "A recusa do governo brasileiro em conceder cidadania aos imigrantes europeus"
+        ],
+        correct: 2,
+        explanation: "A remodelação urbana e o sanitarismo autoritário do prefeito Pereira Passos e do presidente Rodrigues Alves desalojaram milhares de trabalhadores de suas habitações coletivas centrais sem alternativas habitacionais, canalizando a revolta popular em 1904."
+    },
+    {
+        id: "sim-h12", year: "CEFET-RJ 2023", discipline: "Ciências Humanas",
+        question: "(História) Durante o Período Regencial brasileiro (1831-1840), diversas províncias se rebelaram contra a centralização política do Rio de Janeiro. A revolta armada de cunho republicano e separatista que se estendeu por dez anos na província de São Pedro do Rio Grande do Sul foi a:",
+        options: [
+            "Guerra dos Farrapos (Revolução Farroupilha)",
+            "Cabanagem",
+            "Balaiada",
+            "Revolta dos Malês"
+        ],
+        correct: 0,
+        explanation: "A Guerra dos Farrapos (1835-1845) reuniu estancieiros e tropas gaúchas insatisfeitas com os altos impostos imperiais sobre o charque e o couro, chegando a proclamar a República Rio-Grandense e a República Juliana."
+    },
+    {
+        id: "sim-h13", year: "CEFET-RJ 2024", discipline: "Ciências Humanas",
+        question: "(História) A quebra da Bolsa de Valores de Nova York em 1929 desencadeou uma severa crise no capitalismo internacional. No Brasil da Primeira República, o reflexo econômico e político imediato dessa crise foi:",
+        options: [
+            "O aumento recorde das exportações cafeeiras para o mercado europeu",
+            "A crise profunda na economia do café por falta de compradores externos, enfraquecendo o poder político das oligarquias tradicionais",
+            "A criação imediata do Plano Real para controlar a hiperinflação",
+            "A estatização instantânea de todas as ferrovias inglesas no país"
+        ],
+        correct: 1,
+        explanation: "Como os Estados Unidos eram os maiores compradores do café brasileiro, a depressão econômica mundial fez as compras despencarem, derrubando os preços da saca de café e fragilizando a aliança oligárquica de São Paulo e Minas Gerais na véspera da Revolução de 1930."
+    },
+    {
+        id: "sim-h14", year: "CEFET-RJ 2023", discipline: "Ciências Humanas",
+        question: "(História) O envio de soldados da Força Expedicionária Brasileira (FEB) para combater regimes fascistas e nazistas na Itália durante a Segunda Guerra Mundial provocou uma crise de legitimidade interna que contribuiu para:",
+        options: [
+            "A restauração da Monarquia parlamentarista",
+            "A adesão do Brasil ao Tratado de Varsóvia soviético",
+            "O fim da ditadura varguista do Estado Novo e o processo de redemocratização política em 1945",
+            "A prorrogação por mais vinte anos do governo autoritário de Vargas"
+        ],
+        correct: 2,
+        explanation: "Tornou-se uma contradição insustentável para a sociedade brasileira enviar jovens soldados para morrer na Europa em defesa da liberdade e da democracia contra regimes ditatoriais, enquanto no próprio Brasil vigorava a ditadura do Estado Novo de Getúlio Vargas."
+    },
+    {
+        id: "sim-h15", year: "CEFET-RJ 2024", discipline: "Ciências Humanas",
+        question: "(Geografia) O bioma com características semiáridas, com presença de plantas caducifólias e cactáceas adaptadas à escassez de água, e que possui a particularidade de ter seu território localizado exclusivamente dentro do Brasil, é a:",
+        options: [
+            "Caatinga",
+            "Mata Atlântica",
+            "Floresta Amazônica",
+            "Pampa"
+        ],
+        correct: 0,
+        explanation: "A Caatinga é o único bioma genuinamente 100% brasileiro (patrimônio biológico exclusivo do país), abrangendo a maior parte do sertão nordestino e o norte de Minas Gerais sob clima semiárido."
+    },
+    {
+        id: "sim-h16", year: "CEFET-RJ 2023", discipline: "Ciências Humanas",
+        question: "(Geografia) A alteração microclimática típica das grandes cidades caracterizada pela concentração de temperaturas do ar significativamente mais elevadas nas áreas centrais e densamente construídas em relação às áreas periféricas arborizadas é denominada:",
+        options: [
+            "Inversão térmica",
+            "Chuva orográfica",
+            "Ilha de calor urbana",
+            "El Niño continental"
+        ],
+        correct: 2,
+        explanation: "A ilha de calor urbana decorre da substituição da cobertura vegetal por asfalto e concreto (materiais com alto albedo térmico e retenção de calor), associada à poluição atmosférica e concentração veicular nos centros metropolitanos."
+    },
+    {
+        id: "sim-h17", year: "CEFET-RJ 2024", discipline: "Ciências Humanas",
+        question: "(Geografia) Na matriz de geração de eletricidade do Brasil, a fonte de energia que responde historicamente pela maior parcela da produção de energia elétrica nacional é a:",
+        options: [
+            "Hidrelétrica (usinas que aproveitam os recursos hídricos)",
+            "Termelétrica movida a carvão mineral fóssil",
+            "Nuclear com reatores de fissão de urânio",
+            "Geotérmica subterrânea"
+        ],
+        correct: 0,
+        explanation: "O Brasil tem sua matriz elétrica baseada predominantemente no potencial hídrico de seus rios de planalto (energia hidrelétrica, que responde por cerca de 60% a 65% da eletricidade), complementada por fontes eólica, solar e biomassa."
+    },
+    {
+        id: "sim-h18", year: "CEFET-RJ 2023", discipline: "Ciências Humanas",
+        question: "(Geografia) A transição demográfica observada na pirâmide etária do Brasil nas últimas décadas tem como traço definidor:",
+        options: [
+            "O aumento contínuo da taxa de fecundidade e a diminuição da expectativa de vida média",
+            "O aumento expressivo no número de nascimentos e a redução de idosos na população",
+            "A manutenção exata das taxas de natalidade verificadas na década de 1950",
+            "A redução da taxa de natalidade e o envelhecimento proporcional da população com o aumento da expectativa de vida"
+        ],
+        correct: 3,
+        explanation: "A transição demográfica brasileira é marcada pela queda contínua da taxa de fecundidade (menos filhos por mulher) decorrente da urbanização e planejamento familiar, somada ao aumento da longevidade (envelhecimento da estrutura etária)."
+    },
+    {
+        id: "sim-h19", year: "CEFET-RJ 2024", discipline: "Ciências Humanas",
+        question: "(História) Durante a campanha pela abolição da escravidão no Brasil nas décadas de 1870 e 1880, destacaram-se grandes intelectuais, advogados e jornalistas negros de renome nacional, entre os quais figuram:",
+        options: [
+            "Luís Gama, André Rebouças e José do Patrocínio",
+            "Barão de Mauá e Duque de Caxias",
+            "Tiradentes e Joaquim Silvério dos Reis",
+            "Hermes da Fonseca e Washington Luís"
+        ],
+        correct: 0,
+        explanation: "Luís Gama (advogado abolicionista que libertou centenas de escravizados na Justiça), André Rebouças (engenheiro e pensador social) e José do Patrocínio (jornalista e grande orador da Confederação Abolicionista) foram protagonistas negros decisivos na luta contra a escravidão."
+    },
+    {
+        id: "sim-h20", year: "CEFET-RJ 2023", discipline: "Ciências Humanas",
+        question: "(Geografia) O vasto reservatório subterrâneo de água doce que se estende por sedimentos rochosos do subsolo do Brasil, Argentina, Paraguai e Uruguai, constituindo uma reserva estratégica de recursos hídricos, é o:",
+        options: [
+            "Bacia do Rio São Francisco",
+            "Aquífero Guarani",
+            "Aquífero Cabeças",
+            "Bacia do Prata Superior"
+        ],
+        correct: 1,
+        explanation: "O Aquífero Guarani é um manancial hidrogeológico transfronteiriço localizado no Cone Sul da América do Sul, abrangendo mais de 1,2 milhão de km² com gigantesco volume de água doce potável."
     }
 ];
 

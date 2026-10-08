@@ -20,7 +20,8 @@
   <a href="#-as-3-trilhas-de-aprendizagem">Trilhas de Estudo</a> •
   <a href="#-matriz-curricular-completa-64-módulos">Matriz Curricular</a> •
   <a href="#-recursos-da-plataforma">Recursos</a> •
-  <a href="#-os-11-cursos-técnicos-do-maracanã">Cursos do Maracanã</a> •
+  <a href="#-central-de-preparação--simulados-multi-modalidades">Simulados & Preparação</a> •
+  <a href="#-os-7-campi-oficiais-1024-vagas">Vagas e Campi</a> •
   <a href="#-design-system--arquitetura-técnica">Design & Arquitetura</a> •
   <a href="#-como-executar-localmente">Como Rodar</a> •
   <a href="#-manual-vivo-comohtml">Manual Técnico</a>
@@ -222,7 +223,11 @@ A plataforma conta com **64 módulos autorais completos**, com teoria, analogias
 
 | Recurso | Descrição | Status |
 |:---|:---|:---:|
-| 🎯 **Simulador de Prova Completo** | 30 questões objetivas (4 alternativas) + cronômetro regressivo oficial de 4h | ✅ Ativo |
+| 🎯 **Simulador Oficial CEFET-RJ** | 30 questões objetivas oficiais + cronômetro regressivo oficial de 4h + gabarito comentado | ✅ Ativo |
+| ⚡ **Desafio Sprint (Ritmo 2m30s)** | 5 questões sob pressão com 150s por questão e diagnóstico de agilidade mental | ✅ Ativo |
+| 📚 **Baterias Temáticas por Matéria** | Treinos focados por disciplina (Matemática, Português, Física, Química, Biologia, História, Geografia) | ✅ Ativo |
+| 📓 **Caderno de Erros Inteligente** | Coleta automática apenas de respostas incorretas com reteste ativo e limpeza individual | ✅ Ativo |
+| 📊 **Histórico & Analytics de Provas** | Registro de simulados e sprints com pontuações, percentual de acerto e diagnóstico de aprovação | ✅ Ativo |
 | ✍️ **Central de Redação CEFET** | Critérios da banca (100 pts), esqueleto nota 100, banco de conectivos e repertórios | ✅ Ativo |
 | ⚖️ **Simulador de Cotas (Lei 14.723/2023)** | Diagnóstico automático de grupos (L1 a L14), renda de 1 salário mínimo e checklist | ✅ Ativo |
 | 📅 **Planejador Semanal de Estudos** | Cronograma diário com acompanhamento de metas e cálculo dinâmico de horas | ✅ Ativo |
@@ -232,6 +237,36 @@ A plataforma conta com **64 módulos autorais completos**, com teoria, analogias
 | 🔍 **Busca Instantânea em Tempo Real** | Filtro instantâneo por termo, módulo, dificuldade ou disciplina | ✅ Ativo |
 
 </div>
+
+---
+
+## ⚡ Central de Preparação & Simulados Multi-Modalidades
+
+Para maximizar a retenção e a adaptação ao formato real do exame do CEFET-RJ, a plataforma dispõe de 5 ferramentas integradas na aba **Preparação**:
+
+1. **🎯 Simulado Oficial Completo (30 Questões):**
+   - Proporção exata das disciplinas do certame (Língua Portuguesa, Matemática, Física, Química, Biologia, História e Geografia).
+   - Cronômetro regressivo oficial de 4 horas com alerta sonoro/visual de encerramento.
+   - Espaço integrado de Rascunho de Redação com contador de linhas e dicas de estrutura dissertativa.
+   - Relatório completo com gabarito oficial e explicação detalhada para cada alternativa.
+
+2. **⚡ Desafio Sprint (Gestão de Ritmo — 2m30s por questão):**
+   - 5 questões sorteadas com limite rígido de 150 segundos por questão.
+   - Treino voltado a tomada rápida de decisão e gestão do tempo de prova.
+   - Cronômetro interativo com alerta de urgência e diagnóstico de ritmo ao final.
+
+3. **📚 Baterias Temáticas por Disciplina:**
+   - Permite treinar blocos específicos da matéria em que o aluno identifica maior defasagem.
+   - Feedback e resolução comentada imediatos após cada resposta.
+
+4. **📓 Caderno de Erros Inteligente (Reteste Ativo):**
+   - Registra de forma autônoma apenas as questões que o estudante errou (desconsiderando itens deixados em branco).
+   - Permite retestar as lacunas de conhecimento sem poluição visual.
+   - Opções de marcar o item como resolvido ou removê-lo individualmente do caderno de erros.
+
+5. **📊 Histórico de Simulados & Evolução:**
+   - Armazenamento local das tentativas de simulados e desafios sprint.
+   - Estatísticas de aproveitamento geral, média de acertos e comparativo com o histórico de corte.
 
 ---
 
