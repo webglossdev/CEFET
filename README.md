@@ -224,6 +224,7 @@ A plataforma conta com **64 módulos autorais completos**, com teoria, analogias
 | Recurso | Descrição | Status |
 |:---|:---|:---:|
 | 🎯 **Simulador Oficial CEFET-RJ** | 30 questões objetivas oficiais + cronômetro regressivo oficial de 4h + gabarito comentado | ✅ Ativo |
+| 🏛️ **Provas Anteriores (2023 a 2026)** | Cadernos oficiais 2023, 2024, 2025 e 2026 com timer de 4h, mapa de questões e download de prova e gabarito | ✅ Ativo |
 | ⚡ **Desafio Sprint (Ritmo 2m30s)** | 5 questões sob pressão com 150s por questão e diagnóstico de agilidade mental | ✅ Ativo |
 | 📚 **Baterias Temáticas por Matéria** | Treinos focados por disciplina (Matemática, Português, Física, Química, Biologia, História, Geografia) | ✅ Ativo |
 | 📓 **Caderno de Erros Inteligente** | Coleta automática apenas de respostas incorretas com reteste ativo e limpeza individual | ✅ Ativo |
@@ -242,7 +243,7 @@ A plataforma conta com **64 módulos autorais completos**, com teoria, analogias
 
 ## ⚡ Central de Preparação & Simulados Multi-Modalidades
 
-Para maximizar a retenção e a adaptação ao formato real do exame do CEFET-RJ, a plataforma dispõe de 5 ferramentas integradas na aba **Preparação**:
+Para maximizar a retenção e a adaptação ao formato real do exame do CEFET-RJ, a plataforma dispõe de 6 ferramentas integradas na aba **Preparação**:
 
 1. **🎯 Simulado Oficial Completo (30 Questões):**
    - Proporção exata das disciplinas do certame (Língua Portuguesa, Matemática, Física, Química, Biologia, História e Geografia).
@@ -250,22 +251,34 @@ Para maximizar a retenção e a adaptação ao formato real do exame do CEFET-RJ
    - Espaço integrado de Rascunho de Redação com contador de linhas e dicas de estrutura dissertativa.
    - Relatório completo com gabarito oficial e explicação detalhada para cada alternativa.
 
-2. **⚡ Desafio Sprint (Gestão de Ritmo — 2m30s por questão):**
+2. **🏛️ Provas Anteriores Oficiais (2023 a 2026):**
+   - Cadernos completos das edições anteriores do CEFET-RJ com base nos editais da banca Selecon:
+     - **CEFET-RJ 2026** (Edital Selecon 06/2025): 30 questões objetivas oficiais + proposta de Redação sobre Inteligência Artificial e Ética.
+     - **CEFET-RJ 2025** (Edital Selecon 07/2024): 30 questões objetivas oficiais + proposta de Redação sobre Biodiversidade e Sustentabilidade.
+     - **CEFET-RJ 2024** (Edital Selecon 08/2023): 30 questões autênticas completas + proposta oficial de Redação sobre "Impactos do uso excessivo da tecnologia nos jovens brasileiros".
+     - **CEFET-RJ 2023** (Edital Selecon 09/2022): 40 questões autênticas completas (10 Português, 10 Matemática, 10 Natureza, 10 Humanas).
+   - **Cronômetro de 4 Horas Oficial:** Relógio regressivo contínuo com avisos graduais (amarelo aos 30 minutos e vermelho crítico aos 10 minutos).
+   - **Interface Intuitiva de Resolução:** Mapa dinâmico de questões (respondidas vs. pendentes), seleção instantânea de alternativas, filtro por disciplina e gaveta de rascunho de redação em tempo real.
+   - **📥 Baixar Caderno da Prova (PDF/Impressão):** Geração instantânea de caderno diagramado no padrão oficial para resolução impressa ou salvamento em PDF.
+   - **📥 Baixar Gabarito Oficial:** Exportação da grade oficial de respostas da Selecon e comentários explicativos para correção autônoma.
+   - Integração completa com o **Caderno de Erros Inteligente** (registra apenas itens errados, ignorando respostas em branco) e o **Histórico de Desempenho**.
+
+3. **⚡ Desafio Sprint (Gestão de Ritmo — 2m30s por questão):**
    - 5 questões sorteadas com limite rígido de 150 segundos por questão.
    - Treino voltado a tomada rápida de decisão e gestão do tempo de prova.
    - Cronômetro interativo com alerta de urgência e diagnóstico de ritmo ao final.
 
-3. **📚 Baterias Temáticas por Disciplina:**
+4. **📚 Baterias Temáticas por Disciplina:**
    - Permite treinar blocos específicos da matéria em que o aluno identifica maior defasagem.
    - Feedback e resolução comentada imediatos após cada resposta.
 
-4. **📓 Caderno de Erros Inteligente (Reteste Ativo):**
+5. **📓 Caderno de Erros Inteligente (Reteste Ativo):**
    - Registra de forma autônoma apenas as questões que o estudante errou (desconsiderando itens deixados em branco).
    - Permite retestar as lacunas de conhecimento sem poluição visual.
    - Opções de marcar o item como resolvido ou removê-lo individualmente do caderno de erros.
 
-5. **📊 Histórico de Simulados & Evolução:**
-   - Armazenamento local das tentativas de simulados e desafios sprint.
+6. **📊 Histórico de Simulados & Evolução:**
+   - Armazenamento local das tentativas de simulados, provas anteriores e desafios sprint.
    - Estatísticas de aproveitamento geral, média de acertos e comparativo com o histórico de corte.
 
 ---
@@ -299,22 +312,22 @@ O Processo Seletivo Oficial do CEFET-RJ (Edital nº 05/2026) oferece **1.024 vag
 ## 🎨 Design System & Arquitetura Técnica
 
 ```
-                    ┌──────────────────────────────────────────────┐
-                    │            ARQUITETURA DE FRONTEND           │
-                    └──────────────────────┬───────────────────────┘
-                                           │
-         ┌─────────────────────────────────┼────────────────────────────────┐
-         ▼                                 ▼                                ▼
-┌─────────────────┐               ┌─────────────────┐              ┌─────────────────┐
-│   index.html    │               │  curriculum.js  │              │ extra-content.js│
-│ SPA / CSS Glass │ ───────────── │   64 Módulos    │ ──────────── │ Dados do Edital │
-│  UI Interativa  │               │ Matriz Pedagóg. │              │   & Simulador   │
-└────────┬────────┘               └─────────────────┘              └─────────────────┘
+                    ┌────────────────────────────────────────────────────────┐
+                    │                ARQUITETURA DE FRONTEND                 │
+                    └───────────────────────────┬────────────────────────────┘
+                                                │
+         ┌───────────────────────┬──────────────┴──────────────┬───────────────────────┐
+         ▼                       ▼                             ▼                       ▼
+┌─────────────────┐     ┌─────────────────┐           ┌─────────────────┐     ┌─────────────────────┐
+│   index.html    │     │  curriculum.js  │           │ extra-content.js│     │provas-anteriores.js │
+│ SPA / CSS Glass │ ─── │   64 Módulos    │ ───────── │ Dados do Edital │ ─── │ Provas 2023 a 2026  │
+│  UI Interativa  │     │ Matriz Pedagóg. │           │   & Simulador   │     │  Gabaritos Oficiais │
+└────────┬────────┘     └─────────────────┘           └─────────────────┘     └─────────────────────┘
          │
          ▼
-┌──────────────────────────────────────────────────┐
-│ Navegador / LocalStorage (Offline State Engine)  │
-└──────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                          Navegador / LocalStorage (Offline State Engine)                          │
+└───────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Decisões Arquiteturais Fundamentais
@@ -338,12 +351,13 @@ O Processo Seletivo Oficial do CEFET-RJ (Edital nº 05/2026) oferece **1.024 vag
 
 ```bash
 .
-├── index.html          # Aplicação principal (Single Page Application com design Liquid Glass)
-├── como.html           # Manual vivo de Engenharia de Software, Neurodesign e Pedagogia Cognitiva
-├── curriculum.js       # Matriz curricular completa com os 64 módulos de estudo e treino ativo
-├── extra-content.js    # Dados de apoio: regras da prova, guia dos 11 cursos, cotas e redação
-├── source.txt          # Transcrição oficial do conteúdo programático do edital CEFET-RJ
-└── README.md           # Documentação técnica e pedagógica do projeto
+├── index.html            # Aplicação principal (Single Page Application com design Liquid Glass)
+├── como.html             # Manual vivo de Engenharia de Software, Neurodesign e Pedagogia Cognitiva
+├── curriculum.js         # Matriz curricular completa com os 64 módulos de estudo e treino ativo
+├── extra-content.js      # Dados de apoio: regras da prova, guia dos 11 cursos, cotas e redação
+├── provas-anteriores.js  # Banco de provas anteriores (2023-2026), cadernos e gabaritos Selecon
+├── source.txt            # Transcrição oficial do conteúdo programático do edital CEFET-RJ
+└── README.md             # Documentação técnica e pedagógica do projeto
 ```
 
 ---

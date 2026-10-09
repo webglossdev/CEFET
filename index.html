@@ -2889,6 +2889,176 @@
             color: var(--text-secondary);
         }
 
+        /* ─── PROVAS ANTERIORES CEFET-RJ (2023 A 2026) ─── */
+        .past-exams-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .past-exam-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            border: var(--glass-border);
+            border-radius: var(--radius-squircle);
+            padding: 24px 26px;
+            box-shadow: var(--glass-shadow), var(--glass-highlight-top);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform var(--transition-fast), border-color var(--transition-fast);
+        }
+
+        .past-exam-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+        }
+
+        .past-exam-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .past-exam-title {
+            font-size: 18.5px;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        .past-exam-meta-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 14px 0 16px;
+        }
+
+        .past-exam-pill {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: var(--radius-pill);
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .past-exam-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .past-exam-subactions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .past-exam-bar {
+            position: sticky;
+            top: 70px;
+            z-index: 90;
+            background: var(--glass-bg-strong);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            border: var(--glass-border);
+            border-radius: var(--radius-squircle);
+            padding: 14px 20px;
+            box-shadow: var(--glass-shadow);
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .past-exam-timer-display {
+            font-family: monospace;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: 1px;
+            padding: 4px 14px;
+            background: var(--bg-surface);
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--border);
+        }
+
+        .past-exam-timer-display.warning {
+            color: #f59e0b;
+            border-color: #f59e0b;
+        }
+
+        .past-exam-timer-display.danger {
+            color: #ef4444;
+            border-color: #ef4444;
+        }
+
+        .past-exam-qmap-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-glass);
+            -webkit-backdrop-filter: var(--blur-glass);
+            border: var(--glass-border);
+            border-radius: var(--radius-squircle);
+            padding: 18px 22px;
+            margin-bottom: 24px;
+        }
+
+        .past-exam-qmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .past-exam-qmap-btn {
+            height: 36px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-surface);
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .past-exam-qmap-btn:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+            transform: scale(1.08);
+        }
+
+        .past-exam-qmap-btn.answered {
+            background: rgba(14, 165, 233, 0.2);
+            border-color: var(--accent);
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .past-exam-text-box {
+            background: var(--bg-surface);
+            border-left: 4px solid var(--accent);
+            padding: 14px 18px;
+            border-radius: var(--radius-card);
+            margin: 12px 0 16px;
+            font-size: 14px;
+            line-height: 1.65;
+            color: var(--text-secondary);
+            white-space: pre-line;
+        }
+
         /* ─── DASHBOARD HOJE MISTAKES ALERT ─── */
         .hoje-mistakes-alert {
             display: flex;
@@ -6506,9 +6676,10 @@
         </div>
     </div>
 
-    <!-- Carga da Matriz Curricular -->
+    <!-- Carga da Matriz Curricular & Provas Anteriores -->
     <script src="curriculum.js"></script>
     <script src="extra-content.js"></script>
+    <script src="provas-anteriores.js"></script>
 
     <script>
         /* ══════════════════════════════════════════════════════════════
@@ -6601,7 +6772,14 @@
             mistakes: readStorageObject(getProfileStorageKey('cefet2027_mistakes')),
             simHistory: readStorageArray(getProfileStorageKey('cefet2027_sim_history')),
             essayDraft: localStorage.getItem(getProfileStorageKey('cefet2027_essay_draft')) || '',
-            simSubMode: 'oficial', // 'oficial' | 'baterias' | 'sprint' | 'mistakes' | 'historico'
+            simSubMode: 'oficial', // 'oficial' | 'provas' | 'baterias' | 'sprint' | 'mistakes' | 'historico'
+            activePastExamId: null,
+            pastExamAnswers: {},
+            pastExamTimer: null,
+            pastExamTimeLeft: 4 * 3600,
+            pastExamEssayDraft: '',
+            pastExamFilterDisc: 'all',
+            pastExamFinished: false,
             sprintTimer: null,
             sprintTimeLeft: 150,
             sprintCurrentQIndex: 0,
@@ -7280,9 +7458,12 @@
             clearAllSimTimers();
             if (page !== 'simulado') {
                 state.sprintActive = false;
+                state.activePastExamId = null;
             }
             if (page === 'simulado') {
-                if (state.simSubMode === 'baterias') {
+                if (state.simSubMode === 'provas') {
+                    renderProvasAnteriores();
+                } else if (state.simSubMode === 'baterias') {
                     renderBateriasTematicas();
                 } else if (state.simSubMode === 'sprint') {
                     renderSprintMode();
@@ -7700,6 +7881,10 @@
                 clearInterval(state.sprintTimer);
                 state.sprintTimer = null;
             }
+            if (state.pastExamTimer) {
+                clearInterval(state.pastExamTimer);
+                state.pastExamTimer = null;
+            }
         }
 
         function switchSimulatorSubMode(subMode) {
@@ -7707,8 +7892,13 @@
             if (subMode !== 'sprint') {
                 state.sprintActive = false;
             }
+            if (subMode !== 'provas') {
+                state.activePastExamId = null;
+            }
             state.simSubMode = subMode;
-            if (subMode === 'baterias') {
+            if (subMode === 'provas') {
+                renderProvasAnteriores();
+            } else if (subMode === 'baterias') {
                 renderBateriasTematicas();
             } else if (subMode === 'sprint') {
                 renderSprintMode();
@@ -7732,6 +7922,9 @@
             <div class="sim-subnav-bar">
                 <button class="sim-subnav-pill ${activeMode === 'oficial' ? 'active' : ''}" onclick="switchSimulatorSubMode('oficial')">
                     <span>🎯</span> <span>Simulado Geral</span>
+                </button>
+                <button class="sim-subnav-pill ${activeMode === 'provas' ? 'active' : ''}" onclick="switchSimulatorSubMode('provas')">
+                    <span>🏛️</span> <span>Provas Anteriores (2023-2026)</span>
                 </button>
                 <button class="sim-subnav-pill ${activeMode === 'baterias' ? 'active' : ''}" onclick="switchSimulatorSubMode('baterias')">
                     <span>📚</span> <span>Baterias por Matéria</span>
@@ -8563,6 +8756,693 @@
                     }).join('')}
                 </div>
             </div>`;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           MODALIDADE: PROVAS ANTERIORES DO CEFET-RJ (2023 A 2026)
+           Cadernos Oficiais Selecon, Timer 4h, Rascunho & Download
+           ══════════════════════════════════════════════════════════════ */
+        function renderProvasAnteriores() {
+            clearAllSimTimers();
+            const main = document.getElementById('main');
+            const exams = window.provasAnteriores || [];
+
+            // Se há uma prova ativa em andamento ou finalizada
+            if (state.activePastExamId) {
+                const exam = exams.find(e => e.id === state.activePastExamId);
+                if (!exam) {
+                    state.activePastExamId = null;
+                    renderProvasAnteriores();
+                    return;
+                }
+
+                if (state.pastExamFinished) {
+                    renderPastExamResults(exam);
+                    return;
+                }
+
+                renderActivePastExamView(exam);
+                return;
+            }
+
+            // Tela de Seleção de Provas Anteriores
+            const history = state.simHistory || [];
+
+            main.innerHTML = `
+            <div class="support-page">
+                <div class="breadcrumb">
+                    <a onclick="goHome()">Início</a>
+                    <span class="breadcrumb-sep">></span>
+                    <a onclick="showSupportPage('simulado')">Preparação</a>
+                    <span class="breadcrumb-sep">></span>
+                    <span>Provas Anteriores</span>
+                </div>
+
+                <div class="central-cefet-header" style="margin-bottom:12px;">
+                    <div class="tracks-badge">🏛️ Banco Histórico Oficial CEFET-RJ</div>
+                    <h1 class="page-title" style="margin:6px 0;">Provas Anteriores (2023 a 2026)</h1>
+                    <p style="font-size:14.5px; color:var(--text-secondary); margin:0;">
+                        Resolva os cadernos oficiais da banca Selecon sob as condições reais de prova: cronômetro de 4 horas, rascunho de redação e correção instantânea com gabarito oficial comentado.
+                    </p>
+                </div>
+
+                ${getSimulatorSubNavHTML('provas')}
+
+                <div class="past-exams-grid">
+                    ${exams.map(exam => {
+                        const pastAttempts = history.filter(h => h.mode && h.mode.includes(exam.year));
+                        const lastAttempt = pastAttempts.length > 0 ? pastAttempts[0] : null;
+
+                        return `
+                        <div class="past-exam-card">
+                            <div>
+                                <div class="past-exam-header">
+                                    <span class="meta-badge disc" style="background:rgba(14,165,233,0.15); color:var(--accent);">
+                                        Ano ${exam.year}
+                                    </span>
+                                    ${lastAttempt ? `
+                                        <span class="track-badge badge-aprov" style="font-size:11px;">
+                                            Feita: ${lastAttempt.points}/${lastAttempt.maxPoints} pts (${lastAttempt.pct}%)
+                                        </span>
+                                    ` : `
+                                        <span class="track-badge" style="font-size:11px; opacity:0.8;">Pendente</span>
+                                    `}
+                                </div>
+                                <h3 class="past-exam-title">${exam.title}</h3>
+                                <div style="font-size:13px; color:var(--text-tertiary); margin-top:4px;">
+                                    ${exam.edital}
+                                </div>
+
+                                <div class="past-exam-meta-pills">
+                                    <span class="past-exam-pill">🎯 <strong>${exam.totalQuestions}</strong> Questões</span>
+                                    <span class="past-exam-pill">⏱️ <strong>4 Horas</strong></span>
+                                    <span class="past-exam-pill">${exam.hasEssay ? '✍️ <strong>Com Redação</strong>' : '📄 <strong>Apenas Objetiva</strong>'}</span>
+                                </div>
+
+                                <p style="font-size:13.5px; color:var(--text-secondary); line-height:1.5; margin-bottom:16px;">
+                                    ${exam.distributionText}
+                                </p>
+                                ${exam.hasEssay ? `
+                                    <div style="background:var(--bg-surface); padding:10px 14px; border-radius:8px; border:1px solid var(--border); font-size:12.5px; margin-bottom:14px;">
+                                        <strong>Tema da Redação:</strong> "${exam.essayTheme}"
+                                    </div>
+                                ` : ''}
+                            </div>
+
+                            <div class="past-exam-actions">
+                                <button class="btn btn-primary" style="width:100%; justify-content:center; padding:12px 18px; font-size:14.5px;" onclick="startPastExam('${exam.id}')">
+                                    🚀 Fazer Prova no Modo Real (4h)
+                                </button>
+                                <div class="past-exam-subactions">
+                                    <button class="btn btn-secondary" style="font-size:12.5px; padding:9px 12px; justify-content:center;" onclick="downloadPastExam('${exam.id}')">
+                                        📥 Baixar Prova
+                                    </button>
+                                    <button class="btn btn-secondary" style="font-size:12.5px; padding:9px 12px; justify-content:center;" onclick="downloadPastExamKey('${exam.id}')">
+                                        📋 Ver Gabarito
+                                    </button>
+                                </div>
+                            </div>
+                        </div>`;
+                    }).join('')}
+                </div>
+            </div>`;
+        }
+
+        function startPastExam(examId) {
+            clearAllSimTimers();
+            const exams = window.provasAnteriores || [];
+            const exam = exams.find(e => e.id === examId);
+            if (!exam) return;
+
+            state.activePastExamId = examId;
+            state.pastExamAnswers = {};
+            state.pastExamTimeLeft = 4 * 3600; // 4 horas
+            state.pastExamEssayDraft = '';
+            state.pastExamFilterDisc = 'all';
+            state.pastExamFinished = false;
+
+            renderProvasAnteriores();
+            runPastExamTimer();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function runPastExamTimer() {
+            clearInterval(state.pastExamTimer);
+            updatePastExamTimerDisplay();
+            state.pastExamTimer = setInterval(() => {
+                state.pastExamTimeLeft -= 1;
+                updatePastExamTimerDisplay();
+
+                if (state.pastExamTimeLeft <= 0) {
+                    clearInterval(state.pastExamTimer);
+                    showCustomToast('⏱️ O tempo oficial de 4 horas encerrou!');
+                    finishPastExam(true);
+                }
+            }, 1000);
+        }
+
+        function updatePastExamTimerDisplay() {
+            const cur = Math.max(0, state.pastExamTimeLeft);
+            const h = Math.floor(cur / 3600);
+            const m = Math.floor((cur % 3600) / 60);
+            const s = cur % 60;
+            const timerEl = document.getElementById('pastExamTimerText');
+            if (timerEl) {
+                timerEl.textContent = [h, m, s].map(v => String(v).padStart(2, '0')).join(':');
+                timerEl.classList.toggle('warning', cur <= 1800 && cur > 600);
+                timerEl.classList.toggle('danger', cur <= 600);
+            }
+        }
+
+        function handlePastExamSelect(qId, optIndex) {
+            state.pastExamAnswers[qId] = optIndex;
+
+            // Atualiza classe do rádio da questão
+            const qCard = document.getElementById('past_q_' + qId);
+            if (qCard) {
+                qCard.querySelectorAll('.quiz-option').forEach((el, idx) => {
+                    el.classList.toggle('selected', idx === optIndex);
+                });
+            }
+
+            // Atualiza bolinha no Mapa de Questões
+            const btn = document.getElementById('qmap_btn_' + qId);
+            if (btn) btn.classList.add('answered');
+
+            // Atualiza contador
+            const exams = window.provasAnteriores || [];
+            const exam = exams.find(e => e.id === state.activePastExamId);
+            if (exam) {
+                const count = Object.keys(state.pastExamAnswers).length;
+                const counterEl = document.getElementById('pastExamAnsweredCount');
+                if (counterEl) {
+                    counterEl.textContent = `${count} de ${exam.totalQuestions} respondidas`;
+                }
+            }
+        }
+
+        function scrollToPastExamQuestion(qIndex) {
+            const el = document.getElementById('past_q_card_' + qIndex);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        function setPastExamFilter(disc) {
+            state.pastExamFilterDisc = disc;
+            const exam = (window.provasAnteriores || []).find(e => e.id === state.activePastExamId);
+            if (exam) renderActivePastExamView(exam);
+        }
+
+        function updatePastExamEssayDraft(val) {
+            state.pastExamEssayDraft = val;
+            const lines = val.split('\n');
+            let approx = 0;
+            lines.forEach(l => { approx += Math.max(1, Math.ceil(l.length / 65)); });
+            if (!val.trim()) approx = 0;
+            const el = document.getElementById('pastExamEssayCounter');
+            if (el) {
+                const isOpt = approx >= 15 && approx <= 30;
+                el.innerHTML = `Extensão: <strong style="color:${isOpt ? 'var(--positive)' : 'var(--solar-amber)'};">${approx} linhas</strong> (Mínimo: 15 / Máximo: 30 linhas)`;
+            }
+        }
+
+        function cancelPastExam() {
+            if (confirm('Deseja realmente abandonar esta prova? O progresso e respostas desta tentativa serão descartados.')) {
+                clearAllSimTimers();
+                state.activePastExamId = null;
+                renderProvasAnteriores();
+            }
+        }
+
+        function finishPastExam(isAuto = false) {
+            const exams = window.provasAnteriores || [];
+            const exam = exams.find(e => e.id === state.activePastExamId);
+            if (!exam) return;
+
+            const answeredCount = Object.keys(state.pastExamAnswers).length;
+            const totalQ = exam.totalQuestions;
+
+            if (!isAuto && answeredCount < totalQ) {
+                const pending = totalQ - answeredCount;
+                if (!confirm(`Atenção: Você respondeu ${answeredCount} de ${totalQ} questões (${pending} em branco).\n\nDeseja realmente entregar e corrigir a prova agora?`)) {
+                    return;
+                }
+            }
+
+            clearAllSimTimers();
+            state.pastExamFinished = true;
+
+            // Correção das questões
+            let hits = 0;
+            const byDisc = {};
+
+            exam.questions.forEach(q => {
+                if (!byDisc[q.discipline]) byDisc[q.discipline] = { total: 0, hits: 0 };
+                byDisc[q.discipline].total++;
+
+                const isAnswered = state.pastExamAnswers[q.id] !== undefined;
+                const isHit = isAnswered && state.pastExamAnswers[q.id] === q.correct;
+
+                if (isHit) {
+                    hits++;
+                    byDisc[q.discipline].hits++;
+                } else if (isAnswered) {
+                    // Caderno de Erros Inteligente
+                    if (!state.mistakes[q.id]) {
+                        state.mistakes[q.id] = { errorCount: 0, lastAttemptDate: Date.now(), resolved: false };
+                    }
+                    state.mistakes[q.id].errorCount++;
+                    state.mistakes[q.id].lastAttemptDate = Date.now();
+                    state.mistakes[q.id].resolved = false;
+                }
+            });
+
+            saveMistakesState();
+
+            // Gravar histórico
+            const pts = hits * 5;
+            const maxPts = totalQ * 5;
+            const pct = Math.round((hits / totalQ) * 100);
+
+            state.simHistory.unshift({
+                id: 'past_exam_' + exam.id + '_' + Date.now(),
+                date: Date.now(),
+                mode: exam.title,
+                totalQuestions: totalQ,
+                correctCount: hits,
+                points: pts,
+                maxPoints: maxPts,
+                pct: pct,
+                byDiscipline: byDisc
+            });
+            if (state.simHistory.length > 25) state.simHistory.pop();
+            saveSimHistoryState();
+
+            renderProvasAnteriores();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderActivePastExamView(exam) {
+            const main = document.getElementById('main');
+            const totalQ = exam.totalQuestions;
+            const answeredCount = Object.keys(state.pastExamAnswers).length;
+            const filter = state.pastExamFilterDisc || 'all';
+
+            const filteredQuestions = filter === 'all' 
+                ? exam.questions 
+                : exam.questions.filter(q => q.discipline === filter);
+
+            const disciplines = ['Língua Portuguesa', 'Matemática', 'Ciências da Natureza', 'Ciências Humanas'];
+
+            main.innerHTML = `
+            <div class="support-page">
+                <!-- Barra de Controle Fixa de Prova Real -->
+                <div class="past-exam-bar">
+                    <div style="display:flex; align-items:center; gap:12px;">
+                        <span class="track-badge badge-sel" style="margin:0;">🏛️ Prova Oficial</span>
+                        <div>
+                            <strong style="font-size:15px; color:var(--text-primary); display:block;">${exam.title}</strong>
+                            <span id="pastExamAnsweredCount" style="font-size:12.5px; color:var(--text-tertiary);">${answeredCount} de ${totalQ} respondidas</span>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; align-items:center; gap:14px;">
+                        <span class="past-exam-timer-display" id="pastExamTimerText">04:00:00</span>
+                        <button type="button" class="btn btn-secondary" style="font-size:12.5px; padding:8px 14px;" onclick="cancelPastExam()">
+                            ✕ Abandonar
+                        </button>
+                        <button type="button" class="btn btn-primary" style="font-size:13.5px; padding:9px 18px;" onclick="finishPastExam()">
+                            ✓ Entregar Prova
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mapa Interativo de Questões -->
+                <div class="past-exam-qmap-card">
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+                        <strong style="font-size:14px; color:var(--text-primary);">🗺️ Mapa de Questões (Clique para navegar)</strong>
+                        <div style="display:flex; gap:12px; font-size:12px; color:var(--text-tertiary);">
+                            <span><span style="display:inline-block; width:10px; height:10px; border-radius:2px; background:var(--accent); margin-right:4px;"></span> Respondida</span>
+                            <span><span style="display:inline-block; width:10px; height:10px; border-radius:2px; background:var(--bg-surface); border:1px solid var(--border); margin-right:4px;"></span> Pendente</span>
+                        </div>
+                    </div>
+                    <div class="past-exam-qmap-grid">
+                        ${exam.questions.map((q, idx) => {
+                            const isAns = state.pastExamAnswers[q.id] !== undefined;
+                            return `
+                            <button type="button" class="past-exam-qmap-btn ${isAns ? 'answered' : ''}" id="qmap_btn_${q.id}" onclick="scrollToPastExamQuestion(${idx})">
+                                ${idx + 1}
+                            </button>`;
+                        }).join('')}
+                    </div>
+                </div>
+
+                <!-- Gaveta da Redação Oficial (se houver) -->
+                ${exam.hasEssay ? `
+                <div class="essay-draft-drawer" style="margin-bottom:24px;">
+                    <div class="essay-draft-header" onclick="toggleEssayDrawer()">
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <span style="font-size:20px;">✍️</span>
+                            <div>
+                                <strong style="font-size:14.5px; color:var(--text-primary);">Proposta Oficial de Redação (100 Pontos)</strong>
+                                <div style="font-size:12.5px; color:var(--text-tertiary);">Tema: "${exam.essayTheme}"</div>
+                            </div>
+                        </div>
+                        <span id="essayDrawerIcon" style="font-weight:700; color:var(--accent); font-size:13px;">${essayDrawerOpen ? '▲ Recolher Rascunho' : '▼ Abrir Rascunho da Redação'}</span>
+                    </div>
+                    <div class="essay-draft-body" id="essayDrawerBody" style="display:${essayDrawerOpen ? 'block' : 'none'};">
+                        <div class="past-exam-text-box" style="margin-top:0;">
+                            <strong>Instruções Oficiais da Banca:</strong><br/>
+                            ${exam.essayPrompt}
+                        </div>
+                        <textarea class="essay-draft-textarea" placeholder="Digite seu rascunho dissertativo-argumentativo aqui..." oninput="updatePastExamEssayDraft(this.value)">${state.pastExamEssayDraft || ''}</textarea>
+                        <div class="essay-counter-row">
+                            <span id="pastExamEssayCounter">Extensão: <strong>0 linhas</strong> (Ideal: 15 a 30 linhas)</span>
+                            <span style="font-size:12px; color:var(--text-quaternary);">Critérios: Tema, Estrutura, Coesão e Norma Culta</span>
+                        </div>
+                    </div>
+                </div>` : ''}
+
+                <!-- Filtro por Disciplina -->
+                <div class="bateria-filter-bar">
+                    <span style="font-size:13px; font-weight:700; color:var(--text-tertiary);">Filtrar visualização:</span>
+                    <button type="button" class="bateria-filter-btn ${filter === 'all' ? 'active' : ''}" onclick="setPastExamFilter('all')">
+                        Todas (${totalQ})
+                    </button>
+                    ${disciplines.map(d => {
+                        const countD = exam.questions.filter(q => q.discipline === d).length;
+                        if (countD === 0) return '';
+                        return `
+                        <button type="button" class="bateria-filter-btn ${filter === d ? 'active' : ''}" onclick="setPastExamFilter('${d}')">
+                            ${d} (${countD})
+                        </button>`;
+                    }).join('')}
+                </div>
+
+                <!-- Lista de Questões -->
+                <div class="sim-questions-list">
+                    ${filteredQuestions.map((q, localIdx) => {
+                        const globalIdx = exam.questions.findIndex(item => item.id === q.id);
+                        const selectedOpt = state.pastExamAnswers[q.id];
+
+                        return `
+                        <section class="q-block sim-question" id="past_q_card_${globalIdx}" style="margin-bottom:22px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                                <span class="meta-badge disc">${q.discipline}</span>
+                                <span style="font-size:12px; color:var(--text-quaternary); font-weight:700;">Questão ${globalIdx + 1} de ${totalQ} (5,0 pts)</span>
+                            </div>
+
+                            ${q.textSupport ? `
+                                <div class="past-exam-text-box">
+                                    ${q.textSupport}
+                                </div>
+                            ` : ''}
+
+                            <h3 style="font-size:15.5px; line-height:1.6; margin-bottom:16px;">
+                                <strong>${globalIdx + 1}.</strong> ${q.question}
+                            </h3>
+
+                            <div class="quiz-options" id="past_q_${q.id}">
+                                ${q.options.map((opt, j) => {
+                                    const isSel = selectedOpt === j;
+                                    return `
+                                    <label class="quiz-option ${isSel ? 'selected' : ''}" id="past_opt_${q.id}_${j}">
+                                        <input type="radio" name="past_${q.id}" value="${j}" ${isSel ? 'checked' : ''} onchange="handlePastExamSelect('${q.id}', ${j})">
+                                        <span><strong>${String.fromCharCode(65 + j)})</strong> ${opt}</span>
+                                    </label>`;
+                                }).join('')}
+                            </div>
+                        </section>`;
+                    }).join('')}
+                </div>
+
+                <!-- Rodapé de Entrega -->
+                <div style="margin:30px 0; text-align:center; display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+                    <button type="button" class="btn btn-secondary" style="padding:14px 28px; font-size:15px;" onclick="downloadPastExam('${exam.id}')">
+                        📥 Baixar Versão Impressa deste Caderno
+                    </button>
+                    <button type="button" class="btn btn-primary" style="padding:14px 34px; font-size:15.5px;" onclick="finishPastExam()">
+                        ✓ Finalizar Prova e Gerar Relatório de Desempenho
+                    </button>
+                </div>
+            </div>`;
+
+            if (exam.hasEssay) {
+                updatePastExamEssayDraft(state.pastExamEssayDraft || '');
+            }
+            updatePastExamTimerDisplay();
+        }
+
+        function renderPastExamResults(exam) {
+            const main = document.getElementById('main');
+            const totalQ = exam.totalQuestions;
+            let hits = 0;
+            const byDisc = {};
+
+            exam.questions.forEach(q => {
+                if (!byDisc[q.discipline]) byDisc[q.discipline] = { total: 0, hits: 0 };
+                byDisc[q.discipline].total++;
+                if (state.pastExamAnswers[q.id] === q.correct) {
+                    hits++;
+                    byDisc[q.discipline].hits++;
+                }
+            });
+
+            const pts = hits * 5;
+            const maxPts = totalQ * 5;
+            const pct = Math.round((hits / totalQ) * 100);
+
+            main.innerHTML = `
+            <div class="support-page">
+                <div class="breadcrumb">
+                    <a onclick="goHome()">Início</a>
+                    <span class="breadcrumb-sep">></span>
+                    <a onclick="showSupportPage('simulado')">Preparação</a>
+                    <span class="breadcrumb-sep">></span>
+                    <a onclick="state.activePastExamId = null; renderProvasAnteriores();">Provas Anteriores</a>
+                    <span class="breadcrumb-sep">></span>
+                    <span>Resultado ${exam.year}</span>
+                </div>
+
+                ${getSimulatorSubNavHTML('provas')}
+
+                <div class="sim-score-card">
+                    <span class="track-badge badge-aprov">🏆 Prova Finalizada • ${exam.title}</span>
+                    <div class="sim-score-total">${pts} <span style="font-size:20px; color:var(--text-tertiary);">/ ${maxPts} pontos</span></div>
+                    <div style="font-size:16px; color:var(--text-secondary); margin-bottom:16px;">
+                        Você acertou <strong>${hits} de ${totalQ} questões</strong> (${pct}% de aproveitamento).
+                    </div>
+
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:12px; margin:20px 0;">
+                        ${Object.keys(byDisc).map(d => `
+                            <div style="background:var(--bg-surface); padding:12px 14px; border-radius:8px; border:1px solid var(--border); text-align:center;">
+                                <div style="font-size:12px; color:var(--text-tertiary); font-weight:700;">${d}</div>
+                                <div style="font-size:18px; font-weight:800; color:var(--text-primary); margin-top:4px;">
+                                    ${byDisc[d].hits} / ${byDisc[d].total}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div class="box-analogy" style="margin:20px 0; text-align:left;">
+                        <div class="box-header">📊 Diagnóstico de Classificação no CEFET-RJ</div>
+                        <p>${pct >= 75 ? 'Excelente desempenho! Pontuação altamente competitiva para os cursos mais disputados do Maracanã (Informática, Mecânica, Edificações).' : (pct >= 55 ? 'Bom resultado! Você tem chances reais em diversos cursos técnicos. Foque nas matérias com menor percentual no Caderno de Erros.' : 'Treino de grande valor! O rigor das provas do CEFET exige constância. Revise as questões que errou no Caderno de Erros.')}</p>
+                    </div>
+
+                    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:24px;">
+                        <button type="button" class="btn btn-primary" onclick="startPastExam('${exam.id}')">🔄 Refazer Esta Prova</button>
+                        <button type="button" class="btn btn-secondary" onclick="downloadPastExamKey('${exam.id}')">📋 Baixar Gabarito Oficial (PDF)</button>
+                        <button type="button" class="btn btn-secondary" onclick="switchSimulatorSubMode('mistakes')">📓 Abrir Caderno de Erros</button>
+                        <button type="button" class="btn btn-secondary" onclick="state.activePastExamId = null; renderProvasAnteriores();">⬅ Lista de Provas Anteriores</button>
+                    </div>
+                </div>
+
+                <h3 style="margin:30px 0 16px;">Gabarito Oficial Comentado da Prova:</h3>
+                <div class="sim-questions-list">
+                    ${exam.questions.map((q, idx) => {
+                        const isAnswered = state.pastExamAnswers[q.id] !== undefined;
+                        const isHit = isAnswered && state.pastExamAnswers[q.id] === q.correct;
+                        const userAns = isAnswered ? `Alternativa ${String.fromCharCode(65 + state.pastExamAnswers[q.id])}` : 'Em branco';
+                        const corrAns = String.fromCharCode(65 + q.correct);
+                        const statusColor = isHit ? 'var(--positive)' : (isAnswered ? 'var(--danger)' : 'var(--text-tertiary)');
+                        const statusLabel = isHit ? '✓ Acerto' : (isAnswered ? '✗ Erro' : '⚪ Não respondida');
+
+                        return `
+                        <section class="q-block sim-question" style="margin-bottom:16px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                                <span class="meta-badge disc">${q.discipline}</span>
+                                <span style="font-size:12px; font-weight:700; color:${statusColor};">
+                                    ${statusLabel} (Sua resposta: ${userAns})
+                                </span>
+                            </div>
+                            ${q.textSupport ? `<div class="past-exam-text-box">${q.textSupport}</div>` : ''}
+                            <h4 style="font-size:14.5px; margin-bottom:10px;">${idx + 1}. ${q.question}</h4>
+                            <div class="sim-q-feedback ${isHit ? 'correct' : (isAnswered ? 'wrong' : '')}" style="${!isAnswered ? 'background:rgba(255,255,255,0.04); border-left:4px solid var(--text-tertiary); padding:12px 16px; border-radius:8px;' : ''}">
+                                <strong>Gabarito Oficial Selecon: Alternativa ${corrAns}</strong><br>
+                                ${q.explanation}
+                            </div>
+                        </section>`;
+                    }).join('')}
+                </div>
+            </div>`;
+        }
+
+        function downloadPastExam(examId) {
+            const exams = window.provasAnteriores || [];
+            const exam = exams.find(e => e.id === examId);
+            if (!exam) return;
+
+            const html = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Caderno de Prova — ${exam.title}</title>
+    <style>
+        @page { size: A4; margin: 15mm 15mm 15mm 15mm; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11pt; line-height: 1.5; color: #111; margin: 0; padding: 20px; }
+        .header { border-bottom: 2px solid #003366; padding-bottom: 12px; margin-bottom: 20px; text-align: center; }
+        .header h1 { font-size: 16pt; margin: 4px 0; color: #003366; text-transform: uppercase; }
+        .header h2 { font-size: 12pt; margin: 4px 0; color: #333; font-weight: normal; }
+        .candidate-box { border: 1px solid #999; padding: 10px; margin-bottom: 20px; font-size: 10pt; border-radius: 4px; }
+        .instructions { background: #f4f6f9; border-left: 4px solid #003366; padding: 10px 14px; margin-bottom: 24px; font-size: 9.5pt; }
+        .q-item { margin-bottom: 18px; page-break-inside: avoid; }
+        .q-meta { font-size: 9pt; font-weight: bold; color: #003366; text-transform: uppercase; margin-bottom: 4px; }
+        .text-support { background: #f9f9f9; border-left: 3px solid #888; padding: 8px 12px; margin-bottom: 10px; font-size: 9.5pt; font-style: italic; white-space: pre-line; }
+        .options { margin-left: 12px; }
+        .opt-line { margin: 4px 0; }
+        .btn-print { display: block; width: 220px; margin: 0 auto 20px; padding: 10px 16px; background: #003366; color: #fff; text-align: center; font-weight: bold; border-radius: 6px; text-decoration: none; cursor: pointer; }
+        @media print { .btn-print { display: none; } }
+    </style>
+</head>
+<body>
+    <a class="btn-print" onclick="window.print()">🖨️ Imprimir / Salvar em PDF</a>
+    <div class="header">
+        <div style="font-weight: bold; letter-spacing: 1px;">CEFET/RJ — CENTRO FEDERAL DE EDUCAÇÃO TECNOLÓGICA CELSO SUCKOW DA FONSECA</div>
+        <h1>${exam.title}</h1>
+        <h2>${exam.edital} • DURAÇÃO: 4 HORAS • 1.024 VAGAS TOTAIS</h2>
+    </div>
+
+    <div class="candidate-box">
+        <div style="display: flex; justify-content: space-between;">
+            <span><strong>NOME DO CANDIDATO:</strong> ___________________________________________________________</span>
+            <span><strong>INSCRIÇÃO:</strong> _______________</span>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <strong>LEIA ATENTAMENTE AS INSTRUÇÕES:</strong><br/>
+        1. Este caderno contém ${exam.totalQuestions} questões objetivas com 4 alternativas (A, B, C, D) ${exam.hasEssay ? 'e uma Proposta de Redação' : ''}.<br/>
+        2. Duração máxima: 4 horas.<br/>
+        3. Para cada questão existe apenas uma resposta correta.<br/>
+        4. Reserve os 30 minutos finais para preencher seu Cartão-Resposta com caneta esferográfica preta ou azul.
+    </div>
+
+    ${exam.hasEssay ? `
+    <div style="page-break-after: always; margin-bottom: 30px;">
+        <h3 style="border-bottom: 1px solid #003366; padding-bottom: 4px; color: #003366;">PROPOSTA DE REDAÇÃO OFICIAL</h3>
+        <p><strong>TEMA:</strong> "${exam.essayTheme}"</p>
+        <p style="font-size: 10pt;">${exam.essayPrompt}</p>
+        <div style="border: 1px dashed #666; height: 350px; padding: 10px; margin-top: 15px; font-size: 9pt; color: #888;">
+            (Espaço destinado ao rascunho da redação — Mínimo de 15 e máximo de 30 linhas)
+        </div>
+    </div>
+    ` : ''}
+
+    <h3 style="border-bottom: 1px solid #003366; padding-bottom: 4px; color: #003366;">PROVA OBJETIVA</h3>
+    ${exam.questions.map((q, idx) => `
+        <div class="q-item">
+            <div class="q-meta">${q.discipline} — QUESTÃO ${idx + 1}</div>
+            ${q.textSupport ? `<div class="text-support">${q.textSupport}</div>` : ''}
+            <div><strong>${idx + 1}.</strong> ${q.question}</div>
+            <div class="options">
+                ${q.options.map((opt, j) => `
+                    <div class="opt-line">( ${String.fromCharCode(65 + j)} ) ${opt}</div>
+                `).join('')}
+            </div>
+        </div>
+    `).join('')}
+
+    <script>
+        window.onload = function() {
+            setTimeout(function(){ window.print(); }, 400);
+        };
+    <\/script>
+</body>
+</html>`;
+
+            const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            window.open(url, '_blank');
+        }
+
+        function downloadPastExamKey(examId) {
+            const exams = window.provasAnteriores || [];
+            const exam = exams.find(e => e.id === examId);
+            if (!exam) return;
+
+            const html = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gabarito Oficial — ${exam.title}</title>
+    <style>
+        @page { size: A4; margin: 15mm; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11pt; line-height: 1.5; color: #111; margin: 0; padding: 20px; }
+        .header { border-bottom: 2px solid #003366; padding-bottom: 12px; margin-bottom: 20px; text-align: center; }
+        .header h1 { font-size: 16pt; margin: 4px 0; color: #003366; }
+        .grid-key { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; margin: 18px 0 28px; text-align: center; }
+        .key-cell { border: 1px solid #003366; padding: 6px 2px; border-radius: 4px; }
+        .key-num { font-size: 9pt; color: #666; font-weight: bold; }
+        .key-letter { font-size: 14pt; color: #003366; font-weight: 800; }
+        .q-item { margin-bottom: 16px; border-bottom: 1px solid #eee; padding-bottom: 12px; page-break-inside: avoid; }
+        .btn-print { display: block; width: 220px; margin: 0 auto 20px; padding: 10px 16px; background: #003366; color: #fff; text-align: center; font-weight: bold; border-radius: 6px; text-decoration: none; cursor: pointer; }
+        @media print { .btn-print { display: none; } }
+    </style>
+</head>
+<body>
+    <a class="btn-print" onclick="window.print()">🖨️ Imprimir / Salvar em PDF</a>
+    <div class="header">
+        <div style="font-weight: bold; letter-spacing: 1px;">CEFET/RJ • BANCA SELECON</div>
+        <h1>GABARITO OFICIAL — ${exam.title}</h1>
+        <div>${exam.edital} • Processo Seletivo para Educação Profissional Técnica de Nível Médio</div>
+    </div>
+
+    <h3>Tabela de Respostas Oficiais</h3>
+    <div class="grid-key">
+        ${exam.questions.map((q, idx) => `
+            <div class="key-cell">
+                <div class="key-num">${String(idx + 1).padStart(2, '0')}</div>
+                <div class="key-letter">${String.fromCharCode(65 + q.correct)}</div>
+            </div>
+        `).join('')}
+    </div>
+
+    <h3>Resoluções Comentadas das Questões</h3>
+    ${exam.questions.map((q, idx) => `
+        <div class="q-item">
+            <div style="font-size: 9pt; font-weight: bold; color: #003366;">${q.discipline} — QUESTÃO ${idx + 1}</div>
+            <div><strong>${idx + 1}. ${q.question}</strong></div>
+            <div style="margin-top: 6px; color: #059669; font-weight: bold;">
+                Gabarito Oficial: Alternativa ${String.fromCharCode(65 + q.correct)}) ${q.options[q.correct]}
+            </div>
+            <div style="font-size: 10pt; color: #444; margin-top: 4px;">
+                ${q.explanation}
+            </div>
+        </div>
+    `).join('')}
+
+    <script>
+        window.onload = function() {
+            setTimeout(function(){ window.print(); }, 400);
+        };
+    <\/script>
+</body>
+</html>`;
+
+            const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            window.open(url, '_blank');
         }
 
         /* ─── MODALIDADE 4: CADERNO DE ERROS ATIVO (RETESTE DE LACUNAS) ─── */
